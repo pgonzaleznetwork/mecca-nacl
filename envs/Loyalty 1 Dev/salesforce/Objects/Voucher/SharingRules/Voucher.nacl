@@ -1,7 +1,0 @@
-salesforce.SharingRules Voucher {
-  fullName = "Voucher"
-  _parent = [
-    salesforce.Voucher,
-  ]
-  _alias = "Voucher"
-}

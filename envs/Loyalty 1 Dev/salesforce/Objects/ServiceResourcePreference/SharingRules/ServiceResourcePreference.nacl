@@ -1,7 +1,0 @@
-salesforce.SharingRules ServiceResourcePreference {
-  fullName = "ServiceResourcePreference"
-  _parent = [
-    salesforce.ServiceResourcePreference,
-  ]
-  _alias = "ServiceResourcePreference"
-}

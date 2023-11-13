@@ -1,7 +1,0 @@
-salesforce.LoyaltyProgram Cloud_Kicks_Inner_Circle@s {
-  Description = "Loyalty program for customers of Cloud Kicks"
-  IsPrimary = false
-  Name = "Cloud Kicks Inner Circle"
-  Status = "Active"
-  _alias = "Cloud Kicks Inner Circle"
-}

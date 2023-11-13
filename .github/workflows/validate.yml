@@ -1,0 +1,171 @@
+name: CI UAT
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+
+jobs:
+  send_slack_message_changed_files:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Get changed files
+
+      run: |
+        if [[ -n "${{ github.event.pull_request.head.sha }}" ]]; then
+          git fetch origin ${{ github.event.pull_request.head.sha }}
+          git diff --name-only ${{ github.event.pull_request.base.sha }}..${{ github.event.pull_request.head.sha }} > changed_files.txt
+        else
+          git diff --name-only ${{ github.event.pull_request.base.sha }} > changed_files.txt
+        fi
+        
+        cat changed_files.txt
+
+        node create_slack_payload.js
+
+        cat slackPayload.json
+
+    - name: Post to a Slack channel
+      id: slack
+      uses: slackapi/slack-github-action@v1.24.0
+      with:
+        # Slack channel id, channel name, or user id to post message.
+        # See also: https://api.slack.com/methods/chat.postMessage#channels
+        # You can pass in multiple channels to post to by providing a comma-delimited list of channel IDs.
+        channel-id: 'C062G1V3KKK'
+        # For posting a simple plain text message
+        payload-file-path: "slackPayload.json"
+      env:
+        SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }} 
+
+  deployment_validation:
+    runs-on: ubuntu-latest
+    steps:    
+      - name: Install Salto CLI
+        run: |
+          curl https://cli.salto.io/release/1/linux-x64.tar.gz --output linux-x64.tar.gz
+          tar xvzf linux-x64.tar.gz
+        
+      - name: Run Deploy Validation
+        run: |
+          ./salto-cloud deployment validate -b ${{ github.event.pull_request.head.ref }} -C 'salesforce.client.deploy.testLevel=NoTestRun'
+        env: 
+          SALTO_API_TOKEN: ${{ secrets.SALTO_API_TOKEN }}
+          SALTO_URL: https://app-staging.salto.io
+          AUTH0_DOMAIN: salto-staging.us.auth0.com
+          AUTH0_CLIENT_ID: VInwYv5FbNXe6wLfRMQJXTHoB61CgXQd
+          GRAPHQL_URL: https://w6hsr1wvc0.execute-api.us-east-2.amazonaws.com/staging/graphql
+
+  static_code_analysis:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+       # Now Install Salesforce CLI
+      - name: "Install Salesforce CLI"
+        run: |
+          wget https://developer.salesforce.com/media/salesforce-cli/sfdx/channels/stable/sfdx-linux-x64.tar.xz
+          mkdir ~/sfdx
+          tar xJf sfdx-linux-x64.tar.xz -C ~/sfdx --strip-components 1
+          echo "$HOME/sfdx/bin" >> $GITHUB_PATH
+          ~/sfdx/bin/sfdx version
+
+      # Install java as it is required for the next step
+      - name: "Installing java"
+        run: |
+          sudo apt-get update
+          sudo apt install default-jdk
+
+      # Install SFDX scanner
+      - name: "Installing SFDX scanner"
+        run: sfdx plugins:install @salesforce/sfdx-scanner
+
+      - name: Run SFDX Scanner - Report findings as comments
+        uses: mitchspano/sfdx-scan-pull-request@v0.1.15
+        with:
+          severity-threshold: 4
+          report-mode: comments
+          strictly-enforced-rules: '[{ "engine": "pmd", "category": "Performance", "rule": "AvoidDebugStatements" }]'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+  Provar_regression_testing:
+      # The type of runner that the job will run on
+      runs-on: ubuntu-latest
+      env:
+        scratch_org_alias: ProvarDX
+        provar_major_version: 2.11.2
+        provar_build_version: 2.11.2.05
+        dev_hub_alias: SFDX-ENV
+        provar_home: ${{ github.workspace }}/ProvarHome
+      permissions:
+        checks: write
+        pull-requests: write
+      # Steps represent a sequence of tasks that will be executed as part of the job
+      steps:
+        # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+        - uses: actions/checkout@v3
+        - uses: actions/setup-java@v3
+          with:
+            java-version: '11'
+            distribution: 'temurin'
+        - uses: actions/setup-node@v3
+          with: 
+            node-version: '16'
+        - uses: sfdx-actions/setup-sfdx@v1
+          with:
+            sfdx-auth-url: ${{ secrets.SFDX_AUTH_URL }}
+
+        - name: Install ProvarDX SFDX Plugin
+          run: |
+            echo y | sfdx plugins:install @provartesting/provardx
+            sfdx plugins:update
+
+        - name: Download Provar CLI
+          run: |
+            wget -nv https://download.provartesting.com/${{ env.provar_major_version }}/Provar_ANT_${{ env.provar_build_version }}.zip
+
+        - name: Setup Provar CLI
+          run: |
+            echo "Unzip Provar ANT Files"
+            unzip -q Provar_ANT_${{ env.provar_build_version }}.zip -d $GITHUB_WORKSPACE/ProvarHome
+            ls -la ${{ env.provar_home }}
+            ls -la ${{ env.provar_home }}/provardx
+ 
+        - name: Insert Secrets Password
+          run: sed -i "s|ProvarSecretsPassword|${{ secrets.SECRETS_PASSWORD }}|" $GITHUB_WORKSPACE/provardx-properties-github.json        
+    
+        - name: Validate ProvarDX property file
+          run: sfdx provar:validate -p provardx-properties-github.json
+
+        - name: Compile Provar Project
+          run: sfdx provar:compile -p provardx-properties-github.json
+
+        - name: License Check 
+          run: |
+            mkdir -p $HOME/Provar/.properties
+            echo "com.provar.licensecheck.cli=false" >> $HOME/Provar/.properties/provar.properties
+
+        - name: Reload Metadata Cache
+          run: sfdx provar:metadatacache -m 'Reload' -c '.provarCaches' -p provardx-properties-github.json
+
+        - name: Run Provar Tests
+          run: yes | xvfb-run sfdx provar:runtests -p provardx-properties-github.json
+       
+        - name: Upload Test Results Folder
+          uses: actions/upload-artifact@v3
+          with:
+            # Artifact name
+            name: TestResults # optional, default is artifact
+            # A file, directory or wildcard pattern that describes what to upload
+            path: '**/ANT/Results'
+            # The desired behavior if no files are found using the provided path.
+            if-no-files-found: error
+            retention-days: 14 # optional
+  
+  
+      

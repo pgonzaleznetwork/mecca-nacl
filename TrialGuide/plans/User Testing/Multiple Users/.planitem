@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testPlan guid="3ebdc7f9-88f3-4235-8472-f9fd963bc5ce">
+  <planSettings/>
+  <planFeatures/>
+  <associations>
+    <association assocationType="TM.TEST_SUITE" connectionId="31c92433-7959-4a38-8c84-592b78238125" entityKey="a0g2o00000QdiwbAAB"/>
+  </associations>
+</testPlan>

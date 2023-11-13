@@ -1,7 +1,0 @@
-salesforce.SharingRules LoyaltyProgramMember {
-  fullName = "LoyaltyProgramMember"
-  _parent = [
-    salesforce.LoyaltyProgramMember,
-  ]
-  _alias = "LoyaltyProgramMember"
-}

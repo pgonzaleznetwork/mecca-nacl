@@ -1,9 +1,0 @@
-salesforce.ListView LoyaltyPgmEngmtAttrProm_All_LoyaltyPgmEngmtAttrProms {
-  fullName = "LoyaltyPgmEngmtAttrProm.All_LoyaltyPgmEngmtAttrProms"
-  filterScope = "Everything"
-  label = "allLoyaltyPgmEngmtAttrProms"
-  _parent = [
-    salesforce.LoyaltyPgmEngmtAttrProm,
-  ]
-  _alias = "allLoyaltyPgmEngmtAttrProms"
-}

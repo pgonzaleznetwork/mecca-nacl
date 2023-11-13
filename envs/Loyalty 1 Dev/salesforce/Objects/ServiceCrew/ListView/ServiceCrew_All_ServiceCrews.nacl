@@ -1,9 +1,0 @@
-salesforce.ListView ServiceCrew_All_ServiceCrews {
-  fullName = "ServiceCrew.All_ServiceCrews"
-  filterScope = "Everything"
-  label = "All Service Crews"
-  _parent = [
-    salesforce.ServiceCrew,
-  ]
-  _alias = "All Service Crews"
-}

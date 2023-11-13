@@ -1,7 +1,0 @@
-salesforce.SharingRules TravelMode {
-  fullName = "TravelMode"
-  _parent = [
-    salesforce.TravelMode,
-  ]
-  _alias = "TravelMode"
-}

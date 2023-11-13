@@ -1,9 +1,0 @@
-salesforce.ListView Promotion_All_Promotions {
-  fullName = "Promotion.All_Promotions"
-  filterScope = "Everything"
-  label = "All Promotions"
-  _parent = [
-    salesforce.Promotion,
-  ]
-  _alias = "All Promotions"
-}

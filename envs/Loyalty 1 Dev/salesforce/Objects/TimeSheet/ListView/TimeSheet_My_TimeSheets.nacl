@@ -1,9 +1,0 @@
-salesforce.ListView TimeSheet_My_TimeSheets {
-  fullName = "TimeSheet.My_TimeSheets"
-  filterScope = "Mine"
-  label = "My Time Sheets"
-  _parent = [
-    salesforce.TimeSheet,
-  ]
-  _alias = "My Time Sheets"
-}

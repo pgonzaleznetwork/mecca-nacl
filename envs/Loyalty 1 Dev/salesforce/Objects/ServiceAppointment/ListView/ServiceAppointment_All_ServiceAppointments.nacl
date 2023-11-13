@@ -1,9 +1,0 @@
-salesforce.ListView ServiceAppointment_All_ServiceAppointments {
-  fullName = "ServiceAppointment.All_ServiceAppointments"
-  filterScope = "Everything"
-  label = "All Service Appointments"
-  _parent = [
-    salesforce.ServiceAppointment,
-  ]
-  _alias = "All Service Appointments"
-}

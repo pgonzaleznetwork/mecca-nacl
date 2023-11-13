@@ -1,9 +1,0 @@
-salesforce.ListView LoyaltyProgramPartner_All_LoyaltyProgramPartners {
-  fullName = "LoyaltyProgramPartner.All_LoyaltyProgramPartners"
-  filterScope = "Everything"
-  label = "allLoyaltyProgramPartners"
-  _parent = [
-    salesforce.LoyaltyProgramPartner,
-  ]
-  _alias = "allLoyaltyProgramPartners"
-}

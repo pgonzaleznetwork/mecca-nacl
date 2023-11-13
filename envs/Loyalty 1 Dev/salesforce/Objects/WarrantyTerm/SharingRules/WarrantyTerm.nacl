@@ -1,7 +1,0 @@
-salesforce.SharingRules WarrantyTerm {
-  fullName = "WarrantyTerm"
-  _parent = [
-    salesforce.WarrantyTerm,
-  ]
-  _alias = "WarrantyTerm"
-}

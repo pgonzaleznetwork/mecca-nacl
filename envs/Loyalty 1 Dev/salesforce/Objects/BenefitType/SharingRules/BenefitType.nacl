@@ -1,7 +1,0 @@
-salesforce.SharingRules BenefitType {
-  fullName = "BenefitType"
-  _parent = [
-    salesforce.BenefitType,
-  ]
-  _alias = "BenefitType"
-}

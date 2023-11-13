@@ -1,7 +1,0 @@
-salesforce.SharingRules WorkCapacityUsage {
-  fullName = "WorkCapacityUsage"
-  _parent = [
-    salesforce.WorkCapacityUsage,
-  ]
-  _alias = "WorkCapacityUsage"
-}

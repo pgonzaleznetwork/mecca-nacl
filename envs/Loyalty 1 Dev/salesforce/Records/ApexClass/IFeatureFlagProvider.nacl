@@ -1,7 +1,0 @@
-salesforce.ApexClass IFeatureFlagProvider {
-  apiVersion = 57
-  status = "Active"
-  fullName = "IFeatureFlagProvider"
-  content = file("salesforce/Records/ApexClass/IFeatureFlagProvider.cls")
-  _alias = "IFeatureFlagProvider"
-}

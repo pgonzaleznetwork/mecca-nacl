@@ -1,9 +1,0 @@
-salesforce.ListView VoucherDefinition_All_VoucherDefinitions {
-  fullName = "VoucherDefinition.All_VoucherDefinitions"
-  filterScope = "Everything"
-  label = "allVoucherDefinitions"
-  _parent = [
-    salesforce.VoucherDefinition,
-  ]
-  _alias = "allVoucherDefinitions"
-}

@@ -1,9 +1,0 @@
-salesforce.ListView LoyaltyProgramBadge_All_LoyaltyProgramBadges {
-  fullName = "LoyaltyProgramBadge.All_LoyaltyProgramBadges"
-  filterScope = "Everything"
-  label = "allLoyaltyProgramBadges"
-  _parent = [
-    salesforce.LoyaltyProgramBadge,
-  ]
-  _alias = "allLoyaltyProgramBadges"
-}

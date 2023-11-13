@@ -1,7 +1,0 @@
-salesforce.SharingRules LoyaltyProgramMemberMerge {
-  fullName = "LoyaltyProgramMemberMerge"
-  _parent = [
-    salesforce.LoyaltyProgramMemberMerge,
-  ]
-  _alias = "LoyaltyProgramMemberMerge"
-}

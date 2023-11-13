@@ -1,5 +1,0 @@
-salesforce.Account NTO {
-  CleanStatus = "Pending"
-  Name = "NTO"
-  _alias = "NTO"
-}

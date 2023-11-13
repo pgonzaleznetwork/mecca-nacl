@@ -1,4 +1,0 @@
-salesforce.SharingRules WorkAccess {
-  fullName = "WorkAccess"
-  _alias = "WorkAccess"
-}

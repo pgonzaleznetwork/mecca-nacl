@@ -1,9 +1,0 @@
-salesforce.ListView Swarm_My_Swarms {
-  fullName = "Swarm.My_Swarms"
-  filterScope = "Mine"
-  label = "MySwarms"
-  _parent = [
-    salesforce.Swarm,
-  ]
-  _alias = "MySwarms"
-}

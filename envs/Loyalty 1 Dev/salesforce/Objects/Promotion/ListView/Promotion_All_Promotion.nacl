@@ -1,9 +1,0 @@
-salesforce.ListView Promotion_All_Promotion {
-  fullName = "Promotion.All_Promotion"
-  filterScope = "Everything"
-  label = "Recently Viewed Loyalty Program Promotions"
-  _parent = [
-    salesforce.Promotion,
-  ]
-  _alias = "Recently Viewed Loyalty Program Promotions"
-}

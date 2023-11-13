@@ -1,9 +1,0 @@
-salesforce.ListView EngagementTopic_All_EngagementTopics {
-  fullName = "EngagementTopic.All_EngagementTopics"
-  filterScope = "Everything"
-  label = "All Engagement Topics"
-  _parent = [
-    salesforce.EngagementTopic,
-  ]
-  _alias = "All Engagement Topics"
-}

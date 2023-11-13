@@ -1,9 +1,0 @@
-salesforce.ListView Voucher_All_Vouchers {
-  fullName = "Voucher.All_Vouchers"
-  filterScope = "Everything"
-  label = "allVouchers"
-  _parent = [
-    salesforce.Voucher,
-  ]
-  _alias = "allVouchers"
-}

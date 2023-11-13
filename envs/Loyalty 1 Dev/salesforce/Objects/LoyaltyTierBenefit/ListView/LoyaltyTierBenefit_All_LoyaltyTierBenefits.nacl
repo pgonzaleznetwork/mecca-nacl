@@ -1,9 +1,0 @@
-salesforce.ListView LoyaltyTierBenefit_All_LoyaltyTierBenefits {
-  fullName = "LoyaltyTierBenefit.All_LoyaltyTierBenefits"
-  filterScope = "Everything"
-  label = "allLoyaltyTierBenefits"
-  _parent = [
-    salesforce.LoyaltyTierBenefit,
-  ]
-  _alias = "allLoyaltyTierBenefits"
-}

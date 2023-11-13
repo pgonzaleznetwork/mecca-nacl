@@ -1,5 +1,0 @@
-salesforce.JournalSubType Purchase {
-  JournalTypeId = salesforce.JournalType.instance.Accrual
-  Name = "Purchase"
-  _alias = "Accrual Purchase"
-}

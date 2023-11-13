@@ -1,7 +1,0 @@
-salesforce.SharingRules ShiftTemplate {
-  fullName = "ShiftTemplate"
-  _parent = [
-    salesforce.ShiftTemplate,
-  ]
-  _alias = "ShiftTemplate"
-}

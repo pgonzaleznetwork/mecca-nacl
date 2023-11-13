@@ -1,7 +1,0 @@
-salesforce.SharingRules ApptBundlePolicy {
-  fullName = "ApptBundlePolicy"
-  _parent = [
-    salesforce.ApptBundlePolicy,
-  ]
-  _alias = "ApptBundlePolicy"
-}

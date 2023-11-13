@@ -1,7 +1,0 @@
-salesforce.SharingRules WorkThanks {
-  fullName = "WorkThanks"
-  _parent = [
-    salesforce.WorkThanks,
-  ]
-  _alias = "WorkThanks"
-}

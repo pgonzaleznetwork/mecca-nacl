@@ -1,9 +1,0 @@
-salesforce.ListView EngagementInteraction_My_EngagementInteractions {
-  fullName = "EngagementInteraction.My_EngagementInteractions"
-  filterScope = "Mine"
-  label = "My Engagement Interactions"
-  _parent = [
-    salesforce.EngagementInteraction,
-  ]
-  _alias = "My Engagement Interactions"
-}

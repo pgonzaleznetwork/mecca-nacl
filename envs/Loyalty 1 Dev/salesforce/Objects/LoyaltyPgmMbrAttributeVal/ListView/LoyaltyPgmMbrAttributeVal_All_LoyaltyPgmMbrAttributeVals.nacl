@@ -1,9 +1,0 @@
-salesforce.ListView LoyaltyPgmMbrAttributeVal_All_LoyaltyPgmMbrAttributeVals {
-  fullName = "LoyaltyPgmMbrAttributeVal.All_LoyaltyPgmMbrAttributeVals"
-  filterScope = "Everything"
-  label = "allLoyaltyPgmMbrAttributeVals"
-  _parent = [
-    salesforce.LoyaltyPgmMbrAttributeVal,
-  ]
-  _alias = "allLoyaltyPgmMbrAttributeVals"
-}

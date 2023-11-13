@@ -1,9 +1,0 @@
-salesforce.ListView LoyaltyPgmPtnrLdgrSummary_All_LoyaltyPgmPtnrLdgrSummarys {
-  fullName = "LoyaltyPgmPtnrLdgrSummary.All_LoyaltyPgmPtnrLdgrSummarys"
-  filterScope = "Everything"
-  label = "allLoyaltyPgmPtnrLdgrSummaries"
-  _parent = [
-    salesforce.LoyaltyPgmPtnrLdgrSummary,
-  ]
-  _alias = "allLoyaltyPgmPtnrLdgrSummaries"
-}

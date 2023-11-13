@@ -1,9 +1,0 @@
-salesforce.ListView ServiceResourcePreference_All_ServiceResourcePreferences {
-  fullName = "ServiceResourcePreference.All_ServiceResourcePreferences"
-  filterScope = "Everything"
-  label = "All Service Resource Preferences"
-  _parent = [
-    salesforce.ServiceResourcePreference,
-  ]
-  _alias = "All Service Resource Preferences"
-}

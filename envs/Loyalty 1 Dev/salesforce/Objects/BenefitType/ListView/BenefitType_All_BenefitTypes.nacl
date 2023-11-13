@@ -1,9 +1,0 @@
-salesforce.ListView BenefitType_All_BenefitTypes {
-  fullName = "BenefitType.All_BenefitTypes"
-  filterScope = "Everything"
-  label = "allBenefitTypes"
-  _parent = [
-    salesforce.BenefitType,
-  ]
-  _alias = "allBenefitTypes"
-}

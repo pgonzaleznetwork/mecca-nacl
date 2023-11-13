@@ -1,9 +1,0 @@
-salesforce.ListView MaintenancePlan_My_MaintenancePlans {
-  fullName = "MaintenancePlan.My_MaintenancePlans"
-  filterScope = "Mine"
-  label = "My Maintenance Plans"
-  _parent = [
-    salesforce.MaintenancePlan,
-  ]
-  _alias = "My Maintenance Plans"
-}

@@ -1,9 +1,0 @@
-salesforce.ListView WorkPlanSelectionRule_All_WorkPlanSelectionRules {
-  fullName = "WorkPlanSelectionRule.All_WorkPlanSelectionRules"
-  filterScope = "Everything"
-  label = "All Work Plan Selection Rules"
-  _parent = [
-    salesforce.WorkPlanSelectionRule,
-  ]
-  _alias = "All Work Plan Selection Rules"
-}

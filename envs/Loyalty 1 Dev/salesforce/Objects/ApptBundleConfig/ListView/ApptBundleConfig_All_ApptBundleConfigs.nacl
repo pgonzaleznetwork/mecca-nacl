@@ -1,9 +1,0 @@
-salesforce.ListView ApptBundleConfig_All_ApptBundleConfigs {
-  fullName = "ApptBundleConfig.All_ApptBundleConfigs"
-  filterScope = "Everything"
-  label = "All Appointment Bundle Configs"
-  _parent = [
-    salesforce.ApptBundleConfig,
-  ]
-  _alias = "All Appointment Bundle Configs"
-}

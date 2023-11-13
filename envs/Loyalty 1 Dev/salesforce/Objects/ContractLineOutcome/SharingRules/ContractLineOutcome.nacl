@@ -1,7 +1,0 @@
-salesforce.SharingRules ContractLineOutcome {
-  fullName = "ContractLineOutcome"
-  _parent = [
-    salesforce.ContractLineOutcome,
-  ]
-  _alias = "ContractLineOutcome"
-}

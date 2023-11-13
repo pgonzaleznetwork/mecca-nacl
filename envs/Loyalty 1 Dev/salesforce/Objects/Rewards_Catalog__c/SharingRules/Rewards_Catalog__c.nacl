@@ -1,7 +1,0 @@
-salesforce.SharingRules Rewards_Catalog__c {
-  fullName = "Rewards_Catalog__c"
-  _parent = [
-    salesforce.Rewards_Catalog__c,
-  ]
-  _alias = "Rewards_Catalog__c"
-}

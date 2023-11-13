@@ -1,9 +1,0 @@
-salesforce.ListView PromotionMarketSegment_All_PromotionMarketSegments {
-  fullName = "PromotionMarketSegment.All_PromotionMarketSegments"
-  filterScope = "Everything"
-  label = "allPromotionMarketSegments"
-  _parent = [
-    salesforce.PromotionMarketSegment,
-  ]
-  _alias = "allPromotionMarketSegments"
-}

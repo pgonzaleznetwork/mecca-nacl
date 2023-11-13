@@ -1,9 +1,0 @@
-salesforce.ListView LoyaltyProgramPartnerLedger_All_LoyaltyProgramPartnerLedgers {
-  fullName = "LoyaltyProgramPartnerLedger.All_LoyaltyProgramPartnerLedgers"
-  filterScope = "Everything"
-  label = "allLoyaltyProgramPartnerLedgers"
-  _parent = [
-    salesforce.LoyaltyProgramPartnerLedger,
-  ]
-  _alias = "allLoyaltyProgramPartnerLedgers"
-}

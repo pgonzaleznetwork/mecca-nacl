@@ -1,9 +1,0 @@
-salesforce.ListView LoyaltyTier_All_LoyaltyTiers {
-  fullName = "LoyaltyTier.All_LoyaltyTiers"
-  filterScope = "Everything"
-  label = "allLoyaltyTiers"
-  _parent = [
-    salesforce.LoyaltyTier,
-  ]
-  _alias = "allLoyaltyTiers"
-}

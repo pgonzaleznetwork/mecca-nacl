@@ -1,9 +1,0 @@
-salesforce.ListView JournalType_All_JournalTypes {
-  fullName = "JournalType.All_JournalTypes"
-  filterScope = "Everything"
-  label = "allJournalTypes"
-  _parent = [
-    salesforce.JournalType,
-  ]
-  _alias = "allJournalTypes"
-}

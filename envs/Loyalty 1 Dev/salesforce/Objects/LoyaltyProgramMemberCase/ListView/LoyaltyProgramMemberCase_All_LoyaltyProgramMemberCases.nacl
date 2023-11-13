@@ -1,9 +1,0 @@
-salesforce.ListView LoyaltyProgramMemberCase_All_LoyaltyProgramMemberCases {
-  fullName = "LoyaltyProgramMemberCase.All_LoyaltyProgramMemberCases"
-  filterScope = "Everything"
-  label = "allLoyaltyProgramMemberCases"
-  _parent = [
-    salesforce.LoyaltyProgramMemberCase,
-  ]
-  _alias = "allLoyaltyProgramMemberCases"
-}

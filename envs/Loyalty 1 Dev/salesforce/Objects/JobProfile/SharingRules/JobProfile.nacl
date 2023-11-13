@@ -1,7 +1,0 @@
-salesforce.SharingRules JobProfile {
-  fullName = "JobProfile"
-  _parent = [
-    salesforce.JobProfile,
-  ]
-  _alias = "JobProfile"
-}

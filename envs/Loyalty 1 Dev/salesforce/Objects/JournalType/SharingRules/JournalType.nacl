@@ -1,7 +1,0 @@
-salesforce.SharingRules JournalType {
-  fullName = "JournalType"
-  _parent = [
-    salesforce.JournalType,
-  ]
-  _alias = "JournalType"
-}
