@@ -1,0 +1,15 @@
+salesforce.ApexClass FeatureFlagsMock {
+  apiVersion = 57
+  status = "Active"
+  fullName = "FeatureFlagsMock"
+  content = file("salesforce/Records/ApexClass/FeatureFlagsMock.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.FeatureFlags
+    },
+    {
+      reference = salesforce.ApexClass.instance.IFeatureFlags
+    },
+  ]
+  _alias = "FeatureFlagsMock"
+}

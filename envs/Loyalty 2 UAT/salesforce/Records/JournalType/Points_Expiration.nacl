@@ -1,0 +1,6 @@
+salesforce.JournalType Points_Expiration@s {
+  Description = "Represents a transaction that expires points for a loyalty program member."
+  Name = "Points Expiration"
+  ProcessType = "Loyalty"
+  _alias = "Points Expiration"
+}

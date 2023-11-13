@@ -1,0 +1,76 @@
+salesforce.Layout TravelMode_Travel_Mode_Layout@bss {
+  excludeButtons = [
+    "Submit",
+  ]
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.TravelMode.field.Name
+            },
+            {
+              behavior = "Required"
+              field = salesforce.TravelMode.field.TransportType
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.TravelMode.field.CanUseTollRoads
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.TravelMode.field.IsTransportingHazmat
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = false
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.TravelMode.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.TravelMode.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "TravelMode-Travel Mode Layout"
+  _parent = [
+    salesforce.TravelMode,
+  ]
+  _alias = "TravelMode-Travel Mode Layout"
+}

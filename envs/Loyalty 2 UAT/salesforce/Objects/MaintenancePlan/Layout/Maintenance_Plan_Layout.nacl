@@ -1,0 +1,250 @@
+salesforce.Layout MaintenancePlan_Maintenance_Plan_Layout@bss {
+  excludeButtons = [
+    "Submit",
+  ]
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "General Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.MaintenancePlan.field.MaintenancePlanNumber
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.MaintenancePlan.field.WorkTypeId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.MaintenancePlan.field.AccountId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.MaintenancePlan.field.ServiceContractId
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.MaintenancePlan.field.StartDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.MaintenancePlan.field.EndDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Work Order Generation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.MaintenancePlan.field.WorkOrderGenerationMethod
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.MaintenancePlan.field.MaintenanceWindowStartDays
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.MaintenancePlan.field.MaintenanceWindowEndDays
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.MaintenancePlan.field.SvcApptGenerationMethod
+            },
+            {
+              behavior = "Required"
+              field = salesforce.MaintenancePlan.field.GenerationTimeframe
+            },
+            {
+              behavior = "Required"
+              field = salesforce.MaintenancePlan.field.GenerationTimeframeType
+            },
+            {
+              behavior = "Required"
+              field = salesforce.MaintenancePlan.field.NextSuggestedMaintenanceDate
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.MaintenancePlan.field.WorkOrderGenerationStatus
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Automation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.MaintenancePlan.field.DoesAutoGenerateWorkOrders
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.MaintenancePlan.field.GenerationHorizon
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.MaintenancePlan.field.DoesGenerateUponCompletion
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Description"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.MaintenancePlan.field.MaintenancePlanTitle
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.MaintenancePlan.field.Description
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.MaintenancePlan.field.OwnerId
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.MaintenancePlan.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.MaintenancePlan.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      fields = [
+        "Name",
+        "Asset",
+        "Status",
+        "SuggestedMaintenanceDate",
+      ]
+      relatedList = "WorkOrders"
+    },
+    {
+      fields = [
+        "Name",
+        "WorkOrder",
+        "Asset",
+        "Status",
+        "WorkType",
+        "SuggestedMaintenanceDate",
+      ]
+      relatedList = "WorkOrderLineItems"
+    },
+    {
+      fields = [
+        "Name",
+        "Asset",
+        "NextSuggestedMaintenanceDate",
+        "WorkType",
+      ]
+      relatedList = "MaintenanceAssets"
+    },
+    {
+      fields = [
+        "Name",
+        "SortOrder",
+        "RecurrencePattern",
+        "NextSuggestedMaintenanceDate",
+      ]
+      relatedList = "MaintenanceWorkRules"
+    },
+    {
+      relatedList = "RelatedFileList"
+    },
+    {
+      relatedList = "RelatedEntityHistoryList"
+    },
+    {
+      fields = [
+        "CreatedDate",
+        "StepStatus",
+        "OriginalActor",
+        "Actor",
+        "Comments",
+      ]
+      relatedList = "RelatedProcessHistoryList"
+    },
+    {
+      relatedList = "RelatedNoteList"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "MaintenancePlan-Maintenance Plan Layout"
+  _parent = [
+    salesforce.MaintenancePlan,
+  ]
+  _alias = "MaintenancePlan-Maintenance Plan Layout"
+}

@@ -1,0 +1,749 @@
+type salesforce.FlowOrchestrationWorkItem {
+  salesforce.Lookup AssigneeId {
+    apiName = "FlowOrchestrationWorkItem.AssigneeId"
+    relationshipName = "Assignee"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.Group,
+      salesforce.User,
+    ]
+    _required = true
+    label = "Assignee ID"
+    createable = false
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text Description {
+    apiName = "FlowOrchestrationWorkItem.Description"
+    length = 255
+    label = "Description"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Label {
+    apiName = "FlowOrchestrationWorkItem.Label"
+    length = 80
+    label = "Step"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "FlowOrchestrationWorkItem.OwnerId"
+    relationshipName = "Owner"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    label = "Owner ID"
+    createable = false
+    updateable = true
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup RelatedRecordId {
+    apiName = "FlowOrchestrationWorkItem.RelatedRecordId"
+    relationshipName = "RelatedRecord"
+    referenceTo = [
+      salesforce.Account,
+      "Address",
+      salesforce.ApptBundleAggrDurDnscale,
+      salesforce.ApptBundleAggrPolicy,
+      salesforce.ApptBundleConfig,
+      salesforce.ApptBundlePolicy,
+      salesforce.ApptBundlePolicySvcTerr,
+      salesforce.ApptBundlePropagatePolicy,
+      salesforce.ApptBundleRestrictPolicy,
+      salesforce.ApptBundleSortPolicy,
+      salesforce.Asset,
+      salesforce.AssetAction,
+      salesforce.AssetActionSource,
+      salesforce.AssetDowntimePeriod,
+      salesforce.AssetRelationship,
+      salesforce.AssetStatePeriod,
+      salesforce.AssetWarranty,
+      salesforce.AssignedResource,
+      salesforce.AssociatedLocation,
+      salesforce.AttributeDefinition,
+      salesforce.AttributePicklist,
+      salesforce.AttributePicklistValue,
+      salesforce.AuditTrailFileExport,
+      salesforce.AuthorizationForm,
+      salesforce.AuthorizationFormConsent,
+      salesforce.AuthorizationFormDataUse,
+      salesforce.AuthorizationFormText,
+      salesforce.BatchJob,
+      salesforce.BatchJobPart,
+      salesforce.BatchJobPartFailedRecord,
+      salesforce.Benefit,
+      salesforce.BenefitParameterValue,
+      salesforce.BenefitType,
+      salesforce.BusinessBrand,
+      salesforce.Case,
+      "CaseComment",
+      salesforce.CollaborationGroup,
+      salesforce.CommSubscription,
+      salesforce.CommSubscriptionChannelType,
+      salesforce.CommSubscriptionConsent,
+      salesforce.CommSubscriptionTiming,
+      salesforce.ConsumptionRate,
+      salesforce.ConsumptionSchedule,
+      salesforce.Contact,
+      salesforce.ContactPointAddress,
+      salesforce.ContactPointConsent,
+      salesforce.ContactPointEmail,
+      salesforce.ContactPointPhone,
+      salesforce.ContactPointTypeConsent,
+      salesforce.ContactRequest,
+      salesforce.Contract,
+      salesforce.ContractLineItem,
+      salesforce.ContractLineOutcome,
+      salesforce.ContractLineOutcomeData,
+      salesforce.CreditMemo,
+      salesforce.CreditMemoInvApplication,
+      salesforce.CreditMemoLine,
+      salesforce.Customer,
+      salesforce.DandBCompany,
+      salesforce.DataUseLegalBasis,
+      salesforce.DataUsePurpose,
+      salesforce.DigitalSignature,
+      salesforce.DuplicateRecordItem,
+      salesforce.DuplicateRecordSet,
+      salesforce.EmailMessage,
+      salesforce.EngagementAttendee,
+      salesforce.EngagementChannelType,
+      salesforce.EngagementInteraction,
+      salesforce.EngagementTopic,
+      salesforce.Entitlement,
+      salesforce.EntitlementContact,
+      salesforce.EntityMilestone,
+      salesforce.Expense,
+      salesforce.ExpenseReport,
+      salesforce.ExpenseReportEntry,
+      salesforce.ExpressionFilter,
+      salesforce.ExpressionFilterCriteria,
+      salesforce.ExternalEventMapping,
+      salesforce.FinanceBalanceSnapshot,
+      salesforce.FinanceTransaction,
+      salesforce.FlowOrchestrationInstance,
+      salesforce.Idea,
+      salesforce.Image,
+      salesforce.Individual,
+      salesforce.Invoice,
+      salesforce.InvoiceLine,
+      salesforce.JobProfile,
+      salesforce.JournalSubType,
+      salesforce.JournalType,
+      salesforce.Lead,
+      salesforce.Location,
+      salesforce.LocationGroup,
+      salesforce.LocationGroupAssignment,
+      salesforce.LoyaltyMemberCurrency,
+      salesforce.LoyaltyMemberTier,
+      salesforce.LoyaltyMembershipLifecycle,
+      salesforce.LoyaltyPartnerProduct,
+      salesforce.LoyaltyPgmEngmtAttrProm,
+      salesforce.LoyaltyPgmEngmtAttribute,
+      salesforce.LoyaltyPgmGroupMbrRlnsp,
+      salesforce.LoyaltyPgmMbrAttributeVal,
+      salesforce.LoyaltyPgmPartnerCurrency,
+      salesforce.LoyaltyPgmPartnerPromotion,
+      salesforce.LoyaltyPgmPtnrLdgrSummary,
+      salesforce.LoyaltyPgmPtnrPrepaidPack,
+      salesforce.LoyaltyProgram,
+      salesforce.LoyaltyProgramBadge,
+      salesforce.LoyaltyProgramCurrency,
+      salesforce.LoyaltyProgramMbrPromotion,
+      salesforce.LoyaltyProgramMember,
+      salesforce.LoyaltyProgramMemberBadge,
+      salesforce.LoyaltyProgramMemberCase,
+      salesforce.LoyaltyProgramMemberMerge,
+      salesforce.LoyaltyProgramPartner,
+      salesforce.LoyaltyProgramProcess,
+      salesforce.LoyaltyProgramProcessParameter,
+      salesforce.LoyaltyProgramProcessRule,
+      salesforce.LoyaltyTier,
+      salesforce.LoyaltyTierBenefit,
+      salesforce.LoyaltyTierGroup,
+      salesforce.Macro,
+      salesforce.MacroInstruction,
+      salesforce.MacroUsage,
+      salesforce.MaintenanceAsset,
+      salesforce.MaintenancePlan,
+      salesforce.MaintenanceWorkRule,
+      "ManagedContentVariant",
+      salesforce.MemberBenefit,
+      salesforce.OperatingHours,
+      salesforce.OperatingHoursHoliday,
+      salesforce.Opportunity,
+      salesforce.OpportunityRelatedDeleteLog,
+      salesforce.Order,
+      salesforce.OrderItem,
+      salesforce.OrgDeleteRequest,
+      salesforce.OrgMetricScanResult,
+      salesforce.OrgMetricScanSummary,
+      "Organization",
+      salesforce.PartyConsent,
+      salesforce.ProcessException,
+      salesforce.Product2,
+      salesforce.ProductCatalog,
+      salesforce.ProductCategory,
+      salesforce.ProductCategoryProduct,
+      salesforce.ProductConsumed,
+      salesforce.ProductConsumedState,
+      salesforce.ProductItem,
+      salesforce.ProductItemTransaction,
+      salesforce.ProductRequest,
+      salesforce.ProductRequestLineItem,
+      salesforce.ProductRequired,
+      salesforce.ProductServiceCampaign,
+      salesforce.ProductServiceCampaignItem,
+      salesforce.ProductTransfer,
+      salesforce.ProductTransferState,
+      salesforce.ProductWarrantyTerm,
+      salesforce.ProfileSkill,
+      salesforce.ProfileSkillEndorsement,
+      salesforce.ProfileSkillUser,
+      salesforce.Promotion,
+      salesforce.PromotionLoyaltyPtnrProdt,
+      salesforce.PromotionMarketSegment,
+      salesforce.PromptAction,
+      salesforce.PromptError,
+      salesforce.QuickText,
+      salesforce.QuickTextUsage,
+      salesforce.RecordAlert,
+      salesforce.RecordsetFltrCritMonitor,
+      salesforce.ResourceAbsence,
+      salesforce.ResourcePreference,
+      salesforce.ReturnOrder,
+      salesforce.ReturnOrderLineItem,
+      salesforce.Rewards_Catalog__c,
+      salesforce.SchedulingConstraint,
+      salesforce.Seller,
+      salesforce.SerializedProduct,
+      salesforce.SerializedProductTransaction,
+      salesforce.ServiceAppointment,
+      salesforce.ServiceContract,
+      salesforce.ServiceCrew,
+      salesforce.ServiceCrewMember,
+      salesforce.ServiceReport,
+      salesforce.ServiceResource,
+      salesforce.ServiceResourceCapacity,
+      salesforce.ServiceResourceSkill,
+      salesforce.ServiceTerritory,
+      salesforce.ServiceTerritoryLocation,
+      salesforce.ServiceTerritoryMember,
+      salesforce.Shift,
+      salesforce.ShiftPattern,
+      salesforce.ShiftPatternEntry,
+      salesforce.Shipment,
+      salesforce.ShipmentItem,
+      salesforce.Site,
+      salesforce.SkillRequirement,
+      salesforce.Solution,
+      salesforce.StreamingChannel,
+      salesforce.Swarm,
+      salesforce.SwarmMember,
+      salesforce.TableauHostMapping,
+      salesforce.TimeSheet,
+      salesforce.TimeSheetEntry,
+      salesforce.TimeSlot,
+      salesforce.Topic,
+      salesforce.TransactionJournal,
+      salesforce.TravelMode,
+      salesforce.UnitOfMeasure,
+      salesforce.User,
+      "UserLicense",
+      salesforce.UserProvisioningRequest,
+      salesforce.Voucher,
+      salesforce.VoucherDefinition,
+      salesforce.WarrantyTerm,
+      salesforce.WorkBadge,
+      salesforce.WorkBadgeDefinition,
+      salesforce.WorkCapacityAvailability,
+      salesforce.WorkCapacityLimit,
+      salesforce.WorkCapacityUsage,
+      salesforce.WorkOrder,
+      salesforce.WorkOrderLineItem,
+      salesforce.WorkPlan,
+      salesforce.WorkPlanSelectionRule,
+      salesforce.WorkPlanTemplate,
+      salesforce.WorkPlanTemplateEntry,
+      salesforce.WorkStep,
+      salesforce.WorkStepTemplate,
+      salesforce.WorkThanks,
+      salesforce.WorkType,
+      salesforce.WorkTypeGroup,
+      salesforce.WorkTypeGroupMember,
+    ]
+    label = "Context Record ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist ScreenFlow {
+    apiName = "FlowOrchestrationWorkItem.ScreenFlow"
+    valueSet = [
+      {
+        fullName = "benefits__Issue_Free_Product_Sample"
+        isActive = true
+        label = "benefits__Issue_Free_Product_Sample"
+        default = false
+      },
+      {
+        fullName = "benefits__Issue_Voucher"
+        isActive = true
+        label = "benefits__Issue_Voucher"
+        default = false
+      },
+      {
+        fullName = "benefits_entl__Assign_Support_Entl"
+        isActive = true
+        label = "benefits_entl__Assign_Support_Entl"
+        default = false
+      },
+      {
+        fullName = "cms_orch__CMS_BasicApprovalRequest"
+        isActive = true
+        label = "cms_orch__CMS_BasicApprovalRequest"
+        default = false
+      },
+      {
+        fullName = "cms_orch__CMS_EvalApprovalStepStatus"
+        isActive = true
+        label = "cms_orch__CMS_EvalApprovalStepStatus"
+        default = false
+      },
+      {
+        fullName = "cms_orch__CMS_NotifyRequester"
+        isActive = true
+        label = "cms_orch__CMS_NotifyRequester"
+        default = false
+      },
+      {
+        fullName = "cms_orch__CMS_ReviewContent"
+        isActive = true
+        label = "cms_orch__CMS_ReviewContent"
+        default = false
+      },
+      {
+        fullName = "cms_orch__CMS_ReviseContent"
+        isActive = true
+        label = "cms_orch__CMS_ReviseContent"
+        default = false
+      },
+      {
+        fullName = "cms_orch__CMS_WithdrawReviewRequest"
+        isActive = true
+        label = "cms_orch__CMS_WithdrawReviewRequest"
+        default = false
+      },
+      {
+        fullName = "industries_fsc__CreateSlackAccChannel"
+        isActive = true
+        label = "industries_fsc__CreateSlackAccChannel"
+        default = false
+      },
+      {
+        fullName = "industries_fsc__ReferralNotification"
+        isActive = true
+        label = "industries_fsc__ReferralNotification"
+        default = false
+      },
+      {
+        fullName = "industries_loyalty_promo__Add_Segments"
+        isActive = true
+        label = "industries_loyalty_promo__Add_Segments"
+        default = false
+      },
+      {
+        fullName = "industries_loyalty_promo__ApplyPromo"
+        isActive = true
+        label = "industries_loyalty_promo__ApplyPromo"
+        default = false
+      },
+      {
+        fullName = "loyalty_se__idv_loyalty"
+        isActive = true
+        label = "loyalty_se__idv_loyalty"
+        default = false
+      },
+      {
+        fullName = "omnichannel_chat__QueuesChat"
+        isActive = true
+        label = "omnichannel_chat__QueuesChat"
+        default = false
+      },
+      {
+        fullName = "omnichannel_chat__SkillsChat"
+        isActive = true
+        label = "omnichannel_chat__SkillsChat"
+        default = false
+      },
+      {
+        fullName = "omnichannel_messaging__MsgRouting"
+        isActive = true
+        label = "omnichannel_messaging__MsgRouting"
+        default = false
+      },
+      {
+        fullName = "omnichannel_voice__VoiceRouting"
+        isActive = true
+        label = "omnichannel_voice__VoiceRouting"
+        default = false
+      },
+      {
+        fullName = "opencti__SCV_Basic_Routing_Flow"
+        isActive = true
+        label = "opencti__SCV_Basic_Routing_Flow"
+        default = false
+      },
+      {
+        fullName = "runtime_appointmentbooking__Create_WL"
+        isActive = true
+        label = "runtime_appointmentbooking__Create_WL"
+        default = false
+      },
+      {
+        fullName = "runtime_appointmentbooking__Flow"
+        isActive = true
+        label = "runtime_appointmentbooking__Flow"
+        default = false
+      },
+      {
+        fullName = "runtime_appointmentbooking__Guest_Flow"
+        isActive = true
+        label = "runtime_appointmentbooking__Guest_Flow"
+        default = false
+      },
+      {
+        fullName = "runtime_appointmentbooking__In_Cancel"
+        isActive = true
+        label = "runtime_appointmentbooking__In_Cancel"
+        default = false
+      },
+      {
+        fullName = "runtime_appointmentbooking__In_Modify"
+        isActive = true
+        label = "runtime_appointmentbooking__In_Modify"
+        default = false
+      },
+      {
+        fullName = "runtime_appointmentbooking__In_New"
+        isActive = true
+        label = "runtime_appointmentbooking__In_New"
+        default = false
+      },
+      {
+        fullName = "runtime_appointmentbooking__Inv_Book"
+        isActive = true
+        label = "runtime_appointmentbooking__Inv_Book"
+        default = false
+      },
+      {
+        fullName = "runtime_appointmentbooking__Inv_Gen"
+        isActive = true
+        label = "runtime_appointmentbooking__Inv_Gen"
+        default = false
+      },
+      {
+        fullName = "runtime_appointmentbooking__Out_Modify"
+        isActive = true
+        label = "runtime_appointmentbooking__Out_Modify"
+        default = false
+      },
+      {
+        fullName = "runtime_appointmentbooking__send_Invt"
+        isActive = true
+        label = "runtime_appointmentbooking__send_Invt"
+        default = false
+      },
+      {
+        fullName = "runtime_commerce_oms__Cancel_Item"
+        isActive = true
+        label = "runtime_commerce_oms__Cancel_Item"
+        default = false
+      },
+      {
+        fullName = "runtime_commerce_oms__Create_OS"
+        isActive = true
+        label = "runtime_commerce_oms__Create_OS"
+        default = false
+      },
+      {
+        fullName = "runtime_commerce_oms__Create_PE"
+        isActive = true
+        label = "runtime_commerce_oms__Create_PE"
+        default = false
+      },
+      {
+        fullName = "runtime_commerce_oms__Return_Item"
+        isActive = true
+        label = "runtime_commerce_oms__Return_Item"
+        default = false
+      },
+      {
+        fullName = "runtime_industries_loyalty__Merge"
+        isActive = true
+        label = "runtime_industries_loyalty__Merge"
+        default = false
+      },
+      {
+        fullName = "runtime_industries_recurrence__Orch"
+        isActive = true
+        label = "runtime_industries_recurrence__Orch"
+        default = false
+      },
+      {
+        fullName = "runtime_industries_recurrence__Schdlr"
+        isActive = true
+        label = "runtime_industries_recurrence__Schdlr"
+        default = false
+      },
+      {
+        fullName = "runtime_payments__PayNowWithProducts"
+        isActive = true
+        label = "runtime_payments__PayNowWithProducts"
+        default = false
+      },
+      {
+        fullName = "serviceprocess__attempt_fee_reversal"
+        isActive = true
+        label = "serviceprocess__attempt_fee_reversal"
+        default = false
+      },
+      {
+        fullName = "serviceprocess__auconflow"
+        isActive = true
+        label = "serviceprocess__auconflow"
+        default = false
+      },
+      {
+        fullName = "serviceprocess__auporchestrator"
+        isActive = true
+        label = "serviceprocess__auporchestrator"
+        default = false
+      },
+      {
+        fullName = "serviceprocess__ausflow"
+        isActive = true
+        label = "serviceprocess__ausflow"
+        default = false
+      },
+      {
+        fullName = "serviceprocess__auwakeflow"
+        isActive = true
+        label = "serviceprocess__auwakeflow"
+        default = false
+      },
+      {
+        fullName = "serviceprocess__confirm_fee_reversal"
+        isActive = true
+        label = "serviceprocess__confirm_fee_reversal"
+        default = false
+      },
+      {
+        fullName = "serviceprocess__fsc_fee_reversal_flow"
+        isActive = true
+        label = "serviceprocess__fsc_fee_reversal_flow"
+        default = false
+      },
+      {
+        fullName = "serviceprocess__review_fee_reversal"
+        isActive = true
+        label = "serviceprocess__review_fee_reversal"
+        default = false
+      },
+      {
+        fullName = "setup_se__baseidv"
+        isActive = true
+        label = "setup_se__baseidv"
+        default = false
+      },
+      {
+        fullName = "setup_se__idv"
+        isActive = true
+        label = "setup_se__idv"
+        default = false
+      },
+      {
+        fullName = "setup_se__idvbase"
+        isActive = true
+        label = "setup_se__idvbase"
+        default = false
+      },
+      {
+        fullName = "setup_se__idvlinked"
+        isActive = true
+        label = "setup_se__idvlinked"
+        default = false
+      },
+      {
+        fullName = "setup_se__idvprimary"
+        isActive = true
+        label = "setup_se__idvprimary"
+        default = false
+      },
+      {
+        fullName = "setup_se__idvsecondary"
+        isActive = true
+        label = "setup_se__idvsecondary"
+        default = false
+      },
+      {
+        fullName = "setup_service_experience__Create_Case"
+        isActive = true
+        label = "setup_service_experience__Create_Case"
+        default = false
+      },
+      {
+        fullName = "setup_service_experience__Reset_Pwd"
+        isActive = true
+        label = "setup_service_experience__Reset_Pwd"
+        default = false
+      },
+      {
+        fullName = "setup_service_experience__Verify_Cust"
+        isActive = true
+        label = "setup_service_experience__Verify_Cust"
+        default = false
+      },
+      {
+        fullName = "setup_service_folmessaging__MSContact"
+        isActive = true
+        label = "setup_service_folmessaging__MSContact"
+        default = false
+      },
+    ]
+    restricted = true
+    label = "Screen Flow ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist Status {
+    apiName = "FlowOrchestrationWorkItem.Status"
+    valueSet = [
+      {
+        fullName = "Assigned"
+        isActive = true
+        label = "Assigned"
+        default = false
+      },
+      {
+        fullName = "Completed"
+        isActive = true
+        label = "Completed"
+        default = false
+      },
+    ]
+    restricted = true
+    _required = true
+    label = "Status"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup StepInstanceId {
+    apiName = "FlowOrchestrationWorkItem.StepInstanceId"
+    relationshipName = "StepInstance"
+    referenceTo = [
+      salesforce.FlowOrchestrationStepInstance,
+    ]
+    label = "Orchestration Step Run ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "FlowOrchestrationWorkItem.Id"
+    label = "Orchestration Work Item ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "FlowOrchestrationWorkItem.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "FlowOrchestrationWorkItem.Name"
+    label = "Name"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "FlowOrchestrationWorkItem.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "FlowOrchestrationWorkItem.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "FlowOrchestrationWorkItem.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "FlowOrchestrationWorkItem.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "FlowOrchestrationWorkItem.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.LongTextArea ScreenFlowInputs {
+    apiName = "FlowOrchestrationWorkItem.ScreenFlowInputs"
+    length = 32768
+    label = "Screen Flow Inputs"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

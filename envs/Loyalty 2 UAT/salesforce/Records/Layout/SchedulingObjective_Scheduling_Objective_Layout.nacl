@@ -1,0 +1,43 @@
+salesforce.Layout SchedulingObjective_Scheduling_Objective_Layout@bss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = "MasterLabel"
+            },
+            {
+              behavior = "Edit"
+              field = "Description"
+            },
+            {
+              behavior = "Required"
+              field = "SchedulingObjectiveType"
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showHighlightsPanel = false
+  showInteractionLogPanel = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "SchedulingObjective-Scheduling Objective Layout"
+  _alias = "SchedulingObjective-Scheduling Objective Layout"
+}

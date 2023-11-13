@@ -1,0 +1,100 @@
+type salesforce.ApptBundlePolicySvcTerr {
+  salesforce.MasterDetail BundlePolicyId {
+    apiName = "ApptBundlePolicySvcTerr.BundlePolicyId"
+    relationshipName = "BundlePolicy"
+    referenceTo = [
+      salesforce.ApptBundlePolicy,
+    ]
+    _required = true
+    label = "Appointment Bundle Policy ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Text Name {
+    apiName = "ApptBundlePolicySvcTerr.Name"
+    inlineHelpText = "Enter a unique name."
+    length = 255
+    _required = true
+    label = "Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Lookup ServiceTerritoryId {
+    apiName = "ApptBundlePolicySvcTerr.ServiceTerritoryId"
+    relationshipName = "ServiceTerritory"
+    referenceTo = [
+      salesforce.ServiceTerritory,
+    ]
+    label = "Territory ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "ApptBundlePolicySvcTerr.Id"
+    label = "Appointment Bundle Policy Service Territory ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ApptBundlePolicySvcTerr.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ApptBundlePolicySvcTerr.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ApptBundlePolicySvcTerr.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ApptBundlePolicySvcTerr.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ApptBundlePolicySvcTerr.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ApptBundlePolicySvcTerr.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

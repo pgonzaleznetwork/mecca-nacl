@@ -1,0 +1,31 @@
+type salesforce.BatchCalcJobCustomNode {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string description {
+  }
+  string extensionName {
+  }
+  string extensionNamespace {
+  }
+  string label {
+  }
+  string name {
+  }
+  salesforce.BatchCalcJobCustomNodeParameter parameters {
+  }
+  string sources {
+  }
+  metadataType = "BatchCalcJobCustomNode"
+}

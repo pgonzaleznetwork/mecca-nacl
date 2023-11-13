@@ -1,0 +1,1281 @@
+type salesforce.Macro {
+  salesforce.Html Description {
+    apiName = "Macro.Description"
+    length = 4096
+    label = "Description"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup FolderId {
+    apiName = "Macro.FolderId"
+    relationshipName = "Folder"
+    referenceTo = [
+      "Folder",
+    ]
+    label = "Folder ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox IsAlohaSupported {
+    apiName = "Macro.IsAlohaSupported"
+    defaultValue = false
+    label = "Supports Classic"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsLightningSupported {
+    apiName = "Macro.IsLightningSupported"
+    defaultValue = false
+    label = "Supports Lightning"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "Macro.Name"
+    length = 255
+    _required = true
+    label = "Macro Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "Macro.OwnerId"
+    relationshipName = "Owner"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    label = "Owner ID"
+    createable = true
+    updateable = true
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist StartingContext {
+    apiName = "Macro.StartingContext"
+    valueSet = [
+      {
+        fullName = "Account"
+        isActive = true
+        label = "Account"
+        default = false
+      },
+      {
+        fullName = "AlternativePaymentMethod"
+        isActive = true
+        label = "Alternative Payment Method"
+        default = false
+      },
+      {
+        fullName = "ApiAnomalyEventStore"
+        isActive = true
+        label = "API Anomaly Event Store"
+        default = false
+      },
+      {
+        fullName = "ApptBundleAggrDurDnscale"
+        isActive = true
+        label = "Appointment Bundle Aggregation Duration Downscale"
+        default = false
+      },
+      {
+        fullName = "ApptBundleAggrPolicy"
+        isActive = true
+        label = "Appointment Bundle Aggregation Policy"
+        default = false
+      },
+      {
+        fullName = "ApptBundleConfig"
+        isActive = true
+        label = "Appointment Bundle Config"
+        default = false
+      },
+      {
+        fullName = "ApptBundlePolicy"
+        isActive = true
+        label = "Appointment Bundle Policy"
+        default = false
+      },
+      {
+        fullName = "ApptBundlePolicySvcTerr"
+        isActive = true
+        label = "Appointment Bundle Policy Service Territory"
+        default = false
+      },
+      {
+        fullName = "ApptBundlePropagatePolicy"
+        isActive = true
+        label = "Appointment Bundle Propagation Policy"
+        default = false
+      },
+      {
+        fullName = "ApptBundleRestrictPolicy"
+        isActive = true
+        label = "Appointment Bundle Restriction Policy"
+        default = false
+      },
+      {
+        fullName = "ApptBundleSortPolicy"
+        isActive = true
+        label = "Appointment Bundle Sort Policy"
+        default = false
+      },
+      {
+        fullName = "AppointmentTopicTimeSlot"
+        isActive = true
+        label = "Appointment Topic Time Slot"
+        default = false
+      },
+      {
+        fullName = "Asset"
+        isActive = true
+        label = "Asset"
+        default = false
+      },
+      {
+        fullName = "AssetDowntimePeriod"
+        isActive = true
+        label = "Asset Downtime Period"
+        default = false
+      },
+      {
+        fullName = "AssetRelationship"
+        isActive = true
+        label = "Asset Relationship"
+        default = false
+      },
+      {
+        fullName = "AssetWarranty"
+        isActive = true
+        label = "Asset Warranty"
+        default = false
+      },
+      {
+        fullName = "AssignedResource"
+        isActive = true
+        label = "Assigned Resource"
+        default = false
+      },
+      {
+        fullName = "AttributeDefinition"
+        isActive = true
+        label = "Attribute Definition"
+        default = false
+      },
+      {
+        fullName = "AttributePicklist"
+        isActive = true
+        label = "Attribute Picklist"
+        default = false
+      },
+      {
+        fullName = "AttributePicklistValue"
+        isActive = true
+        label = "Attribute Picklist Value"
+        default = false
+      },
+      {
+        fullName = "AuthorizationForm"
+        isActive = true
+        label = "Authorization Form"
+        default = false
+      },
+      {
+        fullName = "AuthorizationFormConsent"
+        isActive = true
+        label = "Authorization Form Consent"
+        default = false
+      },
+      {
+        fullName = "AuthorizationFormDataUse"
+        isActive = true
+        label = "Authorization Form Data Use"
+        default = false
+      },
+      {
+        fullName = "AuthorizationFormText"
+        isActive = true
+        label = "Authorization Form Text"
+        default = false
+      },
+      {
+        fullName = "Benefit"
+        isActive = true
+        label = "Benefit"
+        default = false
+      },
+      {
+        fullName = "BenefitParameterValue"
+        isActive = true
+        label = "Benefit Parameter Value"
+        default = false
+      },
+      {
+        fullName = "BenefitType"
+        isActive = true
+        label = "Benefit Type"
+        default = false
+      },
+      {
+        fullName = "CardPaymentMethod"
+        isActive = true
+        label = "Card Payment Method"
+        default = false
+      },
+      {
+        fullName = "Case"
+        isActive = true
+        label = "Case"
+        default = false
+      },
+      {
+        fullName = "CaseServiceProcess"
+        isActive = true
+        label = "Case Service Process"
+        default = false
+      },
+      {
+        fullName = "ProductCatalog"
+        isActive = true
+        label = "Catalog"
+        default = false
+      },
+      {
+        fullName = "ProductCategory"
+        isActive = true
+        label = "Category"
+        default = false
+      },
+      {
+        fullName = "CollaborationRoom"
+        isActive = true
+        label = "Collaboration Room"
+        default = false
+      },
+      {
+        fullName = "CommSubscription"
+        isActive = true
+        label = "Communication Subscription"
+        default = false
+      },
+      {
+        fullName = "CommSubscriptionChannelType"
+        isActive = true
+        label = "Communication Subscription Channel Type"
+        default = false
+      },
+      {
+        fullName = "CommSubscriptionConsent"
+        isActive = true
+        label = "Communication Subscription Consent"
+        default = false
+      },
+      {
+        fullName = "CommSubscriptionTiming"
+        isActive = true
+        label = "Communication Subscription Timing"
+        default = false
+      },
+      {
+        fullName = "ConsumptionSchedule"
+        isActive = true
+        label = "Consumption Schedule"
+        default = false
+      },
+      {
+        fullName = "Contact"
+        isActive = true
+        label = "Contact"
+        default = false
+      },
+      {
+        fullName = "ContactPointAddress"
+        isActive = true
+        label = "Contact Point Address"
+        default = false
+      },
+      {
+        fullName = "ContactPointEmail"
+        isActive = true
+        label = "Contact Point Email"
+        default = false
+      },
+      {
+        fullName = "ContactPointPhone"
+        isActive = true
+        label = "Contact Point Phone"
+        default = false
+      },
+      {
+        fullName = "Contract"
+        isActive = true
+        label = "Contract"
+        default = false
+      },
+      {
+        fullName = "ContractLineItem"
+        isActive = true
+        label = "Contract Line Item"
+        default = false
+      },
+      {
+        fullName = "CredentialStuffingEventStore"
+        isActive = true
+        label = "Credential Stuffing Event Store"
+        default = false
+      },
+      {
+        fullName = "CreditMemo"
+        isActive = true
+        label = "Credit Memo"
+        default = false
+      },
+      {
+        fullName = "CreditMemoInvApplication"
+        isActive = true
+        label = "Credit Memo Invoice Application"
+        default = false
+      },
+      {
+        fullName = "CreditMemoLine"
+        isActive = true
+        label = "Credit Memo Line"
+        default = false
+      },
+      {
+        fullName = "DataUsePurpose"
+        isActive = true
+        label = "Data Use Purpose"
+        default = false
+      },
+      {
+        fullName = "DigitalWallet"
+        isActive = true
+        label = "Digital Wallet"
+        default = false
+      },
+      {
+        fullName = "EngagementAttendee"
+        isActive = true
+        label = "Engagement Attendee"
+        default = false
+      },
+      {
+        fullName = "EngagementChannelType"
+        isActive = true
+        label = "Engagement Channel Type"
+        default = false
+      },
+      {
+        fullName = "EngagementInteraction"
+        isActive = true
+        label = "Engagement Interaction"
+        default = false
+      },
+      {
+        fullName = "EngagementTopic"
+        isActive = true
+        label = "Engagement Topic"
+        default = false
+      },
+      {
+        fullName = "Event"
+        isActive = true
+        label = "Event"
+        default = false
+      },
+      {
+        fullName = "Expense"
+        isActive = true
+        label = "Expense"
+        default = false
+      },
+      {
+        fullName = "ExpenseReport"
+        isActive = true
+        label = "Expense Report"
+        default = false
+      },
+      {
+        fullName = "ExpenseReportEntry"
+        isActive = true
+        label = "Expense Report Entry"
+        default = false
+      },
+      {
+        fullName = "FeedItem"
+        isActive = true
+        label = "Feed Item"
+        default = false
+      },
+      {
+        fullName = "FinanceBalanceSnapshot"
+        isActive = true
+        label = "Finance Balance Snapshot"
+        default = false
+      },
+      {
+        fullName = "FinanceTransaction"
+        isActive = true
+        label = "Finance Transaction"
+        default = false
+      },
+      {
+        fullName = "CollaborationGroup"
+        isActive = true
+        label = "Group"
+        default = false
+      },
+      {
+        fullName = "Image"
+        isActive = true
+        label = "Image"
+        default = false
+      },
+      {
+        fullName = "Individual"
+        isActive = true
+        label = "Individual"
+        default = false
+      },
+      {
+        fullName = "Invoice"
+        isActive = true
+        label = "Invoice"
+        default = false
+      },
+      {
+        fullName = "InvoiceLine"
+        isActive = true
+        label = "Invoice Line"
+        default = false
+      },
+      {
+        fullName = "JobProfile"
+        isActive = true
+        label = "Job Profile"
+        default = false
+      },
+      {
+        fullName = "Lead"
+        isActive = true
+        label = "Lead"
+        default = false
+      },
+      {
+        fullName = "LegalEntity"
+        isActive = true
+        label = "Legal Entity"
+        default = false
+      },
+      {
+        fullName = "Location"
+        isActive = true
+        label = "Location"
+        default = false
+      },
+      {
+        fullName = "LocationGroup"
+        isActive = true
+        label = "Location Group"
+        default = false
+      },
+      {
+        fullName = "LoyaltyLedger"
+        isActive = true
+        label = "Loyalty Ledger"
+        default = false
+      },
+      {
+        fullName = "LoyaltyMemberCurrency"
+        isActive = true
+        label = "Loyalty Member Currency"
+        default = false
+      },
+      {
+        fullName = "LoyaltyMembershipLifecycle"
+        isActive = true
+        label = "Loyalty Membership Lifecycle"
+        default = false
+      },
+      {
+        fullName = "LoyaltyMemberTier"
+        isActive = true
+        label = "Loyalty Member Tier"
+        default = false
+      },
+      {
+        fullName = "LoyaltyPartnerProduct"
+        isActive = true
+        label = "Loyalty Partner Product"
+        default = false
+      },
+      {
+        fullName = "LoyaltyProgramProcessRule"
+        isActive = true
+        label = "Loyalty Process Rule"
+        default = false
+      },
+      {
+        fullName = "LoyaltyProgram"
+        isActive = true
+        label = "Loyalty Program"
+        default = false
+      },
+      {
+        fullName = "LoyaltyProgramBadge"
+        isActive = true
+        label = "Loyalty Program Badge"
+        default = false
+      },
+      {
+        fullName = "LoyaltyProgramCurrency"
+        isActive = true
+        label = "Loyalty Program Currency"
+        default = false
+      },
+      {
+        fullName = "LoyaltyPgmEngmtAttribute"
+        isActive = true
+        label = "Loyalty Program Engagement Attribute"
+        default = false
+      },
+      {
+        fullName = "LoyaltyPgmEngmtAttrProm"
+        isActive = true
+        label = "Loyalty Program Engagement Attribute Promotion"
+        default = false
+      },
+      {
+        fullName = "LoyaltyPgmGroupMbrRlnsp"
+        isActive = true
+        label = "Loyalty Program Group Member Relationship"
+        default = false
+      },
+      {
+        fullName = "LoyaltyProgramMember"
+        isActive = true
+        label = "Loyalty Program Member"
+        default = false
+      },
+      {
+        fullName = "LoyaltyPgmMbrAttributeVal"
+        isActive = true
+        label = "Loyalty Program Member Attribute Value"
+        default = false
+      },
+      {
+        fullName = "LoyaltyProgramMemberBadge"
+        isActive = true
+        label = "Loyalty Program Member Badge"
+        default = false
+      },
+      {
+        fullName = "LoyaltyProgramMemberCase"
+        isActive = true
+        label = "Loyalty Program Member Case"
+        default = false
+      },
+      {
+        fullName = "LoyaltyProgramMemberMerge"
+        isActive = true
+        label = "Loyalty Program Member Merge"
+        default = false
+      },
+      {
+        fullName = "LoyaltyProgramMbrPromotion"
+        isActive = true
+        label = "Loyalty Program Member Promotion"
+        default = false
+      },
+      {
+        fullName = "LoyaltyProgramPartner"
+        isActive = true
+        label = "Loyalty Program Partner"
+        default = false
+      },
+      {
+        fullName = "LoyaltyPgmPartnerCurrency"
+        isActive = true
+        label = "Loyalty Program Partner Currency"
+        default = false
+      },
+      {
+        fullName = "LoyaltyProgramPartnerLedger"
+        isActive = true
+        label = "Loyalty Program Partner Ledger"
+        default = false
+      },
+      {
+        fullName = "LoyaltyPgmPtnrLdgrSummary"
+        isActive = true
+        label = "Loyalty Program Partner Ledger Summary"
+        default = false
+      },
+      {
+        fullName = "LoyaltyPgmPtnrPrepaidPack"
+        isActive = true
+        label = "Loyalty Program Partner Prepaid Pack"
+        default = false
+      },
+      {
+        fullName = "LoyaltyPgmPartnerPromotion"
+        isActive = true
+        label = "Loyalty Program Partner Promotion"
+        default = false
+      },
+      {
+        fullName = "LoyaltyProgramProcess"
+        isActive = true
+        label = "Loyalty Program Process"
+        default = false
+      },
+      {
+        fullName = "LoyaltyProgramProcessParameter"
+        isActive = true
+        label = "Loyalty Program Process Parameter"
+        default = false
+      },
+      {
+        fullName = "LoyaltyTier"
+        isActive = true
+        label = "Loyalty Tier"
+        default = false
+      },
+      {
+        fullName = "LoyaltyTierBenefit"
+        isActive = true
+        label = "Loyalty Tier Benefit"
+        default = false
+      },
+      {
+        fullName = "LoyaltyTierGroup"
+        isActive = true
+        label = "Loyalty Tier Group"
+        default = false
+      },
+      {
+        fullName = "MaintenanceAsset"
+        isActive = true
+        label = "Maintenance Asset"
+        default = false
+      },
+      {
+        fullName = "MaintenancePlan"
+        isActive = true
+        label = "Maintenance Plan"
+        default = false
+      },
+      {
+        fullName = "MaintenanceWorkRule"
+        isActive = true
+        label = "Maintenance Work Rule"
+        default = false
+      },
+      {
+        fullName = "MemberBenefit"
+        isActive = true
+        label = "Member Benefit"
+        default = false
+      },
+      {
+        fullName = "MessagingSession"
+        isActive = true
+        label = "Messaging Session"
+        default = false
+      },
+      {
+        fullName = "MessagingEndUser"
+        isActive = true
+        label = "Messaging User"
+        default = false
+      },
+      {
+        fullName = "EntityMilestone"
+        isActive = true
+        label = "Object Milestone"
+        default = false
+      },
+      {
+        fullName = "OperatingHours"
+        isActive = true
+        label = "Operating Hours"
+        default = false
+      },
+      {
+        fullName = "Opportunity"
+        isActive = true
+        label = "Opportunity"
+        default = false
+      },
+      {
+        fullName = "OpportunityContactRole"
+        isActive = true
+        label = "Opportunity Contact Role"
+        default = false
+      },
+      {
+        fullName = "Order"
+        isActive = true
+        label = "Order"
+        default = false
+      },
+      {
+        fullName = "PartyConsent"
+        isActive = true
+        label = "Party Consent"
+        default = false
+      },
+      {
+        fullName = "Payment"
+        isActive = true
+        label = "Payment"
+        default = false
+      },
+      {
+        fullName = "PaymentAuthorization"
+        isActive = true
+        label = "Payment Authorization"
+        default = false
+      },
+      {
+        fullName = "PaymentAuthAdjustment"
+        isActive = true
+        label = "Payment Authorization Adjustment"
+        default = false
+      },
+      {
+        fullName = "PaymentGateway"
+        isActive = true
+        label = "Payment Gateway"
+        default = false
+      },
+      {
+        fullName = "PaymentGatewayLog"
+        isActive = true
+        label = "Payment Gateway Log"
+        default = false
+      },
+      {
+        fullName = "PaymentLineInvoice"
+        isActive = true
+        label = "Payment Line Invoice"
+        default = false
+      },
+      {
+        fullName = "ProcessException"
+        isActive = true
+        label = "Process Exception"
+        default = false
+      },
+      {
+        fullName = "Product2"
+        isActive = true
+        label = "Product"
+        default = false
+      },
+      {
+        fullName = "ProductConsumed"
+        isActive = true
+        label = "Product Consumed"
+        default = false
+      },
+      {
+        fullName = "ProductConsumedState"
+        isActive = true
+        label = "Product Consumed State"
+        default = false
+      },
+      {
+        fullName = "ProductItem"
+        isActive = true
+        label = "Product Item"
+        default = false
+      },
+      {
+        fullName = "ProductItemTransaction"
+        isActive = true
+        label = "Product Item Transaction"
+        default = false
+      },
+      {
+        fullName = "ProductRequest"
+        isActive = true
+        label = "Product Request"
+        default = false
+      },
+      {
+        fullName = "ProductRequestLineItem"
+        isActive = true
+        label = "Product Request Line Item"
+        default = false
+      },
+      {
+        fullName = "ProductRequired"
+        isActive = true
+        label = "Product Required"
+        default = false
+      },
+      {
+        fullName = "ProductServiceCampaign"
+        isActive = true
+        label = "Product Service Campaign"
+        default = false
+      },
+      {
+        fullName = "ProductServiceCampaignItem"
+        isActive = true
+        label = "Product Service Campaign Item"
+        default = false
+      },
+      {
+        fullName = "ProductTransfer"
+        isActive = true
+        label = "Product Transfer"
+        default = false
+      },
+      {
+        fullName = "ProductTransferState"
+        isActive = true
+        label = "Product Transfer State"
+        default = false
+      },
+      {
+        fullName = "ProductWarrantyTerm"
+        isActive = true
+        label = "Product Warranty Term"
+        default = false
+      },
+      {
+        fullName = "Promotion"
+        isActive = true
+        label = "Promotion"
+        default = false
+      },
+      {
+        fullName = "PromotionLoyaltyPtnrProdt"
+        isActive = true
+        label = "Promotion Loyalty Partner Product"
+        default = false
+      },
+      {
+        fullName = "PromotionMarketSegment"
+        isActive = true
+        label = "Promotion Market Segment"
+        default = false
+      },
+      {
+        fullName = "ContentDocumentListViewMapping"
+        isActive = true
+        label = "Quip Document from List View"
+        default = false
+      },
+      {
+        fullName = "RecordAlert"
+        isActive = true
+        label = "Record Alert"
+        default = false
+      },
+      {
+        fullName = "RecordsetFilterCriteria"
+        isActive = true
+        label = "Recordset Filter Criteria"
+        default = false
+      },
+      {
+        fullName = "RecordsetFltrCritMonitor"
+        isActive = true
+        label = "Recordset Filter Criteria Monitor"
+        default = false
+      },
+      {
+        fullName = "RecordsetFilterCriteriaRule"
+        isActive = true
+        label = "Recordset Filter Criteria Rule"
+        default = false
+      },
+      {
+        fullName = "Refund"
+        isActive = true
+        label = "Refund"
+        default = false
+      },
+      {
+        fullName = "RefundLinePayment"
+        isActive = true
+        label = "Refund Line Payment"
+        default = false
+      },
+      {
+        fullName = "ReportAnomalyEventStore"
+        isActive = true
+        label = "Report Anomaly Event Store"
+        default = false
+      },
+      {
+        fullName = "ResourceAbsence"
+        isActive = true
+        label = "Resource Absence"
+        default = false
+      },
+      {
+        fullName = "ServiceResourceCapacity"
+        isActive = true
+        label = "Resource Capacity"
+        default = false
+      },
+      {
+        fullName = "ReturnOrder"
+        isActive = true
+        label = "Return Order"
+        default = false
+      },
+      {
+        fullName = "ReturnOrderLineItem"
+        isActive = true
+        label = "Return Order Line Item"
+        default = false
+      },
+      {
+        fullName = "Rewards_Catalog__c"
+        isActive = true
+        label = "Rewards Catalog"
+        default = false
+      },
+      {
+        fullName = "SerializedProduct"
+        isActive = true
+        label = "Serialized Product"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment"
+        isActive = true
+        label = "Service Appointment"
+        default = false
+      },
+      {
+        fullName = "ServiceContract"
+        isActive = true
+        label = "Service Contract"
+        default = false
+      },
+      {
+        fullName = "ServiceCrew"
+        isActive = true
+        label = "Service Crew"
+        default = false
+      },
+      {
+        fullName = "ServiceCrewMember"
+        isActive = true
+        label = "Service Crew Member"
+        default = false
+      },
+      {
+        fullName = "ServiceResource"
+        isActive = true
+        label = "Service Resource"
+        default = false
+      },
+      {
+        fullName = "ServiceResourcePreference"
+        isActive = true
+        label = "Service Resource Preference"
+        default = false
+      },
+      {
+        fullName = "ServiceTerritory"
+        isActive = true
+        label = "Service Territory"
+        default = false
+      },
+      {
+        fullName = "ServiceTerritoryLocation"
+        isActive = true
+        label = "Service Territory Location"
+        default = false
+      },
+      {
+        fullName = "SessionHijackingEventStore"
+        isActive = true
+        label = "Session Hijacking Event Store"
+        default = false
+      },
+      {
+        fullName = "Shift"
+        isActive = true
+        label = "Shift"
+        default = false
+      },
+      {
+        fullName = "ShiftPattern"
+        isActive = true
+        label = "Shift Pattern"
+        default = false
+      },
+      {
+        fullName = "ShiftPatternEntry"
+        isActive = true
+        label = "Shift Pattern Entry"
+        default = false
+      },
+      {
+        fullName = "Shipment"
+        isActive = true
+        label = "Shipment"
+        default = false
+      },
+      {
+        fullName = "ShipmentItem"
+        isActive = true
+        label = "Shipment Item"
+        default = false
+      },
+      {
+        fullName = "ProfileSkill"
+        isActive = true
+        label = "Skill"
+        default = false
+      },
+      {
+        fullName = "ProfileSkillUser"
+        isActive = true
+        label = "Skill User"
+        default = false
+      },
+      {
+        fullName = "Swarm"
+        isActive = true
+        label = "Swarm"
+        default = false
+      },
+      {
+        fullName = "SwarmMember"
+        isActive = true
+        label = "Swarm Member"
+        default = false
+      },
+      {
+        fullName = "Task"
+        isActive = true
+        label = "Task"
+        default = false
+      },
+      {
+        fullName = "ThreatDetectionFeedback"
+        isActive = true
+        label = "Threat Detection Feedback"
+        default = false
+      },
+      {
+        fullName = "TimeSheet"
+        isActive = true
+        label = "Time Sheet"
+        default = false
+      },
+      {
+        fullName = "TimeSheetEntry"
+        isActive = true
+        label = "Time Sheet Entry"
+        default = false
+      },
+      {
+        fullName = "TransactionJournal"
+        isActive = true
+        label = "Transaction Journal"
+        default = false
+      },
+      {
+        fullName = "TravelMode"
+        isActive = true
+        label = "Travel Mode"
+        default = false
+      },
+      {
+        fullName = "User"
+        isActive = true
+        label = "User"
+        default = false
+      },
+      {
+        fullName = "Voucher"
+        isActive = true
+        label = "Voucher"
+        default = false
+      },
+      {
+        fullName = "VoucherDefinition"
+        isActive = true
+        label = "Voucher Definition"
+        default = false
+      },
+      {
+        fullName = "WarrantyTerm"
+        isActive = true
+        label = "Warranty Term"
+        default = false
+      },
+      {
+        fullName = "WebCartDocument"
+        isActive = true
+        label = "Web Cart Document"
+        default = false
+      },
+      {
+        fullName = "WorkOrder"
+        isActive = true
+        label = "Work Order"
+        default = false
+      },
+      {
+        fullName = "WorkOrderLineItem"
+        isActive = true
+        label = "Work Order Line Item"
+        default = false
+      },
+      {
+        fullName = "WorkPlan"
+        isActive = true
+        label = "Work Plan"
+        default = false
+      },
+      {
+        fullName = "WorkPlanSelectionRule"
+        isActive = true
+        label = "Work Plan Selection Rule"
+        default = false
+      },
+      {
+        fullName = "WorkPlanTemplate"
+        isActive = true
+        label = "Work Plan Template"
+        default = false
+      },
+      {
+        fullName = "WorkPlanTemplateEntry"
+        isActive = true
+        label = "Work Plan Template Entry"
+        default = false
+      },
+      {
+        fullName = "WorkStep"
+        isActive = true
+        label = "Work Step"
+        default = false
+      },
+      {
+        fullName = "WorkStepTemplate"
+        isActive = true
+        label = "Work Step Template"
+        default = false
+      },
+      {
+        fullName = "WorkType"
+        isActive = true
+        label = "Work Type"
+        default = false
+      },
+      {
+        fullName = "WorkTypeGroup"
+        isActive = true
+        label = "Work Type Group"
+        default = false
+      },
+      {
+        fullName = "WorkTypeGroupMember"
+        isActive = true
+        label = "Work Type Group Member"
+        default = false
+      },
+    ]
+    restricted = true
+    label = "Apply To"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "Macro.Id"
+    label = "Macro ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "Macro.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "Macro.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "Macro.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "Macro.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "Macro.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "Macro.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text FolderName {
+    apiName = "Macro.FolderName"
+    length = 256
+    label = "Folder Name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+}

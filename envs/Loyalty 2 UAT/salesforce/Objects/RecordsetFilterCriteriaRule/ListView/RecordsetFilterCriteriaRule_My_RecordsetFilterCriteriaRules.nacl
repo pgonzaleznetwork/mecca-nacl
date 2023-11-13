@@ -1,0 +1,9 @@
+salesforce.ListView RecordsetFilterCriteriaRule_My_RecordsetFilterCriteriaRules {
+  fullName = "RecordsetFilterCriteriaRule.My_RecordsetFilterCriteriaRules"
+  filterScope = "Mine"
+  label = "My Recordset Filter Criteria Rules"
+  _parent = [
+    salesforce.RecordsetFilterCriteriaRule,
+  ]
+  _alias = "My Recordset Filter Criteria Rules"
+}

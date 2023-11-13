@@ -1,0 +1,108 @@
+salesforce.Layout EngagementInteraction_Engagement_Interaction_Layout@bss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.EngagementInteraction.field.InitiatingAttendeeId
+            },
+            {
+              behavior = "Required"
+              field = salesforce.EngagementInteraction.field.StartDateTime
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.EngagementInteraction.field.Sentiment
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.EngagementInteraction.field.ExternalIdentifier
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.EngagementInteraction.field.Type
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.EngagementInteraction.field.Reason
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.EngagementInteraction.field.Duration
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.EngagementInteraction.field.EndDateTime
+            },
+            {
+              behavior = "Required"
+              field = salesforce.EngagementInteraction.field.CommunicationChannel
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.EngagementInteraction.field.ContextId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.EngagementInteraction.field.Status
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.EngagementInteraction.field.OwnerId
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      fields = [
+        "Name",
+        "Engagement",
+        "ExternalAttendee",
+        "InternalAttendee",
+        "StartDateTime",
+        "EndDateTime",
+      ]
+      relatedList = "EngagementAttendees"
+    },
+    {
+      fields = [
+        "Name",
+        "Engagement",
+        "RelatedPerson",
+      ]
+      relatedList = "EngagementTopics"
+    },
+    {
+      relatedList = "RelatedNoteList"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "EngagementInteraction-Engagement Interaction Layout"
+  _parent = [
+    salesforce.EngagementInteraction,
+  ]
+  _alias = "EngagementInteraction-Engagement Interaction Layout"
+}

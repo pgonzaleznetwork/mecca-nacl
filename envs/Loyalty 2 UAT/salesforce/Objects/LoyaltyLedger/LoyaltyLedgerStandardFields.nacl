@@ -1,0 +1,216 @@
+type salesforce.LoyaltyLedger {
+  serviceid Id {
+    apiName = "LoyaltyLedger.Id"
+    label = "Loyalty Ledger ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "LoyaltyLedger.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "LoyaltyLedger.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "LoyaltyLedger.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "LoyaltyLedger.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "LoyaltyLedger.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "LoyaltyLedger.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LoyaltyProgramMemberId {
+    apiName = "LoyaltyLedger.LoyaltyProgramMemberId"
+    relationshipName = "LoyaltyProgramMember"
+    referenceTo = [
+      salesforce.LoyaltyProgramMember,
+    ]
+    label = "Loyalty Program Member ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Lookup LoyaltyProgramCurrencyId {
+    apiName = "LoyaltyLedger.LoyaltyProgramCurrencyId"
+    relationshipName = "LoyaltyProgramCurrency"
+    referenceTo = [
+      salesforce.LoyaltyProgramCurrency,
+    ]
+    label = "Currency ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Lookup TransactionJournalId {
+    apiName = "LoyaltyLedger.TransactionJournalId"
+    relationshipName = "TransactionJournal"
+    referenceTo = [
+      salesforce.TransactionJournal,
+    ]
+    label = "Transaction Journal ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.DateTime ActivityDate {
+    apiName = "LoyaltyLedger.ActivityDate"
+    label = "Activity Date"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Date ExpiryDate {
+    apiName = "LoyaltyLedger.ExpiryDate"
+    label = "Expiry Date"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Picklist EventType {
+    apiName = "LoyaltyLedger.EventType"
+    valueSet = [
+      {
+        fullName = "Credit"
+        isActive = true
+        label = "Credit"
+        default = true
+      },
+      {
+        fullName = "Debit"
+        isActive = true
+        label = "Debit"
+        default = false
+      },
+      {
+        fullName = "Expiry"
+        isActive = true
+        label = "Expiry"
+        default = false
+      },
+      {
+        fullName = "Transfer"
+        isActive = true
+        label = "Transfer"
+        default = false
+      },
+      {
+        fullName = "DebitCancellation"
+        isActive = true
+        label = "Debit Cancellation"
+        default = false
+      },
+      {
+        fullName = "CreditCancellation"
+        isActive = true
+        label = "Credit Cancellation"
+        default = false
+      },
+    ]
+    restricted = true
+    label = "Event Type"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Text Correlation {
+    apiName = "LoyaltyLedger.Correlation"
+    length = 15
+    label = "Correlation ID"
+    createable = true
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Text Flow {
+    apiName = "LoyaltyLedger.Flow"
+    length = 15
+    label = "Flow ID"
+    createable = true
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Number Points {
+    apiName = "LoyaltyLedger.Points"
+    label = "Points"
+    precision = 18
+    scale = 2
+    createable = true
+    updateable = false
+    unique = false
+    queryable = true
+  }
+  salesforce.Text AdditionalNotes {
+    apiName = "LoyaltyLedger.AdditionalNotes"
+    length = 255
+    label = "Additional Notes"
+    createable = true
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Lookup PromotionId {
+    apiName = "LoyaltyLedger.PromotionId"
+    relationshipName = "Promotion"
+    referenceTo = [
+      salesforce.Promotion,
+    ]
+    label = "Promotion ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Date EscrowPointsCreditDate {
+    apiName = "LoyaltyLedger.EscrowPointsCreditDate"
+    label = "Escrow Points Credit Date"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+}

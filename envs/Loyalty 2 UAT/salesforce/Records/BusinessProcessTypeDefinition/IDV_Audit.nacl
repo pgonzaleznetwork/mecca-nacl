@@ -1,0 +1,7 @@
+salesforce.BusinessProcessTypeDefinition IDV_Audit {
+  fullName = "IDV_Audit"
+  applicationUsageType = "ExplainabilityService"
+  description = "ISE - Identity Verification Audit Trail"
+  masterLabel = "IDV_Audit"
+  _alias = "IDV_Audit"
+}

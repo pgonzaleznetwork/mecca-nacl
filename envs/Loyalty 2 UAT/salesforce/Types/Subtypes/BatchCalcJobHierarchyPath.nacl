@@ -1,0 +1,44 @@
+type salesforce.BatchCalcJobHierarchyPath {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string description {
+  }
+  string hierarchyFieldName {
+  }
+  boolean isSelfFieldValueIncluded {
+  }
+  string label {
+  }
+  string name {
+  }
+  string parentFieldName {
+  }
+  string selfFieldName {
+  }
+  string sourceName {
+    foreignKeyDomain = [
+      salesforce.BatchCalcJobAggregate,
+      salesforce.BatchCalcJobCustomNode,
+      salesforce.BatchCalcJobDatasource,
+      salesforce.BatchCalcJobFilter,
+      salesforce.BatchCalcJobForecast,
+      salesforce.BatchCalcJobHierarchyPath,
+      salesforce.BatchCalcJobSourceJoin,
+      salesforce.BatchCalcJobTransform,
+      salesforce.BatchCalcJobUnion,
+    ]
+  }
+  metadataType = "BatchCalcJobHierarchyPath"
+}

@@ -1,0 +1,30 @@
+salesforce.LightningComponentBundle flagsInLWC {
+  apiVersion = 57
+  isExposed = true
+  targets = {
+    target = [
+      "lightning__AppPage",
+      "lightning__RecordPage",
+      "lightning__HomePage",
+    ]
+  }
+  fullName = "flagsInLWC"
+  lwcResources = {
+    lwcResource = {
+      flagsInLWC_js@v = {
+        source = file("salesforce/Records/LightningComponentBundle/flagsInLWC/flagsInLWC.js")
+        filePath = "lwc/flagsInLWC/flagsInLWC.js"
+      }
+      flagsInLWC_html@v = {
+        source = file("salesforce/Records/LightningComponentBundle/flagsInLWC/flagsInLWC.html")
+        filePath = "lwc/flagsInLWC/flagsInLWC.html"
+      }
+    }
+  }
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.FeatureFlags
+    },
+  ]
+  _alias = "flagsInLWC"
+}

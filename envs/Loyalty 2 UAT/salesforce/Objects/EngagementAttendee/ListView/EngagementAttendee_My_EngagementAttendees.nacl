@@ -1,0 +1,9 @@
+salesforce.ListView EngagementAttendee_My_EngagementAttendees {
+  fullName = "EngagementAttendee.My_EngagementAttendees"
+  filterScope = "Mine"
+  label = "My Engagement Attendees"
+  _parent = [
+    salesforce.EngagementAttendee,
+  ]
+  _alias = "My Engagement Attendees"
+}

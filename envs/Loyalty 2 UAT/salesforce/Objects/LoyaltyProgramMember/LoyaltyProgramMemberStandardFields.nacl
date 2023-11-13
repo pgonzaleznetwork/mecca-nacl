@@ -1,0 +1,415 @@
+type salesforce.LoyaltyProgramMember {
+  salesforce.Lookup AccountId {
+    apiName = "LoyaltyProgramMember.AccountId"
+    inlineHelpText = "Select a business account for the Corporate member type. This field is optional for the Group member type."
+    relationshipName = "Account"
+    referenceTo = [
+      salesforce.Account,
+    ]
+    label = "Account ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup ContactId {
+    apiName = "LoyaltyProgramMember.ContactId"
+    inlineHelpText = "Select a contact for the Individual member type. This field is optional for Corporate and Group member types."
+    relationshipName = "Contact"
+    referenceTo = [
+      salesforce.Contact,
+    ]
+    label = "Contact ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist EnrollmentChannel {
+    apiName = "LoyaltyProgramMember.EnrollmentChannel"
+    valueSet = [
+      {
+        fullName = "POS"
+        isActive = true
+        label = "POS"
+        default = true
+      },
+      {
+        fullName = "Web"
+        isActive = true
+        label = "Web"
+        default = false
+      },
+      {
+        fullName = "Email"
+        isActive = true
+        label = "Email"
+        default = false
+      },
+      {
+        fullName = "CallCenter"
+        isActive = true
+        label = "Call Center"
+        default = false
+      },
+      {
+        fullName = "Social"
+        isActive = true
+        label = "Social"
+        default = false
+      },
+      {
+        fullName = "Mobile"
+        isActive = true
+        label = "Mobile"
+        default = false
+      },
+      {
+        fullName = "Store"
+        isActive = true
+        label = "Store"
+        default = false
+      },
+      {
+        fullName = "Franchise"
+        isActive = true
+        label = "Franchise"
+        default = false
+      },
+      {
+        fullName = "Partner"
+        isActive = true
+        label = "Partner"
+        default = false
+      },
+      {
+        fullName = "Print"
+        isActive = true
+        label = "Print"
+        default = false
+      },
+    ]
+    restricted = true
+    label = "Enrollment Channel"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Date EnrollmentDate {
+    apiName = "LoyaltyProgramMember.EnrollmentDate"
+    _required = true
+    label = "Enrollment Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup GroupCreatedByMemberId {
+    apiName = "LoyaltyProgramMember.GroupCreatedByMemberId"
+    inlineHelpText = "The loyalty program member who created the group or requested to create the group."
+    relationshipName = "GroupCreatedByMember"
+    referenceTo = [
+      salesforce.LoyaltyProgramMember,
+    ]
+    label = "Loyalty Program Member ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Text GroupName {
+    apiName = "LoyaltyProgramMember.GroupName"
+    inlineHelpText = "This field is required only for the Group member type."
+    length = 80
+    label = "Group Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Checkbox IsEligibleForTierAssessment {
+    apiName = "LoyaltyProgramMember.IsEligibleForTierAssessment"
+    inlineHelpText = "Indicates whether the member is eligible for tier upgrade assessment. The checkbox is selected for members with changes in qualifying point balance. If you want to assess the tier of members whose qualifying point balance hasn’t changed, set up a custom process."
+    defaultValue = false
+    label = "Eligible For Tier Assessment"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Date LastActivityDate {
+    apiName = "LoyaltyProgramMember.LastActivityDate"
+    label = "Last Activity Date"
+    createable = true
+    updateable = true
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist MemberStatus {
+    apiName = "LoyaltyProgramMember.MemberStatus"
+    valueSet = [
+      {
+        fullName = "Active"
+        isActive = true
+        label = "Active"
+        default = false
+      },
+      {
+        fullName = "Inactive"
+        isActive = true
+        label = "Inactive"
+        default = false
+      },
+      {
+        fullName = "Merged"
+        isActive = true
+        label = "Merged"
+        default = false
+      },
+    ]
+    restricted = false
+    _required = true
+    label = "Member Status"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist MemberType {
+    apiName = "LoyaltyProgramMember.MemberType"
+    inlineHelpText = "Individual members represent contacts, and corporate members represent accounts. Select Group to create a group of existing individual and corporate members associated with a loyalty program. Group members can contribute a percentage of their earned points to the group."
+    valueSet = [
+      {
+        fullName = "Individual"
+        isActive = true
+        label = "Individual"
+        default = true
+      },
+      {
+        fullName = "Corporate"
+        isActive = true
+        label = "Corporate"
+        default = false
+      },
+      {
+        fullName = "Group"
+        isActive = true
+        label = "Group"
+        default = false
+      },
+    ]
+    restricted = true
+    _required = true
+    label = "Member Type"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Date MembershipEndDate {
+    apiName = "LoyaltyProgramMember.MembershipEndDate"
+    label = "Membership End Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Date MembershipLastRenewalDate {
+    apiName = "LoyaltyProgramMember.MembershipLastRenewalDate"
+    label = "Membership Last Renewal Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text MembershipNumber {
+    apiName = "LoyaltyProgramMember.MembershipNumber"
+    length = 255
+    _required = true
+    label = "Membership Number"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Lookup ProgramId {
+    apiName = "LoyaltyProgramMember.ProgramId"
+    relationshipName = "Program"
+    referenceTo = [
+      salesforce.LoyaltyProgram,
+    ]
+    label = "Loyalty Program ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Text ReferralCode {
+    apiName = "LoyaltyProgramMember.ReferralCode"
+    inlineHelpText = "The member can share this code with others who want to join the loyalty program. If a referral code isn’t specified during enrollment, the member’s referral code is autogenerated for the member."
+    length = 255
+    label = "Referral Code"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Lookup ReferredById {
+    apiName = "LoyaltyProgramMember.ReferredById"
+    relationshipName = "ReferredBy"
+    referenceTo = [
+      salesforce.LoyaltyProgramMember,
+    ]
+    label = "Referred By ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup RelatedCorporateMembershipId {
+    apiName = "LoyaltyProgramMember.RelatedCorporateMembershipId"
+    relationshipName = "RelatedCorporateMembership"
+    referenceTo = [
+      salesforce.LoyaltyProgramMember,
+    ]
+    label = "Associated Corporate Membership ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist StatementFrequency {
+    apiName = "LoyaltyProgramMember.StatementFrequency"
+    valueSet = [
+      {
+        fullName = "Monthly"
+        isActive = true
+        label = "Monthly"
+        default = true
+      },
+      {
+        fullName = "Quarterly"
+        isActive = true
+        label = "Quarterly"
+        default = false
+      },
+    ]
+    restricted = true
+    label = "Statement Frequency"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.DateTime StatementLastGeneratedDate {
+    apiName = "LoyaltyProgramMember.StatementLastGeneratedDate"
+    label = "Statement Last Generated Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "LoyaltyProgramMember.Id"
+    label = "Loyalty Program Member ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "LoyaltyProgramMember.OwnerId"
+    relationshipName = "Owner"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    label = "Owner ID"
+    createable = true
+    updateable = true
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "LoyaltyProgramMember.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "LoyaltyProgramMember.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "LoyaltyProgramMember.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "LoyaltyProgramMember.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "LoyaltyProgramMember.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "LoyaltyProgramMember.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist StatementMethod {
+    apiName = "LoyaltyProgramMember.StatementMethod"
+    valueSet = [
+      {
+        fullName = "Mail"
+        isActive = true
+        label = "Mail"
+        default = true
+      },
+      {
+        fullName = "Email"
+        isActive = true
+        label = "Email"
+        default = false
+      },
+    ]
+    restricted = true
+    label = "Statement Method"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox CanReceivePromotions {
+    apiName = "LoyaltyProgramMember.CanReceivePromotions"
+    defaultValue = false
+    label = "Receive Promotion"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox CanReceivePartnerPromotions {
+    apiName = "LoyaltyProgramMember.CanReceivePartnerPromotions"
+    defaultValue = false
+    label = "Receive Partner Promotion"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+}

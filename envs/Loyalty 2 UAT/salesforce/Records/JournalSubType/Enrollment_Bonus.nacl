@@ -1,0 +1,5 @@
+salesforce.JournalSubType Enrollment_Bonus@s {
+  JournalTypeId = salesforce.JournalType.instance.Accrual
+  Name = "Enrollment Bonus"
+  _alias = "Accrual Enrollment Bonus"
+}

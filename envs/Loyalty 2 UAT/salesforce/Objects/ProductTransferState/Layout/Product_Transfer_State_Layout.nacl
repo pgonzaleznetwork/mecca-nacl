@@ -1,0 +1,85 @@
+salesforce.Layout ProductTransferState_Product_Transfer_State_Layout@bsss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.ProductTransferState.field.ProductTransferId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ProductTransferState.field.Action
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.ProductTransferState.field.SerializedProductId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ProductTransferState.field.TransferState
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.ProductTransferState.field.CreatedById
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.ProductTransferState.field.CreatedDate
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.ProductTransferState.field.LastModifiedById
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.ProductTransferState.field.LastModifiedDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "ProductTransferState-Product Transfer State Layout"
+  _parent = [
+    salesforce.ProductTransferState,
+  ]
+  _alias = "ProductTransferState-Product Transfer State Layout"
+}

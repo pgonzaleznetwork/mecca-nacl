@@ -1,0 +1,228 @@
+type salesforce.RecordsetFilterCriteria {
+  salesforce.Text CustomLogic {
+    apiName = "RecordsetFilterCriteria.CustomLogic"
+    inlineHelpText = "Define the logic of the conditions. To group conditions, use parentheses around the parameters, for example 1 AND (2 OR 3). If you add another condition, the custom logic is updated automatically to 1 AND (2 OR 3) AND 4."
+    length = 50
+    label = "Custom Logic"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.LongTextArea Description {
+    apiName = "RecordsetFilterCriteria.Description"
+    length = 32000
+    label = "Description"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist FilteredObject {
+    apiName = "RecordsetFilterCriteria.FilteredObject"
+    inlineHelpText = "Choose the object that stores the attributes you want to use in the filter conditions."
+    valueSet = [
+      {
+        fullName = "Asset"
+        isActive = true
+        label = "Asset"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment"
+        isActive = true
+        label = "Service Appointment"
+        default = false
+      },
+    ]
+    restricted = true
+    _required = true
+    label = "Filtered Object"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Checkbox IsActive {
+    apiName = "RecordsetFilterCriteria.IsActive"
+    defaultValue = false
+    label = "Active"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist LogicalOperator {
+    apiName = "RecordsetFilterCriteria.LogicalOperator"
+    valueSet = [
+      {
+        fullName = "AND"
+        isActive = true
+        label = "All the conditions are met"
+        default = true
+      },
+      {
+        fullName = "OR"
+        isActive = true
+        label = "At least one of the conditions is met"
+        default = false
+      },
+      {
+        fullName = "CUSTOMLOGIC"
+        isActive = true
+        label = "Custom logic is met"
+        default = false
+      },
+    ]
+    restricted = true
+    label = "Logical Operator"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text Name {
+    apiName = "RecordsetFilterCriteria.Name"
+    length = 255
+    _required = true
+    label = "Recordset Filter Criteria Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "RecordsetFilterCriteria.OwnerId"
+    relationshipName = "Owner"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    label = "Owner ID"
+    createable = true
+    updateable = true
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist SourceObject {
+    apiName = "RecordsetFilterCriteria.SourceObject"
+    inlineHelpText = "The filter criteria is added to records in the source object."
+    valueSet = [
+      {
+        fullName = "ApptBundleAggrPolicy"
+        isActive = true
+        label = "Appointment Bundle Aggregation Policy"
+        default = false
+      },
+      {
+        fullName = "ApptBundleConfig"
+        isActive = true
+        label = "Appointment Bundle Config"
+        default = false
+      },
+      {
+        fullName = "ApptBundlePolicy"
+        isActive = true
+        label = "Appointment Bundle Policy"
+        default = false
+      },
+      {
+        fullName = "ContractLineOutcome"
+        isActive = true
+        label = "Contract Line Outcome"
+        default = false
+      },
+      {
+        fullName = "MaintenanceWorkRule"
+        isActive = true
+        label = "Maintenance Work Rule"
+        default = false
+      },
+      {
+        fullName = "RecordsetFltrCritMonitor"
+        isActive = true
+        label = "Recordset Filter Criteria Monitor"
+        default = false
+      },
+      {
+        fullName = "Shift"
+        isActive = true
+        label = "Shift"
+        default = false
+      },
+      {
+        fullName = "TimeSlot"
+        isActive = true
+        label = "Time Slot"
+        default = false
+      },
+    ]
+    restricted = true
+    _required = true
+    label = "Source Object"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "RecordsetFilterCriteria.Id"
+    label = "Recordset Filter Criteria ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "RecordsetFilterCriteria.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "RecordsetFilterCriteria.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "RecordsetFilterCriteria.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "RecordsetFilterCriteria.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "RecordsetFilterCriteria.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "RecordsetFilterCriteria.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

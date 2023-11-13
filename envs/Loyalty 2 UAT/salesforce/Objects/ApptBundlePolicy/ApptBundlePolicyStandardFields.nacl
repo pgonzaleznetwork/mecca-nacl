@@ -1,0 +1,358 @@
+type salesforce.ApptBundlePolicy {
+  salesforce.Picklist BundleEndTimeFieldName {
+    apiName = "ApptBundlePolicy.BundleEndTimeFieldName"
+    inlineHelpText = "Select the bundle service appointment field used for the bundle’s end time."
+    valueSet = [
+      {
+        fullName = "ServiceAppointment.ActualEndTime"
+        isActive = true
+        label = "Actual End"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.ActualStartTime"
+        isActive = true
+        label = "Actual Start"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.ArrivalWindowEndTime"
+        isActive = true
+        label = "Arrival Window End"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.ArrivalWindowStartTime"
+        isActive = true
+        label = "Arrival Window Start"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.CreatedDate"
+        isActive = true
+        label = "Created Date"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.DueDate"
+        isActive = true
+        label = "Due Date"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.EarliestStartTime"
+        isActive = true
+        label = "Earliest Start Permitted"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.LastModifiedDate"
+        isActive = true
+        label = "Last Modified Date"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.LastReferencedDate"
+        isActive = true
+        label = "Last Referenced Date"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.LastViewedDate"
+        isActive = true
+        label = "Last Viewed Date"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.SchedEndTime"
+        isActive = true
+        label = "Scheduled End"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.SchedStartTime"
+        isActive = true
+        label = "Scheduled Start"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.SystemModstamp"
+        isActive = true
+        label = "System Modstamp"
+        default = false
+      },
+    ]
+    restricted = true
+    label = "Bundle End Time Field Name"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist BundleStartTimeFieldName {
+    apiName = "ApptBundlePolicy.BundleStartTimeFieldName"
+    inlineHelpText = "Select the bundle service appointment field used for the bundle’s start time."
+    valueSet = [
+      {
+        fullName = "ServiceAppointment.ActualEndTime"
+        isActive = true
+        label = "Actual End"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.ActualStartTime"
+        isActive = true
+        label = "Actual Start"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.ArrivalWindowEndTime"
+        isActive = true
+        label = "Arrival Window End"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.ArrivalWindowStartTime"
+        isActive = true
+        label = "Arrival Window Start"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.CreatedDate"
+        isActive = true
+        label = "Created Date"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.DueDate"
+        isActive = true
+        label = "Due Date"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.EarliestStartTime"
+        isActive = true
+        label = "Earliest Start Permitted"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.LastModifiedDate"
+        isActive = true
+        label = "Last Modified Date"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.LastReferencedDate"
+        isActive = true
+        label = "Last Referenced Date"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.LastViewedDate"
+        isActive = true
+        label = "Last Viewed Date"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.SchedEndTime"
+        isActive = true
+        label = "Scheduled End"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.SchedStartTime"
+        isActive = true
+        label = "Scheduled Start"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.SystemModstamp"
+        isActive = true
+        label = "System Modstamp"
+        default = false
+      },
+    ]
+    restricted = true
+    label = "Bundle Start Time Field Name"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox CanAllowSchleDepndInBundle {
+    apiName = "ApptBundlePolicy.CanAllowSchleDepndInBundle"
+    inlineHelpText = "Allow bundling of service appointments with scheduling dependencies."
+    label = "Allow Scheduling Dependencies in Bundle"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Number ConstantTimeValue {
+    apiName = "ApptBundlePolicy.ConstantTimeValue"
+    inlineHelpText = "Use this option only if Time Calculation by Bundle Duration Field is enabled. Enter the bundle’s total time as a constant value, in minutes."
+    label = "Constant Time Value"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Lookup FilterCriteriaId {
+    apiName = "ApptBundlePolicy.FilterCriteriaId"
+    inlineHelpText = "Select the filter criteria used for the bundle members. Only service appointments that meet the criteria can be bundled."
+    relationshipName = "FilterCriteria"
+    referenceTo = [
+      salesforce.RecordsetFilterCriteria,
+    ]
+    label = "Recordset Filter Criteria ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox IsAutomaticBundling {
+    apiName = "ApptBundlePolicy.IsAutomaticBundling"
+    inlineHelpText = "Make this policy available when automatic bundling is triggered by an automated process. You can have manual bundling and automatic bundling enabled at the same time."
+    label = "Automatic Bundling"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox IsManualBundling {
+    apiName = "ApptBundlePolicy.IsManualBundling"
+    inlineHelpText = "Make this policy available when the dispatcher manually bundles service appointments in the dispatch console. You can have manual bundling and automatic bundling enabled at the same time."
+    defaultValue = false
+    label = "Manual Bundling"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox IsTimeCalcByBundleDurationFld {
+    apiName = "ApptBundlePolicy.IsTimeCalcByBundleDurationFld"
+    inlineHelpText = "Subtract the bundle’s start time from the bundle’s end time and compare it to the bundle’s Duration."
+    label = "Time Calculation by Bundle Duration Field"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Number LimitAmountOfBundleMembers {
+    apiName = "ApptBundlePolicy.LimitAmountOfBundleMembers"
+    inlineHelpText = "Enter the maximum number of bundle members that can be included in a bundle, up to 200."
+    label = "Limit Amount of Bundle Members"
+    precision = 3
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Number LimitDurationOfBundle {
+    apiName = "ApptBundlePolicy.LimitDurationOfBundle"
+    inlineHelpText = "Enter the maximum duration of a bundle, in minutes."
+    label = "Limit Duration of Bundle"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Text Name {
+    apiName = "ApptBundlePolicy.Name"
+    inlineHelpText = "Enter a unique name."
+    length = 255
+    _required = true
+    label = "Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "ApptBundlePolicy.OwnerId"
+    relationshipName = "Owner"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    label = "Owner ID"
+    createable = true
+    updateable = true
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number Priority {
+    apiName = "ApptBundlePolicy.Priority"
+    inlineHelpText = "Enter a policy priority number. Must be unique. When the bundle policies are evaluated with automatic bundling, the priority determines the order that the policies are applied."
+    _required = true
+    label = "Priority"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = true
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "ApptBundlePolicy.Id"
+    label = "Appointment Bundle Policy ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ApptBundlePolicy.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ApptBundlePolicy.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ApptBundlePolicy.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ApptBundlePolicy.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ApptBundlePolicy.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ApptBundlePolicy.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

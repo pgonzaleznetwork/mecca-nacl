@@ -1,0 +1,167 @@
+salesforce.Layout TransactionJournal_Transaction_Journal_Layout@bss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Transaction Journal Details"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.TransactionJournal.field.MemberId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.TransactionJournal.field.JournalTypeId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.TransactionJournal.field.RelatedJournalId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.TransactionJournal.field.Industry
+            },
+            {
+              behavior = "Required"
+              field = salesforce.TransactionJournal.field.ActivityDate
+            },
+            {
+              behavior = "Required"
+              field = salesforce.TransactionJournal.field.Status
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.TransactionJournal.field.TransactionLocation
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.TransactionJournal.field.ProductId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.TransactionJournal.field.Quantity
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.TransactionJournal.field.OrderId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.TransactionJournal.field.InvoiceDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.TransactionJournal.field.TransactionAmount
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.TransactionJournal.field.VoucherCode
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.TransactionJournal.field.RelatedCorporateMembershipId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.TransactionJournal.field.JournalSubTypeId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.TransactionJournal.field.ReferredMemberId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.TransactionJournal.field.PartnerId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.TransactionJournal.field.JournalDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.TransactionJournal.field.LoyaltyProgramId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.TransactionJournal.field.PaymentMethod
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.TransactionJournal.field.ProductCategoryId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.TransactionJournal.field.QuantityUnitOfMeasureId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.TransactionJournal.field.OrderItemId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.TransactionJournal.field.EscrowPointsCreditDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.TransactionJournal.field.PromotionId
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      fields = [
+        "Name",
+        "EventType",
+        "LoyaltyProgramCurrency",
+        "Points",
+        "ExpiryDate",
+        "Flow",
+        "Correlation",
+        "AdditionalNotes",
+      ]
+      relatedList = "LoyaltyLedgers"
+    },
+    {
+      fields = [
+        "VoucherDefinition",
+        "VoucherCode",
+        "EffectiveDate",
+        "ExpirationDate",
+        "Status",
+      ]
+      relatedList = "Vouchers"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  summaryLayout = {
+    masterLabel = "00h4U00000VIjrd"
+    sizeX = 4
+    sizeY = 0
+    summaryLayoutStyle = "Default"
+  }
+  fullName = "TransactionJournal-Transaction Journal Layout"
+  _parent = [
+    salesforce.TransactionJournal,
+  ]
+  _alias = "TransactionJournal-Transaction Journal Layout"
+}

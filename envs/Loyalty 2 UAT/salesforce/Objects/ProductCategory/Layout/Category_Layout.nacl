@@ -1,0 +1,96 @@
+salesforce.Layout ProductCategory_Category_Layout@bs {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.ProductCategory.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ProductCategory.field.IsNavigational
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ProductCategory.field.Description
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ProductCategory.field.SortOrder
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.ProductCategory.field.CatalogId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ProductCategory.field.ParentCategoryId
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "NftInformation"
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "MultiSigConfiguration"
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      fields = [
+        "Product",
+        "IsPrimaryCategory",
+      ]
+      relatedList = "RelatedProducts"
+    },
+    {
+      fields = [
+        "Name",
+        "Description",
+      ]
+      relatedList = "ChildCategories"
+    },
+    {
+      relatedList = "RelatedFileList"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "ProductCategory-Category Layout"
+  _parent = [
+    salesforce.ProductCategory,
+  ]
+  _alias = "ProductCategory-Category Layout"
+}

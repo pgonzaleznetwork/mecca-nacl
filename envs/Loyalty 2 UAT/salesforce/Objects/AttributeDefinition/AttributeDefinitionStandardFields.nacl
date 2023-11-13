@@ -1,0 +1,230 @@
+type salesforce.AttributeDefinition {
+  salesforce.Picklist DataType {
+    apiName = "AttributeDefinition.DataType"
+    valueSet = [
+      {
+        fullName = "Checkbox"
+        isActive = true
+        label = "Checkbox"
+        default = false
+      },
+      {
+        fullName = "Date"
+        isActive = true
+        label = "Date"
+        default = false
+      },
+      {
+        fullName = "Datetime"
+        isActive = true
+        label = "Datetime"
+        default = false
+      },
+      {
+        fullName = "Number"
+        isActive = true
+        label = "Number"
+        default = false
+      },
+      {
+        fullName = "Text"
+        isActive = true
+        label = "Text"
+        default = false
+      },
+      {
+        fullName = "Picklist"
+        isActive = true
+        label = "Picklist"
+        default = false
+      },
+    ]
+    restricted = true
+    _required = true
+    label = "Data Type"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Text DefaultValue {
+    apiName = "AttributeDefinition.DefaultValue"
+    length = 255
+    label = "Default Value"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.LongTextArea Description {
+    apiName = "AttributeDefinition.Description"
+    length = 32000
+    label = "Description"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text DeveloperName {
+    apiName = "AttributeDefinition.DeveloperName"
+    inlineHelpText = "Enter a unique name. This name must begin with a letter and use only alphanumeric characters and underscores. It can't include spaces, end with an underscore, or have two consecutive underscores."
+    length = 80
+    _required = true
+    label = "API Name"
+    createable = true
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Checkbox IsActive {
+    apiName = "AttributeDefinition.IsActive"
+    defaultValue = false
+    label = "Active"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox IsRequired {
+    apiName = "AttributeDefinition.IsRequired"
+    defaultValue = false
+    label = "Required"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text Label {
+    apiName = "AttributeDefinition.Label"
+    length = 255
+    _required = true
+    label = "Label"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Text Name {
+    apiName = "AttributeDefinition.Name"
+    length = 255
+    _required = true
+    label = "Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "AttributeDefinition.OwnerId"
+    relationshipName = "Owner"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    label = "Owner ID"
+    createable = true
+    updateable = true
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup PicklistId {
+    apiName = "AttributeDefinition.PicklistId"
+    relationshipName = "Picklist"
+    referenceTo = [
+      salesforce.AttributePicklist,
+    ]
+    label = "Attribute Picklist ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Unknown Scale {
+    apiName = "AttributeDefinition.Scale"
+    _hidden_value = true
+  }
+  salesforce.Text SourceSystemIdentifier {
+    apiName = "AttributeDefinition.SourceSystemIdentifier"
+    length = 255
+    label = "Source System ID"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Lookup UnitOfMeasureId {
+    apiName = "AttributeDefinition.UnitOfMeasureId"
+    inlineHelpText = "Only for the number data type."
+    relationshipName = "UnitOfMeasure"
+    referenceTo = [
+      salesforce.UnitOfMeasure,
+    ]
+    label = "Unit of Measure ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "AttributeDefinition.Id"
+    label = "Attribute Definition ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "AttributeDefinition.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "AttributeDefinition.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "AttributeDefinition.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "AttributeDefinition.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "AttributeDefinition.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "AttributeDefinition.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

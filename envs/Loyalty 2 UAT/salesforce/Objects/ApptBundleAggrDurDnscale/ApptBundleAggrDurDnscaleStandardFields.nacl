@@ -1,0 +1,121 @@
+type salesforce.ApptBundleAggrDurDnscale {
+  salesforce.MasterDetail BundleAggregationPolicyId {
+    apiName = "ApptBundleAggrDurDnscale.BundleAggregationPolicyId"
+    relationshipName = "BundleAggregationPolicy"
+    referenceTo = [
+      salesforce.ApptBundleAggrPolicy,
+    ]
+    _required = true
+    label = "Appointment Bundle Aggregation Policy ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Number FromBundleMemberNumber {
+    apiName = "ApptBundleAggrDurDnscale.FromBundleMemberNumber"
+    inlineHelpText = "Enter the first bundle member’s number that the downscale applies to."
+    label = "From Bundle Member Number "
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Unknown MaxReduction {
+    apiName = "ApptBundleAggrDurDnscale.MaxReduction"
+    inlineHelpText = "Enter the maximum reduction for a bundle member service appointment, in minutes."
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "ApptBundleAggrDurDnscale.Name"
+    inlineHelpText = "Enter a unique name."
+    length = 255
+    _required = true
+    label = "Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Number PercentageOfReduction {
+    apiName = "ApptBundleAggrDurDnscale.PercentageOfReduction"
+    inlineHelpText = "Enter the percentage of duration reduction."
+    label = "Percentage of Reduction"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Unknown ToBundleMemberNumber {
+    apiName = "ApptBundleAggrDurDnscale.ToBundleMemberNumber"
+    inlineHelpText = "Enter the last bundle member’s number that the downscale applies to. To always downscale to the last bundle member, use an empty value."
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "ApptBundleAggrDurDnscale.Id"
+    label = "Appointment Bundle Aggregation Duration Downscale ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ApptBundleAggrDurDnscale.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ApptBundleAggrDurDnscale.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ApptBundleAggrDurDnscale.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ApptBundleAggrDurDnscale.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ApptBundleAggrDurDnscale.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ApptBundleAggrDurDnscale.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}
