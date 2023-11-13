@@ -1,0 +1,9 @@
+salesforce.ListView PromotionLoyaltyPtnrProdt_All_PromotionLoyaltyPtnrProdts {
+  fullName = "PromotionLoyaltyPtnrProdt.All_PromotionLoyaltyPtnrProdts"
+  filterScope = "Everything"
+  label = "allPromotionLoyaltyPtnrProdts"
+  _parent = [
+    salesforce.PromotionLoyaltyPtnrProdt,
+  ]
+  _alias = "allPromotionLoyaltyPtnrProdts"
+}

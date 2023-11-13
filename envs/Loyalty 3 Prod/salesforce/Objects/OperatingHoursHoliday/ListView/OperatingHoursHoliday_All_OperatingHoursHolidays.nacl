@@ -1,0 +1,9 @@
+salesforce.ListView OperatingHoursHoliday_All_OperatingHoursHolidays {
+  fullName = "OperatingHoursHoliday.All_OperatingHoursHolidays"
+  filterScope = "Everything"
+  label = "All Operating Hours Holiday"
+  _parent = [
+    salesforce.OperatingHoursHoliday,
+  ]
+  _alias = "All Operating Hours Holiday"
+}

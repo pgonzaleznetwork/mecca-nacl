@@ -1,0 +1,9 @@
+salesforce.CustomTab Rewards_Catalog__c {
+  fullName = "Rewards_Catalog__c"
+  customObject = true
+  motif = "Custom53: Bell"
+  _parent = [
+    salesforce.Rewards_Catalog__c,
+  ]
+  _alias = "Rewards_Catalog__c"
+}

@@ -1,0 +1,9 @@
+salesforce.ListView WorkPlanTemplate_My_WorkPlanTemplates {
+  fullName = "WorkPlanTemplate.My_WorkPlanTemplates"
+  filterScope = "Mine"
+  label = "My Work Plan Templates"
+  _parent = [
+    salesforce.WorkPlanTemplate,
+  ]
+  _alias = "My Work Plan Templates"
+}

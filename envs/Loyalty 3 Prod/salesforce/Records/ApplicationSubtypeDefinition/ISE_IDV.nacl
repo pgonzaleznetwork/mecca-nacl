@@ -1,0 +1,7 @@
+salesforce.ApplicationSubtypeDefinition ISE_IDV {
+  fullName = "ISE_IDV"
+  applicationUsageType = "ExplainabilityService"
+  description = "ISE - Identity Verification"
+  masterLabel = "ISE_IDV"
+  _alias = "ISE_IDV"
+}

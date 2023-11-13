@@ -1,0 +1,9 @@
+salesforce.ListView WorkPlan_All_WorkPlans {
+  fullName = "WorkPlan.All_WorkPlans"
+  filterScope = "Everything"
+  label = "All Work Plans"
+  _parent = [
+    salesforce.WorkPlan,
+  ]
+  _alias = "All Work Plans"
+}

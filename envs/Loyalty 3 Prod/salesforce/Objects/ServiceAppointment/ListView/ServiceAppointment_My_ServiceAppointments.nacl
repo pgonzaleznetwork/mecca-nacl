@@ -1,0 +1,9 @@
+salesforce.ListView ServiceAppointment_My_ServiceAppointments {
+  fullName = "ServiceAppointment.My_ServiceAppointments"
+  filterScope = "Mine"
+  label = "My Service Appointments"
+  _parent = [
+    salesforce.ServiceAppointment,
+  ]
+  _alias = "My Service Appointments"
+}

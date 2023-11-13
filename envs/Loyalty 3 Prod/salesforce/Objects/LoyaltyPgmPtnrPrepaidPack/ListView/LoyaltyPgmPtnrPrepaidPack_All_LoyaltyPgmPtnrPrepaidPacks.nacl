@@ -1,0 +1,9 @@
+salesforce.ListView LoyaltyPgmPtnrPrepaidPack_All_LoyaltyPgmPtnrPrepaidPacks {
+  fullName = "LoyaltyPgmPtnrPrepaidPack.All_LoyaltyPgmPtnrPrepaidPacks"
+  filterScope = "Everything"
+  label = "allLoyaltyPgmPtnrPrepaidPacks"
+  _parent = [
+    salesforce.LoyaltyPgmPtnrPrepaidPack,
+  ]
+  _alias = "allLoyaltyPgmPtnrPrepaidPacks"
+}

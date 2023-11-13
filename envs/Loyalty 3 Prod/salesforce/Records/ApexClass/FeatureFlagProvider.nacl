@@ -1,0 +1,12 @@
+salesforce.ApexClass FeatureFlagProvider {
+  apiVersion = 57
+  status = "Active"
+  fullName = "FeatureFlagProvider"
+  content = file("salesforce/Records/ApexClass/FeatureFlagProvider.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.IFeatureFlagProvider
+    },
+  ]
+  _alias = "FeatureFlagProvider"
+}

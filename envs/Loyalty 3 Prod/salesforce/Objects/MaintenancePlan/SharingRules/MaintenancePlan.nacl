@@ -1,0 +1,7 @@
+salesforce.SharingRules MaintenancePlan {
+  fullName = "MaintenancePlan"
+  _parent = [
+    salesforce.MaintenancePlan,
+  ]
+  _alias = "MaintenancePlan"
+}

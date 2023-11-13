@@ -1,0 +1,208 @@
+type salesforce.ShiftTemplate {
+  salesforce.Text BackgroundColor {
+    apiName = "ShiftTemplate.BackgroundColor"
+    inlineHelpText = "Set a background color to highlight shifts in the schedule view."
+    length = 7
+    label = "Background Color"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.TextArea Description {
+    apiName = "ShiftTemplate.Description"
+    label = "Description"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Number Duration {
+    apiName = "ShiftTemplate.Duration"
+    _required = true
+    label = "Duration"
+    precision = 6
+    scale = 2
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.Lookup Id {
+    apiName = "ShiftTemplate.Id"
+    label = "Shift Template ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsActive {
+    apiName = "ShiftTemplate.IsActive"
+    label = "Active"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox IsNonStandard {
+    apiName = "ShiftTemplate.IsNonStandard"
+    defaultValue = false
+    label = "Non-Standard"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup JobProfileId {
+    apiName = "ShiftTemplate.JobProfileId"
+    relationshipName = "JobProfile"
+    referenceTo = [
+      salesforce.JobProfile,
+    ]
+    label = "Job Profile ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text Name {
+    apiName = "ShiftTemplate.Name"
+    length = 50
+    _required = true
+    label = "Shift Template Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "ShiftTemplate.OwnerId"
+    relationshipName = "Owner"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    label = "Owner ID"
+    createable = true
+    updateable = true
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup RecordsetFilterCriteriaId {
+    apiName = "ShiftTemplate.RecordsetFilterCriteriaId"
+    relationshipName = "RecordsetFilterCriteria"
+    referenceTo = [
+      salesforce.RecordsetFilterCriteria,
+    ]
+    label = "Recordset Filter Criteria ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist ShiftTemplateDurationType {
+    apiName = "ShiftTemplate.ShiftTemplateDurationType"
+    valueSet = [
+      {
+        fullName = "M"
+        isActive = true
+        label = "Minutes"
+        default = false
+      },
+      {
+        fullName = "H"
+        isActive = true
+        label = "Hours"
+        default = true
+      },
+    ]
+    restricted = true
+    _required = true
+    label = "Duration Type"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Time StartTime {
+    apiName = "ShiftTemplate.StartTime"
+    _required = true
+    label = "Start Time"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist TimeSlotType {
+    apiName = "ShiftTemplate.TimeSlotType"
+    valueSet = [
+      {
+        fullName = "Normal"
+        isActive = true
+        label = "Normal"
+        default = true
+      },
+      {
+        fullName = "Extended"
+        isActive = true
+        label = "Extended"
+        default = false
+      },
+    ]
+    restricted = true
+    label = "Time Slot Type"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ShiftTemplate.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ShiftTemplate.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ShiftTemplate.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ShiftTemplate.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ShiftTemplate.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ShiftTemplate.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

@@ -1,0 +1,9 @@
+salesforce.ListView WorkPlanSelectionRule_My_WorkPlanSelectionRules {
+  fullName = "WorkPlanSelectionRule.My_WorkPlanSelectionRules"
+  filterScope = "Mine"
+  label = "My Work Plan Selection Rules"
+  _parent = [
+    salesforce.WorkPlanSelectionRule,
+  ]
+  _alias = "My Work Plan Selection Rules"
+}

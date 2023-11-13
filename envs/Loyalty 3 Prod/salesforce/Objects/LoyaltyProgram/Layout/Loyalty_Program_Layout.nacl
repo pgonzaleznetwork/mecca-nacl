@@ -1,0 +1,192 @@
+salesforce.Layout LoyaltyProgram_Loyalty_Program_Layout@bss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Loyalty Program Details"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.LoyaltyProgram.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.LoyaltyProgram.field.Description
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.LoyaltyProgram.field.IsPrimary
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.LoyaltyProgram.field.Status
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.LoyaltyProgram.field.LastModifiedById
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.LoyaltyProgram.field.EscrowPeriod
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      fields = [
+        "Name",
+        "Contact",
+        "Account",
+        "MemberType",
+        "MemberStatus",
+        "EnrollmentDate",
+        "Program",
+        "LastActivityDate",
+        "MembershipEndDate",
+      ]
+      relatedList = "LoyaltyProgramMembers"
+    },
+    {
+      fields = [
+        "Name",
+        "JournalType",
+        "JournalSubType",
+        "ActivityDate",
+        "ExternalTransactionNumber",
+        "Member",
+        "JournalDate",
+        "Status",
+        "TransactionAmount",
+      ]
+      relatedList = "TransactionJournals"
+    },
+    {
+      fields = [
+        "Name",
+        "Description",
+        "TierModel",
+        "IsActive",
+      ]
+      relatedList = "LoyaltyTierGroups"
+    },
+    {
+      fields = [
+        "Name",
+        "CurrencyType",
+        "ExpiryModel",
+        "IsActive",
+      ]
+      relatedList = "LoyaltyProgramCurrencies"
+    },
+    {
+      fields = [
+        "Name",
+        "LoyaltyProgram",
+        "Category",
+        "Description",
+      ]
+      relatedList = "BenefitTypes"
+    },
+    {
+      fields = [
+        "Name",
+        "PartnerType",
+        "LoyaltyPartner",
+        "PartnershipStartDate",
+        "PartnershipEndDate",
+        "PartnerStatus",
+        "PartnerIndustry",
+      ]
+      relatedList = "LoyaltyProgramPartners"
+    },
+    {
+      fields = [
+        "Name",
+        "StartDate",
+        "LoyaltyPromotionType",
+        "FulfillmentAction",
+        "EndDate",
+        "IsEnrollmentRequired",
+      ]
+      relatedList = "Promotions"
+    },
+    {
+      fields = [
+        "Name",
+        "Type",
+        "EffectiveDate",
+        "IsActive",
+      ]
+      relatedList = "VoucherDefinitions"
+    },
+    {
+      fields = [
+        "Name",
+        "ProcessType",
+        "Status",
+        "JournalType",
+        "JournalSubType",
+        "LoyaltyTierGroup",
+      ]
+      relatedList = "LoyaltyProgramProcesses"
+    },
+    {
+      fields = [
+        "Name",
+        "LoyaltyProgramProcess",
+        "Promotion",
+        "Status",
+        "NextProcessRule",
+      ]
+      relatedList = "LoyaltyProgramProcessRules"
+    },
+    {
+      fields = [
+        "Name",
+        "Description",
+        "Status",
+      ]
+      relatedList = "LoyaltyProgramEngagementAttributes"
+    },
+    {
+      fields = [
+        "Name",
+        "Status",
+        "Description",
+      ]
+      relatedList = "LoyaltyProgramBadges"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  summaryLayout = {
+    masterLabel = "00h4U00000VIjqf"
+    sizeX = 4
+    sizeY = 0
+    summaryLayoutStyle = "Default"
+  }
+  fullName = "LoyaltyProgram-Loyalty Program Layout"
+  _parent = [
+    salesforce.LoyaltyProgram,
+  ]
+  _alias = "LoyaltyProgram-Loyalty Program Layout"
+}

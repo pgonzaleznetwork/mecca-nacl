@@ -1,0 +1,84 @@
+salesforce.Layout SchedulingConstraint_Scheduling_Constraint_Layout@bss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.SchedulingConstraint.field.Name
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.SchedulingConstraint.field.Id
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.SchedulingConstraint.field.MaxShiftsPerDay
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.SchedulingConstraint.field.MaxShiftsPerWeek
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.SchedulingConstraint.field.MaxShiftsPerMonth
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.SchedulingConstraint.field.MaxNonstandardShiftsPerMonth
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.SchedulingConstraint.field.RestTimeMinutes
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.SchedulingConstraint.field.MaxWorkingHoursPerDay
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.SchedulingConstraint.field.MaxWorkingHoursPerWeek
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.SchedulingConstraint.field.MaxWorkingHoursPerMonth
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.SchedulingConstraint.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.SchedulingConstraint.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "SchedulingConstraint-Scheduling Constraint Layout"
+  _parent = [
+    salesforce.SchedulingConstraint,
+  ]
+  _alias = "SchedulingConstraint-Scheduling Constraint Layout"
+}

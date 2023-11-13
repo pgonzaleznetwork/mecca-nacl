@@ -1,0 +1,7 @@
+salesforce.SharingRules WorkCapacityAvailability {
+  fullName = "WorkCapacityAvailability"
+  _parent = [
+    salesforce.WorkCapacityAvailability,
+  ]
+  _alias = "WorkCapacityAvailability"
+}

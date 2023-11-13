@@ -1,0 +1,199 @@
+salesforce.Layout Shipment_Shipment_Layout@bs {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Shipment.field.DestinationLocationId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Shipment.field.ShipToAddress
+            },
+            {
+              behavior = "Required"
+              field = salesforce.Shipment.field.ShipToName
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Shipment.field.SourceLocationId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Shipment.field.ShipFromAddress
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Shipment.field.TotalItemsQuantity
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Tracking Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Shipment.field.TrackingNumber
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Shipment.field.TrackingUrl
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Shipment.field.Provider
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Shipment.field.DeliveredToId
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Shipment.field.ExpectedDeliveryDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Shipment.field.ActualDeliveryDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Shipment.field.Status
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Description"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Shipment.field.Description
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Shipment.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Shipment.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      fields = [
+        "TASK.SUBJECT",
+        "TASK.WHO_NAME",
+        "ACTIVITY.TASK",
+        "TASK.DUE_DATE",
+        "TASK.STATUS",
+        "TASK.PRIORITY",
+        "CORE.USERS.FULL_NAME",
+      ]
+      relatedList = "RelatedActivityList"
+    },
+    {
+      relatedList = "RelatedEntityHistoryList"
+    },
+    {
+      relatedList = "RelatedFileList"
+    },
+    {
+      fields = [
+        "CreatedDate",
+        "StepStatus",
+        "OriginalActor",
+        "Actor",
+        "Comments",
+      ]
+      relatedList = "RelatedProcessHistoryList"
+    },
+    {
+      fields = [
+        "Name",
+        "Product2",
+        "SourceProductItem",
+        "QuantityReceived",
+        "DestinationLocation",
+        "IsReceived",
+        "ReceivedBy",
+      ]
+      relatedList = "ProductTransfers"
+    },
+    {
+      fields = [
+        "Name",
+        "ExpectedDeliveryDate",
+        "Quantity",
+        "TrackingNumber",
+        "TrackingUrl",
+      ]
+      relatedList = "ShipmentItems"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "Shipment-Shipment Layout"
+  _parent = [
+    salesforce.Shipment,
+  ]
+  _alias = "Shipment-Shipment Layout"
+}

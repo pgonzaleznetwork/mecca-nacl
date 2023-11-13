@@ -1,0 +1,9 @@
+salesforce.ListView ApptBundleConfig_My_ApptBundleConfigs {
+  fullName = "ApptBundleConfig.My_ApptBundleConfigs"
+  filterScope = "Mine"
+  label = "My Appointment Bundle Configs"
+  _parent = [
+    salesforce.ApptBundleConfig,
+  ]
+  _alias = "My Appointment Bundle Configs"
+}
