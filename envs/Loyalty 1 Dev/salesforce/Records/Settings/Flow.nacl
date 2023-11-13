@@ -1,0 +1,27 @@
+salesforce.FlowSettings {
+  fullName = "Flow"
+  canDebugFlowAsAnotherUser = "false"
+  doesEnforceApexCpuTimeLimit = "true"
+  doesFormulaEnforceDataAccess = false
+  doesFormulaGenerateHtmlOutput = false
+  enableEmailSimpleRespectProfiles = "true"
+  enableFlowBREncodedFixEnabled = true
+  enableFlowCustomPropertyEditor = "false"
+  enableFlowDeployAsActiveEnabled = false
+  enableFlowFieldFilterEnabled = false
+  enableFlowFormulasFixEnabled = true
+  enableFlowInterviewSharingEnabled = true
+  enableFlowNullPreviousValueFix = true
+  enableFlowPauseEnabled = false
+  enableFlowReactiveDisplayText = "false"
+  enableFlowReactiveScreens = "false"
+  enableFlowUseApexExceptionEmail = false
+  enableFlowViaRestUsesUserCtxt = "false"
+  enableLightningRuntimeEnabled = true
+  isApexPluginAccessModifierRespected = true
+  isEnhancedFlowListViewVisible = true
+  isFlowBlockAccessToSessionIDEnabled = "true"
+  isManageFlowRequiredForAutomationCharts = false
+  isSupportRollbackOnErrorForApexInvocableActionsEnabled = "false"
+  _alias = "Flow"
+}

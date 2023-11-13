@@ -1,0 +1,170 @@
+type salesforce.SerializedProductTransaction {
+  salesforce.Lookup RelatedRecordId {
+    apiName = "SerializedProductTransaction.RelatedRecordId"
+    relationshipName = "RelatedRecord"
+    referenceTo = [
+      salesforce.ProductConsumed,
+      salesforce.ProductTransfer,
+    ]
+    label = "related record ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.MasterDetail SerializedProductId {
+    apiName = "SerializedProductTransaction.SerializedProductId"
+    relationshipName = "SerializedProduct"
+    referenceTo = [
+      salesforce.SerializedProduct,
+    ]
+    _required = true
+    label = "Serialized Product ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist TransactionType {
+    apiName = "SerializedProductTransaction.TransactionType"
+    valueSet = [
+      {
+        fullName = "Adjusted"
+        isActive = true
+        label = "Adjusted"
+        default = false
+      },
+      {
+        fullName = "Consumed"
+        isActive = true
+        label = "Consumed"
+        default = false
+      },
+      {
+        fullName = "Damaged"
+        isActive = true
+        label = "Damaged"
+        default = false
+      },
+      {
+        fullName = "Found"
+        isActive = true
+        label = "Found"
+        default = false
+      },
+      {
+        fullName = "Lost"
+        isActive = true
+        label = "Lost"
+        default = false
+      },
+      {
+        fullName = "Received"
+        isActive = true
+        label = "Received"
+        default = false
+      },
+      {
+        fullName = "Repaired"
+        isActive = true
+        label = "Repaired"
+        default = false
+      },
+      {
+        fullName = "Replenished"
+        isActive = true
+        label = "Replenished"
+        default = false
+      },
+      {
+        fullName = "Sent"
+        isActive = true
+        label = "Sent"
+        default = false
+      },
+      {
+        fullName = "Withdrawn"
+        isActive = true
+        label = "Withdrawn"
+        default = false
+      },
+    ]
+    restricted = true
+    label = "Transaction Type"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "SerializedProductTransaction.Id"
+    label = "Serialized Product Transaction ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "SerializedProductTransaction.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "SerializedProductTransaction.Name"
+    label = "Name"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "SerializedProductTransaction.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "SerializedProductTransaction.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "SerializedProductTransaction.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "SerializedProductTransaction.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "SerializedProductTransaction.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

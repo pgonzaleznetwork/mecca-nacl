@@ -1,0 +1,53 @@
+type salesforce.SchedulingRule {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  boolean isProtected {
+  }
+  string masterLabel {
+  }
+  string schedulingCategory {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "A",
+        "B",
+      ]
+    }
+  }
+  string schedulingRuleType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "A",
+        "B",
+        "C",
+        "LimitNonstandardShifts",
+        "M",
+        "Q",
+        "RestTimeMinutes",
+        "W",
+      ]
+    }
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "schedulingRule"
+  dirName = "SchedulingRules"
+  metadataType = "SchedulingRule"
+}

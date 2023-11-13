@@ -1,0 +1,58 @@
+type salesforce.BatchDataSrcFilterCriteria {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  boolean dynamicValue {
+  }
+  string dynamicValueType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "boolean",
+        "currency",
+        "date",
+        "datetime",
+        "integer",
+        "picklist",
+        "reference",
+        "string",
+      ]
+    }
+  }
+  string fieldName {
+  }
+  string fieldValue {
+  }
+  string operator {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "equals",
+        "excludes",
+        "greaterThan",
+        "greaterThanOrEqualTo",
+        "in",
+        "includes",
+        "lessThan",
+        "lessThanOrEqualTo",
+        "like",
+        "notEquals",
+        "notIn",
+      ]
+    }
+  }
+  number sequenceNo {
+  }
+  metadataType = "BatchDataSrcFilterCriteria"
+}

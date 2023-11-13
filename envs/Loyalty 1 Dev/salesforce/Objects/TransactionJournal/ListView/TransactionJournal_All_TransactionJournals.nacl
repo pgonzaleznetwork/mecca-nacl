@@ -1,0 +1,9 @@
+salesforce.ListView TransactionJournal_All_TransactionJournals {
+  fullName = "TransactionJournal.All_TransactionJournals"
+  filterScope = "Everything"
+  label = "allTransactionJournals"
+  _parent = [
+    salesforce.TransactionJournal,
+  ]
+  _alias = "allTransactionJournals"
+}

@@ -1,0 +1,15 @@
+salesforce.Promotion "0c82o0000008QtdAAE" {
+  DefaultVoucherDefinitionId = salesforce.VoucherDefinition.instance.2Xa2o000000GnFdCAK
+  Description = "This promotion issues a voucher every time a customer purchases two or more slip-ons between June and August."
+  EndDate = "2023-08-31"
+  FulfillmentAction = "IssueVoucher"
+  IsActive = false
+  IsEnrollmentRequired = false
+  IsPointsWithFactor = false
+  IsQuickPromotion = false
+  LoyaltyProgramId = salesforce.LoyaltyProgram.instance.Cloud_Kicks_Inner_Circle@s
+  LoyaltyPromotionType = "Standard"
+  Name = "10% discount on next purchase of two or more slip-on shoes during summer"
+  StartDate = "2023-06-01"
+  _alias = "10% discount on next purchase of two or more slip-on shoes during summer"
+}

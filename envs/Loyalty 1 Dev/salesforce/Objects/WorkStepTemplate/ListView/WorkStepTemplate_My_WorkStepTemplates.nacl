@@ -1,0 +1,9 @@
+salesforce.ListView WorkStepTemplate_My_WorkStepTemplates {
+  fullName = "WorkStepTemplate.My_WorkStepTemplates"
+  filterScope = "Mine"
+  label = "My Work Step Templates"
+  _parent = [
+    salesforce.WorkStepTemplate,
+  ]
+  _alias = "My Work Step Templates"
+}

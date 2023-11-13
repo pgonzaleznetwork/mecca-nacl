@@ -1,0 +1,11 @@
+salesforce.ExplainabilityActionDefinition ISE_IDVAudit {
+  fullName = "ISE_IDVAudit"
+  actionLogSchemaType = "Other"
+  applicationSubtype = salesforce.ApplicationSubtypeDefinition.instance.ISE_IDV
+  applicationType = "IndustryServiceExcellence"
+  description = "ISE IDV Audit Trail Log Def"
+  internal = false
+  masterLabel = "ISE_IDVAudit"
+  processType = salesforce.BusinessProcessTypeDefinition.instance.IDV_Audit
+  _alias = "ISE_IDVAudit"
+}

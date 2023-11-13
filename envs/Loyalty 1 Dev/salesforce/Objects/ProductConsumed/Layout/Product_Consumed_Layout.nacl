@@ -1,0 +1,151 @@
+salesforce.Layout ProductConsumed_Product_Consumed_Layout@bss {
+  excludeButtons = [
+    "Submit",
+  ]
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.ProductConsumed.field.WorkOrderId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ProductConsumed.field.ProductItemId
+            },
+            {
+              behavior = "Required"
+              field = salesforce.ProductConsumed.field.QuantityConsumed
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.ProductConsumed.field.WorkOrderLineItemId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ProductConsumed.field.PricebookEntryId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ProductConsumed.field.UnitPrice
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Description"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.ProductConsumed.field.Description
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.ProductConsumed.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.ProductConsumed.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      relatedList = "RelatedEntityHistoryList"
+    },
+    {
+      relatedList = "RelatedFileList"
+    },
+    {
+      relatedList = "RelatedNoteList"
+    },
+    {
+      fields = [
+        "Name",
+        "RelatedRecord",
+        "TransactionType",
+        "Quantity",
+      ]
+      relatedList = "ProductItemTransaction"
+    },
+    {
+      fields = [
+        "SerializedProduct",
+        "ConsumedState",
+      ]
+      relatedList = "ProductConsumedStates"
+    },
+    {
+      fields = [
+        "CreatedDate",
+        "StepStatus",
+        "OriginalActor",
+        "Actor",
+        "Comments",
+      ]
+      relatedList = "RelatedProcessHistoryList"
+    },
+    {
+      fields = [
+        "Name",
+        "SerializedProduct",
+        "RelatedRecord",
+        "TransactionType",
+      ]
+      relatedList = "SerializedProductTransactions"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "ProductConsumed-Product Consumed Layout"
+  _parent = [
+    salesforce.ProductConsumed,
+  ]
+  _alias = "ProductConsumed-Product Consumed Layout"
+}

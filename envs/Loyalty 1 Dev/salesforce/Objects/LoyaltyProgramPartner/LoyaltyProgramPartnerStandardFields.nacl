@@ -1,0 +1,374 @@
+type salesforce.LoyaltyProgramPartner {
+  salesforce.Currency AccrualCostperUnit {
+    apiName = "LoyaltyProgramPartner.AccrualCostperUnit"
+    label = "Accrual Cost per Unit"
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 18
+    queryable = true
+  }
+  salesforce.Number AlertValue {
+    apiName = "LoyaltyProgramPartner.AlertValue"
+    inlineHelpText = "For prepaid billing, specify the minimum point balance, which can be used to alert partners. For postpaid billing, specify the maximum outstanding bill, which can be used to alert partners."
+    label = "Alert Value"
+    precision = 18
+    scale = 2
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.Picklist BillingType {
+    apiName = "LoyaltyProgramPartner.BillingType"
+    inlineHelpText = "For prepaid billing, partners can purchase points in packs and for postpaid billing, partners can pay the bill amount."
+    valueSet = [
+      {
+        fullName = "Prepaid"
+        isActive = true
+        label = "Prepaid"
+        default = true
+      },
+      {
+        fullName = "Postpaid"
+        isActive = true
+        label = "Postpaid"
+        default = false
+      },
+    ]
+    restricted = true
+    label = "Billing Type"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Number CreditedPoints {
+    apiName = "LoyaltyProgramPartner.CreditedPoints"
+    inlineHelpText = "Points credited to partners for redemptions, accrual cancellations, or any custom processes."
+    label = "Credited Points"
+    precision = 18
+    scale = 2
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.Number DebitedPoints {
+    apiName = "LoyaltyProgramPartner.DebitedPoints"
+    inlineHelpText = "Points debited from the partner for accrual,  redemption cancellations, or any custom processes."
+    label = "Debited Points"
+    precision = 18
+    scale = 2
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.DateTime LastProcessedDateTime {
+    apiName = "LoyaltyProgramPartner.LastProcessedDateTime"
+    inlineHelpText = "The date and time the point balance for prepaid billing or outstanding bill amount for postpaid billing was last calculated."
+    label = "Last Processed Date Time"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup LoyaltyPartnerId {
+    apiName = "LoyaltyProgramPartner.LoyaltyPartnerId"
+    relationshipName = "LoyaltyPartner"
+    referenceTo = [
+      salesforce.Account,
+    ]
+    _required = true
+    label = "Loyalty Program Partner ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup LoyaltyProgramId {
+    apiName = "LoyaltyProgramPartner.LoyaltyProgramId"
+    relationshipName = "LoyaltyProgram"
+    referenceTo = [
+      salesforce.LoyaltyProgram,
+    ]
+    _required = true
+    label = "Loyalty Program ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text Name {
+    apiName = "LoyaltyProgramPartner.Name"
+    length = 255
+    _required = true
+    label = "Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Picklist PartnerCategory {
+    apiName = "LoyaltyProgramPartner.PartnerCategory"
+    valueSet = [
+      {
+        fullName = "Alliance"
+        isActive = true
+        label = "Alliance"
+        default = false
+      },
+      {
+        fullName = "Bilateral"
+        isActive = true
+        label = "Bilateral"
+        default = false
+      },
+    ]
+    restricted = false
+    label = "Program Partnership Category"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist PartnerIndustry {
+    apiName = "LoyaltyProgramPartner.PartnerIndustry"
+    inlineHelpText = "Admins must add picklist values for this field in Object Manager."
+    valueSet = [
+      {
+        fullName = "Agriculture"
+        isActive = true
+        label = "Agriculture"
+        default = false
+      },
+      {
+        fullName = "Healthcare"
+        isActive = true
+        label = "Healthcare"
+        default = false
+      },
+      {
+        fullName = "Hospitality"
+        isActive = true
+        label = "Hospitality"
+        default = false
+      },
+      {
+        fullName = "Manufacturing"
+        isActive = true
+        label = "Manufacturing"
+        default = false
+      },
+      {
+        fullName = "Renewable Energy"
+        isActive = true
+        label = "Renewable Energy"
+        default = false
+      },
+      {
+        fullName = "Retail"
+        isActive = true
+        label = "Retail"
+        default = false
+      },
+    ]
+    restricted = false
+    _required = true
+    label = "Industry"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist PartnerStatus {
+    apiName = "LoyaltyProgramPartner.PartnerStatus"
+    valueSet = [
+      {
+        fullName = "Active"
+        isActive = true
+        label = "Active"
+        default = true
+      },
+      {
+        fullName = "Inactive"
+        isActive = true
+        label = "Inactive"
+        default = false
+      },
+      {
+        fullName = "Pending"
+        isActive = true
+        label = "Pending"
+        default = false
+      },
+    ]
+    restricted = true
+    _required = true
+    label = "Status"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist PartnerType {
+    apiName = "LoyaltyProgramPartner.PartnerType"
+    valueSet = [
+      {
+        fullName = "Accrual"
+        isActive = true
+        label = "Accrual"
+        default = false
+      },
+      {
+        fullName = "Redemption"
+        isActive = true
+        label = "Redemption"
+        default = false
+      },
+      {
+        fullName = "Both"
+        isActive = true
+        label = "Both"
+        default = false
+      },
+    ]
+    restricted = true
+    _required = true
+    label = "Type"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Date PartnershipEndDate {
+    apiName = "LoyaltyProgramPartner.PartnershipEndDate"
+    label = "Program Partnership End Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Date PartnershipStartDate {
+    apiName = "LoyaltyProgramPartner.PartnershipStartDate"
+    _required = true
+    label = "Program Partnership Start Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Summary PointsBalance {
+    apiName = "LoyaltyProgramPartner.PointsBalance"
+    inlineHelpText = "The points balance is the purchased points minus the debited points."
+    label = "Points Balance"
+    precision = 18
+    scale = 2
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Currency PostpaidBillAmount {
+    apiName = "LoyaltyProgramPartner.PostpaidBillAmount"
+    inlineHelpText = "The total amount of all credits minus debits for partner transactions from the partnership start date. A positive value indicates that the partner is liable to the program. A negative value indicates the program is liable to the partner."
+    label = "Postpaid Bill Amount"
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 18
+    queryable = true
+  }
+  salesforce.Unknown PostpaidPartnerBillFrequency {
+    apiName = "LoyaltyProgramPartner.PostpaidPartnerBillFrequency"
+    _hidden_value = true
+  }
+  salesforce.Number PurchasedPoints {
+    apiName = "LoyaltyProgramPartner.PurchasedPoints"
+    inlineHelpText = "The total number of points purchased by the partner from all point packs."
+    label = "Purchased Points"
+    precision = 18
+    scale = 2
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.Currency RedemptionCostperUnit {
+    apiName = "LoyaltyProgramPartner.RedemptionCostperUnit"
+    label = "Redemption Cost per Unit"
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 18
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "LoyaltyProgramPartner.Id"
+    label = "Loyalty Program Partner ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "LoyaltyProgramPartner.OwnerId"
+    relationshipName = "Owner"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    label = "Owner ID"
+    createable = true
+    updateable = true
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "LoyaltyProgramPartner.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "LoyaltyProgramPartner.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "LoyaltyProgramPartner.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "LoyaltyProgramPartner.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "LoyaltyProgramPartner.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "LoyaltyProgramPartner.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

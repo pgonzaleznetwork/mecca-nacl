@@ -1,0 +1,7 @@
+salesforce.SharingRules TimeSheet {
+  fullName = "TimeSheet"
+  _parent = [
+    salesforce.TimeSheet,
+  ]
+  _alias = "TimeSheet"
+}

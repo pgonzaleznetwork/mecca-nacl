@@ -1,0 +1,8 @@
+salesforce.Benefit "0ji2o000000KzziAAC" {
+  BenefitTypeId = salesforce.BenefitType.instance.0jh2o000000KzznAAC
+  IsActive = true
+  IsBenefitSelectionAllowed = false
+  Name = "20% off on Apparel Voucher"
+  PrioritySequence = 2
+  _alias = "Exclusive Discounts 20% off on Apparel Voucher"
+}

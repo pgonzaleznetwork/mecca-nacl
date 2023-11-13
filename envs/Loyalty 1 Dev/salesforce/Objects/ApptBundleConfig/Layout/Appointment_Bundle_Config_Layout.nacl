@@ -1,0 +1,138 @@
+salesforce.Layout ApptBundleConfig_Appointment_Bundle_Config_Layout@bsss {
+  excludeButtons = [
+    "Submit",
+  ]
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "General Settings"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.ApptBundleConfig.field.AddToBundleStatuses
+            },
+            {
+              behavior = "Required"
+              field = salesforce.ApptBundleConfig.field.Name
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.ApptBundleConfig.field.RemoveFromBundleStatuses
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ApptBundleConfig.field.DoesAddTravelTime
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Unbundling Settings"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.ApptBundleConfig.field.StatusOnRemovalFromBundle
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ApptBundleConfig.field.StatusesNotToUpdateOnUnbundle
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.ApptBundleConfig.field.CriteriaForAutoUnbundlingId
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Status Transition Settings"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.ApptBundleConfig.field.BundleStatusesToPropagate
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.ApptBundleConfig.field.MemberStatusesNotToPropagate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.ApptBundleConfig.field.OwnerId
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.ApptBundleConfig.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.ApptBundleConfig.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "ApptBundleConfig-Appointment Bundle Config Layout"
+  _parent = [
+    salesforce.ApptBundleConfig,
+  ]
+  _alias = "ApptBundleConfig-Appointment Bundle Config Layout"
+}

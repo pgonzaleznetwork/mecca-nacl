@@ -1,0 +1,132 @@
+type salesforce.DigitalSignature {
+  salesforce.Picklist SignatureType {
+    apiName = "DigitalSignature.SignatureType"
+    valueSet = [
+      {
+        fullName = "Default"
+        isActive = true
+        label = "Default"
+        default = true
+      },
+    ]
+    restricted = false
+    label = "Type"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "DigitalSignature.Id"
+    label = "Digital Signature ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "DigitalSignature.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber DigitalSignatureNumber {
+    apiName = "DigitalSignature.DigitalSignatureNumber"
+    label = "Signature Number"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "DigitalSignature.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "DigitalSignature.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "DigitalSignature.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "DigitalSignature.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "DigitalSignature.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup ParentId {
+    apiName = "DigitalSignature.ParentId"
+    relationshipName = "Parent"
+    referenceTo = [
+      salesforce.AuthorizationFormConsent,
+      salesforce.Order,
+      salesforce.ServiceAppointment,
+      salesforce.WorkOrder,
+      salesforce.WorkOrderLineItem,
+    ]
+    _required = true
+    label = "Parent Record ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Text SignedBy {
+    apiName = "DigitalSignature.SignedBy"
+    length = 255
+    label = "Signed By"
+    createable = true
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Text Place {
+    apiName = "DigitalSignature.Place"
+    length = 255
+    label = "Place"
+    createable = true
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.DateTime SignedDate {
+    apiName = "DigitalSignature.SignedDate"
+    label = "Date"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+}

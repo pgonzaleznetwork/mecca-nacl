@@ -1,0 +1,215 @@
+salesforce.Layout WarrantyTerm_Warranty_Term_Layout@bss {
+  excludeButtons = [
+    "Submit",
+  ]
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.WarrantyTerm.field.WarrantyTermName
+            },
+            {
+              behavior = "Required"
+              field = salesforce.WarrantyTerm.field.WarrantyDuration
+            },
+            {
+              behavior = "Required"
+              field = salesforce.WarrantyTerm.field.WarrantyUnitOfTime
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.WarrantyTerm.field.IsActive
+            },
+            {
+              behavior = "Required"
+              field = salesforce.WarrantyTerm.field.EffectiveStartDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.WarrantyTerm.field.Pricebook2Id
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Description"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.WarrantyTerm.field.Description
+            },
+            {
+              behavior = "Required"
+              field = salesforce.WarrantyTerm.field.WarrantyType
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.WarrantyTerm.field.ExchangeType
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.WarrantyTerm.field.Code
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.WarrantyTerm.field.Exclusions
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.WarrantyTerm.field.IsTransferable
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Coverage"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.WarrantyTerm.field.LaborCovered
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.WarrantyTerm.field.PartsCovered
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.WarrantyTerm.field.ExpensesCovered
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.WarrantyTerm.field.LaborCoveredUnitOfTime
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.WarrantyTerm.field.ExpensesCoveredUnitOfTime
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.WarrantyTerm.field.LaborCoveredDuration
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.WarrantyTerm.field.PartsCoveredDuration
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.WarrantyTerm.field.ExpensesCoveredDuration
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.WarrantyTerm.field.PartsCoveredUnitOfTime
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.WarrantyTerm.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.WarrantyTerm.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      fields = [
+        "Name",
+        "CoveredProductFamily",
+        "CoveredProduct",
+      ]
+      relatedList = "ProductWarrantyTerm"
+    },
+    {
+      fields = [
+        "Name",
+        "Asset",
+      ]
+      relatedList = "AssetWarranties"
+    },
+    {
+      fields = [
+        "CreatedDate",
+        "StepStatus",
+        "OriginalActor",
+        "Actor",
+        "Comments",
+      ]
+      relatedList = "RelatedProcessHistoryList"
+    },
+    {
+      relatedList = "RelatedEntityHistoryList"
+    },
+    {
+      relatedList = "RelatedNoteList"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "WarrantyTerm-Warranty Term Layout"
+  _parent = [
+    salesforce.WarrantyTerm,
+  ]
+  _alias = "WarrantyTerm-Warranty Term Layout"
+}

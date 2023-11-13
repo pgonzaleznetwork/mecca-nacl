@@ -1,0 +1,9 @@
+salesforce.ListView ProductConsumedState_My_ProductConsumedStates {
+  fullName = "ProductConsumedState.My_ProductConsumedStates"
+  filterScope = "Mine"
+  label = "My Product Consumed States"
+  _parent = [
+    salesforce.ProductConsumedState,
+  ]
+  _alias = "My Product Consumed States"
+}

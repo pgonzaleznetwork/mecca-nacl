@@ -1,0 +1,234 @@
+type salesforce.LoyaltyMemberCurrency {
+  salesforce.Number BalanceBeforeReset {
+    apiName = "LoyaltyMemberCurrency.BalanceBeforeReset"
+    label = "Balance Before Reset"
+    precision = 18
+    scale = 2
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.Summary EscrowPointsBalance {
+    apiName = "LoyaltyMemberCurrency.EscrowPointsBalance"
+    label = "Escrow Points Balance"
+    precision = 18
+    scale = 2
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Date LastResetDate {
+    apiName = "LoyaltyMemberCurrency.LastResetDate"
+    label = "Last Reset Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.MasterDetail LoyaltyMemberId {
+    apiName = "LoyaltyMemberCurrency.LoyaltyMemberId"
+    relationshipName = "LoyaltyMember"
+    referenceTo = [
+      salesforce.LoyaltyProgramMember,
+    ]
+    _required = true
+    label = "Loyalty Program Member ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Lookup LoyaltyProgramCurrencyId {
+    apiName = "LoyaltyMemberCurrency.LoyaltyProgramCurrencyId"
+    relationshipName = "LoyaltyProgramCurrency"
+    referenceTo = [
+      salesforce.LoyaltyProgramCurrency,
+    ]
+    label = "Currency ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text Name {
+    apiName = "LoyaltyMemberCurrency.Name"
+    length = 255
+    _required = true
+    label = "Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Date NextResetDate {
+    apiName = "LoyaltyMemberCurrency.NextResetDate"
+    label = "Next Reset Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Summary PointsBalance {
+    apiName = "LoyaltyMemberCurrency.PointsBalance"
+    label = "Points Balance"
+    precision = 18
+    scale = 2
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "LoyaltyMemberCurrency.Id"
+    label = "Loyalty Member Currency ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "LoyaltyMemberCurrency.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "LoyaltyMemberCurrency.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "LoyaltyMemberCurrency.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "LoyaltyMemberCurrency.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "LoyaltyMemberCurrency.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "LoyaltyMemberCurrency.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number TotalPointsAccrued {
+    apiName = "LoyaltyMemberCurrency.TotalPointsAccrued"
+    label = "Total Points Accrued"
+    precision = 18
+    scale = 2
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.Number TotalPointsRedeemed {
+    apiName = "LoyaltyMemberCurrency.TotalPointsRedeemed"
+    label = "Total Points Redeemed"
+    precision = 18
+    scale = 2
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.Number TotalPointsExpired {
+    apiName = "LoyaltyMemberCurrency.TotalPointsExpired"
+    label = "Total Points Expired"
+    precision = 18
+    scale = 2
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.Number ExpirablePoints {
+    apiName = "LoyaltyMemberCurrency.ExpirablePoints"
+    label = "Total Expirable Points"
+    precision = 18
+    scale = 2
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.Date LastExpirationProcessRunDate {
+    apiName = "LoyaltyMemberCurrency.LastExpirationProcessRunDate"
+    label = "Last Expiration Process Run Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.DateTime LastAccrualProcessedDate {
+    apiName = "LoyaltyMemberCurrency.LastAccrualProcessedDate"
+    label = "Last Accrual Processed Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Number TotalEscrowPointsAccrued {
+    apiName = "LoyaltyMemberCurrency.TotalEscrowPointsAccrued"
+    label = "Total Escrow Points Accrued"
+    precision = 18
+    scale = 2
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.Number TotalEscrowRolloverPoints {
+    apiName = "LoyaltyMemberCurrency.TotalEscrowRolloverPoints"
+    label = "Total Escrow Rollover Points"
+    precision = 18
+    scale = 2
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.DateTime LastEscrowProcessedDate {
+    apiName = "LoyaltyMemberCurrency.LastEscrowProcessedDate"
+    label = "Last Escrow Processed Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Number PointsBalBeforeSecondLastReset {
+    apiName = "LoyaltyMemberCurrency.PointsBalBeforeSecondLastReset"
+    label = "Points Balance Bef Second To Last Reset"
+    precision = 18
+    scale = 2
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+}

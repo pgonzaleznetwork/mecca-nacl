@@ -1,0 +1,1665 @@
+type salesforce.RecordsetFilterCriteriaRule {
+  salesforce.Picklist CriteriaField {
+    apiName = "RecordsetFilterCriteriaRule.CriteriaField"
+    valueSet = [
+      {
+        fullName = "Asset.AccountId"
+        isActive = true
+        label = "Account ID"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.AccountId"
+        isActive = true
+        label = "Account ID"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.ActualDuration"
+        isActive = true
+        label = "Actual Duration (Minutes)"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.ActualEndTime"
+        isActive = true
+        label = "Actual End"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.ActualStartTime"
+        isActive = true
+        label = "Actual Start"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.AppointmentNumber"
+        isActive = true
+        label = "Appointment Number"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.ArrivalWindowEndTime"
+        isActive = true
+        label = "Arrival Window End"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.ArrivalWindowStartTime"
+        isActive = true
+        label = "Arrival Window Start"
+        default = false
+      },
+      {
+        fullName = "Asset.Id"
+        isActive = true
+        label = "Asset ID"
+        default = false
+      },
+      {
+        fullName = "Asset.Name"
+        isActive = true
+        label = "Asset Name"
+        default = false
+      },
+      {
+        fullName = "Asset.AssetProvidedById"
+        isActive = true
+        label = "Asset Provided By ID"
+        default = false
+      },
+      {
+        fullName = "Asset.AssetServicedById"
+        isActive = true
+        label = "Asset Serviced By ID"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.IsBundle"
+        isActive = true
+        label = "Bundle"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.IsBundleMember"
+        isActive = true
+        label = "Bundle Member"
+        default = false
+      },
+      {
+        fullName = "Asset.City"
+        isActive = true
+        label = "City"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.City"
+        isActive = true
+        label = "City"
+        default = false
+      },
+      {
+        fullName = "Asset.IsCompetitorProduct"
+        isActive = true
+        label = "Competitor Asset"
+        default = false
+      },
+      {
+        fullName = "Asset.ContactId"
+        isActive = true
+        label = "Contact ID"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.ContactId"
+        isActive = true
+        label = "Contact ID"
+        default = false
+      },
+      {
+        fullName = "Asset.Country"
+        isActive = true
+        label = "Country"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.Country"
+        isActive = true
+        label = "Country"
+        default = false
+      },
+      {
+        fullName = "Asset.CreatedById"
+        isActive = true
+        label = "Created By ID"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.CreatedById"
+        isActive = true
+        label = "Created By ID"
+        default = false
+      },
+      {
+        fullName = "Asset.CreatedDate"
+        isActive = true
+        label = "Created Date"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.CreatedDate"
+        isActive = true
+        label = "Created Date"
+        default = false
+      },
+      {
+        fullName = "Asset.CurrentAmount"
+        isActive = true
+        label = "Current Amount"
+        default = false
+      },
+      {
+        fullName = "Asset.CurrentLifecycleEndDate"
+        isActive = true
+        label = "Current Lifecycle End Date"
+        default = false
+      },
+      {
+        fullName = "Asset.CurrentMrr"
+        isActive = true
+        label = "Current Monthly Recurring Revenue"
+        default = false
+      },
+      {
+        fullName = "Asset.CurrentQuantity"
+        isActive = true
+        label = "Current Quantity"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.DueDate"
+        isActive = true
+        label = "Due Date"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.Duration"
+        isActive = true
+        label = "Duration"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.DurationInMinutes"
+        isActive = true
+        label = "Duration in Minutes"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.DurationType"
+        isActive = true
+        label = "Duration Type"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.EarliestStartTime"
+        isActive = true
+        label = "Earliest Start Permitted"
+        default = false
+      },
+      {
+        fullName = "Asset.GeocodeAccuracy"
+        isActive = true
+        label = "Geocode Accuracy"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.GeocodeAccuracy"
+        isActive = true
+        label = "Geocode Accuracy"
+        default = false
+      },
+      {
+        fullName = "Asset.InstallDate"
+        isActive = true
+        label = "Install Date"
+        default = false
+      },
+      {
+        fullName = "Asset.IsInternal"
+        isActive = true
+        label = "Internal Asset"
+        default = false
+      },
+      {
+        fullName = "Asset.LastModifiedById"
+        isActive = true
+        label = "Last Modified By ID"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.LastModifiedById"
+        isActive = true
+        label = "Last Modified By ID"
+        default = false
+      },
+      {
+        fullName = "Asset.LastModifiedDate"
+        isActive = true
+        label = "Last Modified Date"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.LastModifiedDate"
+        isActive = true
+        label = "Last Modified Date"
+        default = false
+      },
+      {
+        fullName = "Asset.Latitude"
+        isActive = true
+        label = "Latitude"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.Latitude"
+        isActive = true
+        label = "Latitude"
+        default = false
+      },
+      {
+        fullName = "Asset.LifecycleEndDate"
+        isActive = true
+        label = "Lifecycle End Date"
+        default = false
+      },
+      {
+        fullName = "Asset.HasLifecycleManagement"
+        isActive = true
+        label = "Lifecycle-managed asset"
+        default = false
+      },
+      {
+        fullName = "Asset.LifecycleStartDate"
+        isActive = true
+        label = "Lifecycle Start Date"
+        default = false
+      },
+      {
+        fullName = "Asset.LocationId"
+        isActive = true
+        label = "Location ID"
+        default = false
+      },
+      {
+        fullName = "Asset.Longitude"
+        isActive = true
+        label = "Longitude"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.Longitude"
+        isActive = true
+        label = "Longitude"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.IsManuallyBundled"
+        isActive = true
+        label = "Manually Bundled"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.IsOffsiteAppointment"
+        isActive = true
+        label = "Offsite Appointment"
+        default = false
+      },
+      {
+        fullName = "Asset.OwnerId"
+        isActive = true
+        label = "Owner ID"
+        default = false
+      },
+      {
+        fullName = "Asset.ParentId"
+        isActive = true
+        label = "Parent Asset ID"
+        default = false
+      },
+      {
+        fullName = "Asset.PostalCode"
+        isActive = true
+        label = "Postal Code"
+        default = false
+      },
+      {
+        fullName = "Asset.Price"
+        isActive = true
+        label = "Price"
+        default = false
+      },
+      {
+        fullName = "Asset.Product2Id"
+        isActive = true
+        label = "Product ID"
+        default = false
+      },
+      {
+        fullName = "Asset.PurchaseDate"
+        isActive = true
+        label = "Purchase Date"
+        default = false
+      },
+      {
+        fullName = "Asset.Quantity"
+        isActive = true
+        label = "Quantity"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.RelatedBundleId"
+        isActive = true
+        label = "Related Bundle ID"
+        default = false
+      },
+      {
+        fullName = "Asset.RootAssetId"
+        isActive = true
+        label = "Root Asset ID"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.SchedEndTime"
+        isActive = true
+        label = "Scheduled End"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.SchedStartTime"
+        isActive = true
+        label = "Scheduled Start"
+        default = false
+      },
+      {
+        fullName = "Asset.SerialNumber"
+        isActive = true
+        label = "Serial Number"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.Id"
+        isActive = true
+        label = "Service Appointment ID"
+        default = false
+      },
+      {
+        fullName = "Asset.State"
+        isActive = true
+        label = "State"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.State"
+        isActive = true
+        label = "State/Province"
+        default = false
+      },
+      {
+        fullName = "Asset.Status"
+        isActive = true
+        label = "Status"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.Status"
+        isActive = true
+        label = "Status"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.StatusCategory"
+        isActive = true
+        label = "Status Category"
+        default = false
+      },
+      {
+        fullName = "Asset.Street"
+        isActive = true
+        label = "Street"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.Street"
+        isActive = true
+        label = "Street"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.Subject"
+        isActive = true
+        label = "Subject"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.ServiceTerritoryId"
+        isActive = true
+        label = "Territory ID"
+        default = false
+      },
+      {
+        fullName = "Asset.TotalLifecycleAmount"
+        isActive = true
+        label = "Total Lifecycle Amount"
+        default = false
+      },
+      {
+        fullName = "Asset.UsageEndDate"
+        isActive = true
+        label = "Usage End Date"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.WorkTypeId"
+        isActive = true
+        label = "Work Type ID"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.PostalCode"
+        isActive = true
+        label = "Zip/Postal Code"
+        default = false
+      },
+    ]
+    restricted = true
+    _required = true
+    label = "Criteria Field"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text FirstOccurrence {
+    apiName = "RecordsetFilterCriteriaRule.FirstOccurrence"
+    inlineHelpText = "Set the start value. To determine if the rule is true, this value is compared to the Usage Field value."
+    length = 255
+    label = "First Occurrence"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Text Frequency {
+    apiName = "RecordsetFilterCriteriaRule.Frequency"
+    inlineHelpText = "Set the frequency of maintenance. For example if this field is “1000”, this will schedule at every 1000 increments. This can either be a positive value for an incrementing Usage Field, or a negative value for a decreasing Usage Field."
+    length = 255
+    label = "Frequency"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Number Index {
+    apiName = "RecordsetFilterCriteriaRule.Index"
+    inlineHelpText = "Index in the Recordset Filter Criteria Rule"
+    label = "Index"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Text LastOccurrence {
+    apiName = "RecordsetFilterCriteriaRule.LastOccurrence"
+    length = 255
+    label = "Last Occurrence"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Picklist NextOccurrenceField {
+    apiName = "RecordsetFilterCriteriaRule.NextOccurrenceField"
+    inlineHelpText = "This field’s value is compared to the Usage Field to determine if the rule is true."
+    valueSet = [
+      {
+        fullName = "Asset.AccountId"
+        isActive = true
+        label = "Account ID"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.AccountId"
+        isActive = true
+        label = "Account ID"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.ActualDuration"
+        isActive = true
+        label = "Actual Duration (Minutes)"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.ActualEndTime"
+        isActive = true
+        label = "Actual End"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.ActualStartTime"
+        isActive = true
+        label = "Actual Start"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.AppointmentNumber"
+        isActive = true
+        label = "Appointment Number"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.ArrivalWindowEndTime"
+        isActive = true
+        label = "Arrival Window End"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.ArrivalWindowStartTime"
+        isActive = true
+        label = "Arrival Window Start"
+        default = false
+      },
+      {
+        fullName = "Asset.Id"
+        isActive = true
+        label = "Asset ID"
+        default = false
+      },
+      {
+        fullName = "Asset.Name"
+        isActive = true
+        label = "Asset Name"
+        default = false
+      },
+      {
+        fullName = "Asset.AssetProvidedById"
+        isActive = true
+        label = "Asset Provided By ID"
+        default = false
+      },
+      {
+        fullName = "Asset.AssetServicedById"
+        isActive = true
+        label = "Asset Serviced By ID"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.IsBundle"
+        isActive = true
+        label = "Bundle"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.IsBundleMember"
+        isActive = true
+        label = "Bundle Member"
+        default = false
+      },
+      {
+        fullName = "Asset.City"
+        isActive = true
+        label = "City"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.City"
+        isActive = true
+        label = "City"
+        default = false
+      },
+      {
+        fullName = "Asset.IsCompetitorProduct"
+        isActive = true
+        label = "Competitor Asset"
+        default = false
+      },
+      {
+        fullName = "Asset.ContactId"
+        isActive = true
+        label = "Contact ID"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.ContactId"
+        isActive = true
+        label = "Contact ID"
+        default = false
+      },
+      {
+        fullName = "Asset.Country"
+        isActive = true
+        label = "Country"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.Country"
+        isActive = true
+        label = "Country"
+        default = false
+      },
+      {
+        fullName = "Asset.CreatedById"
+        isActive = true
+        label = "Created By ID"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.CreatedById"
+        isActive = true
+        label = "Created By ID"
+        default = false
+      },
+      {
+        fullName = "Asset.CreatedDate"
+        isActive = true
+        label = "Created Date"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.CreatedDate"
+        isActive = true
+        label = "Created Date"
+        default = false
+      },
+      {
+        fullName = "Asset.CurrentAmount"
+        isActive = true
+        label = "Current Amount"
+        default = false
+      },
+      {
+        fullName = "Asset.CurrentLifecycleEndDate"
+        isActive = true
+        label = "Current Lifecycle End Date"
+        default = false
+      },
+      {
+        fullName = "Asset.CurrentMrr"
+        isActive = true
+        label = "Current Monthly Recurring Revenue"
+        default = false
+      },
+      {
+        fullName = "Asset.CurrentQuantity"
+        isActive = true
+        label = "Current Quantity"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.DueDate"
+        isActive = true
+        label = "Due Date"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.Duration"
+        isActive = true
+        label = "Duration"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.DurationInMinutes"
+        isActive = true
+        label = "Duration in Minutes"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.DurationType"
+        isActive = true
+        label = "Duration Type"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.EarliestStartTime"
+        isActive = true
+        label = "Earliest Start Permitted"
+        default = false
+      },
+      {
+        fullName = "Asset.GeocodeAccuracy"
+        isActive = true
+        label = "Geocode Accuracy"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.GeocodeAccuracy"
+        isActive = true
+        label = "Geocode Accuracy"
+        default = false
+      },
+      {
+        fullName = "Asset.InstallDate"
+        isActive = true
+        label = "Install Date"
+        default = false
+      },
+      {
+        fullName = "Asset.IsInternal"
+        isActive = true
+        label = "Internal Asset"
+        default = false
+      },
+      {
+        fullName = "Asset.LastModifiedById"
+        isActive = true
+        label = "Last Modified By ID"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.LastModifiedById"
+        isActive = true
+        label = "Last Modified By ID"
+        default = false
+      },
+      {
+        fullName = "Asset.LastModifiedDate"
+        isActive = true
+        label = "Last Modified Date"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.LastModifiedDate"
+        isActive = true
+        label = "Last Modified Date"
+        default = false
+      },
+      {
+        fullName = "Asset.Latitude"
+        isActive = true
+        label = "Latitude"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.Latitude"
+        isActive = true
+        label = "Latitude"
+        default = false
+      },
+      {
+        fullName = "Asset.LifecycleEndDate"
+        isActive = true
+        label = "Lifecycle End Date"
+        default = false
+      },
+      {
+        fullName = "Asset.HasLifecycleManagement"
+        isActive = true
+        label = "Lifecycle-managed asset"
+        default = false
+      },
+      {
+        fullName = "Asset.LifecycleStartDate"
+        isActive = true
+        label = "Lifecycle Start Date"
+        default = false
+      },
+      {
+        fullName = "Asset.LocationId"
+        isActive = true
+        label = "Location ID"
+        default = false
+      },
+      {
+        fullName = "Asset.Longitude"
+        isActive = true
+        label = "Longitude"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.Longitude"
+        isActive = true
+        label = "Longitude"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.IsManuallyBundled"
+        isActive = true
+        label = "Manually Bundled"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.IsOffsiteAppointment"
+        isActive = true
+        label = "Offsite Appointment"
+        default = false
+      },
+      {
+        fullName = "Asset.OwnerId"
+        isActive = true
+        label = "Owner ID"
+        default = false
+      },
+      {
+        fullName = "Asset.ParentId"
+        isActive = true
+        label = "Parent Asset ID"
+        default = false
+      },
+      {
+        fullName = "Asset.PostalCode"
+        isActive = true
+        label = "Postal Code"
+        default = false
+      },
+      {
+        fullName = "Asset.Price"
+        isActive = true
+        label = "Price"
+        default = false
+      },
+      {
+        fullName = "Asset.Product2Id"
+        isActive = true
+        label = "Product ID"
+        default = false
+      },
+      {
+        fullName = "Asset.PurchaseDate"
+        isActive = true
+        label = "Purchase Date"
+        default = false
+      },
+      {
+        fullName = "Asset.Quantity"
+        isActive = true
+        label = "Quantity"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.RelatedBundleId"
+        isActive = true
+        label = "Related Bundle ID"
+        default = false
+      },
+      {
+        fullName = "Asset.RootAssetId"
+        isActive = true
+        label = "Root Asset ID"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.SchedEndTime"
+        isActive = true
+        label = "Scheduled End"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.SchedStartTime"
+        isActive = true
+        label = "Scheduled Start"
+        default = false
+      },
+      {
+        fullName = "Asset.SerialNumber"
+        isActive = true
+        label = "Serial Number"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.Id"
+        isActive = true
+        label = "Service Appointment ID"
+        default = false
+      },
+      {
+        fullName = "Asset.State"
+        isActive = true
+        label = "State"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.State"
+        isActive = true
+        label = "State/Province"
+        default = false
+      },
+      {
+        fullName = "Asset.Status"
+        isActive = true
+        label = "Status"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.Status"
+        isActive = true
+        label = "Status"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.StatusCategory"
+        isActive = true
+        label = "Status Category"
+        default = false
+      },
+      {
+        fullName = "Asset.Street"
+        isActive = true
+        label = "Street"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.Street"
+        isActive = true
+        label = "Street"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.Subject"
+        isActive = true
+        label = "Subject"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.ServiceTerritoryId"
+        isActive = true
+        label = "Territory ID"
+        default = false
+      },
+      {
+        fullName = "Asset.TotalLifecycleAmount"
+        isActive = true
+        label = "Total Lifecycle Amount"
+        default = false
+      },
+      {
+        fullName = "Asset.UsageEndDate"
+        isActive = true
+        label = "Usage End Date"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.WorkTypeId"
+        isActive = true
+        label = "Work Type ID"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.PostalCode"
+        isActive = true
+        label = "Zip/Postal Code"
+        default = false
+      },
+    ]
+    restricted = true
+    label = "Next Occurrence Field"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist Operator {
+    apiName = "RecordsetFilterCriteriaRule.Operator"
+    valueSet = [
+      {
+        fullName = "Equals"
+        isActive = true
+        label = "Equals"
+        default = true
+      },
+      {
+        fullName = "GreaterThan"
+        isActive = true
+        label = "Greater than"
+        default = false
+      },
+      {
+        fullName = "GreaterOrEqual"
+        isActive = true
+        label = "Greater than or equal"
+        default = false
+      },
+      {
+        fullName = "LessThan"
+        isActive = true
+        label = "Less than"
+        default = false
+      },
+      {
+        fullName = "LessOrEqual"
+        isActive = true
+        label = "Less than or equal"
+        default = false
+      },
+    ]
+    restricted = true
+    _required = true
+    label = "Operator"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.MasterDetail RecordsetFilterCriteriaId {
+    apiName = "RecordsetFilterCriteriaRule.RecordsetFilterCriteriaId"
+    relationshipName = "RecordsetFilterCriteria"
+    referenceTo = [
+      salesforce.RecordsetFilterCriteria,
+    ]
+    _required = true
+    label = "Recordset Filter Criteria ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Picklist Type {
+    apiName = "RecordsetFilterCriteriaRule.Type"
+    valueSet = [
+      {
+        fullName = "Criteria"
+        isActive = true
+        label = "Criteria"
+        default = true
+      },
+      {
+        fullName = "Usage"
+        isActive = true
+        label = "Usage"
+        default = false
+      },
+      {
+        fullName = "UsageDuration"
+        isActive = true
+        label = "Usage(Duration)"
+        default = false
+      },
+      {
+        fullName = "UsageCounter"
+        isActive = true
+        label = "Usage(Counter)"
+        default = false
+      },
+    ]
+    restricted = true
+    label = "Recordset Filter Criteria Type"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist UsageRateField {
+    apiName = "RecordsetFilterCriteriaRule.UsageRateField"
+    inlineHelpText = "This field stores the daily usage rate of the asset. The unit for the usage rate must be per day."
+    valueSet = [
+      {
+        fullName = "Asset.AccountId"
+        isActive = true
+        label = "Account ID"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.AccountId"
+        isActive = true
+        label = "Account ID"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.ActualDuration"
+        isActive = true
+        label = "Actual Duration (Minutes)"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.ActualEndTime"
+        isActive = true
+        label = "Actual End"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.ActualStartTime"
+        isActive = true
+        label = "Actual Start"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.AppointmentNumber"
+        isActive = true
+        label = "Appointment Number"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.ArrivalWindowEndTime"
+        isActive = true
+        label = "Arrival Window End"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.ArrivalWindowStartTime"
+        isActive = true
+        label = "Arrival Window Start"
+        default = false
+      },
+      {
+        fullName = "Asset.Id"
+        isActive = true
+        label = "Asset ID"
+        default = false
+      },
+      {
+        fullName = "Asset.Name"
+        isActive = true
+        label = "Asset Name"
+        default = false
+      },
+      {
+        fullName = "Asset.AssetProvidedById"
+        isActive = true
+        label = "Asset Provided By ID"
+        default = false
+      },
+      {
+        fullName = "Asset.AssetServicedById"
+        isActive = true
+        label = "Asset Serviced By ID"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.IsBundle"
+        isActive = true
+        label = "Bundle"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.IsBundleMember"
+        isActive = true
+        label = "Bundle Member"
+        default = false
+      },
+      {
+        fullName = "Asset.City"
+        isActive = true
+        label = "City"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.City"
+        isActive = true
+        label = "City"
+        default = false
+      },
+      {
+        fullName = "Asset.IsCompetitorProduct"
+        isActive = true
+        label = "Competitor Asset"
+        default = false
+      },
+      {
+        fullName = "Asset.ContactId"
+        isActive = true
+        label = "Contact ID"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.ContactId"
+        isActive = true
+        label = "Contact ID"
+        default = false
+      },
+      {
+        fullName = "Asset.Country"
+        isActive = true
+        label = "Country"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.Country"
+        isActive = true
+        label = "Country"
+        default = false
+      },
+      {
+        fullName = "Asset.CreatedById"
+        isActive = true
+        label = "Created By ID"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.CreatedById"
+        isActive = true
+        label = "Created By ID"
+        default = false
+      },
+      {
+        fullName = "Asset.CreatedDate"
+        isActive = true
+        label = "Created Date"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.CreatedDate"
+        isActive = true
+        label = "Created Date"
+        default = false
+      },
+      {
+        fullName = "Asset.CurrentAmount"
+        isActive = true
+        label = "Current Amount"
+        default = false
+      },
+      {
+        fullName = "Asset.CurrentLifecycleEndDate"
+        isActive = true
+        label = "Current Lifecycle End Date"
+        default = false
+      },
+      {
+        fullName = "Asset.CurrentMrr"
+        isActive = true
+        label = "Current Monthly Recurring Revenue"
+        default = false
+      },
+      {
+        fullName = "Asset.CurrentQuantity"
+        isActive = true
+        label = "Current Quantity"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.DueDate"
+        isActive = true
+        label = "Due Date"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.Duration"
+        isActive = true
+        label = "Duration"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.DurationInMinutes"
+        isActive = true
+        label = "Duration in Minutes"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.DurationType"
+        isActive = true
+        label = "Duration Type"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.EarliestStartTime"
+        isActive = true
+        label = "Earliest Start Permitted"
+        default = false
+      },
+      {
+        fullName = "Asset.GeocodeAccuracy"
+        isActive = true
+        label = "Geocode Accuracy"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.GeocodeAccuracy"
+        isActive = true
+        label = "Geocode Accuracy"
+        default = false
+      },
+      {
+        fullName = "Asset.InstallDate"
+        isActive = true
+        label = "Install Date"
+        default = false
+      },
+      {
+        fullName = "Asset.IsInternal"
+        isActive = true
+        label = "Internal Asset"
+        default = false
+      },
+      {
+        fullName = "Asset.LastModifiedById"
+        isActive = true
+        label = "Last Modified By ID"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.LastModifiedById"
+        isActive = true
+        label = "Last Modified By ID"
+        default = false
+      },
+      {
+        fullName = "Asset.LastModifiedDate"
+        isActive = true
+        label = "Last Modified Date"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.LastModifiedDate"
+        isActive = true
+        label = "Last Modified Date"
+        default = false
+      },
+      {
+        fullName = "Asset.Latitude"
+        isActive = true
+        label = "Latitude"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.Latitude"
+        isActive = true
+        label = "Latitude"
+        default = false
+      },
+      {
+        fullName = "Asset.LifecycleEndDate"
+        isActive = true
+        label = "Lifecycle End Date"
+        default = false
+      },
+      {
+        fullName = "Asset.HasLifecycleManagement"
+        isActive = true
+        label = "Lifecycle-managed asset"
+        default = false
+      },
+      {
+        fullName = "Asset.LifecycleStartDate"
+        isActive = true
+        label = "Lifecycle Start Date"
+        default = false
+      },
+      {
+        fullName = "Asset.LocationId"
+        isActive = true
+        label = "Location ID"
+        default = false
+      },
+      {
+        fullName = "Asset.Longitude"
+        isActive = true
+        label = "Longitude"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.Longitude"
+        isActive = true
+        label = "Longitude"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.IsManuallyBundled"
+        isActive = true
+        label = "Manually Bundled"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.IsOffsiteAppointment"
+        isActive = true
+        label = "Offsite Appointment"
+        default = false
+      },
+      {
+        fullName = "Asset.OwnerId"
+        isActive = true
+        label = "Owner ID"
+        default = false
+      },
+      {
+        fullName = "Asset.ParentId"
+        isActive = true
+        label = "Parent Asset ID"
+        default = false
+      },
+      {
+        fullName = "Asset.PostalCode"
+        isActive = true
+        label = "Postal Code"
+        default = false
+      },
+      {
+        fullName = "Asset.Price"
+        isActive = true
+        label = "Price"
+        default = false
+      },
+      {
+        fullName = "Asset.Product2Id"
+        isActive = true
+        label = "Product ID"
+        default = false
+      },
+      {
+        fullName = "Asset.PurchaseDate"
+        isActive = true
+        label = "Purchase Date"
+        default = false
+      },
+      {
+        fullName = "Asset.Quantity"
+        isActive = true
+        label = "Quantity"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.RelatedBundleId"
+        isActive = true
+        label = "Related Bundle ID"
+        default = false
+      },
+      {
+        fullName = "Asset.RootAssetId"
+        isActive = true
+        label = "Root Asset ID"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.SchedEndTime"
+        isActive = true
+        label = "Scheduled End"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.SchedStartTime"
+        isActive = true
+        label = "Scheduled Start"
+        default = false
+      },
+      {
+        fullName = "Asset.SerialNumber"
+        isActive = true
+        label = "Serial Number"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.Id"
+        isActive = true
+        label = "Service Appointment ID"
+        default = false
+      },
+      {
+        fullName = "Asset.State"
+        isActive = true
+        label = "State"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.State"
+        isActive = true
+        label = "State/Province"
+        default = false
+      },
+      {
+        fullName = "Asset.Status"
+        isActive = true
+        label = "Status"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.Status"
+        isActive = true
+        label = "Status"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.StatusCategory"
+        isActive = true
+        label = "Status Category"
+        default = false
+      },
+      {
+        fullName = "Asset.Street"
+        isActive = true
+        label = "Street"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.Street"
+        isActive = true
+        label = "Street"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.Subject"
+        isActive = true
+        label = "Subject"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.ServiceTerritoryId"
+        isActive = true
+        label = "Territory ID"
+        default = false
+      },
+      {
+        fullName = "Asset.TotalLifecycleAmount"
+        isActive = true
+        label = "Total Lifecycle Amount"
+        default = false
+      },
+      {
+        fullName = "Asset.UsageEndDate"
+        isActive = true
+        label = "Usage End Date"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.WorkTypeId"
+        isActive = true
+        label = "Work Type ID"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.PostalCode"
+        isActive = true
+        label = "Zip/Postal Code"
+        default = false
+      },
+    ]
+    restricted = true
+    label = "Usage Rate Field"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist UsageRateUnit {
+    apiName = "RecordsetFilterCriteriaRule.UsageRateUnit"
+    inlineHelpText = "This enum value that define different options for Usage Rate Field."
+    valueSet = [
+      {
+        fullName = "Day"
+        isActive = true
+        label = "Day"
+        default = true
+      },
+    ]
+    restricted = true
+    label = "Usage Rate Unit"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.LongTextArea Value {
+    apiName = "RecordsetFilterCriteriaRule.Value"
+    length = 256
+    label = "Value"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "RecordsetFilterCriteriaRule.Id"
+    label = "Recordset Filter Criteria Rule ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "RecordsetFilterCriteriaRule.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber RecordsetFilterCriteriaRuleNumber {
+    apiName = "RecordsetFilterCriteriaRule.RecordsetFilterCriteriaRuleNumber"
+    label = "Recordset Filter Criteria Rule Number"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "RecordsetFilterCriteriaRule.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "RecordsetFilterCriteriaRule.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "RecordsetFilterCriteriaRule.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "RecordsetFilterCriteriaRule.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "RecordsetFilterCriteriaRule.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

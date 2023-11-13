@@ -1,0 +1,70 @@
+salesforce.Layout BenefitType_Benefit_Type_Layout@bss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Benefit Type Details"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.BenefitType.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.BenefitType.field.LoyaltyProgramId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.BenefitType.field.Description
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.BenefitType.field.ProcessType
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.BenefitType.field.Category
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      fields = [
+        "Name",
+        "Value",
+        "PrioritySequence",
+        "IsActive",
+      ]
+      relatedList = "Benefits"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "BenefitType-Benefit Type Layout"
+  _parent = [
+    salesforce.BenefitType,
+  ]
+  _alias = "BenefitType-Benefit Type Layout"
+}

@@ -1,0 +1,330 @@
+type salesforce.EngagementInteraction {
+  salesforce.DateTime AttendeeVerificationTime {
+    apiName = "EngagementInteraction.AttendeeVerificationTime"
+    label = "Attendee Verification Time"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist CommunicationChannel {
+    apiName = "EngagementInteraction.CommunicationChannel"
+    valueSet = [
+      {
+        fullName = "Voice Call"
+        isActive = true
+        label = "Voice Call"
+        default = false
+      },
+      {
+        fullName = "Video Call"
+        isActive = true
+        label = "Video Call"
+        default = false
+      },
+      {
+        fullName = "Web Chat"
+        isActive = true
+        label = "Web Chat"
+        default = false
+      },
+      {
+        fullName = "In Person"
+        isActive = true
+        label = "In Person"
+        default = false
+      },
+    ]
+    restricted = false
+    _required = true
+    label = "Communication Channel"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup ContextId {
+    apiName = "EngagementInteraction.ContextId"
+    relationshipName = "Context"
+    referenceTo = [
+      salesforce.ServiceAppointment,
+    ]
+    label = "Context ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text Duration {
+    apiName = "EngagementInteraction.Duration"
+    length = 4000
+    label = "Duration"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.DateTime EndDateTime {
+    apiName = "EngagementInteraction.EndDateTime"
+    label = "End Date Time"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text ExternalIdentifier {
+    apiName = "EngagementInteraction.ExternalIdentifier"
+    length = 255
+    label = "External Identifier"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Lookup InitiatingAttendeeId {
+    apiName = "EngagementInteraction.InitiatingAttendeeId"
+    relationshipName = "InitiatingAttendee"
+    referenceTo = [
+      salesforce.Account,
+      salesforce.Contact,
+      salesforce.Lead,
+      salesforce.LoyaltyProgramMember,
+    ]
+    label = "InitiatingAttendee ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox IsAttendeeAuthenticated {
+    apiName = "EngagementInteraction.IsAttendeeAuthenticated"
+    defaultValue = false
+    label = "Is Attendee Authenticated"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox IsAttendeeVerified {
+    apiName = "EngagementInteraction.IsAttendeeVerified"
+    defaultValue = false
+    label = "Is Attendee Verified"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "EngagementInteraction.OwnerId"
+    securityClassification = "Internal"
+    relationshipName = "Owner"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    label = "Owner ID"
+    createable = true
+    updateable = true
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Phone PhoneNumber {
+    apiName = "EngagementInteraction.PhoneNumber"
+    securityClassification = "Confidential"
+    label = "Phone Number"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text Reason {
+    apiName = "EngagementInteraction.Reason"
+    length = 765
+    label = "Reason"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Picklist Sentiment {
+    apiName = "EngagementInteraction.Sentiment"
+    valueSet = [
+      {
+        fullName = "Positive"
+        isActive = true
+        label = "Positive"
+        default = false
+      },
+      {
+        fullName = "Neutral"
+        isActive = true
+        label = "Neutral"
+        default = false
+      },
+      {
+        fullName = "Negative"
+        isActive = true
+        label = "Negative"
+        default = false
+      },
+    ]
+    restricted = false
+    label = "Sentiment"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.DateTime StartDateTime {
+    apiName = "EngagementInteraction.StartDateTime"
+    _required = true
+    label = "Start Date Time"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist Status {
+    apiName = "EngagementInteraction.Status"
+    valueSet = [
+      {
+        fullName = "New"
+        isActive = true
+        label = "New"
+        default = true
+      },
+      {
+        fullName = "In Progress"
+        isActive = true
+        label = "In Progress"
+        default = false
+      },
+      {
+        fullName = "Completed"
+        isActive = true
+        label = "Completed"
+        default = false
+      },
+    ]
+    restricted = false
+    label = "Status"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist Type {
+    apiName = "EngagementInteraction.Type"
+    valueSet = [
+      {
+        fullName = "Inbound"
+        isActive = true
+        label = "Inbound"
+        default = false
+      },
+      {
+        fullName = "Outbound"
+        isActive = true
+        label = "Outbound"
+        default = false
+      },
+    ]
+    restricted = false
+    label = "Type"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "EngagementInteraction.Id"
+    label = "Engagement Interaction ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "EngagementInteraction.Name"
+    label = "Name"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "EngagementInteraction.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "EngagementInteraction.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "EngagementInteraction.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "EngagementInteraction.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "EngagementInteraction.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "EngagementInteraction.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist MappedState {
+    apiName = "EngagementInteraction.MappedState"
+    valueSet = [
+      {
+        fullName = "New"
+        isActive = true
+        label = "New"
+        default = true
+      },
+      {
+        fullName = "InProgress"
+        isActive = true
+        label = "In Progress"
+        default = false
+      },
+      {
+        fullName = "Completed"
+        isActive = true
+        label = "Completed"
+        default = false
+      },
+    ]
+    restricted = true
+    label = "Mapped State"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

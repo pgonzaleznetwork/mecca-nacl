@@ -1,0 +1,14 @@
+salesforce.VoucherDefinition "2Xa2o000000GnFZCA0" {
+  DiscountPercent = 10
+  EffectiveDate = "2023-08-03"
+  ExpirationPeriod = 1
+  ExpirationPeriodUnit = "Months"
+  ExpirationType = "Period"
+  IsActive = true
+  IsPartialRedeemable = false
+  LoyaltyProgramId = salesforce.LoyaltyProgram.instance.Cloud_Kicks_Inner_Circle@s
+  Name = "10% off sitewide"
+  PartnerAccountId = salesforce.Account.instance.NTO
+  Type = "DiscountPercentage"
+  _alias = "10% off sitewide"
+}

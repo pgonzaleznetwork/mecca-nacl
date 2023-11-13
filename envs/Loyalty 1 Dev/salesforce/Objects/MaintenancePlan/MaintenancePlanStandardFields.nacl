@@ -1,0 +1,376 @@
+type salesforce.MaintenancePlan {
+  salesforce.Lookup AccountId {
+    apiName = "MaintenancePlan.AccountId"
+    relationshipName = "Account"
+    referenceTo = [
+      salesforce.Account,
+    ]
+    label = "Account ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup ContactId {
+    apiName = "MaintenancePlan.ContactId"
+    relationshipName = "Contact"
+    referenceTo = [
+      salesforce.Contact,
+    ]
+    label = "Contact ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.LongTextArea Description {
+    apiName = "MaintenancePlan.Description"
+    length = 32000
+    label = "Description"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox DoesAutoGenerateWorkOrders {
+    apiName = "MaintenancePlan.DoesAutoGenerateWorkOrders"
+    inlineHelpText = "Define whether work orders are generated automatically. This rule disables the ability to manually generate work orders."
+    defaultValue = false
+    label = "Auto-generate work orders"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox DoesGenerateUponCompletion {
+    apiName = "MaintenancePlan.DoesGenerateUponCompletion"
+    inlineHelpText = "Specify whether to generate the new batch on completion of the last work order in the previous batch."
+    defaultValue = false
+    label = "Generate new batch upon completion"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Date EndDate {
+    apiName = "MaintenancePlan.EndDate"
+    label = "End Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Number GenerationHorizon {
+    apiName = "MaintenancePlan.GenerationHorizon"
+    inlineHelpText = "Set the number of days before the Date of the first work order in the next batch on which work order batches are generated."
+    label = "Generation Horizon (Days)"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Number GenerationTimeframe {
+    apiName = "MaintenancePlan.GenerationTimeframe"
+    inlineHelpText = "The time in advance that work orders are generated in each batch. The unit is specified in Generation Timeframe Type."
+    _required = true
+    label = "Generation Timeframe"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Picklist GenerationTimeframeType {
+    apiName = "MaintenancePlan.GenerationTimeframeType"
+    inlineHelpText = "The unit of frequency for the generation timeframe."
+    valueSet = [
+      {
+        fullName = "Days"
+        isActive = true
+        label = "Days"
+        default = false
+      },
+      {
+        fullName = "Weeks"
+        isActive = true
+        label = "Weeks"
+        default = false
+      },
+      {
+        fullName = "Months"
+        isActive = true
+        label = "Months"
+        default = true
+      },
+      {
+        fullName = "Years"
+        isActive = true
+        label = "Years"
+        default = false
+      },
+    ]
+    restricted = true
+    _required = true
+    label = "Generation Timeframe Type"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup LocationId {
+    apiName = "MaintenancePlan.LocationId"
+    relationshipName = "Location"
+    referenceTo = [
+      salesforce.Location,
+    ]
+    label = "Location ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text MaintenancePlanTitle {
+    apiName = "MaintenancePlan.MaintenancePlanTitle"
+    length = 255
+    label = "Maintenance Plan Title"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Number MaintenanceWindowEndDays {
+    apiName = "MaintenancePlan.MaintenanceWindowEndDays"
+    inlineHelpText = "The number of days after the work order’s suggested service date in which the service appointment can be scheduled."
+    label = "Maintenance Window End (Days)"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Number MaintenanceWindowStartDays {
+    apiName = "MaintenancePlan.MaintenanceWindowStartDays"
+    inlineHelpText = "The number of days before the work order’s suggested service date in which the service appointment can be scheduled."
+    label = "Maintenance Window Start (Days)"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Date NextSuggestedMaintenanceDate {
+    apiName = "MaintenancePlan.NextSuggestedMaintenanceDate"
+    inlineHelpText = "The suggested date of service for the work order in the next batch generated. The value is updated after each batch is generated."
+    _required = true
+    label = "Date of the first work order in the next batch"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "MaintenancePlan.OwnerId"
+    relationshipName = "Owner"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    label = "Owner ID"
+    createable = true
+    updateable = true
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup ServiceContractId {
+    apiName = "MaintenancePlan.ServiceContractId"
+    relationshipName = "ServiceContract"
+    referenceTo = [
+      salesforce.ServiceContract,
+    ]
+    label = "Service Contract ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Date StartDate {
+    apiName = "MaintenancePlan.StartDate"
+    _required = true
+    label = "Start Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist SvcApptGenerationMethod {
+    apiName = "MaintenancePlan.SvcApptGenerationMethod"
+    inlineHelpText = "Specify how service appointments are generated when more than one asset is associated with the maintenance plan and work order generation method is One work order line item per asset."
+    valueSet = [
+      {
+        fullName = "SvcApptPerWorkOrder"
+        isActive = true
+        label = "One service appointment per work order"
+        default = false
+      },
+      {
+        fullName = "SvcApptPerWorkOrderLineItem"
+        isActive = true
+        label = "One service appointment per work order line item"
+        default = false
+      },
+    ]
+    restricted = true
+    label = "Service Appointment Generation Method"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist WorkOrderGenerationMethod {
+    apiName = "MaintenancePlan.WorkOrderGenerationMethod"
+    inlineHelpText = "Specify how work orders are generated when more than one asset is associated with the maintenance plan."
+    valueSet = [
+      {
+        fullName = "WorkOrderPerAsset"
+        isActive = true
+        label = "One work order per asset"
+        default = true
+      },
+      {
+        fullName = "WorkOrderLineItemPerAsset"
+        isActive = true
+        label = "One work order line item per asset"
+        default = false
+      },
+    ]
+    restricted = true
+    label = "Work Order Generation Method"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist WorkOrderGenerationStatus {
+    apiName = "MaintenancePlan.WorkOrderGenerationStatus"
+    valueSet = [
+      {
+        fullName = "NotStarted"
+        isActive = true
+        label = "Not Started"
+        default = true
+      },
+      {
+        fullName = "InProgress"
+        isActive = true
+        label = "In Progress"
+        default = false
+      },
+      {
+        fullName = "Complete"
+        isActive = true
+        label = "Complete"
+        default = false
+      },
+      {
+        fullName = "Unsuccessful"
+        isActive = true
+        label = "Unsuccessful"
+        default = false
+      },
+      {
+        fullName = "NoWorkOrderGenerated"
+        isActive = true
+        label = "No Work Order Generated"
+        default = false
+      },
+      {
+        fullName = "NeedsReview"
+        isActive = true
+        label = "Needs Review"
+        default = false
+      },
+    ]
+    restricted = true
+    label = "Work Order Generation Status"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup WorkTypeId {
+    apiName = "MaintenancePlan.WorkTypeId"
+    inlineHelpText = "Set the work type that governs the duration, required skills and products, and linked articles inherited by generated work orders."
+    relationshipName = "WorkType"
+    referenceTo = [
+      salesforce.WorkType,
+    ]
+    label = "Work Type ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "MaintenancePlan.Id"
+    label = "Maintenance Plan ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "MaintenancePlan.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber MaintenancePlanNumber {
+    apiName = "MaintenancePlan.MaintenancePlanNumber"
+    label = "Maintenance Plan Number"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "MaintenancePlan.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "MaintenancePlan.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "MaintenancePlan.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "MaintenancePlan.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "MaintenancePlan.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

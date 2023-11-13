@@ -1,0 +1,15 @@
+salesforce.Promotion "0c82o0000008QtbAAE" {
+  FulfillmentAction = "CreditPoints"
+  IsActive = false
+  IsEnrollmentRequired = false
+  IsPointsWithFactor = true
+  IsQuickPromotion = false
+  LoyaltyProgramCurrencyId = salesforce.LoyaltyProgramCurrency.instance.0lc2o000000GnFbAAK
+  LoyaltyProgramId = salesforce.LoyaltyProgram.instance.Cloud_Kicks_Inner_Circle@s
+  LoyaltyPromotionType = "Standard"
+  Name = "Buy Super Kicks, Get Double Points"
+  PointFactor = 2
+  StartDate = "2023-08-03"
+  TransactionJournalType = "Accrual"
+  _alias = "Buy Super Kicks, Get Double Points"
+}

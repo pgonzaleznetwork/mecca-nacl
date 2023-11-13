@@ -1,0 +1,69 @@
+salesforce.Layout OperatingHoursHoliday_Operating_Hours_Holiday_Layout@bsss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.OperatingHoursHoliday.field.OperatingHoursHolidayNumber
+            },
+            {
+              behavior = "Required"
+              field = salesforce.OperatingHoursHoliday.field.OperatingHoursId
+            },
+            {
+              behavior = "Required"
+              field = salesforce.OperatingHoursHoliday.field.HolidayId
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.OperatingHoursHoliday.field.CreatedDate
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.OperatingHoursHoliday.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "OperatingHoursHoliday-Operating Hours Holiday Layout"
+  _parent = [
+    salesforce.OperatingHoursHoliday,
+  ]
+  _alias = "OperatingHoursHoliday-Operating Hours Holiday Layout"
+}

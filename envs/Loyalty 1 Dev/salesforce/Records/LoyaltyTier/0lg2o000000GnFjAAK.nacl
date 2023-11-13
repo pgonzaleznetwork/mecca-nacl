@@ -1,0 +1,6 @@
+salesforce.LoyaltyTier "0lg2o000000GnFjAAK" {
+  LoyaltyTierGroupId = salesforce.LoyaltyTierGroup.instance.0lt2o000000GnFWAA0
+  Name = "Diamond"
+  SequenceNumber = 3
+  _alias = "Cloud Kicks Inner Circle Inner Circle Tier Group Diamond"
+}
