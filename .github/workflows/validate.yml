@@ -55,10 +55,7 @@ jobs:
           ./salto-cloud deployment validate -b ${{ github.event.pull_request.head.ref }} -C 'salesforce.client.deploy.testLevel=NoTestRun'
         env: 
           SALTO_API_TOKEN: ${{ secrets.SALTO_API_TOKEN }}
-          SALTO_URL: https://app-staging.salto.io
-          AUTH0_DOMAIN: salto-staging.us.auth0.com
-          AUTH0_CLIENT_ID: VInwYv5FbNXe6wLfRMQJXTHoB61CgXQd
-          GRAPHQL_URL: https://w6hsr1wvc0.execute-api.us-east-2.amazonaws.com/staging/graphql
+
 
   static_code_analysis:
     runs-on: ubuntu-latest
@@ -92,7 +89,7 @@ jobs:
           report-mode: comments
           strictly-enforced-rules: '[{ "engine": "pmd", "category": "Performance", "rule": "AvoidDebugStatements" }]'
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   Provar_regression_testing:
       # The type of runner that the job will run on
       runs-on: ubuntu-latest
