@@ -1,0 +1,69 @@
+salesforce.ExpressionSetObjectAlias Partner {
+  fullName = "Partner"
+  dataType = "sObject"
+  mappings = [
+    {
+      fieldAlias = "BillingType"
+      sourceFieldName = "Partner.BillingType"
+    },
+    {
+      fieldAlias = "PartnershipStartDate"
+      sourceFieldName = "Partner.PartnershipStartDate"
+    },
+    {
+      fieldAlias = "AccrualCostPerUnit"
+      sourceFieldName = "Partner.AccrualCostperUnit"
+    },
+    {
+      fieldAlias = "PartnerIndustry"
+      sourceFieldName = "Partner.PartnerIndustry"
+    },
+    {
+      fieldAlias = "PartnerName"
+      sourceFieldName = "Partner.Name"
+    },
+    {
+      fieldAlias = "PartnerCategory"
+      sourceFieldName = "Partner.PartnerCategory"
+    },
+    {
+      fieldAlias = "PartnershipEndDate"
+      sourceFieldName = "Partner.PartnershipEndDate"
+    },
+    {
+      fieldAlias = "PartnerStatus"
+      sourceFieldName = "Partner.PartnerStatus"
+    },
+    {
+      fieldAlias = "PartnerType"
+      sourceFieldName = "Partner.PartnerType"
+    },
+    {
+      fieldAlias = "RedemptionCostPerUnit"
+      sourceFieldName = "Partner.RedemptionCostperUnit"
+    },
+    {
+      fieldAlias = "CreditedPoints"
+      sourceFieldName = "Partner.CreditedPoints"
+    },
+    {
+      fieldAlias = "DebitedPoints"
+      sourceFieldName = "Partner.DebitedPoints"
+    },
+    {
+      fieldAlias = "PartnersPointsBalance"
+      sourceFieldName = "Partner.PointsBalance"
+    },
+    {
+      fieldAlias = "PostpaidBillAmount"
+      sourceFieldName = "Partner.PostpaidBillAmount"
+    },
+    {
+      fieldAlias = "PurchasedPoints"
+      sourceFieldName = "Partner.PurchasedPoints"
+    },
+  ]
+  objectApiName = "TransactionJournal"
+  usageType = "TransactionJournal"
+  _alias = "Partner"
+}

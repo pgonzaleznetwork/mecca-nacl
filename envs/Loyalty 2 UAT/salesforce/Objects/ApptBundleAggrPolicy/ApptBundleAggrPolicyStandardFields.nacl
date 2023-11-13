@@ -1,0 +1,513 @@
+type salesforce.ApptBundleAggrPolicy {
+  salesforce.Picklist AggregationAction {
+    apiName = "ApptBundleAggrPolicy.AggregationAction"
+    inlineHelpText = "Select an action that can be used with the Bundle Field Name. For help, check the documentation."
+    valueSet = [
+      {
+        fullName = "Apply AND operation"
+        isActive = true
+        label = "Apply AND operation"
+        default = false
+      },
+      {
+        fullName = "Apply OR operation"
+        isActive = true
+        label = "Apply OR operation"
+        default = false
+      },
+      {
+        fullName = "Clear value"
+        isActive = true
+        label = "Clear value"
+        default = false
+      },
+      {
+        fullName = "Count Bundle Members in Filter Criteria"
+        isActive = true
+        label = "Count Bundle Members in Filter Criteria"
+        default = false
+      },
+      {
+        fullName = "Find earliest"
+        isActive = true
+        label = "Find earliest"
+        default = false
+      },
+      {
+        fullName = "Find latest"
+        isActive = true
+        label = "Find latest"
+        default = false
+      },
+      {
+        fullName = "Find maximum"
+        isActive = true
+        label = "Find maximum"
+        default = false
+      },
+      {
+        fullName = "Find minimum"
+        isActive = true
+        label = "Find minimum"
+        default = false
+      },
+      {
+        fullName = "Has at least one Bundle Member in Filter Criteria"
+        isActive = true
+        label = "Has at least one Bundle Member in Filter Criteria"
+        default = false
+      },
+      {
+        fullName = "Intersect"
+        isActive = true
+        label = "Intersect"
+        default = false
+      },
+      {
+        fullName = "Set constant value"
+        isActive = true
+        label = "Set constant value"
+        default = false
+      },
+      {
+        fullName = "Set downscaled duration"
+        isActive = true
+        label = "Set downscaled duration"
+        default = false
+      },
+      {
+        fullName = "Subtract based on Bundle fields"
+        isActive = true
+        label = "Subtract based on Bundle fields"
+        default = false
+      },
+      {
+        fullName = "Sum based on Bundle fields"
+        isActive = true
+        label = "Sum based on Bundle fields"
+        default = false
+      },
+      {
+        fullName = "Sum based on Bundle Members"
+        isActive = true
+        label = "Sum based on Bundle Members"
+        default = false
+      },
+      {
+        fullName = "Unite"
+        isActive = true
+        label = "Unite"
+        default = false
+      },
+    ]
+    restricted = true
+    label = "Aggregation Action"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist AggregationFieldType {
+    apiName = "ApptBundleAggrPolicy.AggregationFieldType"
+    inlineHelpText = "Select the bundle service appointment’s field type. The value is filled via the aggregation."
+    valueSet = [
+      {
+        fullName = "Boolean"
+        isActive = true
+        label = "Boolean"
+        default = false
+      },
+      {
+        fullName = "Date"
+        isActive = true
+        label = "Date"
+        default = false
+      },
+      {
+        fullName = "Numeric"
+        isActive = true
+        label = "Numeric"
+        default = false
+      },
+      {
+        fullName = "Picklist"
+        isActive = true
+        label = "Picklist"
+        default = false
+      },
+      {
+        fullName = "Picklist-Multi"
+        isActive = true
+        label = "Picklist-Multi"
+        default = false
+      },
+      {
+        fullName = "Skills"
+        isActive = true
+        label = "Skills"
+        default = false
+      },
+      {
+        fullName = "String"
+        isActive = true
+        label = "String"
+        default = false
+      },
+      {
+        fullName = "Lookup"
+        isActive = true
+        label = "Lookup"
+        default = false
+      },
+    ]
+    restricted = true
+    label = "Aggregation Field Type"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Unknown AggregationOrder {
+    apiName = "ApptBundleAggrPolicy.AggregationOrder"
+    inlineHelpText = "Set the order to trigger the aggregation. For example, enter 1 to trigger this policy first."
+    _hidden_value = true
+  }
+  salesforce.Picklist BundleFieldName {
+    apiName = "ApptBundleAggrPolicy.BundleFieldName"
+    inlineHelpText = "Select a bundle service appointment field. The value is pulled from the bundle member service appointment."
+    valueSet = [
+      {
+        fullName = "ServiceAppointment.ActualDuration"
+        isActive = true
+        label = "Actual Duration (Minutes)"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.ActualEndTime"
+        isActive = true
+        label = "Actual End"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.ActualStartTime"
+        isActive = true
+        label = "Actual Start"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.ApptBookingInfoUrl"
+        isActive = true
+        label = "Appointment Booking URL"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.ArrivalWindowEndTime"
+        isActive = true
+        label = "Arrival Window End"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.ArrivalWindowStartTime"
+        isActive = true
+        label = "Arrival Window Start"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.City"
+        isActive = true
+        label = "City"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.ContactId"
+        isActive = true
+        label = "Contact ID"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.Country"
+        isActive = true
+        label = "Country"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.CreatedDate"
+        isActive = true
+        label = "Created Date"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.Description"
+        isActive = true
+        label = "Description"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.DueDate"
+        isActive = true
+        label = "Due Date"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.Duration"
+        isActive = true
+        label = "Duration"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.DurationInMinutes"
+        isActive = true
+        label = "Duration in Minutes"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.DurationType"
+        isActive = true
+        label = "Duration Type"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.EarliestStartTime"
+        isActive = true
+        label = "Earliest Start Permitted"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.GeocodeAccuracy"
+        isActive = true
+        label = "Geocode Accuracy"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.LastModifiedDate"
+        isActive = true
+        label = "Last Modified Date"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.Latitude"
+        isActive = true
+        label = "Latitude"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.Longitude"
+        isActive = true
+        label = "Longitude"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.IsOffsiteAppointment"
+        isActive = true
+        label = "Offsite Appointment"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.SchedEndTime"
+        isActive = true
+        label = "Scheduled End"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.SchedStartTime"
+        isActive = true
+        label = "Scheduled Start"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.ServiceNote"
+        isActive = true
+        label = "Service Note"
+        default = false
+      },
+      {
+        fullName = "SkillRequirements"
+        isActive = true
+        label = "Skill Requirements"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.State"
+        isActive = true
+        label = "State/Province"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.Status"
+        isActive = true
+        label = "Status"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.StatusCategory"
+        isActive = true
+        label = "Status Category"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.Street"
+        isActive = true
+        label = "Street"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.Subject"
+        isActive = true
+        label = "Subject"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.ServiceTerritoryId"
+        isActive = true
+        label = "Territory ID"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.PostalCode"
+        isActive = true
+        label = "Zip/Postal Code"
+        default = false
+      },
+    ]
+    restricted = true
+    label = "Bundle’s Target Field"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Unknown BundleMemberAddiFieldName {
+    apiName = "ApptBundleAggrPolicy.BundleMemberAddiFieldName"
+    inlineHelpText = "The additional source field comes from the bundle member service appointment. If you select the aggregation action Sum Based on Bundle Fields or Subtract Based on Bundle Fields, the additional source field comes from the bundle service appointment."
+    _hidden_value = true
+  }
+  salesforce.Unknown BundleMemberFieldName {
+    apiName = "ApptBundleAggrPolicy.BundleMemberFieldName"
+    inlineHelpText = "The source field comes from the bundle member service appointment. If you select the aggregation action Sum Based on Bundle Fields or Subtract Based on Bundle Fields, the source field comes from the bundle service appointment."
+    _hidden_value = true
+  }
+  salesforce.MasterDetail BundlePolicyId {
+    apiName = "ApptBundleAggrPolicy.BundlePolicyId"
+    relationshipName = "BundlePolicy"
+    referenceTo = [
+      salesforce.ApptBundlePolicy,
+    ]
+    _required = true
+    label = "Appointment Bundle Policy ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Unknown ConstantValue {
+    apiName = "ApptBundleAggrPolicy.ConstantValue"
+    _hidden_value = true
+  }
+  salesforce.Unknown DateValue {
+    apiName = "ApptBundleAggrPolicy.DateValue"
+    inlineHelpText = "Applies only if date aggregations require a constant date value."
+    _hidden_value = true
+  }
+  salesforce.Unknown DoesAllowDuplicateStrings {
+    apiName = "ApptBundleAggrPolicy.DoesAllowDuplicateStrings"
+    inlineHelpText = "Valid only if Sum Based on Bundle Members is selected for the Aggregation Action."
+    _hidden_value = true
+  }
+  salesforce.Unknown DownscaleSortDirection {
+    apiName = "ApptBundleAggrPolicy.DownscaleSortDirection"
+    inlineHelpText = "Applies only if the Set Downscaled Duration action is set. Select the downscaling sorting direction of the bundle member service appointments, according to their duration."
+    _hidden_value = true
+  }
+  salesforce.Lookup FilterCriteriaId {
+    apiName = "ApptBundleAggrPolicy.FilterCriteriaId"
+    inlineHelpText = "Enter the recordset filter criteria used to aggregate the bundle members. You can aggregate only service appointments that meet this criteria."
+    relationshipName = "FilterCriteria"
+    referenceTo = [
+      salesforce.RecordsetFilterCriteria,
+    ]
+    label = "Recordset Filter Criteria ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Unknown MaxBundleDuration {
+    apiName = "ApptBundleAggrPolicy.MaxBundleDuration"
+    inlineHelpText = "Applies to downscaling aggregations only. Enter the maximum bundle duration, in minutes, calculated from the sum of bundle members after downscaling."
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "ApptBundleAggrPolicy.Name"
+    inlineHelpText = "Enter a unique name."
+    length = 255
+    _required = true
+    label = "Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Unknown ShouldUpdateOnCreationOnly {
+    apiName = "ApptBundleAggrPolicy.ShouldUpdateOnCreationOnly"
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "ApptBundleAggrPolicy.Id"
+    label = "Appointment Bundle Aggregation Policy ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ApptBundleAggrPolicy.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ApptBundleAggrPolicy.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ApptBundleAggrPolicy.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ApptBundleAggrPolicy.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ApptBundleAggrPolicy.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ApptBundleAggrPolicy.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

@@ -1,0 +1,18 @@
+salesforce.ListView BatchJobPart_All_Tasks {
+  fullName = "BatchJobPart.All_Tasks"
+  columns = [
+    "Name",
+    "Id",
+    "StartTime",
+    "EndTime",
+    "InputRecordCount",
+    "Status",
+    "FailedRecordCount",
+  ]
+  filterScope = "Everything"
+  label = "All Tasks"
+  _parent = [
+    salesforce.BatchJobPart,
+  ]
+  _alias = "All Tasks"
+}

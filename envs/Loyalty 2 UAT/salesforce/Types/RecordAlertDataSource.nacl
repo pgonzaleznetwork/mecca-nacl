@@ -1,0 +1,45 @@
+type salesforce.RecordAlertDataSource {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string apexClass {
+    foreignKeyDomain = [
+      salesforce.ApexClass,
+    ]
+  }
+  serviceid fullName {
+  }
+  boolean isActive {
+  }
+  boolean isProtected {
+  }
+  string masterLabel {
+  }
+  string type {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "APEX",
+        "BusinessRulesEngine",
+      ]
+    }
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "recordAlertDataSource"
+  dirName = "recordAlertDataSources"
+  metadataType = "RecordAlertDataSource"
+}

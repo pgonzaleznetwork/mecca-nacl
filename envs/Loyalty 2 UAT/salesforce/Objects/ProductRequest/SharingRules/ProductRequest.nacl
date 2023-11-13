@@ -1,0 +1,7 @@
+salesforce.SharingRules ProductRequest {
+  fullName = "ProductRequest"
+  _parent = [
+    salesforce.ProductRequest,
+  ]
+  _alias = "ProductRequest"
+}

@@ -1,0 +1,9 @@
+salesforce.ListView ApptBundlePolicy_My_ApptBundlePolicies {
+  fullName = "ApptBundlePolicy.My_ApptBundlePolicies"
+  filterScope = "Mine"
+  label = "My Appointment Bundle Policies"
+  _parent = [
+    salesforce.ApptBundlePolicy,
+  ]
+  _alias = "My Appointment Bundle Policies"
+}

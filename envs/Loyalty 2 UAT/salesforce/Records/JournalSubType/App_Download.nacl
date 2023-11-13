@@ -1,0 +1,5 @@
+salesforce.JournalSubType App_Download@s {
+  JournalTypeId = salesforce.JournalType.instance.Accrual
+  Name = "App Download"
+  _alias = "Accrual App Download"
+}

@@ -1,0 +1,148 @@
+type salesforce.ServiceResourceCapacity {
+  salesforce.Number CapacityInHours {
+    apiName = "ServiceResourceCapacity.CapacityInHours"
+    label = "Hours per Time Period"
+    precision = 18
+    scale = 2
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.Number CapacityInWorkItems {
+    apiName = "ServiceResourceCapacity.CapacityInWorkItems"
+    label = "Work Items per Time Period"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Date EndDate {
+    apiName = "ServiceResourceCapacity.EndDate"
+    label = "End Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.MasterDetail ServiceResourceId {
+    apiName = "ServiceResourceCapacity.ServiceResourceId"
+    relationshipName = "ServiceResource"
+    referenceTo = [
+      salesforce.ServiceResource,
+    ]
+    _required = true
+    label = "Resource ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Date StartDate {
+    apiName = "ServiceResourceCapacity.StartDate"
+    _required = true
+    label = "Start Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist TimePeriod {
+    apiName = "ServiceResourceCapacity.TimePeriod"
+    valueSet = [
+      {
+        fullName = "Day"
+        isActive = true
+        label = "Day"
+        default = true
+      },
+      {
+        fullName = "Week"
+        isActive = true
+        label = "Week"
+        default = false
+      },
+      {
+        fullName = "Month"
+        isActive = true
+        label = "Month"
+        default = false
+      },
+    ]
+    restricted = true
+    label = "Time Period"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "ServiceResourceCapacity.Id"
+    label = "Resource Capacity ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ServiceResourceCapacity.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber CapacityNumber {
+    apiName = "ServiceResourceCapacity.CapacityNumber"
+    label = "Resource Capacity Number"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ServiceResourceCapacity.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ServiceResourceCapacity.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ServiceResourceCapacity.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ServiceResourceCapacity.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ServiceResourceCapacity.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

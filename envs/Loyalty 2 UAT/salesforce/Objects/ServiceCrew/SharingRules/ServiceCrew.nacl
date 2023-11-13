@@ -1,0 +1,7 @@
+salesforce.SharingRules ServiceCrew {
+  fullName = "ServiceCrew"
+  _parent = [
+    salesforce.ServiceCrew,
+  ]
+  _alias = "ServiceCrew"
+}

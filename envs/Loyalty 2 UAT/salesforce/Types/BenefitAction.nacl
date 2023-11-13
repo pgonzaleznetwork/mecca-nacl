@@ -1,0 +1,120 @@
+type salesforce.BenefitAction {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  salesforce.BenefitActionParameter benefitActionParameters {
+  }
+  string description {
+  }
+  string flowDefinition {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "benefits__Issue_Free_Product_Sample",
+        "benefits__Issue_Voucher",
+        "benefits_entl__Assign_Support_Entl",
+        "cms_orch__CMS_BasicApprovalRequest",
+        "cms_orch__CMS_EvalApprovalStepStatus",
+        "cms_orch__CMS_NotifyRequester",
+        "cms_orch__CMS_ReviewContent",
+        "cms_orch__CMS_ReviseContent",
+        "cms_orch__CMS_WithdrawReviewRequest",
+        "industries_fsc__CreateSlackAccChannel",
+        "industries_fsc__ReferralNotification",
+        "industries_loyalty_promo__Add_Segments",
+        "industries_loyalty_promo__ApplyPromo",
+        "loyalty_se__idv_loyalty",
+        "omnichannel_chat__QueuesChat",
+        "omnichannel_chat__SkillsChat",
+        "omnichannel_messaging__MsgRouting",
+        "omnichannel_voice__VoiceRouting",
+        "opencti__SCV_Basic_Routing_Flow",
+        "runtime_appointmentbooking__Create_WL",
+        "runtime_appointmentbooking__Flow",
+        "runtime_appointmentbooking__Guest_Flow",
+        "runtime_appointmentbooking__In_Cancel",
+        "runtime_appointmentbooking__In_Modify",
+        "runtime_appointmentbooking__In_New",
+        "runtime_appointmentbooking__Inv_Book",
+        "runtime_appointmentbooking__Inv_Gen",
+        "runtime_appointmentbooking__Out_Modify",
+        "runtime_appointmentbooking__send_Invt",
+        "runtime_commerce_oms__Cancel_Item",
+        "runtime_commerce_oms__Create_OS",
+        "runtime_commerce_oms__Create_PE",
+        "runtime_commerce_oms__Return_Item",
+        "runtime_industries_loyalty__Merge",
+        "runtime_industries_recurrence__Orch",
+        "runtime_industries_recurrence__Schdlr",
+        "runtime_payments__PayNowWithProducts",
+        "serviceprocess__attempt_fee_reversal",
+        "serviceprocess__auconflow",
+        "serviceprocess__auporchestrator",
+        "serviceprocess__ausflow",
+        "serviceprocess__auwakeflow",
+        "serviceprocess__confirm_fee_reversal",
+        "serviceprocess__fsc_fee_reversal_flow",
+        "serviceprocess__review_fee_reversal",
+        "setup_se__baseidv",
+        "setup_se__idv",
+        "setup_se__idvbase",
+        "setup_se__idvlinked",
+        "setup_se__idvprimary",
+        "setup_se__idvsecondary",
+        "setup_service_experience__Create_Case",
+        "setup_service_experience__Reset_Pwd",
+        "setup_service_experience__Verify_Cust",
+        "setup_service_folmessaging__MSContact",
+      ]
+    }
+    foreignKeyDomain = [
+      salesforce.FlowDefinition,
+    ]
+  }
+  boolean isActive {
+  }
+  boolean isBenefitExpirationAllowed {
+  }
+  boolean isBenefitUpdateAllowed {
+  }
+  string masterLabel {
+  }
+  string memberBenefitVariableName {
+  }
+  string processType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Loyalty",
+      ]
+    }
+  }
+  string type {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Flow",
+      ]
+    }
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "benefitAction"
+  dirName = "benefitActions"
+  metadataType = "BenefitAction"
+}

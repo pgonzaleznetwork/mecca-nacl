@@ -1,0 +1,9 @@
+salesforce.ListView AuthorizationFormText_All_AuthorizationFormTexts {
+  fullName = "AuthorizationFormText.All_AuthorizationFormTexts"
+  filterScope = "Everything"
+  label = "All Authorization Form Texts"
+  _parent = [
+    salesforce.AuthorizationFormText,
+  ]
+  _alias = "All Authorization Form Texts"
+}

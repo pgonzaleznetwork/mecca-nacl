@@ -1,0 +1,6 @@
+salesforce.IdentityProviderSettings {
+  fullName = "IdentityProvider"
+  certificateName = ""
+  enableIdentityProvider = false
+  _alias = "IdentityProvider"
+}

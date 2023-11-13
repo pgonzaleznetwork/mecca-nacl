@@ -1,0 +1,123 @@
+salesforce.Flow Run_Loyalty_Program_Process {
+  fullName = "Run_Loyalty_Program_Process"
+  actionCalls = [
+    {
+      name = "Run_Program_Process"
+      label = "Run Program Process"
+      locationX = 1008
+      locationY = 160
+      actionName = "runProgramProcessForTransactionJournal"
+      actionType = "runProgramProcessForTransactionJournal"
+      flowTransactionModel = "CurrentTransaction"
+      inputParameters = [
+        {
+          name = "transactionJournalId"
+          value = {
+            elementReference = "$Record.Id"
+          }
+        },
+      ]
+      nameSegment = "runProgramProcessForTransactionJournal"
+      storeOutputAutomatically = true
+      versionSegment = 1
+    },
+  ]
+  apiVersion = 58
+  decisions = [
+    {
+      name = "Check_for_Journal_SubType"
+      label = "Check for Journal SubType"
+      locationX = 779
+      locationY = 160
+      defaultConnectorLabel = "Default Outcome"
+      rules = [
+        {
+          name = "Journal_Subtype"
+          conditionLogic = "and"
+          conditions = [
+            {
+              leftValueReference = "Get_Journal_SubType.Name"
+              operator = "NotEqualTo"
+              rightValue = {
+                stringValue = "Social Media Activity"
+              }
+            },
+          ]
+          connector = {
+            targetReference = "Run_Program_Process"
+          }
+          label = "Journal Subtype"
+        },
+      ]
+    },
+  ]
+  environments = "Default"
+  interviewLabel = "Run Loyalty Program Process {!$Flow.CurrentDateTime}"
+  label = "Run Loyalty Program Process"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "FREE_FORM_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "AutoLaunchedFlow"
+  recordLookups = [
+    {
+      name = "Get_Journal_SubType"
+      label = "Get Journal SubType"
+      locationX = 594
+      locationY = 158
+      assignNullValuesIfNoRecordsFound = false
+      connector = {
+        targetReference = "Check_for_Journal_SubType"
+      }
+      filterLogic = "and"
+      filters = [
+        {
+          field = salesforce.JournalSubType.field.Id
+          operator = "EqualTo"
+          value = {
+            elementReference = "$Record.JournalSubType.Id"
+          }
+        },
+      ]
+      getFirstRecordOnly = true
+      object = salesforce.JournalSubType
+      storeOutputAutomatically = true
+    },
+  ]
+  start = {
+    locationX = 114
+    locationY = 48
+    connector = {
+      targetReference = "Get_Journal_SubType"
+    }
+    filterLogic = "and"
+    filters = {
+      field = salesforce.TransactionJournal.field.Status
+      operator = "EqualTo"
+      value = {
+        stringValue = "Pending"
+      }
+    }
+    object = salesforce.TransactionJournal
+    recordTriggerType = "Create"
+    triggerType = "RecordAfterSave"
+  }
+  status = "Obsolete"
+  _alias = "Run Loyalty Program Process"
+}

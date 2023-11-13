@@ -1,0 +1,178 @@
+type salesforce.SerializedProduct {
+  salesforce.Lookup AssetId {
+    apiName = "SerializedProduct.AssetId"
+    relationshipName = "Asset"
+    referenceTo = [
+      salesforce.Asset,
+    ]
+    label = "Asset ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Date ExpirationDate {
+    apiName = "SerializedProduct.ExpirationDate"
+    label = "Expiration Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "SerializedProduct.OwnerId"
+    relationshipName = "Owner"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    label = "Owner ID"
+    createable = true
+    updateable = true
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup Product2Id {
+    apiName = "SerializedProduct.Product2Id"
+    relationshipName = "Product2"
+    referenceTo = [
+      salesforce.Product2,
+    ]
+    _required = true
+    label = "Product ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup ProductItemId {
+    apiName = "SerializedProduct.ProductItemId"
+    relationshipName = "ProductItem"
+    referenceTo = [
+      salesforce.ProductItem,
+    ]
+    label = "Product Item ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text SerialNumber {
+    apiName = "SerializedProduct.SerialNumber"
+    length = 255
+    _required = true
+    label = "Serial Number"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Picklist Status {
+    apiName = "SerializedProduct.Status"
+    valueSet = [
+      {
+        fullName = "Available"
+        isActive = true
+        label = "Available"
+        default = true
+      },
+      {
+        fullName = "Sent"
+        isActive = true
+        label = "Sent"
+        default = false
+      },
+      {
+        fullName = "Consumed"
+        isActive = true
+        label = "Consumed"
+        default = false
+      },
+      {
+        fullName = "Damaged"
+        isActive = true
+        label = "Damaged"
+        default = false
+      },
+      {
+        fullName = "Lost"
+        isActive = true
+        label = "Lost"
+        default = false
+      },
+    ]
+    restricted = true
+    label = "Status"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "SerializedProduct.Id"
+    label = "Serialized Product ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "SerializedProduct.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "SerializedProduct.Name"
+    label = "Name"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "SerializedProduct.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "SerializedProduct.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "SerializedProduct.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "SerializedProduct.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "SerializedProduct.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

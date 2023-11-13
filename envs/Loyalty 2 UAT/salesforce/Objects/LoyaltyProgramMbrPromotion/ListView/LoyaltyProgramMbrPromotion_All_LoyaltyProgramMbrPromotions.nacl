@@ -1,0 +1,9 @@
+salesforce.ListView LoyaltyProgramMbrPromotion_All_LoyaltyProgramMbrPromotions {
+  fullName = "LoyaltyProgramMbrPromotion.All_LoyaltyProgramMbrPromotions"
+  filterScope = "Everything"
+  label = "allLoyaltyProgramMbrPromotions"
+  _parent = [
+    salesforce.LoyaltyProgramMbrPromotion,
+  ]
+  _alias = "allLoyaltyProgramMbrPromotions"
+}

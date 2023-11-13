@@ -1,0 +1,203 @@
+salesforce.Layout ProductRequest_Product_Request_Layout@bss {
+  excludeButtons = [
+    "Submit",
+  ]
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.ProductRequest.field.ProductRequestNumber
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ProductRequest.field.OwnerId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ProductRequest.field.WorkOrderId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ProductRequest.field.DestinationLocationId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ProductRequest.field.Description
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.ProductRequest.field.Status
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ProductRequest.field.ShipmentType
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ProductRequest.field.NeedByDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ProductRequest.field.ShipToAddress
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.ProductRequest.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.ProductRequest.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  quickActionList = {
+    quickActionListItems = [
+      {
+        quickActionName = "FeedItem.ContentPost"
+      },
+      {
+        quickActionName = "FeedItem.LinkPost"
+      },
+      {
+        quickActionName = "FeedItem.PollPost"
+      },
+      {
+        quickActionName = "FeedItem.QuestionPost"
+      },
+      {
+        quickActionName = "FeedItem.RypplePost"
+      },
+      {
+        quickActionName = "FeedItem.TextPost"
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.LogACall
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.NewCase
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.NewEvent
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.NewNote
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.NewTask
+      },
+    ]
+  }
+  relatedLists = [
+    {
+      fields = [
+        "TASK.SUBJECT",
+        "TASK.WHO_NAME",
+        "ACTIVITY.TASK",
+        "TASK.DUE_DATE",
+        "TASK.STATUS",
+        "TASK.PRIORITY",
+        "CORE.USERS.FULL_NAME",
+      ]
+      relatedList = "RelatedActivityList"
+    },
+    {
+      relatedList = "RelatedNoteList"
+    },
+    {
+      relatedList = "RelatedFileList"
+    },
+    {
+      relatedList = "RelatedEntityHistoryList"
+    },
+    {
+      fields = [
+        "CreatedDate",
+        "StepStatus",
+        "OriginalActor",
+        "Actor",
+        "Comments",
+      ]
+      relatedList = "RelatedProcessHistoryList"
+    },
+    {
+      fields = [
+        "Name",
+        "QuantityRequested",
+        "QuantityUnitOfMeasure",
+        "NeedByDate",
+        "Status",
+        "CreatedBy",
+      ]
+      relatedList = "ProductRequestLineItem"
+    },
+    {
+      fields = [
+        "Name",
+        "Product2",
+        "SourceProductItem",
+        "QuantityReceived",
+        "DestinationLocation",
+        "IsReceived",
+        "ReceivedBy",
+      ]
+      relatedList = "ProductTransfers"
+    },
+    {
+      fields = [
+        "Name",
+        "DestinationLocation",
+        "SourceLocation",
+        "Status",
+        "CreatedBy",
+      ]
+      relatedList = "ReturnOrders"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "ProductRequest-Product Request Layout"
+  _parent = [
+    salesforce.ProductRequest,
+  ]
+  _alias = "ProductRequest-Product Request Layout"
+}

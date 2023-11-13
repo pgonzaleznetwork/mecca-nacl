@@ -1,0 +1,9 @@
+salesforce.ListView ServiceCrew_My_ServiceCrews {
+  fullName = "ServiceCrew.My_ServiceCrews"
+  filterScope = "Mine"
+  label = "My Service Crews"
+  _parent = [
+    salesforce.ServiceCrew,
+  ]
+  _alias = "My Service Crews"
+}

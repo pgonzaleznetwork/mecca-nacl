@@ -1,0 +1,10 @@
+salesforce.ExplainabilityActionVersion ISE_IDVAudit {
+  fullName = "ISE_IDVAudit"
+  actionSpecification = "{}"
+  active = true
+  definitionVersion = 1
+  description = "ISE IDV Audit Trail Log Def Initial Version"
+  explainabilityActionDef = salesforce.ExplainabilityActionDefinition.instance.ISE_IDVAudit
+  masterLabel = "ISE_IDVAudit"
+  _alias = "ISE_IDVAudit"
+}
