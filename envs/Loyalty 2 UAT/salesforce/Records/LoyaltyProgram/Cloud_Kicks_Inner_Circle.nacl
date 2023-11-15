@@ -3,6 +3,6 @@ salesforce.LoyaltyProgram Cloud_Kicks_Inner_Circle@s {
   Name = "Cloud Kicks Inner Circle"
   Status = "Active"
   _alias = "Cloud Kicks Inner Circle"
-  Tier__c = "Gold"
-  Description = "Loyalty program for customers of Cloud Kicks"
+  
+  
 }
