@@ -13,6 +13,10 @@ public with sharing class FeatureFlagProvider implements IFeatureFlagProvider {
         return FeatureFlag__mdt.getAll();
     }
     
-  
+    public static void badQuery(){
+        for(Integer x=0;x < 10; x++){
+            List<Account> accts = [SELECT Id FROM Account];
+        }
+    }
 
 }
