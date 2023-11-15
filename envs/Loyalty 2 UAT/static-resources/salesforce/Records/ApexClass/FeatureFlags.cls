@@ -11,6 +11,7 @@ public with sharing class FeatureFlags implements IFeatureFlags {
         customPermissionNames = provider.getCustomPermissionNames();
     }
 
+    //new comment
     public FeatureFlags(){
         this(new FeatureFlagProvider());
     }
