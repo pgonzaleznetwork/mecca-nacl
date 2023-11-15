@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase guid="faad9f94-b65d-42e2-86fa-791b2c34f53b">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" guid="74ac789b-fb8b-4391-9de0-1f2fda6c2bfa" name="ApexConnect" testItemId="1" title="Salesforce Connect: Admin (Test)">
+      <associations>
+        <association assocationType="TM.TEST_STEP" connectionId="31c92433-7959-4a38-8c84-592b78238125" entityKey="a0e2o00001HPkKlAAL"/>
+      </associations>
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">Admin</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">Admin</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="uiApplicationName"/>
+        <argument id="quickUiLogin">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="closeAllPrimaryTabs">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="reuseConnectionName"/>
+        <argument id="alreadyOpenBehaviour">
+          <value class="value" valueClass="string">Fail</value>
+        </argument>
+        <argument id="privateBrowsingMode"/>
+        <argument id="enableObjectIdLogging">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="autoCleanup"/>
+        <argument id="cleanupConnectionName"/>
+        <argument id="logFileLocation"/>
+        <argument id="username"/>
+        <argument id="password"/>
+        <argument id="securityToken"/>
+        <argument id="environment"/>
+        <argument id="lightningMode">
+          <value class="value" valueClass="string">default</value>
+        </argument>
+        <argument id="webBrowser"/>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.GenerateTestCase" guid="d9b15268-be87-45b5-8658-b19334f26365" name="GenerateTestCase" testItemId="2" title="Generate Test Case: ⇒ ">
+      <associations>
+        <association assocationType="TM.TEST_STEP" connectionId="31c92433-7959-4a38-8c84-592b78238125" entityKey="a0e2o00001HPkymAAD"/>
+      </associations>
+      <arguments>
+        <argument id="ObjectsName">
+          <value class="value" valueClass="string">Opportunity, Account</value>
+        </argument>
+        <argument id="ConnectionName">
+          <value class="value" valueClass="string">Admin</value>
+        </argument>
+      </arguments>
+    </apiCall>
+  </steps>
+  <associations>
+    <association assocationType="TM.TEST_CASE" connectionId="31c92433-7959-4a38-8c84-592b78238125" entityKey="a0R2o00000fJsHZEA0" lastUploadedDateTime="2023-10-17T12:41:47Z"/>
+  </associations>
+</testCase>
