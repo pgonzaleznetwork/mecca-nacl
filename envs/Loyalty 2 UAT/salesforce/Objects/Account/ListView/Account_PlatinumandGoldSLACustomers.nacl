@@ -8,7 +8,7 @@ salesforce.ListView Account_PlatinumandGoldSLACustomers {
     "CORE.USERS.ALIAS",
   ]
   filterScope = "Everything"
-  label = "Platinum and Gold SLA Customers"
+  label = "Platinum Or Gold SLA Customers"
   _parent = [
     salesforce.Account,
   ]
