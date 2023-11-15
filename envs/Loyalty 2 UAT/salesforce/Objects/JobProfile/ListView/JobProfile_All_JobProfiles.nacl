@@ -1,0 +1,9 @@
+salesforce.ListView JobProfile_All_JobProfiles {
+  fullName = "JobProfile.All_JobProfiles"
+  filterScope = "Everything"
+  label = "All Job Profiles"
+  _parent = [
+    salesforce.JobProfile,
+  ]
+  _alias = "All Job Profiles"
+}

@@ -1,0 +1,7 @@
+salesforce.SharingRules ShiftPattern {
+  fullName = "ShiftPattern"
+  _parent = [
+    salesforce.ShiftPattern,
+  ]
+  _alias = "ShiftPattern"
+}

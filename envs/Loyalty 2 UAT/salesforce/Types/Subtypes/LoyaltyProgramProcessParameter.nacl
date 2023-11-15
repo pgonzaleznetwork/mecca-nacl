@@ -1,0 +1,58 @@
+type salesforce.LoyaltyProgramProcessParameter {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  salesforce.LoyaltyProgramProcessCondition condition {
+  }
+  string dataType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Boolean",
+        "Date",
+        "DateTime",
+        "Numeric",
+        "Sobject",
+        "Text",
+      ]
+    }
+  }
+  number decimalPlaces {
+  }
+  string description {
+  }
+  boolean isCollection {
+  }
+  boolean isInput {
+  }
+  boolean isOutput {
+  }
+  string objectName {
+  }
+  string parameterName {
+  }
+  string parameterType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Constant",
+        "Formula",
+        "Variable",
+      ]
+    }
+  }
+  string value {
+  }
+  metadataType = "LoyaltyProgramProcessParameter"
+}

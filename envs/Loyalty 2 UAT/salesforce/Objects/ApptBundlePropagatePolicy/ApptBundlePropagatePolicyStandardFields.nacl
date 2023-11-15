@@ -1,0 +1,134 @@
+type salesforce.ApptBundlePropagatePolicy {
+  salesforce.Unknown AdditionalConstantValue {
+    apiName = "ApptBundlePropagatePolicy.AdditionalConstantValue"
+    inlineHelpText = "Enter another constant value that’s added to the bundle members."
+    _hidden_value = true
+  }
+  salesforce.Unknown BundleFieldName {
+    apiName = "ApptBundlePropagatePolicy.BundleFieldName"
+    inlineHelpText = "Select a bundle service appointment field. The value is added to the bundle member service appointments."
+    _hidden_value = true
+  }
+  salesforce.Unknown BundleMemberFieldName {
+    apiName = "ApptBundlePropagatePolicy.BundleMemberFieldName"
+    inlineHelpText = "Select a bundle member service appointment field. The value is pulled from the bundle service appointment."
+    _hidden_value = true
+  }
+  salesforce.MasterDetail BundlePolicyId {
+    apiName = "ApptBundlePropagatePolicy.BundlePolicyId"
+    relationshipName = "BundlePolicy"
+    referenceTo = [
+      salesforce.ApptBundlePolicy,
+    ]
+    _required = true
+    label = "Appointment Bundle Policy ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Unknown ConstantValue {
+    apiName = "ApptBundlePropagatePolicy.ConstantValue"
+    inlineHelpText = "Enter the constant value that’s added to the bundle members."
+    _hidden_value = true
+  }
+  salesforce.Unknown DateValue {
+    apiName = "ApptBundlePropagatePolicy.DateValue"
+    inlineHelpText = "__MISSING LABEL__ PropertyFile - val DateValuePropagateTooltip not found in section AppointmentBundleTooltipText"
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "ApptBundlePropagatePolicy.Name"
+    inlineHelpText = "Enter a unique name."
+    length = 255
+    _required = true
+    label = "Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Unknown ShouldAddConstantValue {
+    apiName = "ApptBundlePropagatePolicy.ShouldAddConstantValue"
+    inlineHelpText = "Add a constant value to the bundle member service appointments."
+    _hidden_value = true
+  }
+  salesforce.Unknown ShouldUpdateOnAdd {
+    apiName = "ApptBundlePropagatePolicy.ShouldUpdateOnAdd"
+    inlineHelpText = "Update the bundle member service appointment fields when they’re added to the bundle."
+    _hidden_value = true
+  }
+  salesforce.Unknown ShouldUpdateOnRemove {
+    apiName = "ApptBundlePropagatePolicy.ShouldUpdateOnRemove"
+    inlineHelpText = "Update the bundle member service appointment fields when they’re removed from the bundle."
+    _hidden_value = true
+  }
+  salesforce.Unknown ShouldUpdateOnUnbundle {
+    apiName = "ApptBundlePropagatePolicy.ShouldUpdateOnUnbundle"
+    inlineHelpText = "Update the bundle member service appointment fields when the bundle is unbundled."
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "ApptBundlePropagatePolicy.Id"
+    label = "Appointment Bundle Propagation Policy ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ApptBundlePropagatePolicy.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ApptBundlePropagatePolicy.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ApptBundlePropagatePolicy.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ApptBundlePropagatePolicy.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ApptBundlePropagatePolicy.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ApptBundlePropagatePolicy.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

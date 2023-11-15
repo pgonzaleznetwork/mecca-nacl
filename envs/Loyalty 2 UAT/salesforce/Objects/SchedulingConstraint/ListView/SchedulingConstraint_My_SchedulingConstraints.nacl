@@ -1,0 +1,9 @@
+salesforce.ListView SchedulingConstraint_My_SchedulingConstraints {
+  fullName = "SchedulingConstraint.My_SchedulingConstraints"
+  filterScope = "Mine"
+  label = "My Scheduling Constraints"
+  _parent = [
+    salesforce.SchedulingConstraint,
+  ]
+  _alias = "My Scheduling Constraints"
+}

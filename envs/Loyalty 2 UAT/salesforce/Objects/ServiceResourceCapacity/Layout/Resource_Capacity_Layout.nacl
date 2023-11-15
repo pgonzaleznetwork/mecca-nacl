@@ -1,0 +1,118 @@
+salesforce.Layout ServiceResourceCapacity_Resource_Capacity_Layout@bss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.ServiceResourceCapacity.field.CapacityNumber
+            },
+            {
+              behavior = "Required"
+              field = salesforce.ServiceResourceCapacity.field.ServiceResourceId
+            },
+            {
+              behavior = "Required"
+              field = salesforce.ServiceResourceCapacity.field.StartDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ServiceResourceCapacity.field.EndDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ServiceResourceCapacity.field.CapacityInHours
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ServiceResourceCapacity.field.CapacityInWorkItems
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ServiceResourceCapacity.field.TimePeriod
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = false
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.ServiceResourceCapacity.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.ServiceResourceCapacity.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  quickActionList = {
+    quickActionListItems = [
+      {
+        quickActionName = "FeedItem.ContentPost"
+      },
+      {
+        quickActionName = "FeedItem.LinkPost"
+      },
+      {
+        quickActionName = "FeedItem.PollPost"
+      },
+      {
+        quickActionName = "FeedItem.QuestionPost"
+      },
+      {
+        quickActionName = "FeedItem.RypplePost"
+      },
+      {
+        quickActionName = "FeedItem.TextPost"
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.NewNote
+      },
+    ]
+  }
+  relatedLists = [
+    {
+      relatedList = "RelatedFileList"
+    },
+    {
+      relatedList = "RelatedEntityHistoryList"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "ServiceResourceCapacity-Resource Capacity Layout"
+  _parent = [
+    salesforce.ServiceResourceCapacity,
+  ]
+  _alias = "ServiceResourceCapacity-Resource Capacity Layout"
+}

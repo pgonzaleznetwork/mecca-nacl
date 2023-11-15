@@ -1,0 +1,8 @@
+salesforce.DecisionTableDatasetLink Rewards_Catalog_Default {
+  fullName = "Rewards_Catalog_Default"
+  decisionTableName = "Rewards_Catalog"
+  isDefault = true
+  setupName = "Default Payload"
+  sourceObject = "Rewards_Catalog__c"
+  _alias = "Rewards_Catalog_Default"
+}

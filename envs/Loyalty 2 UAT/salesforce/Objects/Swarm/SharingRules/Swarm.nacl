@@ -1,0 +1,7 @@
+salesforce.SharingRules Swarm {
+  fullName = "Swarm"
+  _parent = [
+    salesforce.Swarm,
+  ]
+  _alias = "Swarm"
+}

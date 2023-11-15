@@ -1,0 +1,122 @@
+salesforce.Layout LoyaltyProgramCurrency_Loyalty_Program_Currency_Layout@bsss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Currency Details"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.LoyaltyProgramCurrency.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.LoyaltyProgramCurrency.field.IsActive
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.LoyaltyProgramCurrency.field.IsPrimary
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.LoyaltyProgramCurrency.field.CurrencyType
+            },
+            {
+              behavior = "Required"
+              field = salesforce.LoyaltyProgramCurrency.field.LoyaltyProgramId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.LoyaltyProgramCurrency.field.HasEscrow
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Qualifying Currency"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.LoyaltyProgramCurrency.field.LoyaltyTierGroupId
+            },
+          ]
+        },
+        {
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Non-Qualifying Currency"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.LoyaltyProgramCurrency.field.ExpiryModel
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.LoyaltyProgramCurrency.field.ExpiryPeriodFrequency
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.LoyaltyProgramCurrency.field.CostperUnit
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.LoyaltyProgramCurrency.field.ExtendExpiration
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.LoyaltyProgramCurrency.field.ExpiryPeriodUnit
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  summaryLayout = {
+    masterLabel = "00h4U00000VIjql"
+    sizeX = 4
+    sizeY = 0
+    summaryLayoutStyle = "Default"
+  }
+  fullName = "LoyaltyProgramCurrency-Loyalty Program Currency Layout"
+  _parent = [
+    salesforce.LoyaltyProgramCurrency,
+  ]
+  _alias = "LoyaltyProgramCurrency-Loyalty Program Currency Layout"
+}

@@ -1,0 +1,120 @@
+salesforce.Layout WorkType_Work_Type_Layout@bss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Description"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.WorkType.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.WorkType.field.Description
+            },
+            {
+              behavior = "Required"
+              field = salesforce.WorkType.field.EstimatedDuration
+            },
+            {
+              behavior = "Required"
+              field = salesforce.WorkType.field.DurationType
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.WorkType.field.ServiceReportTemplateId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.WorkType.field.ShouldAutoCreateSvcAppt
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.WorkType.field.CreatedById
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.WorkType.field.OwnerId
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.WorkType.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      relatedList = "RelatedEntityHistoryList"
+    },
+    {
+      fields = [
+        "Product2",
+        "QuantityRequired",
+      ]
+      relatedList = "ProductsRequired"
+    },
+    {
+      fields = [
+        "Skill",
+        "SkillLevel",
+      ]
+      relatedList = "SkillRequirements"
+    },
+    {
+      fields = [
+        "Name",
+        "WorkTypeGroup",
+      ]
+      relatedList = "WorkTypeGroupMember"
+    },
+    {
+      fields = [
+        "Name",
+        "WorkPlanTemplate",
+        "Asset",
+        "IsActive",
+      ]
+      relatedList = "WorkPlanSelectionRule"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "WorkType-Work Type Layout"
+  _parent = [
+    salesforce.WorkType,
+  ]
+  _alias = "WorkType-Work Type Layout"
+}

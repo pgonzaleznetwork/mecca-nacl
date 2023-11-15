@@ -1,0 +1,9 @@
+salesforce.ListView LoyaltyProgramMemberMerge_All_LoyaltyProgramMemberMerges {
+  fullName = "LoyaltyProgramMemberMerge.All_LoyaltyProgramMemberMerges"
+  filterScope = "Everything"
+  label = "allLoyaltyProgramMemberMerges"
+  _parent = [
+    salesforce.LoyaltyProgramMemberMerge,
+  ]
+  _alias = "allLoyaltyProgramMemberMerges"
+}

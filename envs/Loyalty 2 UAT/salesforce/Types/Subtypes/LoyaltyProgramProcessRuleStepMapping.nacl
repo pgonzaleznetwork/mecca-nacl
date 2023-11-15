@@ -1,0 +1,23 @@
+type salesforce.LoyaltyProgramProcessRuleStepMapping {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string associatedStep {
+  }
+  string parentStep {
+  }
+  number sequence {
+  }
+  metadataType = "LoyaltyProgramProcessRuleStepMapping"
+}

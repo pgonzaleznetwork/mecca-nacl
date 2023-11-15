@@ -1,0 +1,9 @@
+salesforce.ListView WorkCapacityAvailability_All_WorkCapacityAvailabilities {
+  fullName = "WorkCapacityAvailability.All_WorkCapacityAvailabilities"
+  filterScope = "Everything"
+  label = "All Work Capacity Availabilities"
+  _parent = [
+    salesforce.WorkCapacityAvailability,
+  ]
+  _alias = "All Work Capacity Availabilities"
+}
