@@ -1,0 +1,9 @@
+salesforce.ListView LoyaltyMemberTier_All_LoyaltyMemberTiers {
+  fullName = "LoyaltyMemberTier.All_LoyaltyMemberTiers"
+  filterScope = "Everything"
+  label = "allLoyaltyMemberTiers"
+  _parent = [
+    salesforce.LoyaltyMemberTier,
+  ]
+  _alias = "allLoyaltyMemberTiers"
+}

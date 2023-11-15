@@ -1,0 +1,135 @@
+type salesforce.LoyaltyPgmPtnrPrepaidPack {
+  salesforce.Date EndDate {
+    apiName = "LoyaltyPgmPtnrPrepaidPack.EndDate"
+    label = "End Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.MasterDetail LoyaltyProgramPartnerId {
+    apiName = "LoyaltyPgmPtnrPrepaidPack.LoyaltyProgramPartnerId"
+    relationshipName = "LoyaltyProgramPartner"
+    referenceTo = [
+      salesforce.LoyaltyProgramPartner,
+    ]
+    _required = true
+    label = "Loyalty Program Partner ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Text Name {
+    apiName = "LoyaltyPgmPtnrPrepaidPack.Name"
+    length = 255
+    _required = true
+    label = "Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Lookup OrderId {
+    apiName = "LoyaltyPgmPtnrPrepaidPack.OrderId"
+    relationshipName = "Order"
+    referenceTo = [
+      salesforce.Order,
+    ]
+    label = "Order ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Date PurchaseDate {
+    apiName = "LoyaltyPgmPtnrPrepaidPack.PurchaseDate"
+    _required = true
+    label = "Purchase Date"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Number PurchasedPoints {
+    apiName = "LoyaltyPgmPtnrPrepaidPack.PurchasedPoints"
+    _required = true
+    label = "Purchased Points "
+    precision = 18
+    scale = 2
+    createable = true
+    updateable = false
+    unique = false
+    queryable = true
+  }
+  salesforce.Number RemainingPoints {
+    apiName = "LoyaltyPgmPtnrPrepaidPack.RemainingPoints"
+    label = "Remaining Points "
+    precision = 18
+    scale = 2
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "LoyaltyPgmPtnrPrepaidPack.Id"
+    label = "Loyalty Program Partner Prepaid Pack ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "LoyaltyPgmPtnrPrepaidPack.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "LoyaltyPgmPtnrPrepaidPack.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "LoyaltyPgmPtnrPrepaidPack.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "LoyaltyPgmPtnrPrepaidPack.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "LoyaltyPgmPtnrPrepaidPack.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "LoyaltyPgmPtnrPrepaidPack.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

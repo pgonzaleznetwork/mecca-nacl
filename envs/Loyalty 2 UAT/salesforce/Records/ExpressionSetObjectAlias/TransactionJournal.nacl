@@ -1,0 +1,77 @@
+salesforce.ExpressionSetObjectAlias TransactionJournal {
+  fullName = "TransactionJournal"
+  dataType = "sObject"
+  mappings = [
+    {
+      fieldAlias = "EscrowPeriod"
+      sourceFieldName = "LoyaltyProgram.EscrowPeriod"
+    },
+    {
+      fieldAlias = "ProductName"
+      sourceFieldName = "Product.Name"
+    },
+    {
+      fieldAlias = "ProductCode"
+      sourceFieldName = "Product.ProductCode"
+    },
+    {
+      fieldAlias = "isProductActive"
+      sourceFieldName = "Product.IsActive"
+    },
+    {
+      fieldAlias = "CatalogName"
+      sourceFieldName = "ProductCategory.Catalog.Name"
+    },
+    {
+      fieldAlias = "OrderAccountName"
+      sourceFieldName = "Order.Account.Name"
+    },
+    {
+      fieldAlias = "OrderBillToContact"
+      sourceFieldName = "Order.BillToContact.Name"
+    },
+    {
+      fieldAlias = "OrderContractName"
+      sourceFieldName = "Order.ContractName"
+    },
+    {
+      fieldAlias = "OrderContractNumber"
+      sourceFieldName = "Order.Contract.Name"
+    },
+    {
+      fieldAlias = "OrderOpportunityName"
+      sourceFieldName = "Order.Opportunity.Name"
+    },
+    {
+      fieldAlias = "OrderAmount"
+      sourceFieldName = "Order.TotalAmount"
+    },
+    {
+      fieldAlias = "OrderName"
+      sourceFieldName = "Order.Name"
+    },
+    {
+      fieldAlias = "OrderType"
+      sourceFieldName = "Order.Type"
+    },
+    {
+      fieldAlias = "OrderStatus"
+      sourceFieldName = "Order.Status"
+    },
+    {
+      fieldAlias = "OrderProductListPrice"
+      sourceFieldName = "OrderItem.ListPrice"
+    },
+    {
+      fieldAlias = "OrderProductTotalPrice"
+      sourceFieldName = "OrderItem.TotalPrice"
+    },
+    {
+      fieldAlias = "OrderProductUnitPrice"
+      sourceFieldName = "OrderItem.UnitPrice"
+    },
+  ]
+  objectApiName = "TransactionJournal"
+  usageType = "TransactionJournal"
+  _alias = "TransactionJournal"
+}

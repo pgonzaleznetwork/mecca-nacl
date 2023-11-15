@@ -1,0 +1,114 @@
+type salesforce.ApptBundleRestrictPolicy {
+  salesforce.MasterDetail BundlePolicyId {
+    apiName = "ApptBundleRestrictPolicy.BundlePolicyId"
+    relationshipName = "BundlePolicy"
+    referenceTo = [
+      salesforce.ApptBundlePolicy,
+    ]
+    _required = true
+    label = "Appointment Bundle Policy ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Unknown DoesAllowEmpty {
+    apiName = "ApptBundleRestrictPolicy.DoesAllowEmpty"
+    inlineHelpText = "Allow a bundle member service appointment with an empty Restriction Field Name to be bundled."
+    _hidden_value = true
+  }
+  salesforce.Unknown DoesRestrictAutomaticMode {
+    apiName = "ApptBundleRestrictPolicy.DoesRestrictAutomaticMode"
+    inlineHelpText = "Apply this restriction with automatic bundling."
+    _hidden_value = true
+  }
+  salesforce.Unknown DoesRestrictManualMode {
+    apiName = "ApptBundleRestrictPolicy.DoesRestrictManualMode"
+    inlineHelpText = "Apply this restriction with manual bundling."
+    _hidden_value = true
+  }
+  salesforce.Unknown IsRestrictByDateOnly {
+    apiName = "ApptBundleRestrictPolicy.IsRestrictByDateOnly"
+    inlineHelpText = "Restriction Field Name must be of type Date/Time. Restrict bundle based on the calendar date only, ignoring the time of day."
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "ApptBundleRestrictPolicy.Name"
+    inlineHelpText = "Enter a unique name."
+    length = 255
+    _required = true
+    label = "Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Unknown RestrictionFieldName {
+    apiName = "ApptBundleRestrictPolicy.RestrictionFieldName"
+    inlineHelpText = "Select the bundle member service appointment field used to apply the restriction. Only bundle member service appointments with the same value can be bundled together."
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "ApptBundleRestrictPolicy.Id"
+    label = "Appointment Bundle Restriction Policy ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ApptBundleRestrictPolicy.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ApptBundleRestrictPolicy.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ApptBundleRestrictPolicy.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ApptBundleRestrictPolicy.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ApptBundleRestrictPolicy.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ApptBundleRestrictPolicy.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

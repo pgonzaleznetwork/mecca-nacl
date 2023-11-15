@@ -1,0 +1,191 @@
+salesforce.Layout ApptBundlePolicy_Appointment_Bundle_Policy_Layout@bsss {
+  excludeButtons = [
+    "Submit",
+  ]
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.ApptBundlePolicy.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ApptBundlePolicy.field.IsManualBundling
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ApptBundlePolicy.field.IsAutomaticBundling
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.ApptBundlePolicy.field.Priority
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Validation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.ApptBundlePolicy.field.FilterCriteriaId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ApptBundlePolicy.field.LimitAmountOfBundleMembers
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ApptBundlePolicy.field.CanAllowSchleDepndInBundle
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.ApptBundlePolicy.field.LimitDurationOfBundle
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Duration Calculation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.ApptBundlePolicy.field.BundleStartTimeFieldName
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ApptBundlePolicy.field.IsTimeCalcByBundleDurationFld
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ApptBundlePolicy.field.ConstantTimeValue
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.ApptBundlePolicy.field.BundleEndTimeFieldName
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.ApptBundlePolicy.field.OwnerId
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.ApptBundlePolicy.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.ApptBundlePolicy.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      fields = [
+        "Name",
+        "SortFieldName",
+        "SortDirection",
+      ]
+      relatedList = "ApptBundleSortPolicies"
+    },
+    {
+      fields = [
+        "Name",
+        "RestrictionFieldName",
+        "DoesAllowEmpty",
+      ]
+      relatedList = "ApptBundleRestrictPolicies"
+    },
+    {
+      fields = [
+        "Name",
+        "ShouldUpdateOnAdd",
+        "ShouldUpdateOnRemove",
+      ]
+      relatedList = "ApptBundlePropagatePolicies"
+    },
+    {
+      fields = [
+        "Name",
+        "AggregationOrder",
+        "FilterCriteria",
+      ]
+      relatedList = "ApptBundleAggrPolicies"
+    },
+    {
+      fields = [
+        "Name",
+        "ServiceTerritory",
+      ]
+      relatedList = "ApptBundlePolicySvcTerrs"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "ApptBundlePolicy-Appointment Bundle Policy Layout"
+  _parent = [
+    salesforce.ApptBundlePolicy,
+  ]
+  _alias = "ApptBundlePolicy-Appointment Bundle Policy Layout"
+}

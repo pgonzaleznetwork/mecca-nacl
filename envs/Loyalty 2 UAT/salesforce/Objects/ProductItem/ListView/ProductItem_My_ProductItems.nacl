@@ -1,0 +1,9 @@
+salesforce.ListView ProductItem_My_ProductItems {
+  fullName = "ProductItem.My_ProductItems"
+  filterScope = "Mine"
+  label = "My Product Items"
+  _parent = [
+    salesforce.ProductItem,
+  ]
+  _alias = "My Product Items"
+}

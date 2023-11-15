@@ -1,0 +1,109 @@
+type salesforce.BenefitParameterValue {
+  salesforce.Lookup BenefitActionParameterId {
+    apiName = "BenefitParameterValue.BenefitActionParameterId"
+    relationshipName = "BenefitActionParameter"
+    referenceTo = [
+      salesforce.BenefitActionParameter,
+    ]
+    label = "Benefit Action Parameter ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.MasterDetail BenefitId {
+    apiName = "BenefitParameterValue.BenefitId"
+    relationshipName = "Benefit"
+    referenceTo = [
+      salesforce.Benefit,
+    ]
+    _required = true
+    label = "Benefit ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Text Name {
+    apiName = "BenefitParameterValue.Name"
+    length = 255
+    _required = true
+    label = "Benefit Parameter Value Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Text ParameterValue {
+    apiName = "BenefitParameterValue.ParameterValue"
+    length = 255
+    label = "Parameter Value"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "BenefitParameterValue.Id"
+    label = "Benefit Parameter Value ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "BenefitParameterValue.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "BenefitParameterValue.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "BenefitParameterValue.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "BenefitParameterValue.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "BenefitParameterValue.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "BenefitParameterValue.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

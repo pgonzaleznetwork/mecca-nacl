@@ -1,0 +1,113 @@
+salesforce.Layout JobProfile_Job_Profile_Layout@bss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.JobProfile.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.JobProfile.field.Description
+            },
+          ]
+        },
+        {
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.JobProfile.field.CreatedById
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.JobProfile.field.OwnerId
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.JobProfile.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      fields = [
+        "Skill",
+        "SkillLevel",
+        "CreatedDate",
+        "LastModifiedDate",
+      ]
+      relatedList = "JobProfileSkillRequirements"
+    },
+    {
+      fields = [
+        "Name",
+        "Label",
+        "StartTime",
+        "EndTime",
+        "Status",
+        "ServiceResource",
+        "ServiceTerritory",
+      ]
+      relatedList = "JobProfileShifts"
+    },
+    {
+      relatedList = "RelatedNoteList"
+    },
+    {
+      relatedList = "RelatedFileList"
+    },
+    {
+      relatedList = "RelatedEntityHistoryList"
+    },
+    {
+      fields = [
+        "CreatedDate",
+        "StepStatus",
+        "OriginalActor",
+        "Actor",
+        "Comments",
+      ]
+      relatedList = "RelatedProcessHistoryList"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "JobProfile-Job Profile Layout"
+  _parent = [
+    salesforce.JobProfile,
+  ]
+  _alias = "JobProfile-Job Profile Layout"
+}

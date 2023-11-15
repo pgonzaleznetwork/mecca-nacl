@@ -1,0 +1,75 @@
+type salesforce.TimeSheetTemplate {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  boolean active {
+  }
+  string description {
+  }
+  string frequency {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Daily",
+        "EveryTwoWeeks",
+        "Monthly",
+        "TwiceAMonth",
+        "Weekly",
+      ]
+    }
+  }
+  serviceid fullName {
+  }
+  string masterLabel {
+  }
+  string startDate {
+  }
+  salesforce.TimeSheetTemplateAssignment timeSheetTemplateAssignments {
+  }
+  string workWeekEndDay {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Friday",
+        "Monday",
+        "Saturday",
+        "Sunday",
+        "Thursday",
+        "Tuesday",
+        "Wednesday",
+      ]
+    }
+  }
+  string workWeekStartDay {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Friday",
+        "Monday",
+        "Saturday",
+        "Sunday",
+        "Thursday",
+        "Tuesday",
+        "Wednesday",
+      ]
+    }
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "timeSheetTemplate"
+  dirName = "timeSheetTemplates"
+  metadataType = "TimeSheetTemplate"
+}

@@ -1,0 +1,6 @@
+salesforce.JournalType Redemption_Reversal@s {
+  Description = "Represents a transaction that reverses a redemption of a loyalty program member's points."
+  Name = "Redemption Reversal"
+  ProcessType = "Loyalty"
+  _alias = "Redemption Reversal"
+}

@@ -1,0 +1,13 @@
+salesforce.LeadConfigSettings {
+  fullName = "LeadConfig"
+  doesEnableLeadConvertDefaultSubjectBlankTaskCreation = false
+  doesHideOpportunityInConvertLeadWindow = false
+  doesPreserveLeadStatus = true
+  doesSelectNoOpportunityOnConvertLead = false
+  doesTrackHistory = false
+  enableConversionsOnMobile = false
+  enableOrgWideMergeAndDelete = false
+  shouldLeadConvertRequireValidation = true
+  shouldSendNotificationEmailWhenLeadOwnerUpdatesViaApexInLEX = "false"
+  _alias = "LeadConfig"
+}

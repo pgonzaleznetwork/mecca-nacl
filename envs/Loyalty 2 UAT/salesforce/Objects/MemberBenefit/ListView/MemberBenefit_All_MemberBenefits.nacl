@@ -1,0 +1,9 @@
+salesforce.ListView MemberBenefit_All_MemberBenefits {
+  fullName = "MemberBenefit.All_MemberBenefits"
+  filterScope = "Everything"
+  label = "allMemberBenefits"
+  _parent = [
+    salesforce.MemberBenefit,
+  ]
+  _alias = "allMemberBenefits"
+}

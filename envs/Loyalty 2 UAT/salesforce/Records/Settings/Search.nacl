@@ -1,0 +1,1025 @@
+salesforce.SearchSettings {
+  fullName = "Search"
+  documentContentSearchEnabled = true
+  enableAdvancedSearchInAlohaSidebar = false
+  enableEinsteinSearchAssistantDialog = "true"
+  enableEinsteinSearchEs4kPilot = "false"
+  enableEinsteinSearchNLSFilters = "false"
+  enableEinsteinSearchNaturalLanguage = "true"
+  enableEinsteinSearchPersonalization = true
+  enableEinsteinSearchQA = "false"
+  enablePersonalTagging = false
+  enablePublicTagging = false
+  enableQuerySuggestionPigOn = "false"
+  enableSalesforceGeneratedSynonyms = true
+  enableSetupSearch = true
+  enableSuggestArticlesLinksOnly = false
+  optimizeSearchForCJKEnabled = false
+  recentlyViewedUsersForBlankLookupEnabled = true
+  searchSettingsByObject = {
+    searchSettingsByObject = [
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.Account
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.Activity
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.AppointmentTopicTimeSlot
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.ApptBundleAggrDurDnscale
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.ApptBundleAggrPolicy
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.ApptBundleConfig
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.ApptBundlePolicy
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.ApptBundlePolicySvcTerr
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.ApptBundlePropagatePolicy
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.ApptBundleRestrictPolicy
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.ApptBundleSortPolicy
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.Asset
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.AssetAction
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.AssetActionSource
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.AssetDowntimePeriod
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.AssetRelationship
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.AssetStatePeriod
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.AssetWarranty
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "Attachment"
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.AttributeDefinition
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.AuthorizationForm
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.AuthorizationFormConsent
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.AuthorizationFormDataUse
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.AuthorizationFormText
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.BatchJob
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.BatchJobPart
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.BatchJobPartFailedRecord
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.Benefit
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.BenefitParameterValue
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.BenefitType
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "Calendar"
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.Case
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "CaseComment"
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.CollaborationGroup
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.CommSubscription
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.CommSubscriptionChannelType
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.CommSubscriptionConsent
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.ConsumptionSchedule
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.Contact
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.ContactPointAddress
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.ContactPointConsent
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.ContactPointEmail
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.ContactPointPhone
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.ContactPointTypeConsent
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.ContentVersion
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.Contract
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.ContractLineItem
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.ContractLineOutcome
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.ContractLineOutcomeData
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.CreditMemo
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.DandBCompany
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.DataUseLegalBasis
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.DataUsePurpose
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "Document"
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.EmailMessage
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.EngagementChannelType
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "EnhancedLetterhead"
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.Entitlement
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.Expense
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.ExpenseReport
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "Folder"
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.Idea
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.Individual
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.JournalSubType
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.JournalType
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.Lead
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.LegalEntity
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "ListEmail"
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.Location
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.LoyaltyLedger
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.LoyaltyMemberCurrency
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.LoyaltyMemberTier
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.LoyaltyMembershipLifecycle
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.LoyaltyPartnerProduct
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.LoyaltyPgmEngmtAttrProm
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.LoyaltyPgmEngmtAttribute
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.LoyaltyPgmGroupMbrRlnsp
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.LoyaltyPgmMbrAttributeVal
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.LoyaltyPgmPartnerCurrency
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.LoyaltyPgmPartnerPromotion
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.LoyaltyPgmPtnrLdgrSummary
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.LoyaltyPgmPtnrPrepaidPack
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.LoyaltyProgram
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.LoyaltyProgramBadge
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.LoyaltyProgramCurrency
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.LoyaltyProgramMbrPromotion
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.LoyaltyProgramMember
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.LoyaltyProgramMemberBadge
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.LoyaltyProgramMemberCase
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.LoyaltyProgramMemberMerge
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.LoyaltyProgramPartner
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.LoyaltyProgramPartnerLedger
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "LoyaltyProgramProcess"
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "LoyaltyProgramProcessRule"
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.LoyaltyTier
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.LoyaltyTierBenefit
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.LoyaltyTierGroup
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.Macro
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.MaintenancePlan
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.MemberBenefit
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.MessagingEndUser
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.MessagingSession
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "Note"
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.OperatingHours
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.Opportunity
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.Order
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.PartyConsent
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.Pricebook2
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.PricebookEntry
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.Product2
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.ProductConsumed
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.ProductItem
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.ProductRequest
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.ProductRequestLineItem
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.ProductServiceCampaignItem
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.ProductTransfer
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.ProfileSkill
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.PromotionLoyaltyPtnrProdt
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.PromotionMarketSegment
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.QuickText
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.Recommendation
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.RecordsetFilterCriteria
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.RecordsetFilterCriteriaRule
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.RecordsetFltrCritMonitor
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "Report"
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.ResourceAbsence
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.ReturnOrder
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.ReturnOrderLineItem
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.Rewards_Catalog__c
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.SerializedProduct
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.SerializedProductTransaction
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.ServiceAppointment
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.ServiceContract
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.ServiceCrew
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.ServiceCrewMember
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.ServiceResource
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.ServiceResourceSkill
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.ServiceTerritory
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.ServiceTerritoryMember
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.Shift
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.ShiftPattern
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.ShiftPatternEntry
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.ShiftTemplate
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.Shipment
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.Solution
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.TimeSheet
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.TransactionJournal
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.TravelMode
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.User
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.Voucher
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.VoucherDefinition
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.WarrantyTerm
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.WorkBadge
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.WorkBadgeDefinition
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.WorkCapacityAvailability
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.WorkCapacityLimit
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.WorkCapacityUsage
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.WorkOrder
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.WorkOrderLineItem
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.WorkPlan
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.WorkPlanSelectionRule
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.WorkPlanTemplate
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.WorkPlanTemplateEntry
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.WorkStep
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.WorkStepTemplate
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.WorkTypeGroup
+        resultsPerPageCount = 25
+      },
+    ]
+  }
+  sidebarAutoCompleteEnabled = true
+  sidebarDropDownListEnabled = true
+  sidebarLimitToItemsIOwnCheckboxEnabled = true
+  singleSearchResultShortcutEnabled = true
+  spellCorrectKnowledgeSearchEnabled = false
+  _alias = "Search"
+}

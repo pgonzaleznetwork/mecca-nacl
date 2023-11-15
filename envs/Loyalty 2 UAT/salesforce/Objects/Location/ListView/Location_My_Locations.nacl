@@ -1,0 +1,9 @@
+salesforce.ListView Location_My_Locations {
+  fullName = "Location.My_Locations"
+  filterScope = "Mine"
+  label = "My Locations"
+  _parent = [
+    salesforce.Location,
+  ]
+  _alias = "My Locations"
+}

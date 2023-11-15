@@ -1,0 +1,119 @@
+type salesforce.LoyaltyPgmPartnerCurrency {
+  salesforce.Number AccrualConversionFactor {
+    apiName = "LoyaltyPgmPartnerCurrency.AccrualConversionFactor"
+    inlineHelpText = "Enter a number that’s multiplied with the points accrued by the member to calculate the number of points to be debited from the partner. For example, if the conversion factor is 2 and the member accrues 10 points for purchasing the partner’s products or services, 20 points are debited from the partner."
+    label = "Accrual Conversion Factor"
+    precision = 18
+    scale = 2
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.Lookup LoyaltyProgramCurrencyId {
+    apiName = "LoyaltyPgmPartnerCurrency.LoyaltyProgramCurrencyId"
+    relationshipName = "LoyaltyProgramCurrency"
+    referenceTo = [
+      salesforce.LoyaltyProgramCurrency,
+    ]
+    _required = true
+    label = "Currency ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.MasterDetail LoyaltyProgramPartnerId {
+    apiName = "LoyaltyPgmPartnerCurrency.LoyaltyProgramPartnerId"
+    relationshipName = "LoyaltyProgramPartner"
+    referenceTo = [
+      salesforce.LoyaltyProgramPartner,
+    ]
+    _required = true
+    label = "Loyalty Program Partner ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Number RedemptionConversionFactor {
+    apiName = "LoyaltyPgmPartnerCurrency.RedemptionConversionFactor"
+    inlineHelpText = "Enter a number that’s multiplied with the points redeemed by the member to calculate the number of points to be credited to the partner. For example, if the conversion factor is 2 and the member redeems 10 points for purchasing the partner’s products or services, 20 points are credited from the partner."
+    label = "Redemption Conversion Factor"
+    precision = 18
+    scale = 2
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "LoyaltyPgmPartnerCurrency.Id"
+    label = "Loyalty Program Partner Currency ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "LoyaltyPgmPartnerCurrency.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "LoyaltyPgmPartnerCurrency.Name"
+    label = "Name"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "LoyaltyPgmPartnerCurrency.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "LoyaltyPgmPartnerCurrency.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "LoyaltyPgmPartnerCurrency.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "LoyaltyPgmPartnerCurrency.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "LoyaltyPgmPartnerCurrency.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

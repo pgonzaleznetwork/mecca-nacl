@@ -1,0 +1,29 @@
+type salesforce.LoyaltyProgram {
+  salesforce.Picklist Tier__c {
+    apiName = "LoyaltyProgram.Tier__c"
+    externalId = false
+    label = "Tier"
+    valueSet = [
+      {
+        fullName = "Gold"
+        default = false
+        label = "Gold"
+      },
+      {
+        fullName = "Premium"
+        default = false
+        label = "Premium"
+      },
+      {
+        fullName = "N/A"
+        default = false
+        label = "N/A"
+      },
+    ]
+    sorted = false
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+}
