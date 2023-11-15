@@ -45,6 +45,10 @@ salesforce.Layout Account_Account_Layout@bs {
               behavior = "Edit"
               field = salesforce.Account.field.AnnualRevenue
             },
+            {
+              behavior = "Edit"
+              field = salesforce.Account.field.Is_Loyalty_Partner__c
+            },
           ]
         },
         {

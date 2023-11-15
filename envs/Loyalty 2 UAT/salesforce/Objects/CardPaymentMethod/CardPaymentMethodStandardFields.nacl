@@ -363,12 +363,6 @@ type salesforce.CardPaymentMethod {
         default = false
       },
       {
-        fullName = "Other"
-        isActive = true
-        label = "Other"
-        default = false
-      },
-      {
         fullName = "BACS"
         isActive = true
         label = "Bacs"
@@ -441,9 +435,21 @@ type salesforce.CardPaymentMethod {
         default = false
       },
       {
+        fullName = "Other"
+        isActive = true
+        label = "Other"
+        default = false
+      },
+      {
         fullName = "PayPal"
         isActive = true
         label = "Paypal"
+        default = false
+      },
+      {
+        fullName = "SepaDebit"
+        isActive = true
+        label = "SEPA Debit"
         default = false
       },
       {
@@ -456,12 +462,6 @@ type salesforce.CardPaymentMethod {
         fullName = "Venmo"
         isActive = true
         label = "Venmo"
-        default = false
-      },
-      {
-        fullName = "SepaDebit"
-        isActive = true
-        label = "SEPA Debit"
         default = false
       },
       {

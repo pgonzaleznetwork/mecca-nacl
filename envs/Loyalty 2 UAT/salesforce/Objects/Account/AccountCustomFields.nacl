@@ -137,4 +137,13 @@ type salesforce.Account {
     updateable = true
     queryable = true
   }
+  salesforce.Checkbox Is_Loyalty_Partner__c {
+    apiName = "Account.Is_Loyalty_Partner__c"
+    defaultValue = false
+    externalId = false
+    label = "Is Loyalty Partner"
+    createable = true
+    updateable = true
+    queryable = true
+  }
 }

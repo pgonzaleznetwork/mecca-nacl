@@ -86,8 +86,14 @@ salesforce {
         "JournalSubType",
         "LoyaltyProgramBadge",
         "VoucherDefinition",
-        "Promotion"
+        "Promotion",
+        "Account"
       ]
+
+      saltoManagementFieldSettings = {
+        defaultFieldName = "Is_Loyalty_Partner__c"
+      }
+
       saltoIDSettings = {
         defaultIdFields = [
           "Id",
@@ -120,9 +126,7 @@ salesforce {
         ]
       }
 
-      allowReferenceTo = [
-        "Account",
-      ]
+      
     }
     fetchAllCustomSettings = false
     maxInstancesPerType = 5000

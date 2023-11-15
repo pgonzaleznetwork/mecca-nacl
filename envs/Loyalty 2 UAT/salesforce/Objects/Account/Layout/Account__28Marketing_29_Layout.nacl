@@ -33,6 +33,10 @@ salesforce.Layout Account_Account__28Marketing_29_Layout@bspps {
               behavior = "Edit"
               field = salesforce.Account.field.Site
             },
+            {
+              behavior = "Edit"
+              field = salesforce.Account.field.Is_Loyalty_Partner__c
+            },
           ]
         },
         {
