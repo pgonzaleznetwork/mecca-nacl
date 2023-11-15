@@ -1,0 +1,173 @@
+salesforce.Flow InnerCircleAccrualForEngagementActivities {
+  fullName = "InnerCircleAccrualForEngagementActivities"
+  apiVersion = 58
+  assignments = [
+    {
+      name = "AssignmentForAppDownload"
+      label = "AssignmentForAppDownload"
+      locationX = 760
+      locationY = 116
+      assignmentItems = [
+        {
+          assignToReference = "PointsToCredit"
+          operator = "Assign"
+          value = {
+            numberValue = 50
+          }
+        },
+      ]
+    },
+    {
+      name = "AssignmentForCustomerSurvey"
+      label = "AssignmentForCustomerSurvey"
+      locationX = 758
+      locationY = 256
+      assignmentItems = [
+        {
+          assignToReference = "PointsToCredit"
+          operator = "Assign"
+          value = {
+            numberValue = 100
+          }
+        },
+      ]
+    },
+    {
+      name = "AssignmentForSocialMediaActivity"
+      label = "AssignmentForSocialMediaActivity"
+      locationX = 759
+      locationY = 402
+      assignmentItems = [
+        {
+          assignToReference = "PointsToCredit"
+          operator = "Assign"
+          value = {
+            numberValue = 50
+          }
+        },
+      ]
+    },
+  ]
+  decisions = [
+    {
+      name = "CheckJournalSubType"
+      label = "CheckJournalSubType"
+      locationX = 492
+      locationY = 258
+      defaultConnectorLabel = "Default Outcome"
+      rules = [
+        {
+          name = "App_Download"
+          conditionLogic = "and"
+          conditions = [
+            {
+              leftValueReference = "GetTransactionJournals.JournalSubType.Name"
+              operator = "EqualTo"
+              rightValue = {
+                stringValue = "App Download"
+              }
+            },
+          ]
+          label = "App Download"
+        },
+        {
+          name = "Customer_Survey"
+          conditionLogic = "and"
+          conditions = [
+            {
+              leftValueReference = "GetTransactionJournals.JournalSubType.Name"
+              operator = "EqualTo"
+              rightValue = {
+                stringValue = "Customer Survey"
+              }
+            },
+          ]
+          label = "Customer Survey"
+        },
+        {
+          name = "Social_Media_Activity"
+          conditionLogic = "and"
+          conditions = [
+            {
+              leftValueReference = "GetTransactionJournals.JournalSubType.Name"
+              operator = "EqualTo"
+              rightValue = {
+                stringValue = "Social Media Activity"
+              }
+            },
+          ]
+          label = "Social Media Activity"
+        },
+      ]
+    },
+  ]
+  environments = "Default"
+  interviewLabel = "InnerCircleAccrualForEngagementActivities {!$Flow.CurrentDateTime}"
+  label = "InnerCircleAccrualForEngagementActivities"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "FREE_FORM_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "AutoLaunchedFlow"
+  recordLookups = [
+    {
+      name = "GetTransactionJournals"
+      label = "GetTransactionJournals"
+      locationX = 267
+      locationY = 257
+      assignNullValuesIfNoRecordsFound = false
+      filterLogic = "and"
+      filters = [
+        {
+          field = salesforce.TransactionJournal.field.Id
+          operator = "EqualTo"
+          value = {
+            elementReference = "JournalID"
+          }
+        },
+      ]
+      getFirstRecordOnly = true
+      object = salesforce.TransactionJournal
+      storeOutputAutomatically = true
+    },
+  ]
+  start = {
+    locationX = 141
+    locationY = 48
+  }
+  status = "InvalidDraft"
+  variables = [
+    {
+      name = "JournalID"
+      dataType = "String"
+      isCollection = false
+      isInput = true
+      isOutput = false
+    },
+    {
+      name = "PointsToCredit"
+      dataType = "Number"
+      isCollection = false
+      isInput = false
+      isOutput = false
+      scale = 2
+    },
+  ]
+  _alias = "InnerCircleAccrualForEngagementActivities"
+}

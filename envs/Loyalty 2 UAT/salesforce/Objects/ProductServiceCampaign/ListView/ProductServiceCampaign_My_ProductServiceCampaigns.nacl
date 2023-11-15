@@ -1,0 +1,9 @@
+salesforce.ListView ProductServiceCampaign_My_ProductServiceCampaigns {
+  fullName = "ProductServiceCampaign.My_ProductServiceCampaigns"
+  filterScope = "Mine"
+  label = "My Product Service Campaigns"
+  _parent = [
+    salesforce.ProductServiceCampaign,
+  ]
+  _alias = "My Product Service Campaigns"
+}

@@ -1,0 +1,81 @@
+salesforce.Layout WorkCapacityAvailability_Work_Capacity_Availability_Layout@bsss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "General Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.WorkCapacityAvailability.field.WorkCapacityAvailNumber
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.WorkCapacityAvailability.field.ServiceTerritoryId
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Availability Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.WorkCapacityAvailability.field.TimePeriod
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.WorkCapacityAvailability.field.AvailCapacityMinutes
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.WorkCapacityAvailability.field.AvailCapacityHours
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.WorkCapacityAvailability.field.StartDate
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.WorkCapacityAvailability.field.EndDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "WorkCapacityAvailability-Work Capacity Availability Layout"
+  _parent = [
+    salesforce.WorkCapacityAvailability,
+  ]
+  _alias = "WorkCapacityAvailability-Work Capacity Availability Layout"
+}

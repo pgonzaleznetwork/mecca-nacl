@@ -1,0 +1,138 @@
+type salesforce.ProductConsumedState {
+  salesforce.Picklist ConsumedState {
+    apiName = "ProductConsumedState.ConsumedState"
+    valueSet = [
+      {
+        fullName = "Available"
+        isActive = true
+        label = "Available"
+        default = true
+      },
+      {
+        fullName = "Sent"
+        isActive = true
+        label = "Sent"
+        default = false
+      },
+      {
+        fullName = "Consumed"
+        isActive = true
+        label = "Consumed"
+        default = false
+      },
+      {
+        fullName = "Damaged"
+        isActive = true
+        label = "Damaged"
+        default = false
+      },
+      {
+        fullName = "Lost"
+        isActive = true
+        label = "Lost"
+        default = false
+      },
+    ]
+    restricted = true
+    _required = true
+    label = "Consumed State"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.MasterDetail ProductConsumedId {
+    apiName = "ProductConsumedState.ProductConsumedId"
+    relationshipName = "ProductConsumed"
+    referenceTo = [
+      salesforce.ProductConsumed,
+    ]
+    _required = true
+    label = "Product Consumed ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Lookup SerializedProductId {
+    apiName = "ProductConsumedState.SerializedProductId"
+    relationshipName = "SerializedProduct"
+    referenceTo = [
+      salesforce.SerializedProduct,
+    ]
+    _required = true
+    label = "Serialized Product ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "ProductConsumedState.Id"
+    label = "Product Consumed State Item ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ProductConsumedState.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "ProductConsumedState.Name"
+    label = "Product Consumed State Number"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ProductConsumedState.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ProductConsumedState.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ProductConsumedState.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ProductConsumedState.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ProductConsumedState.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

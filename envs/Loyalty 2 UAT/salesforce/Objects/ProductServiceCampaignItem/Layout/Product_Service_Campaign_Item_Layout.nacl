@@ -1,0 +1,112 @@
+salesforce.Layout ProductServiceCampaignItem_Product_Service_Campaign_Item_Layout@bssss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.ProductServiceCampaignItem.field.ProductServiceCampaignItemNumber
+            },
+            {
+              behavior = "Required"
+              field = salesforce.ProductServiceCampaignItem.field.ProductServiceCampaignId
+            },
+            {
+              behavior = "Required"
+              field = salesforce.ProductServiceCampaignItem.field.Status
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.ProductServiceCampaignItem.field.Product2Id
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ProductServiceCampaignItem.field.AssetId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ProductServiceCampaignItem.field.SerializedProductId
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.ProductServiceCampaignItem.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.ProductServiceCampaignItem.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      fields = [
+        "Name",
+        "Asset",
+      ]
+      relatedList = "WorkOrderLineItems"
+    },
+    {
+      fields = [
+        "Name",
+        "DestinationLocation",
+        "SourceLocation",
+        "CreatedBy",
+      ]
+      relatedList = "ReturnOrderLineItems"
+    },
+    {
+      relatedList = "RelatedEntityHistoryList"
+    },
+    {
+      relatedList = "RelatedNoteList"
+    },
+    {
+      relatedList = "RelatedFileList"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "ProductServiceCampaignItem-Product Service Campaign Item Layout"
+  _parent = [
+    salesforce.ProductServiceCampaignItem,
+  ]
+  _alias = "ProductServiceCampaignItem-Product Service Campaign Item Layout"
+}

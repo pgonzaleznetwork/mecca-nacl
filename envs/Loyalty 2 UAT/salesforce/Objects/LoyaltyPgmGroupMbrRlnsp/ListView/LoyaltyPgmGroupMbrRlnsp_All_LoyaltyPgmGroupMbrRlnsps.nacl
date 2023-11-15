@@ -1,0 +1,9 @@
+salesforce.ListView LoyaltyPgmGroupMbrRlnsp_All_LoyaltyPgmGroupMbrRlnsps {
+  fullName = "LoyaltyPgmGroupMbrRlnsp.All_LoyaltyPgmGroupMbrRlnsps"
+  filterScope = "Everything"
+  label = "allLoyaltyPgmGroupMbrRlnsp"
+  _parent = [
+    salesforce.LoyaltyPgmGroupMbrRlnsp,
+  ]
+  _alias = "allLoyaltyPgmGroupMbrRlnsp"
+}

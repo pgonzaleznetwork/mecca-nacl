@@ -1,0 +1,149 @@
+type salesforce.ExpenseReportEntry {
+  salesforce.Currency Amount {
+    apiName = "ExpenseReportEntry.Amount"
+    label = "Amount"
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup ExpenseId {
+    apiName = "ExpenseReportEntry.ExpenseId"
+    relationshipName = "Expense"
+    referenceTo = [
+      salesforce.Expense,
+    ]
+    _required = true
+    label = "Expense ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.MasterDetail ExpenseReportId {
+    apiName = "ExpenseReportEntry.ExpenseReportId"
+    relationshipName = "ExpenseReport"
+    referenceTo = [
+      salesforce.ExpenseReport,
+    ]
+    _required = true
+    label = "Expense Report ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Picklist ExpenseType {
+    apiName = "ExpenseReportEntry.ExpenseType"
+    valueSet = [
+      {
+        fullName = "Billable"
+        isActive = true
+        label = "Billable"
+        default = true
+      },
+      {
+        fullName = "Non-Billable"
+        isActive = true
+        label = "Non-Billable"
+        default = false
+      },
+    ]
+    restricted = false
+    label = "Expense Type"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Title {
+    apiName = "ExpenseReportEntry.Title"
+    length = 255
+    label = "Title"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Date TransactionDate {
+    apiName = "ExpenseReportEntry.TransactionDate"
+    label = "Transaction Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "ExpenseReportEntry.Id"
+    label = "Expense Report Entry ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ExpenseReportEntry.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber ExpenseReportEntryNumber {
+    apiName = "ExpenseReportEntry.ExpenseReportEntryNumber"
+    label = "Expense Report Entry Number"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ExpenseReportEntry.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ExpenseReportEntry.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ExpenseReportEntry.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ExpenseReportEntry.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ExpenseReportEntry.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

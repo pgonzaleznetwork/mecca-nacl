@@ -1,0 +1,117 @@
+salesforce.Layout RecordsetFilterCriteriaRule_Recordset_Filter_Criteria_Rule_Layout@bssss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.RecordsetFilterCriteriaRule.field.RecordsetFilterCriteriaId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.RecordsetFilterCriteriaRule.field.Type
+            },
+            {
+              behavior = "Required"
+              field = salesforce.RecordsetFilterCriteriaRule.field.CriteriaField
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.RecordsetFilterCriteriaRule.field.NextOccurrenceField
+            },
+            {
+              behavior = "Required"
+              field = salesforce.RecordsetFilterCriteriaRule.field.Operator
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.RecordsetFilterCriteriaRule.field.Value
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.RecordsetFilterCriteriaRule.field.Frequency
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.RecordsetFilterCriteriaRule.field.FirstOccurrence
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.RecordsetFilterCriteriaRule.field.LastOccurrence
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.RecordsetFilterCriteriaRule.field.RecordsetFilterCriteriaRuleNumber
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.RecordsetFilterCriteriaRule.field.Index
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.RecordsetFilterCriteriaRule.field.UsageRateField
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.RecordsetFilterCriteriaRule.field.UsageRateUnit
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "SystemInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.RecordsetFilterCriteriaRule.field.CreatedById
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.RecordsetFilterCriteriaRule.field.CreatedDate
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.RecordsetFilterCriteriaRule.field.LastModifiedById
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.RecordsetFilterCriteriaRule.field.LastModifiedDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "RecordsetFilterCriteriaRule-Recordset Filter Criteria Rule Layout"
+  _parent = [
+    salesforce.RecordsetFilterCriteriaRule,
+  ]
+  _alias = "RecordsetFilterCriteriaRule-Recordset Filter Criteria Rule Layout"
+}

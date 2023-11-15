@@ -1,0 +1,257 @@
+type salesforce.Shipment {
+  salesforce.DateTime ActualDeliveryDate {
+    apiName = "Shipment.ActualDeliveryDate"
+    label = "Actual Delivery Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup DeliveredToId {
+    apiName = "Shipment.DeliveredToId"
+    relationshipName = "DeliveredTo"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    label = "Delivered To ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.LongTextArea Description {
+    apiName = "Shipment.Description"
+    length = 32000
+    label = "Description"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup DestinationLocationId {
+    apiName = "Shipment.DestinationLocationId"
+    relationshipName = "DestinationLocation"
+    referenceTo = [
+      salesforce.Location,
+    ]
+    label = "Destination Location ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.DateTime ExpectedDeliveryDate {
+    apiName = "Shipment.ExpectedDeliveryDate"
+    label = "Expected Delivery Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "Shipment.OwnerId"
+    relationshipName = "Owner"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    label = "Owner ID"
+    createable = true
+    updateable = true
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist Provider {
+    apiName = "Shipment.Provider"
+    valueSet = [
+      {
+        fullName = "FedEx"
+        isActive = true
+        label = "FedEx"
+        default = true
+      },
+      {
+        fullName = "UPS"
+        isActive = true
+        label = "UPS"
+        default = false
+      },
+      {
+        fullName = "USPS"
+        isActive = true
+        label = "USPS"
+        default = false
+      },
+    ]
+    restricted = false
+    label = "Shipping Provider"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup ReturnOrderId {
+    apiName = "Shipment.ReturnOrderId"
+    relationshipName = "ReturnOrder"
+    referenceTo = [
+      salesforce.ReturnOrder,
+    ]
+    label = "Return Order ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Address ShipFromAddress {
+    apiName = "Shipment.ShipFromAddress"
+    label = "Ship From Address"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Address ShipToAddress {
+    apiName = "Shipment.ShipToAddress"
+    label = "Ship To Address"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text ShipToName {
+    apiName = "Shipment.ShipToName"
+    length = 255
+    _required = true
+    label = "Ship To Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Lookup SourceLocationId {
+    apiName = "Shipment.SourceLocationId"
+    relationshipName = "SourceLocation"
+    referenceTo = [
+      salesforce.Location,
+    ]
+    label = "Source Location ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist Status {
+    apiName = "Shipment.Status"
+    valueSet = [
+      {
+        fullName = "Shipped"
+        isActive = true
+        label = "Shipped"
+        default = true
+      },
+      {
+        fullName = "Delivered"
+        isActive = true
+        label = "Delivered"
+        default = false
+      },
+    ]
+    restricted = false
+    label = "Status"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Summary TotalItemsQuantity {
+    apiName = "Shipment.TotalItemsQuantity"
+    label = "Total Items Quantity"
+    precision = 18
+    scale = 2
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text TrackingNumber {
+    apiName = "Shipment.TrackingNumber"
+    length = 255
+    label = "Tracking Number"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Url TrackingUrl {
+    apiName = "Shipment.TrackingUrl"
+    label = "Tracking URL"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "Shipment.Id"
+    label = "Shipment ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "Shipment.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber ShipmentNumber {
+    apiName = "Shipment.ShipmentNumber"
+    label = "Shipment Number"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "Shipment.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "Shipment.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "Shipment.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "Shipment.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "Shipment.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

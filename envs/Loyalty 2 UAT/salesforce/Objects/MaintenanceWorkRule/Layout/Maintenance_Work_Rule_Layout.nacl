@@ -1,0 +1,186 @@
+salesforce.Layout MaintenanceWorkRule_Maintenance_Work_Rule_Layout@bsss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Description"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.MaintenanceWorkRule.field.Title
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.MaintenanceWorkRule.field.Type
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "General Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.MaintenanceWorkRule.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.MaintenanceWorkRule.field.ParentMaintenanceRecordId
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.MaintenanceWorkRule.field.WorkTypeId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.MaintenanceWorkRule.field.ParentMaintenancePlanId
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Work Order Generation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.MaintenanceWorkRule.field.SortOrder
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.MaintenanceWorkRule.field.NextSuggestedMaintenanceDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Criteria Definition"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.MaintenanceWorkRule.field.RecordsetFilterCriteriaId
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "RecurrencePattern"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.MaintenanceWorkRule.field.RecurrencePattern
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.MaintenanceWorkRule.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.MaintenanceWorkRule.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      fields = [
+        "Name",
+        "Asset",
+        "Status",
+        "SuggestedMaintenanceDate",
+      ]
+      relatedList = "WorkOrders"
+    },
+    {
+      fields = [
+        "Name",
+        "WorkOrder",
+        "Asset",
+        "Status",
+        "WorkType",
+        "SuggestedMaintenanceDate",
+      ]
+      relatedList = "WorkOrderLineItems"
+    },
+    {
+      relatedList = "RelatedEntityHistoryList"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "MaintenanceWorkRule-Maintenance Work Rule Layout"
+  _parent = [
+    salesforce.MaintenanceWorkRule,
+  ]
+  _alias = "MaintenanceWorkRule-Maintenance Work Rule Layout"
+}

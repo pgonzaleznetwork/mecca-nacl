@@ -1,0 +1,231 @@
+type salesforce.RecordAlert {
+  salesforce.Text Description {
+    apiName = "RecordAlert.Description"
+    length = 255
+    label = "Description"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.DateTime EffectiveDate {
+    apiName = "RecordAlert.EffectiveDate"
+    _required = true
+    label = "Effective Start Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox IsActive {
+    apiName = "RecordAlert.IsActive"
+    defaultValue = false
+    label = "Active"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "RecordAlert.OwnerId"
+    relationshipName = "Owner"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    label = "Owner ID"
+    createable = true
+    updateable = true
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup ParentId {
+    apiName = "RecordAlert.ParentId"
+    relationshipName = "Parent"
+    referenceTo = [
+      salesforce.Account,
+      salesforce.Asset,
+      salesforce.Case,
+      salesforce.Contact,
+      salesforce.Contract,
+      salesforce.Lead,
+      salesforce.LoyaltyProgramMember,
+      salesforce.Opportunity,
+      salesforce.Rewards_Catalog__c,
+      salesforce.TransactionJournal,
+      salesforce.User,
+    ]
+    label = "Parent Record ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup RecordAlertCategoryId {
+    apiName = "RecordAlert.RecordAlertCategoryId"
+    relationshipName = "RecordAlertCategory"
+    referenceTo = [
+      salesforce.RecordAlertCategory,
+    ]
+    label = "Record Alert Category ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist Severity {
+    apiName = "RecordAlert.Severity"
+    inlineHelpText = "The severity value defined overwrites the default value defined on the record alert category."
+    valueSet = [
+      {
+        fullName = "Error"
+        isActive = true
+        label = "Error"
+        default = false
+      },
+      {
+        fullName = "Warning"
+        isActive = true
+        label = "Warning"
+        default = false
+      },
+      {
+        fullName = "Info"
+        isActive = true
+        label = "Info"
+        default = false
+      },
+    ]
+    restricted = false
+    label = "Severity"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.DateTime SnoozeUntilDate {
+    apiName = "RecordAlert.SnoozeUntilDate"
+    inlineHelpText = "Pause the alert until this date."
+    label = "Snooze Until Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text SourceSystemIdentifier {
+    apiName = "RecordAlert.SourceSystemIdentifier"
+    length = 255
+    label = "Source System ID"
+    createable = true
+    updateable = true
+    unique = true
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Text Subject {
+    apiName = "RecordAlert.Subject"
+    length = 255
+    label = "Subject"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.DateTime ValidUntilDate {
+    apiName = "RecordAlert.ValidUntilDate"
+    _required = true
+    label = "Valid Until Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup WhatId {
+    apiName = "RecordAlert.WhatId"
+    relationshipName = "What"
+    referenceTo = [
+      salesforce.Account,
+      salesforce.Asset,
+      salesforce.Case,
+      salesforce.Contact,
+      salesforce.Contract,
+      salesforce.Lead,
+      salesforce.LoyaltyProgramMember,
+      salesforce.Opportunity,
+      salesforce.Rewards_Catalog__c,
+      salesforce.TransactionJournal,
+      salesforce.User,
+    ]
+    _required = true
+    label = "What Record ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "RecordAlert.Id"
+    label = "Record Alert ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "RecordAlert.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "RecordAlert.Name"
+    label = "Name"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "RecordAlert.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "RecordAlert.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "RecordAlert.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "RecordAlert.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "RecordAlert.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

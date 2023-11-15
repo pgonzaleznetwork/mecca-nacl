@@ -1,0 +1,9 @@
+salesforce.ListView ProductTransferState_My_ProductTransferStates {
+  fullName = "ProductTransferState.My_ProductTransferStates"
+  filterScope = "Mine"
+  label = "My Product Transfer States"
+  _parent = [
+    salesforce.ProductTransferState,
+  ]
+  _alias = "My Product Transfer States"
+}

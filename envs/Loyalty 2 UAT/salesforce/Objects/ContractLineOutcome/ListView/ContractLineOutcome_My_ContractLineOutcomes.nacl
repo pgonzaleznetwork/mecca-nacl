@@ -1,0 +1,9 @@
+salesforce.ListView ContractLineOutcome_My_ContractLineOutcomes {
+  fullName = "ContractLineOutcome.My_ContractLineOutcomes"
+  filterScope = "Mine"
+  label = "My Contract Line Outcomes"
+  _parent = [
+    salesforce.ContractLineOutcome,
+  ]
+  _alias = "My Contract Line Outcomes"
+}

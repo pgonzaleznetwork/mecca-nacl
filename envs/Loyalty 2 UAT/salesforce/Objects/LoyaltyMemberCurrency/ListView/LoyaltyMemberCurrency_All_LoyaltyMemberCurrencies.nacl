@@ -1,0 +1,9 @@
+salesforce.ListView LoyaltyMemberCurrency_All_LoyaltyMemberCurrencies {
+  fullName = "LoyaltyMemberCurrency.All_LoyaltyMemberCurrencies"
+  filterScope = "Everything"
+  label = "allLoyaltyMemberCurrencies"
+  _parent = [
+    salesforce.LoyaltyMemberCurrency,
+  ]
+  _alias = "allLoyaltyMemberCurrencies"
+}

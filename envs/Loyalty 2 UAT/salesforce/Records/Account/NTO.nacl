@@ -1,0 +1,6 @@
+salesforce.Account NTO {
+  CleanStatus = "Pending"
+  Is_Loyalty_Partner__c = true
+  Name = "NTO"
+  _alias = "NTO"
+}

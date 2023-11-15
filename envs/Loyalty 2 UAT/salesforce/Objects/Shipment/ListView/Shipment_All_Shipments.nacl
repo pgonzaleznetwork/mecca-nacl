@@ -1,0 +1,9 @@
+salesforce.ListView Shipment_All_Shipments {
+  fullName = "Shipment.All_Shipments"
+  filterScope = "Everything"
+  label = "All Shipments"
+  _parent = [
+    salesforce.Shipment,
+  ]
+  _alias = "All Shipments"
+}

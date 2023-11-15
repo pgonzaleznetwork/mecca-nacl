@@ -1,0 +1,8 @@
+salesforce.TimelineObjectDefinition Loyalty_Member_Timeline {
+  fullName = "Loyalty_Member_Timeline"
+  baseObject = "LoyaltyProgramMember"
+  definition = "{\"timeline\":{\"anchorObject\":{\"object\":{\"entity\":\"LoyaltyProgramMember\",\"label\":\"Loyalty Program Member\",\"source\":\"\",\"icon\":\"\"}},\"age\":{\"field\":\"\"},\"events\":[{\"oneToMany\":{\"eventObject\":{\"name\":\"EngagementInteraction\",\"label\":\"Engagement Interaction\",\"recordTypes\":[],\"fieldsToDisplay\":[{\"field\":\"Sentiment\",\"label\":\"Sentiment\",\"type\":\"DynamicEnum\"},{\"field\":\"Status\",\"label\":\"Status\",\"type\":\"DynamicEnum\"},{\"field\":\"Type\",\"label\":\"Type\",\"type\":\"DynamicEnum\"}],\"relatedlistsToDisplay\":[{\"entity\":\"EngagementTopics\",\"label\":\"Engagement Topics\"},{\"entity\":\"EngagementAttendees\",\"label\":\"Engagement Attendees\"}],\"title\":{\"field\":\"Name\",\"label\":\"Name\",\"type\":\"AutoNumber\"},\"subTitle\":{\"field\":\"CommunicationChannel\",\"label\":\"Communication Channel\",\"type\":\"DynamicEnum\"}},\"filters\":[],\"sort\":{\"field\":\"StartDateTime\",\"label\":\"Start Date Time\",\"type\":\"DateTime\"},\"anchorReferenceField\":{\"field\":\"InitiatingAttendeeId\",\"label\":\"InitiatingAttendee ID\",\"type\":\"EntityId\"}}}]}}"
+  isActive = true
+  masterLabel = "Loyalty Member Timeline"
+  _alias = "Loyalty_Member_Timeline"
+}

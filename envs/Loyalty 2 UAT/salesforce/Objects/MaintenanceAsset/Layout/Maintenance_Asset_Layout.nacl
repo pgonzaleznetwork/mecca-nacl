@@ -1,0 +1,95 @@
+salesforce.Layout MaintenanceAsset_Maintenance_Asset_Layout@bss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.MaintenanceAsset.field.MaintenanceAssetNumber
+            },
+            {
+              behavior = "Required"
+              field = salesforce.MaintenanceAsset.field.AssetId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.MaintenanceAsset.field.ContractLineItemId
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.MaintenanceAsset.field.MaintenancePlanId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.MaintenanceAsset.field.WorkTypeId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.MaintenanceAsset.field.NextSuggestedMaintenanceDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.MaintenanceAsset.field.CreatedById
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.MaintenanceAsset.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      relatedList = "RelatedEntityHistoryList"
+    },
+    {
+      fields = [
+        "Name",
+        "SortOrder",
+        "RecurrencePattern",
+        "NextSuggestedMaintenanceDate",
+      ]
+      relatedList = "MaintenanceWorkRules"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "MaintenanceAsset-Maintenance Asset Layout"
+  _parent = [
+    salesforce.MaintenanceAsset,
+  ]
+  _alias = "MaintenanceAsset-Maintenance Asset Layout"
+}

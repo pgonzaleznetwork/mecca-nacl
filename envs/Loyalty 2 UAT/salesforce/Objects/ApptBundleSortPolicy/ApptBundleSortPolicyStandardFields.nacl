@@ -1,0 +1,156 @@
+type salesforce.ApptBundleSortPolicy {
+  salesforce.MasterDetail BundlePolicyId {
+    apiName = "ApptBundleSortPolicy.BundlePolicyId"
+    relationshipName = "BundlePolicy"
+    referenceTo = [
+      salesforce.ApptBundlePolicy,
+    ]
+    _required = true
+    label = "Appointment Bundle Policy ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Text Name {
+    apiName = "ApptBundleSortPolicy.Name"
+    inlineHelpText = "Enter a unique name."
+    length = 255
+    _required = true
+    label = "Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Picklist SortDirection {
+    apiName = "ApptBundleSortPolicy.SortDirection"
+    inlineHelpText = "Set the order of the appointments in a bundle to ascending or descending."
+    valueSet = [
+      {
+        fullName = "Ascending"
+        isActive = true
+        label = "Ascending"
+        default = false
+      },
+      {
+        fullName = "Descending"
+        isActive = true
+        label = "Descending"
+        default = false
+      },
+    ]
+    restricted = true
+    _required = true
+    label = "Sort Direction"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Unknown SortFieldName {
+    apiName = "ApptBundleSortPolicy.SortFieldName"
+    inlineHelpText = "Select the service appointment field that sorts the bundle members."
+    _hidden_value = true
+  }
+  salesforce.Number SortOrder {
+    apiName = "ApptBundleSortPolicy.SortOrder"
+    inlineHelpText = "Enter a number. Determines in which order the sort policy is triggered."
+    label = "Sort Order"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Picklist SortType {
+    apiName = "ApptBundleSortPolicy.SortType"
+    inlineHelpText = '''
+Sort Within a Bundle defines the order of bundle members. It’s also used when you unbundle to define the order that the service appointments are scheduled on the Gantt.
+            Sort for Automated Bundling defines the order that automated bundling uses to examine the candidate service appointments to be bundled.
+'''
+    valueSet = [
+      {
+        fullName = "SortWithinaBundle"
+        isActive = true
+        label = "Sort Within a Bundle"
+        default = false
+      },
+      {
+        fullName = "SortForAutomaticBundling"
+        isActive = true
+        label = "Sort For Automatic Bundling"
+        default = false
+      },
+    ]
+    restricted = true
+    _required = true
+    label = "Sort Type"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "ApptBundleSortPolicy.Id"
+    label = "Appointment Bundle Sort Policy ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ApptBundleSortPolicy.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ApptBundleSortPolicy.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ApptBundleSortPolicy.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ApptBundleSortPolicy.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ApptBundleSortPolicy.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ApptBundleSortPolicy.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

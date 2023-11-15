@@ -1,0 +1,96 @@
+salesforce.Layout SwarmMember_Swarm_Member_Layout@bss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.SwarmMember.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.SwarmMember.field.SwarmId
+            },
+            {
+              behavior = "Required"
+              field = salesforce.SwarmMember.field.Status
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.SwarmMember.field.AssignedDateTime
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.SwarmMember.field.OwnerId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.SwarmMember.field.HelpNeeded
+            },
+            {
+              behavior = "Required"
+              field = salesforce.SwarmMember.field.RelatedRecordId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.SwarmMember.field.CompletedDateTime
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.SwarmMember.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.SwarmMember.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "SwarmMember-Swarm Member Layout"
+  _parent = [
+    salesforce.SwarmMember,
+  ]
+  _alias = "SwarmMember-Swarm Member Layout"
+}
