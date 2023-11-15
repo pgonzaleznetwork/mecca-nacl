@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testPlanInstance guid="e2e82b6b-ad38-4f1c-98ee-1a9d670b4665" testCasePath="tests/Lesson 2/Create Booking and Add Experiences.testcase">
+  <planSettings/>
+  <planFeatures/>
+  <associations>
+    <association assocationType="TM.TEST_SUITE_CASE" connectionId="31c92433-7959-4a38-8c84-592b78238125" entityKey="a0f2o00002WIAKiAAP"/>
+  </associations>
+</testPlanInstance>
