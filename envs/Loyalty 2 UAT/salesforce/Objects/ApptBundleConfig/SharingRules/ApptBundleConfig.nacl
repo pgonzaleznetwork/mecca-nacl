@@ -1,0 +1,7 @@
+salesforce.SharingRules ApptBundleConfig {
+  fullName = "ApptBundleConfig"
+  _parent = [
+    salesforce.ApptBundleConfig,
+  ]
+  _alias = "ApptBundleConfig"
+}

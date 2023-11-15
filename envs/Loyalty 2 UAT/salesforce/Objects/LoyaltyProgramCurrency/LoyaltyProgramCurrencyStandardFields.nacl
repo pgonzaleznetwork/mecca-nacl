@@ -1,0 +1,238 @@
+type salesforce.LoyaltyProgramCurrency {
+  salesforce.Currency CostperUnit {
+    apiName = "LoyaltyProgramCurrency.CostperUnit"
+    label = "Cost per Unit"
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 18
+    queryable = true
+  }
+  salesforce.Picklist CurrencyType {
+    apiName = "LoyaltyProgramCurrency.CurrencyType"
+    valueSet = [
+      {
+        fullName = "Qualifying"
+        isActive = true
+        label = "Qualifying"
+        default = true
+      },
+      {
+        fullName = "NonQualifying"
+        isActive = true
+        label = "Non-Qualifying"
+        default = false
+      },
+    ]
+    restricted = true
+    _required = true
+    label = "Currency Type"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Picklist ExpiryModel {
+    apiName = "LoyaltyProgramCurrency.ExpiryModel"
+    valueSet = [
+      {
+        fullName = "Activity"
+        isActive = true
+        label = "Activity"
+        default = false
+      },
+      {
+        fullName = "Fixed"
+        isActive = true
+        label = "Fixed"
+        default = false
+      },
+    ]
+    restricted = true
+    label = "Expiration Model"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Number ExpiryPeriodFrequency {
+    apiName = "LoyaltyProgramCurrency.ExpiryPeriodFrequency"
+    label = "Expiration Interval"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Picklist ExpiryPeriodUnit {
+    apiName = "LoyaltyProgramCurrency.ExpiryPeriodUnit"
+    valueSet = [
+      {
+        fullName = "Days"
+        isActive = true
+        label = "Days"
+        default = false
+      },
+      {
+        fullName = "Months"
+        isActive = true
+        label = "Months"
+        default = false
+      },
+      {
+        fullName = "Years"
+        isActive = true
+        label = "Years"
+        default = false
+      },
+    ]
+    restricted = true
+    label = "Expiration Interval Unit"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist ExtendExpiration {
+    apiName = "LoyaltyProgramCurrency.ExtendExpiration"
+    valueSet = [
+      {
+        fullName = "None"
+        isActive = true
+        label = "No Extension"
+        default = false
+      },
+      {
+        fullName = "TillEndOfMonth"
+        isActive = true
+        label = "Till End Of Month"
+        default = false
+      },
+    ]
+    restricted = true
+    label = "Extend Expiration"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox HasEscrow {
+    apiName = "LoyaltyProgramCurrency.HasEscrow"
+    inlineHelpText = "Credit accrued points to the escrow points balance. Program members can redeem the points after the escrow period is over."
+    defaultValue = false
+    label = "Has Escrow"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox IsActive {
+    apiName = "LoyaltyProgramCurrency.IsActive"
+    defaultValue = false
+    label = "Active"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox IsPrimary {
+    apiName = "LoyaltyProgramCurrency.IsPrimary"
+    defaultValue = false
+    label = "Primary"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.MasterDetail LoyaltyProgramId {
+    apiName = "LoyaltyProgramCurrency.LoyaltyProgramId"
+    relationshipName = "LoyaltyProgram"
+    referenceTo = [
+      salesforce.LoyaltyProgram,
+    ]
+    _required = true
+    label = "Loyalty Program ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Lookup LoyaltyTierGroupId {
+    apiName = "LoyaltyProgramCurrency.LoyaltyTierGroupId"
+    relationshipName = "LoyaltyTierGroup"
+    referenceTo = [
+      salesforce.LoyaltyTierGroup,
+    ]
+    label = "Loyalty Tier Group ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text Name {
+    apiName = "LoyaltyProgramCurrency.Name"
+    length = 255
+    _required = true
+    label = "Currency Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "LoyaltyProgramCurrency.Id"
+    label = "Currency ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "LoyaltyProgramCurrency.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "LoyaltyProgramCurrency.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "LoyaltyProgramCurrency.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "LoyaltyProgramCurrency.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "LoyaltyProgramCurrency.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "LoyaltyProgramCurrency.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

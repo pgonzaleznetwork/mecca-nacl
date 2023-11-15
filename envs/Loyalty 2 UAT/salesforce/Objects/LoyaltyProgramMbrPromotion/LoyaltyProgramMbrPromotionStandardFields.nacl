@@ -1,0 +1,135 @@
+type salesforce.LoyaltyProgramMbrPromotion {
+  salesforce.Percent CumulativeUsageCompletePercent {
+    apiName = "LoyaltyProgramMbrPromotion.CumulativeUsageCompletePercent"
+    label = "Cumulative Usage Complete Percentage"
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 5
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number CumulativeUsageCompleted {
+    apiName = "LoyaltyProgramMbrPromotion.CumulativeUsageCompleted"
+    label = "Cumulative Usage Completed"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Number CumulativeUsageTarget {
+    apiName = "LoyaltyProgramMbrPromotion.CumulativeUsageTarget"
+    label = "Cumulative Usage Target"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsEnrollmentActive {
+    apiName = "LoyaltyProgramMbrPromotion.IsEnrollmentActive"
+    defaultValue = false
+    label = "Enrollment active"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.MasterDetail LoyaltyProgramMemberId {
+    apiName = "LoyaltyProgramMbrPromotion.LoyaltyProgramMemberId"
+    relationshipName = "LoyaltyProgramMember"
+    referenceTo = [
+      salesforce.LoyaltyProgramMember,
+    ]
+    _required = true
+    label = "Loyalty Program Member ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Lookup PromotionId {
+    apiName = "LoyaltyProgramMbrPromotion.PromotionId"
+    relationshipName = "Promotion"
+    referenceTo = [
+      salesforce.Promotion,
+    ]
+    label = "Promotion ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "LoyaltyProgramMbrPromotion.Id"
+    label = "Loyalty Program Member Promotion ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "LoyaltyProgramMbrPromotion.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "LoyaltyProgramMbrPromotion.Name"
+    label = "Name"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "LoyaltyProgramMbrPromotion.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "LoyaltyProgramMbrPromotion.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "LoyaltyProgramMbrPromotion.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "LoyaltyProgramMbrPromotion.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "LoyaltyProgramMbrPromotion.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

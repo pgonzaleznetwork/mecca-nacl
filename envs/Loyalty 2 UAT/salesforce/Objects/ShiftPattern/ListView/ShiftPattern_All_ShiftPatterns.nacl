@@ -1,0 +1,9 @@
+salesforce.ListView ShiftPattern_All_ShiftPatterns {
+  fullName = "ShiftPattern.All_ShiftPatterns"
+  filterScope = "Everything"
+  label = "All Shift Patterns"
+  _parent = [
+    salesforce.ShiftPattern,
+  ]
+  _alias = "All Shift Patterns"
+}

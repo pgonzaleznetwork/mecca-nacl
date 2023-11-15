@@ -1,0 +1,6 @@
+salesforce.JournalSubType Member_Referral@s {
+  Description = "Represents transactions that credit points to loyalty program members when a member they have referred has joined the loyalty program."
+  JournalTypeId = salesforce.JournalType.instance.Accrual
+  Name = "Member Referral"
+  _alias = "Accrual Member Referral"
+}

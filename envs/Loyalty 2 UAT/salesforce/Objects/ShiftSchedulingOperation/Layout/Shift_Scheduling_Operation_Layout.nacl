@@ -1,0 +1,129 @@
+salesforce.Layout ShiftSchedulingOperation_Shift_Scheduling_Operation_Layout@bsss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "ShiftSchedulingOperationInformation"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = "Name"
+            },
+            {
+              behavior = "Required"
+              field = salesforce.ShiftSchedulingOperation.field.TotalShiftsToSchedule
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.ShiftSchedulingOperation.field.TotalShiftsProcessed
+            },
+            {
+              behavior = "Required"
+              field = salesforce.ShiftSchedulingOperation.field.TotalShiftsScheduled
+            },
+            {
+              behavior = "Required"
+              field = salesforce.ShiftSchedulingOperation.field.Status
+            },
+            {
+              behavior = "Required"
+              field = salesforce.ShiftSchedulingOperation.field.CurrentShiftsStatus
+            },
+            {
+              behavior = "Required"
+              field = salesforce.ShiftSchedulingOperation.field.ShiftsStartDateTime
+            },
+            {
+              behavior = "Required"
+              field = salesforce.ShiftSchedulingOperation.field.ServiceTerritories
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.ShiftSchedulingOperation.field.JobStartTime
+            },
+            {
+              behavior = "Required"
+              field = salesforce.ShiftSchedulingOperation.field.JobEndTime
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.ShiftSchedulingOperation.field.TotalShiftsExcluded
+            },
+            {
+              behavior = "Required"
+              field = salesforce.ShiftSchedulingOperation.field.TotalShiftsLeftUnassigned
+            },
+            {
+              behavior = "Required"
+              field = salesforce.ShiftSchedulingOperation.field.SelectedAction
+            },
+            {
+              behavior = "Required"
+              field = salesforce.ShiftSchedulingOperation.field.UpdatedShiftsStatus
+            },
+            {
+              behavior = "Required"
+              field = salesforce.ShiftSchedulingOperation.field.ShiftsEndDateTime
+            },
+            {
+              behavior = "Required"
+              field = salesforce.ShiftSchedulingOperation.field.JobProfiles
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = "CreatedById"
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ShiftSchedulingOperation.field.OwnerId
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = "LastModifiedById"
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "ShiftSchedulingOperation-Shift Scheduling Operation Layout"
+  _parent = [
+    salesforce.ShiftSchedulingOperation,
+  ]
+  _alias = "ShiftSchedulingOperation-Shift Scheduling Operation Layout"
+}

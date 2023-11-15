@@ -1,0 +1,125 @@
+type salesforce.ServiceResourcePreference {
+  salesforce.Date EndDate {
+    apiName = "ServiceResourcePreference.EndDate"
+    label = "End Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup OperatingHoursId {
+    apiName = "ServiceResourcePreference.OperatingHoursId"
+    relationshipName = "OperatingHours"
+    referenceTo = [
+      salesforce.OperatingHours,
+    ]
+    _required = true
+    label = "Operating Hour ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "ServiceResourcePreference.OwnerId"
+    relationshipName = "Owner"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    label = "Owner ID"
+    createable = true
+    updateable = true
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup ServiceResourceId {
+    apiName = "ServiceResourcePreference.ServiceResourceId"
+    relationshipName = "ServiceResource"
+    referenceTo = [
+      salesforce.ServiceResource,
+    ]
+    _required = true
+    label = "Resource ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Date StartDate {
+    apiName = "ServiceResourcePreference.StartDate"
+    _required = true
+    label = "Start Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "ServiceResourcePreference.Id"
+    label = "Service Resource Preference ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ServiceResourcePreference.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "ServiceResourcePreference.Name"
+    label = "Name"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ServiceResourcePreference.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ServiceResourcePreference.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ServiceResourcePreference.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ServiceResourcePreference.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ServiceResourcePreference.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

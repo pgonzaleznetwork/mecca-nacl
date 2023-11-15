@@ -1,0 +1,6 @@
+salesforce.JournalType Accrual_Reversal@s {
+  Description = "Represents a transaction that reverses an accrual to a loyalty program member's balance."
+  Name = "Accrual Reversal"
+  ProcessType = "Loyalty"
+  _alias = "Accrual Reversal"
+}

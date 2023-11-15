@@ -1,0 +1,219 @@
+type salesforce.AuditTrailFileExport {
+  serviceid Id {
+    apiName = "AuditTrailFileExport.Id"
+    label = "Audit Trail File Export ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "AuditTrailFileExport.OwnerId"
+    relationshipName = "Owner"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    label = "Owner ID"
+    createable = true
+    updateable = true
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "AuditTrailFileExport.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "AuditTrailFileExport.Name"
+    label = "Name"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "AuditTrailFileExport.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "AuditTrailFileExport.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "AuditTrailFileExport.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "AuditTrailFileExport.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "AuditTrailFileExport.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text RequestIdentifier {
+    apiName = "AuditTrailFileExport.RequestIdentifier"
+    length = 255
+    _required = true
+    label = "Request Identifier"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Text FileName {
+    apiName = "AuditTrailFileExport.FileName"
+    length = 255
+    label = "File Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Picklist RequestStatus {
+    apiName = "AuditTrailFileExport.RequestStatus"
+    valueSet = [
+      {
+        fullName = "Submitted"
+        isActive = true
+        label = "Submitted"
+        default = false
+      },
+      {
+        fullName = "InProgress"
+        isActive = true
+        label = "InProgress"
+        default = false
+      },
+      {
+        fullName = "Completed"
+        isActive = true
+        label = "Completed"
+        default = false
+      },
+      {
+        fullName = "Failed"
+        isActive = true
+        label = "Failed"
+        default = false
+      },
+    ]
+    restricted = true
+    _required = true
+    label = "Request Status"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text FileIdentifier {
+    apiName = "AuditTrailFileExport.FileIdentifier"
+    length = 255
+    label = "File Identifier"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.DateTime CompletedDateTime {
+    apiName = "AuditTrailFileExport.CompletedDateTime"
+    label = "Completed Date Time"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox IsEmailSent {
+    apiName = "AuditTrailFileExport.IsEmailSent"
+    defaultValue = false
+    label = "Is Email Sent"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist FileStatus {
+    apiName = "AuditTrailFileExport.FileStatus"
+    valueSet = [
+      {
+        fullName = "Available"
+        isActive = true
+        label = "Available"
+        default = false
+      },
+      {
+        fullName = "Failed"
+        isActive = true
+        label = "Failed"
+        default = false
+      },
+      {
+        fullName = "ManuallyDeleted"
+        isActive = true
+        label = "ManuallyDeleted"
+        default = false
+      },
+      {
+        fullName = "SystemDeleted"
+        isActive = true
+        label = "SystemDeleted"
+        default = false
+      },
+    ]
+    restricted = true
+    label = "File Status"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.DateTime FileDeletedDateTime {
+    apiName = "AuditTrailFileExport.FileDeletedDateTime"
+    label = "File Deleted Date Time"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup FileDeletedById {
+    apiName = "AuditTrailFileExport.FileDeletedById"
+    relationshipName = "FileDeletedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "User ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+}

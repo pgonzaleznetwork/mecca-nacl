@@ -1,0 +1,6 @@
+salesforce.JournalType Redemption {
+  Description = "Represents a transaction that redeems a loyalty program member's points."
+  Name = "Redemption"
+  ProcessType = "Loyalty"
+  _alias = "Redemption"
+}

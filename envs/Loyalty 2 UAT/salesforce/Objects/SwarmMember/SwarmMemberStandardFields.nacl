@@ -1,0 +1,167 @@
+type salesforce.SwarmMember {
+  salesforce.DateTime AssignedDateTime {
+    apiName = "SwarmMember.AssignedDateTime"
+    label = "Assigned Date Time"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.DateTime CompletedDateTime {
+    apiName = "SwarmMember.CompletedDateTime"
+    label = "Completed Date Time"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.LongTextArea HelpNeeded {
+    apiName = "SwarmMember.HelpNeeded"
+    length = 32000
+    label = "Swarm Description"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text Name {
+    apiName = "SwarmMember.Name"
+    length = 255
+    _required = true
+    label = "Details"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "SwarmMember.OwnerId"
+    relationshipName = "Owner"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    label = "Owner ID"
+    createable = true
+    updateable = true
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup RelatedRecordId {
+    apiName = "SwarmMember.RelatedRecordId"
+    relationshipName = "RelatedRecord"
+    referenceTo = [
+      salesforce.Account,
+      salesforce.Case,
+      salesforce.Opportunity,
+      salesforce.ServiceAppointment,
+      salesforce.User,
+    ]
+    _required = true
+    label = "RelatedRecord ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist Status {
+    apiName = "SwarmMember.Status"
+    valueSet = [
+      {
+        fullName = "New"
+        isActive = true
+        label = "New"
+        default = true
+      },
+      {
+        fullName = "In Progress"
+        isActive = true
+        label = "In Progress"
+        default = false
+      },
+      {
+        fullName = "Closed"
+        isActive = true
+        label = "Closed"
+        default = false
+      },
+    ]
+    restricted = false
+    _required = true
+    label = "Status"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup SwarmId {
+    apiName = "SwarmMember.SwarmId"
+    relationshipName = "Swarm"
+    referenceTo = [
+      salesforce.Swarm,
+    ]
+    label = "Swarm ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "SwarmMember.Id"
+    label = "Swarm Member ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "SwarmMember.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "SwarmMember.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "SwarmMember.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "SwarmMember.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "SwarmMember.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "SwarmMember.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

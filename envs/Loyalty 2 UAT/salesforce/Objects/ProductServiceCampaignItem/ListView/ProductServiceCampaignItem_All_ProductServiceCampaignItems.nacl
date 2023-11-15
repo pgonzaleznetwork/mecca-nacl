@@ -1,0 +1,9 @@
+salesforce.ListView ProductServiceCampaignItem_All_ProductServiceCampaignItems {
+  fullName = "ProductServiceCampaignItem.All_ProductServiceCampaignItems"
+  filterScope = "Everything"
+  label = "All Product Service Campaign Items"
+  _parent = [
+    salesforce.ProductServiceCampaignItem,
+  ]
+  _alias = "All Product Service Campaign Items"
+}

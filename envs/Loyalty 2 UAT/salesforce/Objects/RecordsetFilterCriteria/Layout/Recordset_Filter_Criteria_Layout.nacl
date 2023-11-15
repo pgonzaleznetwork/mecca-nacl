@@ -1,0 +1,117 @@
+salesforce.Layout RecordsetFilterCriteria_Recordset_Filter_Criteria_Layout@bsss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.RecordsetFilterCriteria.field.Name
+            },
+            {
+              behavior = "Required"
+              field = salesforce.RecordsetFilterCriteria.field.SourceObject
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.RecordsetFilterCriteria.field.Description
+            },
+            {
+              behavior = "Required"
+              field = salesforce.RecordsetFilterCriteria.field.LogicalOperator
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.RecordsetFilterCriteria.field.CustomLogic
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.RecordsetFilterCriteria.field.IsActive
+            },
+            {
+              behavior = "Required"
+              field = salesforce.RecordsetFilterCriteria.field.FilteredObject
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.RecordsetFilterCriteria.field.CreatedById
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.RecordsetFilterCriteria.field.LastModifiedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.RecordsetFilterCriteria.field.CreatedDate
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.RecordsetFilterCriteria.field.LastModifiedDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      fields = [
+        "Name",
+      ]
+      relatedList = "RecordsetFilterCriteriaRules"
+    },
+    {
+      relatedList = "RelatedEntityHistoryList"
+    },
+    {
+      fields = [
+        "Name",
+        "RecordsetFilterCriteria",
+        "Asset",
+        "IsWithinThreshold",
+      ]
+      relatedList = "RecordsetFltrCritMonitors"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "RecordsetFilterCriteria-Recordset Filter Criteria Layout"
+  _parent = [
+    salesforce.RecordsetFilterCriteria,
+  ]
+  _alias = "RecordsetFilterCriteria-Recordset Filter Criteria Layout"
+}

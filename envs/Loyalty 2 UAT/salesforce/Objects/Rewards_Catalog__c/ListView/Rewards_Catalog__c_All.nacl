@@ -1,0 +1,9 @@
+salesforce.ListView Rewards_Catalog__c_All {
+  fullName = "Rewards_Catalog__c.All"
+  filterScope = "Everything"
+  label = "All"
+  _parent = [
+    salesforce.Rewards_Catalog__c,
+  ]
+  _alias = "All"
+}

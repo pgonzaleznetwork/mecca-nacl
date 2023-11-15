@@ -1,0 +1,59 @@
+type salesforce.Rewards_Catalog__c {
+  salesforce.Lookup Partner__c {
+    apiName = "Rewards_Catalog__c.Partner__c"
+    deleteConstraint = "SetNull"
+    externalId = false
+    label = "Partner"
+    referenceTo = [
+      salesforce.LoyaltyProgramPartner,
+    ]
+    relationshipLabel = "Rewards Catalog"
+    relationshipName = "Rewards_Catalog"
+    trackTrending = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Number Points__c {
+    apiName = "Rewards_Catalog__c.Points__c"
+    externalId = false
+    label = "Points"
+    precision = 18
+    scale = 0
+    trackTrending = false
+    unique = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup Product__c {
+    apiName = "Rewards_Catalog__c.Product__c"
+    deleteConstraint = "SetNull"
+    externalId = false
+    label = "Product"
+    referenceTo = [
+      salesforce.Product2,
+    ]
+    relationshipLabel = "Rewards Catalog"
+    relationshipName = "Rewards_Catalog"
+    trackTrending = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup Voucher_Definition__c {
+    apiName = "Rewards_Catalog__c.Voucher_Definition__c"
+    deleteConstraint = "SetNull"
+    externalId = false
+    label = "Voucher Definition"
+    referenceTo = [
+      salesforce.VoucherDefinition,
+    ]
+    relationshipLabel = "Rewards Catalog"
+    relationshipName = "Rewards_Catalog"
+    trackTrending = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+}

@@ -1,0 +1,9 @@
+salesforce.ListView TravelMode_All_TravelModes {
+  fullName = "TravelMode.All_TravelModes"
+  filterScope = "Everything"
+  label = "All Travel Modes"
+  _parent = [
+    salesforce.TravelMode,
+  ]
+  _alias = "All Travel Modes"
+}

@@ -1,0 +1,7 @@
+salesforce.SharingRules AuditTrailFileExport {
+  fullName = "AuditTrailFileExport"
+  _parent = [
+    salesforce.AuditTrailFileExport,
+  ]
+  _alias = "AuditTrailFileExport"
+}

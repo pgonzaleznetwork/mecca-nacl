@@ -1,0 +1,161 @@
+type salesforce.ProductTransferState {
+  salesforce.Picklist Action {
+    apiName = "ProductTransferState.Action"
+    valueSet = [
+      {
+        fullName = "Receive"
+        isActive = true
+        label = "Receive"
+        default = false
+      },
+      {
+        fullName = "Send"
+        isActive = true
+        label = "Send"
+        default = false
+      },
+    ]
+    restricted = true
+    _required = true
+    label = "Action"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.MasterDetail ProductTransferId {
+    apiName = "ProductTransferState.ProductTransferId"
+    relationshipName = "ProductTransfer"
+    referenceTo = [
+      salesforce.ProductTransfer,
+    ]
+    _required = true
+    label = "Product Transfer ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Lookup SerializedProductId {
+    apiName = "ProductTransferState.SerializedProductId"
+    relationshipName = "SerializedProduct"
+    referenceTo = [
+      salesforce.SerializedProduct,
+    ]
+    _required = true
+    label = "Serialized Product ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist TransferState {
+    apiName = "ProductTransferState.TransferState"
+    valueSet = [
+      {
+        fullName = "Available"
+        isActive = true
+        label = "Available"
+        default = true
+      },
+      {
+        fullName = "Sent"
+        isActive = true
+        label = "Sent"
+        default = false
+      },
+      {
+        fullName = "Consumed"
+        isActive = true
+        label = "Consumed"
+        default = false
+      },
+      {
+        fullName = "Damaged"
+        isActive = true
+        label = "Damaged"
+        default = false
+      },
+      {
+        fullName = "Lost"
+        isActive = true
+        label = "Lost"
+        default = false
+      },
+    ]
+    restricted = true
+    _required = true
+    label = "Transfer State"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "ProductTransferState.Id"
+    label = "Product Transfer State Item ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ProductTransferState.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "ProductTransferState.Name"
+    label = "Product Transfer State Number"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ProductTransferState.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ProductTransferState.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ProductTransferState.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ProductTransferState.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ProductTransferState.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

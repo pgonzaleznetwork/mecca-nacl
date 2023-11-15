@@ -1,0 +1,242 @@
+type salesforce.AssetWarranty {
+  salesforce.MasterDetail AssetId {
+    apiName = "AssetWarranty.AssetId"
+    relationshipName = "Asset"
+    referenceTo = [
+      salesforce.Asset,
+    ]
+    _required = true
+    label = "Asset ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Date EndDate {
+    apiName = "AssetWarranty.EndDate"
+    label = "End Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist ExchangeType {
+    apiName = "AssetWarranty.ExchangeType"
+    valueSet = [
+      {
+        fullName = "Advance Exchange"
+        isActive = true
+        label = "Advance Exchange"
+        default = false
+      },
+      {
+        fullName = "Loaner"
+        isActive = true
+        label = "Loaner"
+        default = false
+      },
+      {
+        fullName = "Return Exchange"
+        isActive = true
+        label = "Return Exchange"
+        default = false
+      },
+    ]
+    restricted = false
+    label = "Exchange Type"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.LongTextArea Exclusions {
+    apiName = "AssetWarranty.Exclusions"
+    length = 32000
+    label = "Exclusions"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Percent ExpensesCovered {
+    apiName = "AssetWarranty.ExpensesCovered"
+    label = "Expenses Covered"
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 5
+    queryable = true
+  }
+  salesforce.Date ExpensesCoveredEndDate {
+    apiName = "AssetWarranty.ExpensesCoveredEndDate"
+    label = "Expenses Covered End Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox IsTransferable {
+    apiName = "AssetWarranty.IsTransferable"
+    defaultValue = false
+    label = "Transferable"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Percent LaborCovered {
+    apiName = "AssetWarranty.LaborCovered"
+    label = "Labor Covered"
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 5
+    queryable = true
+  }
+  salesforce.Date LaborCoveredEndDate {
+    apiName = "AssetWarranty.LaborCoveredEndDate"
+    label = "Labor Covered End Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Percent PartsCovered {
+    apiName = "AssetWarranty.PartsCovered"
+    label = "Parts Covered"
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 5
+    queryable = true
+  }
+  salesforce.Date PartsCoveredEndDate {
+    apiName = "AssetWarranty.PartsCoveredEndDate"
+    label = "Parts Covered End Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup Pricebook2Id {
+    apiName = "AssetWarranty.Pricebook2Id"
+    relationshipName = "Pricebook2"
+    referenceTo = [
+      salesforce.Pricebook2,
+    ]
+    label = "Price Book ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Date StartDate {
+    apiName = "AssetWarranty.StartDate"
+    _required = true
+    label = "Start Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup WarrantyTermId {
+    apiName = "AssetWarranty.WarrantyTermId"
+    relationshipName = "WarrantyTerm"
+    referenceTo = [
+      salesforce.WarrantyTerm,
+    ]
+    label = "Warranty Term ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist WarrantyType {
+    apiName = "AssetWarranty.WarrantyType"
+    valueSet = [
+      {
+        fullName = "Repair"
+        isActive = true
+        label = "Repair"
+        default = false
+      },
+      {
+        fullName = "Standard"
+        isActive = true
+        label = "Standard"
+        default = false
+      },
+      {
+        fullName = "Supplier"
+        isActive = true
+        label = "Supplier"
+        default = false
+      },
+    ]
+    restricted = false
+    label = "Warranty Type"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "AssetWarranty.Id"
+    label = "Asset Warranty ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "AssetWarranty.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber AssetWarrantyNumber {
+    apiName = "AssetWarranty.AssetWarrantyNumber"
+    label = "Asset Warranty Number"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "AssetWarranty.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "AssetWarranty.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "AssetWarranty.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "AssetWarranty.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "AssetWarranty.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

@@ -1,0 +1,217 @@
+salesforce.Layout ProductRequestLineItem_Product_Request_Line_Item_Layout@bssss {
+  excludeButtons = [
+    "Submit",
+  ]
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.ProductRequestLineItem.field.ProductRequestLineItemNumber
+            },
+            {
+              behavior = "Required"
+              field = salesforce.ProductRequestLineItem.field.Product2Id
+            },
+            {
+              behavior = "Required"
+              field = salesforce.ProductRequestLineItem.field.QuantityRequested
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ProductRequestLineItem.field.QuantityUnitOfMeasure
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.ProductRequestLineItem.field.ParentId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ProductRequestLineItem.field.NeedByDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Shipping Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.ProductRequestLineItem.field.SourceLocationId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ProductRequestLineItem.field.ShipmentType
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.ProductRequestLineItem.field.DestinationLocationId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ProductRequestLineItem.field.ShipToAddress
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.ProductRequestLineItem.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.ProductRequestLineItem.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  quickActionList = {
+    quickActionListItems = [
+      {
+        quickActionName = "FeedItem.ContentPost"
+      },
+      {
+        quickActionName = "FeedItem.LinkPost"
+      },
+      {
+        quickActionName = "FeedItem.PollPost"
+      },
+      {
+        quickActionName = "FeedItem.QuestionPost"
+      },
+      {
+        quickActionName = "FeedItem.RypplePost"
+      },
+      {
+        quickActionName = "FeedItem.TextPost"
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.LogACall
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.NewCase
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.NewEvent
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.NewNote
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.NewTask
+      },
+    ]
+  }
+  relatedLists = [
+    {
+      fields = [
+        "TASK.SUBJECT",
+        "TASK.WHO_NAME",
+        "ACTIVITY.TASK",
+        "TASK.DUE_DATE",
+        "TASK.STATUS",
+        "TASK.PRIORITY",
+        "CORE.USERS.FULL_NAME",
+      ]
+      relatedList = "RelatedActivityList"
+    },
+    {
+      relatedList = "RelatedFileList"
+    },
+    {
+      relatedList = "RelatedEntityHistoryList"
+    },
+    {
+      relatedList = "RelatedNoteList"
+    },
+    {
+      fields = [
+        "CreatedDate",
+        "StepStatus",
+        "OriginalActor",
+        "Actor",
+        "Comments",
+      ]
+      relatedList = "RelatedProcessHistoryList"
+    },
+    {
+      fields = [
+        "Name",
+        "Product2",
+        "SourceProductItem",
+        "QuantityReceived",
+        "DestinationLocation",
+        "IsReceived",
+        "ReceivedBy",
+        "Shipment",
+        "ShipmentExpectedDeliveryDate",
+        "ShipmentTrackingNumber",
+        "ShipmentTrackingUrl",
+      ]
+      relatedList = "ProductTransfers"
+    },
+    {
+      fields = [
+        "Name",
+        "ReturnOrder",
+        "DestinationLocation",
+        "SourceLocation",
+        "CreatedBy",
+      ]
+      relatedList = "ReturnOrderLineItems"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "ProductRequestLineItem-Product Request Line Item Layout"
+  _parent = [
+    salesforce.ProductRequestLineItem,
+  ]
+  _alias = "ProductRequestLineItem-Product Request Line Item Layout"
+}

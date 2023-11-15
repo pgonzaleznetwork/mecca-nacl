@@ -1,0 +1,132 @@
+salesforce.Layout Shift_Shift_Layout@bs {
+  excludeButtons = [
+    "Submit",
+  ]
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.Shift.field.StartTime
+            },
+            {
+              behavior = "Required"
+              field = salesforce.Shift.field.Status
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Shift.field.ServiceTerritoryId
+            },
+            {
+              behavior = "Required"
+              field = salesforce.Shift.field.TimeSlotType
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.Shift.field.StatusCategory
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Shift.field.IsNonStandard
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Shift.field.BackgroundColor
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.Shift.field.EndTime
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Shift.field.JobProfileId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Shift.field.ServiceResourceId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Shift.field.Label
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Shift.field.RecordsetFilterCriteriaId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Shift.field.IsHolidayShift
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Recurrence"
+      layoutColumns = [
+        {
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      fields = [
+        "TASK.SUBJECT",
+        "TASK.WHO_NAME",
+        "ACTIVITY.TASK",
+        "TASK.DUE_DATE",
+        "TASK.STATUS",
+        "TASK.PRIORITY",
+        "CORE.USERS.FULL_NAME",
+      ]
+      relatedList = "RelatedActivityList"
+    },
+    {
+      relatedList = "RelatedEntityHistoryList"
+    },
+    {
+      relatedList = "RelatedFileList"
+    },
+    {
+      fields = [
+        "CreatedDate",
+        "StepStatus",
+        "OriginalActor",
+        "Actor",
+        "Comments",
+      ]
+      relatedList = "RelatedProcessHistoryList"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "Shift-Shift Layout"
+  _parent = [
+    salesforce.Shift,
+  ]
+  _alias = "Shift-Shift Layout"
+}
