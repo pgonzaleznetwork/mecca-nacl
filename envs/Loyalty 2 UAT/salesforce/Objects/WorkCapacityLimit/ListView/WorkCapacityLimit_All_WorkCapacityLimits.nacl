@@ -1,0 +1,9 @@
+salesforce.ListView WorkCapacityLimit_All_WorkCapacityLimits {
+  fullName = "WorkCapacityLimit.All_WorkCapacityLimits"
+  filterScope = "Everything"
+  label = "All Work Capacity Limits"
+  _parent = [
+    salesforce.WorkCapacityLimit,
+  ]
+  _alias = "All Work Capacity Limits"
+}

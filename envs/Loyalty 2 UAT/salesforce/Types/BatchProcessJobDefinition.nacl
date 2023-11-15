@@ -1,0 +1,64 @@
+type salesforce.BatchProcessJobDefinition {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  number batchSize {
+  }
+  salesforce.BatchDataSource dataSource {
+  }
+  string description {
+  }
+  string executionProcessApiName {
+  }
+  string flowApiName {
+  }
+  string flowInputVariable {
+  }
+  string masterLabel {
+  }
+  string processGroup {
+  }
+  number retryCount {
+  }
+  number retryInterval {
+  }
+  string status {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Active",
+        "Inactive",
+      ]
+    }
+  }
+  string type {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Calc",
+        "Flow",
+        "LoyaltyProgramProcess",
+      ]
+    }
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "batchProcessJobDefinition"
+  dirName = "batchProcessJobDefinitions"
+  metadataType = "BatchProcessJobDefinition"
+}

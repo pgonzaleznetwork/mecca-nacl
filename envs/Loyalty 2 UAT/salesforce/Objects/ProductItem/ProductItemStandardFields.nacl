@@ -1,0 +1,167 @@
+type salesforce.ProductItem {
+  salesforce.Lookup LocationId {
+    apiName = "ProductItem.LocationId"
+    relationshipName = "Location"
+    referenceTo = [
+      salesforce.Location,
+    ]
+    _required = true
+    label = "Location ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "ProductItem.OwnerId"
+    relationshipName = "Owner"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    label = "Owner ID"
+    createable = true
+    updateable = true
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup Product2Id {
+    apiName = "ProductItem.Product2Id"
+    relationshipName = "Product2"
+    referenceTo = [
+      salesforce.Product2,
+    ]
+    _required = true
+    label = "Product ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Number QuantityOnHand {
+    apiName = "ProductItem.QuantityOnHand"
+    _required = true
+    label = "Quantity On Hand"
+    precision = 18
+    scale = 2
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.Picklist QuantityUnitOfMeasure {
+    apiName = "ProductItem.QuantityUnitOfMeasure"
+    valueSet = [
+      {
+        fullName = "Each"
+        isActive = true
+        label = "Each"
+        default = false
+      },
+    ]
+    restricted = false
+    label = "Quantity Unit Of Measure"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text SerialNumber {
+    apiName = "ProductItem.SerialNumber"
+    length = 80
+    label = "Serial Number"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "ProductItem.Id"
+    label = "Product Item ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ProductItem.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber ProductItemNumber {
+    apiName = "ProductItem.ProductItemNumber"
+    label = "Product Item Number"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ProductItem.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ProductItem.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ProductItem.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ProductItem.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ProductItem.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text ProductName {
+    apiName = "ProductItem.ProductName"
+    length = 255
+    label = "Product Name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsProduct2Serialized {
+    apiName = "ProductItem.IsProduct2Serialized"
+    defaultValue = false
+    label = "Serialized"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

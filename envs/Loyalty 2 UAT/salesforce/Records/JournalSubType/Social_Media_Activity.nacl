@@ -1,0 +1,5 @@
+salesforce.JournalSubType Social_Media_Activity@s {
+  JournalTypeId = salesforce.JournalType.instance.Accrual
+  Name = "Social Media Activity"
+  _alias = "Accrual Social Media Activity"
+}

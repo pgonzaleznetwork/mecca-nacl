@@ -1,0 +1,6 @@
+salesforce.JournalType Qualifying_Points_Reset@s {
+  Description = "Represents a transaction that resets qualifying points balance for a loyalty program member."
+  Name = "Qualifying Points Reset"
+  ProcessType = "Loyalty"
+  _alias = "Qualifying Points Reset"
+}

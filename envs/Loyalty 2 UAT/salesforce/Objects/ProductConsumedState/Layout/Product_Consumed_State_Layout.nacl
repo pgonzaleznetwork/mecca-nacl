@@ -1,0 +1,81 @@
+salesforce.Layout ProductConsumedState_Product_Consumed_State_Layout@bsss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.ProductConsumedState.field.ProductConsumedId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ProductConsumedState.field.ConsumedState
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.ProductConsumedState.field.SerializedProductId
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.ProductConsumedState.field.CreatedById
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.ProductConsumedState.field.CreatedDate
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.ProductConsumedState.field.LastModifiedById
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.ProductConsumedState.field.LastModifiedDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "ProductConsumedState-Product Consumed State Layout"
+  _parent = [
+    salesforce.ProductConsumedState,
+  ]
+  _alias = "ProductConsumedState-Product Consumed State Layout"
+}

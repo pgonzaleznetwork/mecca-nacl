@@ -1,0 +1,142 @@
+salesforce.Layout WorkPlanSelectionRule_Work_Plan_Selection_Rule_Layout@bssss {
+  excludeButtons = [
+    "Submit",
+  ]
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.WorkPlanSelectionRule.field.WorkPlanSelectionRuleNumber
+            },
+            {
+              behavior = "Required"
+              field = salesforce.WorkPlanSelectionRule.field.WorkPlanTemplateId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.WorkPlanSelectionRule.field.WorkTypeId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.WorkPlanSelectionRule.field.LocationId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.WorkPlanSelectionRule.field.ServiceContractId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.WorkPlanSelectionRule.field.IsActive
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.WorkPlanSelectionRule.field.Description
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.WorkPlanSelectionRule.field.AssetId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.WorkPlanSelectionRule.field.Product2Id
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.WorkPlanSelectionRule.field.ServiceTerritoryId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.WorkPlanSelectionRule.field.AccountId
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.WorkPlanSelectionRule.field.OwnerId
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.WorkPlanSelectionRule.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.WorkPlanSelectionRule.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      relatedList = "RelatedFileList"
+    },
+    {
+      fields = [
+        "CreatedDate",
+        "StepStatus",
+        "OriginalActor",
+        "Actor",
+        "Comments",
+      ]
+      relatedList = "RelatedProcessHistoryList"
+    },
+    {
+      relatedList = "RelatedEntityHistoryList"
+    },
+    {
+      fields = [
+        "TASK.SUBJECT",
+        "TASK.WHO_NAME",
+        "ACTIVITY.TASK",
+        "TASK.DUE_DATE",
+        "TASK.STATUS",
+        "TASK.PRIORITY",
+        "CORE.USERS.FULL_NAME",
+      ]
+      relatedList = "RelatedActivityList"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "WorkPlanSelectionRule-Work Plan Selection Rule Layout"
+  _parent = [
+    salesforce.WorkPlanSelectionRule,
+  ]
+  _alias = "WorkPlanSelectionRule-Work Plan Selection Rule Layout"
+}

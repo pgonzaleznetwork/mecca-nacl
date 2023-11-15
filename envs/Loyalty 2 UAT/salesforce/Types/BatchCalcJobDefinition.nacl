@@ -1,0 +1,98 @@
+type salesforce.BatchCalcJobDefinition {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  salesforce.BatchCalcJobAggregate aggregates {
+  }
+  salesforce.BatchCalcJobUnion appends {
+  }
+  salesforce.BatchCalcJobCustomNode customNodes {
+  }
+  salesforce.BatchCalcJobDatasource datasources {
+  }
+  string description {
+  }
+  string executionPlatformType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "CDP",
+        "CRMA",
+      ]
+    }
+  }
+  salesforce.BatchCalcJobFilter filters {
+  }
+  salesforce.BatchCalcJobForecast forecasts {
+  }
+  salesforce.BatchCalcJobHierarchyPath hierarchyPaths {
+  }
+  boolean isTemplate {
+  }
+  salesforce.BatchCalcJobSourceJoin joins {
+  }
+  string label {
+  }
+  salesforce.BatchCalcJobParameter parameters {
+  }
+  string processType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "AccountingSubledger",
+        "ActionableList",
+        "AdvancedAccountForecast",
+        "CDPEnrichment",
+        "CdpActionableList",
+        "CriteriaBsdSearchAndFilter",
+        "DataProcessingEngine",
+        "DecisionMatrixDataUpload",
+        "Education",
+        "FSCHierarchyRollUp",
+        "Loyalty",
+        "LoyaltyPartnerManagement",
+        "LoyaltyPointsAggregation",
+        "NetZero",
+        "NetZeroHidden",
+        "ProgramBasedBusiness",
+        "ProgramManagementRollups",
+        "ProviderSearch",
+        "Rebates",
+        "RecordAggregation",
+      ]
+    }
+  }
+  string status {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Active",
+        "Inactive",
+      ]
+    }
+  }
+  salesforce.BatchCalcJobTransform transforms {
+  }
+  salesforce.BatchCalcJobWritebackObject writebacks {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "batchCalcJobDefinition"
+  dirName = "batchCalcJobDefinitions"
+  metadataType = "BatchCalcJobDefinition"
+}

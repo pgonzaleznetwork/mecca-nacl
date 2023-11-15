@@ -1,0 +1,158 @@
+salesforce.Layout ProductServiceCampaign_Product_Service_Campaign_Layout@bsss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.ProductServiceCampaign.field.ProductServiceCampaignName
+            },
+            {
+              behavior = "Required"
+              field = salesforce.ProductServiceCampaign.field.Status
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ProductServiceCampaign.field.Priority
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.ProductServiceCampaign.field.Product2Id
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ProductServiceCampaign.field.OwnerId
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Description"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.ProductServiceCampaign.field.Description
+            },
+            {
+              behavior = "Required"
+              field = salesforce.ProductServiceCampaign.field.Type
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ProductServiceCampaign.field.WorkTypeId
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.ProductServiceCampaign.field.StartDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ProductServiceCampaign.field.EndDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.ProductServiceCampaign.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.ProductServiceCampaign.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      fields = [
+        "Name",
+        "Asset",
+        "SerializedProduct",
+        "Product2",
+        "Status",
+      ]
+      relatedList = "ProductServiceCampaignItems"
+    },
+    {
+      fields = [
+        "Name",
+        "Subject",
+        "Priority",
+        "Status",
+      ]
+      relatedList = "WorkOrders"
+    },
+    {
+      fields = [
+        "Name",
+        "DestinationLocation",
+        "SourceLocation",
+        "Status",
+        "CreatedBy",
+      ]
+      relatedList = "ReturnOrders"
+    },
+    {
+      relatedList = "RelatedEntityHistoryList"
+    },
+    {
+      relatedList = "RelatedNoteList"
+    },
+    {
+      relatedList = "RelatedFileList"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "ProductServiceCampaign-Product Service Campaign Layout"
+  _parent = [
+    salesforce.ProductServiceCampaign,
+  ]
+  _alias = "ProductServiceCampaign-Product Service Campaign Layout"
+}

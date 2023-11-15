@@ -1,0 +1,192 @@
+type salesforce.WorkPlanSelectionRule {
+  salesforce.Lookup AccountId {
+    apiName = "WorkPlanSelectionRule.AccountId"
+    relationshipName = "Account"
+    referenceTo = [
+      salesforce.Account,
+    ]
+    label = "Account ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup AssetId {
+    apiName = "WorkPlanSelectionRule.AssetId"
+    relationshipName = "Asset"
+    referenceTo = [
+      salesforce.Asset,
+    ]
+    label = "Asset ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text Description {
+    apiName = "WorkPlanSelectionRule.Description"
+    length = 255
+    label = "Description"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Checkbox IsActive {
+    apiName = "WorkPlanSelectionRule.IsActive"
+    label = "Active"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup LocationId {
+    apiName = "WorkPlanSelectionRule.LocationId"
+    relationshipName = "Location"
+    referenceTo = [
+      salesforce.Location,
+    ]
+    label = "Location ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "WorkPlanSelectionRule.OwnerId"
+    relationshipName = "Owner"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    label = "Owner ID"
+    createable = true
+    updateable = true
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup Product2Id {
+    apiName = "WorkPlanSelectionRule.Product2Id"
+    relationshipName = "Product2"
+    referenceTo = [
+      salesforce.Product2,
+    ]
+    label = "Product ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup ServiceContractId {
+    apiName = "WorkPlanSelectionRule.ServiceContractId"
+    relationshipName = "ServiceContract"
+    referenceTo = [
+      salesforce.ServiceContract,
+    ]
+    label = "Service Contract ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup ServiceTerritoryId {
+    apiName = "WorkPlanSelectionRule.ServiceTerritoryId"
+    relationshipName = "ServiceTerritory"
+    referenceTo = [
+      salesforce.ServiceTerritory,
+    ]
+    label = "Territory ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup WorkPlanTemplateId {
+    apiName = "WorkPlanSelectionRule.WorkPlanTemplateId"
+    relationshipName = "WorkPlanTemplate"
+    referenceTo = [
+      salesforce.WorkPlanTemplate,
+    ]
+    _required = true
+    label = "Work Plan Template ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup WorkTypeId {
+    apiName = "WorkPlanSelectionRule.WorkTypeId"
+    relationshipName = "WorkType"
+    referenceTo = [
+      salesforce.WorkType,
+    ]
+    label = "Work Type ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "WorkPlanSelectionRule.Id"
+    label = "Work Plan Selection Rule ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "WorkPlanSelectionRule.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber WorkPlanSelectionRuleNumber {
+    apiName = "WorkPlanSelectionRule.WorkPlanSelectionRuleNumber"
+    label = "Name"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "WorkPlanSelectionRule.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "WorkPlanSelectionRule.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "WorkPlanSelectionRule.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "WorkPlanSelectionRule.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "WorkPlanSelectionRule.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

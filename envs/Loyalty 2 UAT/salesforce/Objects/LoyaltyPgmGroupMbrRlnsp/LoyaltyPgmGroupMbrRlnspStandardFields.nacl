@@ -1,0 +1,192 @@
+type salesforce.LoyaltyPgmGroupMbrRlnsp {
+  salesforce.Checkbox CanMemberRedeemFromGroup {
+    apiName = "LoyaltyPgmGroupMbrRlnsp.CanMemberRedeemFromGroup"
+    defaultValue = false
+    label = "Member can redeem group points"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist ContributionCalculationType {
+    apiName = "LoyaltyPgmGroupMbrRlnsp.ContributionCalculationType"
+    inlineHelpText = "Indicates the method to calculate the member's point contribution to the group."
+    valueSet = [
+      {
+        fullName = "Percentage"
+        isActive = true
+        label = "Percentage"
+        default = false
+      },
+    ]
+    restricted = true
+    _required = true
+    label = "Contribution Calculation Type"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.MasterDetail LoyaltyProgramGroupMemberId {
+    apiName = "LoyaltyPgmGroupMbrRlnsp.LoyaltyProgramGroupMemberId"
+    relationshipName = "LoyaltyProgramGroupMember"
+    referenceTo = [
+      salesforce.LoyaltyProgramMember,
+    ]
+    _required = true
+    label = "Loyalty Program Member ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Text MemberName {
+    apiName = "LoyaltyPgmGroupMbrRlnsp.MemberName"
+    length = 255
+    label = "Member Name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Percent MemberPointContributionPercent {
+    apiName = "LoyaltyPgmGroupMbrRlnsp.MemberPointContributionPercent"
+    inlineHelpText = "The percentage of total points earned by a member that's contributed to the group."
+    label = "Contribution Percentage"
+    createable = true
+    updateable = true
+    scale = 0
+    precision = 3
+    queryable = true
+  }
+  salesforce.Picklist MemberRole {
+    apiName = "LoyaltyPgmGroupMbrRlnsp.MemberRole"
+    valueSet = [
+      {
+        fullName = "Primary"
+        isActive = true
+        label = "Primary"
+        default = false
+      },
+      {
+        fullName = "Secondary"
+        isActive = true
+        label = "Secondary"
+        default = false
+      },
+    ]
+    restricted = false
+    label = "Member Role"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup RelatedLoyaltyProgramMemberId {
+    apiName = "LoyaltyPgmGroupMbrRlnsp.RelatedLoyaltyProgramMemberId"
+    inlineHelpText = "The individual or corporate loyalty program member added to the group."
+    relationshipName = "RelatedLoyaltyProgramMember"
+    referenceTo = [
+      salesforce.LoyaltyProgramMember,
+    ]
+    label = "Loyalty Program Member ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "LoyaltyPgmGroupMbrRlnsp.Id"
+    label = "Loyalty Program Group Account Member ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "LoyaltyPgmGroupMbrRlnsp.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "LoyaltyPgmGroupMbrRlnsp.Name"
+    length = 255
+    _required = true
+    label = "Name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "LoyaltyPgmGroupMbrRlnsp.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "LoyaltyPgmGroupMbrRlnsp.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "LoyaltyPgmGroupMbrRlnsp.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "LoyaltyPgmGroupMbrRlnsp.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "LoyaltyPgmGroupMbrRlnsp.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup AccountId {
+    apiName = "LoyaltyPgmGroupMbrRlnsp.AccountId"
+    relationshipName = "Account"
+    referenceTo = [
+      salesforce.Account,
+    ]
+    label = "Account ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup ContactId {
+    apiName = "LoyaltyPgmGroupMbrRlnsp.ContactId"
+    relationshipName = "Contact"
+    referenceTo = [
+      salesforce.Contact,
+    ]
+    label = "Contact ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+}

@@ -1,0 +1,21 @@
+salesforce.DecisionTableDatasetLink Transaction_Journal_Dataset_Link {
+  fullName = "Transaction_Journal_Dataset_Link"
+  decisionTableName = "Rewards_Catalog"
+  decisionTblDatasetParameters = [
+    {
+      datasetFieldName = "PartnerId"
+      datasetSourceObject = "TransactionJournal"
+      fieldName = "Partner__c"
+    },
+    {
+      datasetFieldName = "ProductId"
+      datasetSourceObject = "TransactionJournal"
+      fieldName = "Product__c"
+    },
+  ]
+  description = "Mapping fields for transaction journal"
+  isDefault = false
+  setupName = "Transaction Journal Dataset Link"
+  sourceObject = "TransactionJournal"
+  _alias = "Transaction_Journal_Dataset_Link"
+}

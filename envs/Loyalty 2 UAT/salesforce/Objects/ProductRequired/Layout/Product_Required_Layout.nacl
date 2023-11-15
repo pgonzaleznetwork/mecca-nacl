@@ -1,0 +1,106 @@
+salesforce.Layout ProductRequired_Product_Required_Layout@bss {
+  excludeButtons = [
+    "Submit",
+  ]
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.ProductRequired.field.ProductRequiredNumber
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.ProductRequired.field.ParentRecordType
+            },
+            {
+              behavior = "Required"
+              field = salesforce.ProductRequired.field.ParentRecordId
+            },
+            {
+              behavior = "Required"
+              field = salesforce.ProductRequired.field.Product2Id
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ProductRequired.field.QuantityRequired
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.ProductRequired.field.QuantityUnitOfMeasure
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.ProductRequired.field.CreatedById
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.ProductRequired.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "OneColumn"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  miniLayout = {
+    fields = [
+      "QuantityUnitOfMeasure",
+    ]
+  }
+  relatedLists = [
+    {
+      relatedList = "RelatedFileList"
+    },
+    {
+      relatedList = "RelatedEntityHistoryList"
+    },
+    {
+      relatedList = "RelatedNoteList"
+    },
+    {
+      fields = [
+        "CreatedDate",
+        "StepStatus",
+        "OriginalActor",
+        "Actor",
+        "Comments",
+      ]
+      relatedList = "RelatedProcessHistoryList"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "ProductRequired-Product Required Layout"
+  _parent = [
+    salesforce.ProductRequired,
+  ]
+  _alias = "ProductRequired-Product Required Layout"
+}

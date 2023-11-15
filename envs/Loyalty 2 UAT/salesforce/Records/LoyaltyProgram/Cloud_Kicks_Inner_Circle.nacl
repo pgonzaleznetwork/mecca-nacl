@@ -1,0 +1,7 @@
+salesforce.LoyaltyProgram Cloud_Kicks_Inner_Circle@s {
+  IsPrimary = false
+  Name = "Cloud Kicks Inner Circle"
+  Status = "Active"
+  _alias = "Cloud Kicks Inner Circle"
+  Tier__c = "Gold"
+}

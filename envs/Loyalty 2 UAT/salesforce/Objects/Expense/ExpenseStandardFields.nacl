@@ -1,0 +1,224 @@
+type salesforce.Expense {
+  salesforce.Lookup AccountId {
+    apiName = "Expense.AccountId"
+    relationshipName = "Account"
+    referenceTo = [
+      salesforce.Account,
+    ]
+    label = "Account ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Currency Amount {
+    apiName = "Expense.Amount"
+    _required = true
+    label = "Amount"
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 18
+    queryable = true
+  }
+  salesforce.LongTextArea Description {
+    apiName = "Expense.Description"
+    length = 32000
+    label = "Description"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Percent Discount {
+    apiName = "Expense.Discount"
+    label = "Discount"
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 5
+    queryable = true
+  }
+  salesforce.Date ExpenseEndDate {
+    apiName = "Expense.ExpenseEndDate"
+    label = "End Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Date ExpenseStartDate {
+    apiName = "Expense.ExpenseStartDate"
+    label = "Start Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist ExpenseType {
+    apiName = "Expense.ExpenseType"
+    valueSet = [
+      {
+        fullName = "Billable"
+        isActive = true
+        label = "Billable"
+        default = true
+      },
+      {
+        fullName = "Non-Billable"
+        isActive = true
+        label = "Non-Billable"
+        default = false
+      },
+    ]
+    restricted = false
+    label = "Expense Type"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "Expense.OwnerId"
+    relationshipName = "Owner"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    label = "Owner ID"
+    createable = true
+    updateable = true
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number Quantity {
+    apiName = "Expense.Quantity"
+    label = "Quantity"
+    precision = 12
+    scale = 2
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.Summary Subtotal {
+    apiName = "Expense.Subtotal"
+    label = "Subtotal"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Title {
+    apiName = "Expense.Title"
+    length = 255
+    label = "Title"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Summary TotalPrice {
+    apiName = "Expense.TotalPrice"
+    label = "Total  Price"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Date TransactionDate {
+    apiName = "Expense.TransactionDate"
+    _required = true
+    label = "Transaction Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Currency UnitPrice {
+    apiName = "Expense.UnitPrice"
+    label = "Unit Price"
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 18
+    queryable = true
+  }
+  salesforce.Lookup WorkOrderId {
+    apiName = "Expense.WorkOrderId"
+    relationshipName = "WorkOrder"
+    referenceTo = [
+      salesforce.WorkOrder,
+    ]
+    label = "Work Order ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "Expense.Id"
+    label = "Expense ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "Expense.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber ExpenseNumber {
+    apiName = "Expense.ExpenseNumber"
+    label = "Expense Name"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "Expense.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "Expense.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "Expense.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "Expense.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "Expense.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

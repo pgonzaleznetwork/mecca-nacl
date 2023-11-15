@@ -1,0 +1,36 @@
+type salesforce.BatchCalcJobTransformAddedField {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string alias {
+  }
+  string dataType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Date",
+        "DateTime",
+        "Numeric",
+        "Text",
+      ]
+    }
+  }
+  number decimalPlaces {
+  }
+  string expression {
+  }
+  number length {
+  }
+  metadataType = "BatchCalcJobTransformAddedField"
+}

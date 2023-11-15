@@ -1,0 +1,29 @@
+type salesforce.LoyaltyProgramSetup {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string label {
+  }
+  "List<salesforce.LoyaltyProgramProcess>" programProcesses {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "loyaltyProgramSetup"
+  dirName = "loyaltyProgramSetups"
+  metadataType = "LoyaltyProgramSetup"
+}

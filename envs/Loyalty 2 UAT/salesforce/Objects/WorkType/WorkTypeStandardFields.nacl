@@ -1,0 +1,181 @@
+type salesforce.WorkType {
+  salesforce.LongTextArea Description {
+    apiName = "WorkType.Description"
+    length = 32000
+    label = "Description"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist DurationType {
+    apiName = "WorkType.DurationType"
+    valueSet = [
+      {
+        fullName = "Hours"
+        isActive = true
+        label = "Hours"
+        default = true
+      },
+      {
+        fullName = "Minutes"
+        isActive = true
+        label = "Minutes"
+        default = false
+      },
+    ]
+    restricted = true
+    _required = true
+    label = "Duration Type"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Number EstimatedDuration {
+    apiName = "WorkType.EstimatedDuration"
+    _required = true
+    label = "Estimated Duration"
+    precision = 18
+    scale = 2
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.Number MinimumCrewSize {
+    apiName = "WorkType.MinimumCrewSize"
+    label = "Minimum Crew Size"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Text Name {
+    apiName = "WorkType.Name"
+    length = 255
+    _required = true
+    label = "Work Type Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "WorkType.OwnerId"
+    relationshipName = "Owner"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    label = "Owner ID"
+    createable = true
+    updateable = true
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number RecommendedCrewSize {
+    apiName = "WorkType.RecommendedCrewSize"
+    label = "Recommended Crew Size"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Lookup ServiceReportTemplateId {
+    apiName = "WorkType.ServiceReportTemplateId"
+    relationshipName = "ServiceReportTemplate"
+    referenceTo = [
+      "ServiceReportLayout",
+    ]
+    label = "Service Report Layout ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox ShouldAutoCreateSvcAppt {
+    apiName = "WorkType.ShouldAutoCreateSvcAppt"
+    defaultValue = false
+    label = "Auto-Create Service Appointment"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "WorkType.Id"
+    label = "Work Type ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "WorkType.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "WorkType.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "WorkType.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "WorkType.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "WorkType.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "WorkType.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number DurationInMinutes {
+    apiName = "WorkType.DurationInMinutes"
+    label = "Duration in Minutes"
+    precision = 18
+    scale = 2
+    createable = false
+    updateable = false
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+}

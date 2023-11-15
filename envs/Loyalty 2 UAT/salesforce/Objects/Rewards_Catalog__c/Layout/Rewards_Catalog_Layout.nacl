@@ -1,0 +1,86 @@
+salesforce.Layout Rewards_Catalog__c_Rewards_Catalog_Layout@uuubss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.Rewards_Catalog__c.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Rewards_Catalog__c.field.Partner__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Rewards_Catalog__c.field.Product__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Rewards_Catalog__c.field.Points__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Rewards_Catalog__c.field.Voucher_Definition__c
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Rewards_Catalog__c.field.OwnerId
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Rewards_Catalog__c.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Rewards_Catalog__c.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showHighlightsPanel = false
+  showInteractionLogPanel = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "Rewards_Catalog__c-Rewards Catalog Layout"
+  _parent = [
+    salesforce.Rewards_Catalog__c,
+  ]
+  _alias = "Rewards_Catalog__c-Rewards Catalog Layout"
+}

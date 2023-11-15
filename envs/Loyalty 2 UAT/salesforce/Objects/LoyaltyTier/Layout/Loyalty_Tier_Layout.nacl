@@ -1,0 +1,73 @@
+salesforce.Layout LoyaltyTier_Loyalty_Tier_Layout@bss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Loyalty Tier Details"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.LoyaltyTier.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.LoyaltyTier.field.Description
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.LoyaltyTier.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.LoyaltyTier.field.LoyaltyTierGroupId
+            },
+            {
+              behavior = "Required"
+              field = salesforce.LoyaltyTier.field.SequenceNumber
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.LoyaltyTier.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      fields = [
+        "Name",
+        "LoyaltyTier",
+        "Benefit",
+      ]
+      relatedList = "LoyaltyTierBenefits"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "LoyaltyTier-Loyalty Tier Layout"
+  _parent = [
+    salesforce.LoyaltyTier,
+  ]
+  _alias = "LoyaltyTier-Loyalty Tier Layout"
+}
