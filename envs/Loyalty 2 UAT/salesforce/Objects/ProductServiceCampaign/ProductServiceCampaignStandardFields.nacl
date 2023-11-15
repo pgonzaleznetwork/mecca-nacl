@@ -1,0 +1,247 @@
+type salesforce.ProductServiceCampaign {
+  salesforce.LongTextArea Description {
+    apiName = "ProductServiceCampaign.Description"
+    length = 32000
+    label = "Description"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Date EndDate {
+    apiName = "ProductServiceCampaign.EndDate"
+    label = "End Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "ProductServiceCampaign.OwnerId"
+    relationshipName = "Owner"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    label = "Owner ID"
+    createable = true
+    updateable = true
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist Priority {
+    apiName = "ProductServiceCampaign.Priority"
+    restricted = false
+    label = "Priority"
+    createable = true
+    updateable = true
+    queryable = true
+    valueSetName = salesforce.StandardValueSet.instance.WorkOrderPriority
+  }
+  salesforce.Lookup Product2Id {
+    apiName = "ProductServiceCampaign.Product2Id"
+    relationshipName = "Product2"
+    referenceTo = [
+      salesforce.Product2,
+    ]
+    label = "Product ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text ProductServiceCampaignName {
+    apiName = "ProductServiceCampaign.ProductServiceCampaignName"
+    length = 255
+    _required = true
+    label = "Product Service Campaign Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Date StartDate {
+    apiName = "ProductServiceCampaign.StartDate"
+    _required = true
+    label = "Start Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist Status {
+    apiName = "ProductServiceCampaign.Status"
+    restricted = false
+    _required = true
+    label = "Status"
+    createable = true
+    updateable = true
+    queryable = true
+    valueSetName = salesforce.StandardValueSet.instance.WorkOrderStatus
+  }
+  salesforce.Picklist StatusCategory {
+    apiName = "ProductServiceCampaign.StatusCategory"
+    valueSet = [
+      {
+        fullName = "New"
+        isActive = true
+        label = "New"
+        default = false
+      },
+      {
+        fullName = "InProgress"
+        isActive = true
+        label = "In Progress"
+        default = false
+      },
+      {
+        fullName = "OnHold"
+        isActive = true
+        label = "On Hold"
+        default = false
+      },
+      {
+        fullName = "Completed"
+        isActive = true
+        label = "Completed"
+        default = false
+      },
+      {
+        fullName = "Closed"
+        isActive = true
+        label = "Closed"
+        default = false
+      },
+      {
+        fullName = "None"
+        isActive = true
+        label = "None"
+        default = true
+      },
+      {
+        fullName = "CannotComplete"
+        isActive = true
+        label = "Cannot Complete"
+        default = false
+      },
+      {
+        fullName = "Canceled"
+        isActive = true
+        label = "Canceled"
+        default = false
+      },
+    ]
+    restricted = true
+    label = "Status Category"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist Type {
+    apiName = "ProductServiceCampaign.Type"
+    valueSet = [
+      {
+        fullName = "Modification"
+        isActive = true
+        label = "Modification"
+        default = false
+      },
+      {
+        fullName = "Recall"
+        isActive = true
+        label = "Recall"
+        default = false
+      },
+      {
+        fullName = "Service"
+        isActive = true
+        label = "Service"
+        default = false
+      },
+      {
+        fullName = "Upgrade"
+        isActive = true
+        label = "Upgrade"
+        default = false
+      },
+    ]
+    restricted = false
+    _required = true
+    label = "Type"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup WorkTypeId {
+    apiName = "ProductServiceCampaign.WorkTypeId"
+    relationshipName = "WorkType"
+    referenceTo = [
+      salesforce.WorkType,
+    ]
+    label = "Work Type ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "ProductServiceCampaign.Id"
+    label = "Product Service Campaign ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ProductServiceCampaign.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ProductServiceCampaign.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ProductServiceCampaign.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ProductServiceCampaign.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ProductServiceCampaign.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ProductServiceCampaign.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

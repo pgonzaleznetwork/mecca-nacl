@@ -1,0 +1,9 @@
+salesforce.ListView AttributeDefinition_My_AttributeDefinitions {
+  fullName = "AttributeDefinition.My_AttributeDefinitions"
+  filterScope = "Mine"
+  label = "My Attribute Definitions"
+  _parent = [
+    salesforce.AttributeDefinition,
+  ]
+  _alias = "My Attribute Definitions"
+}

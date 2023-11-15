@@ -1,0 +1,116 @@
+type salesforce.BatchCalcJobForecast {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string accuracyPercent {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Eighty",
+        "NinetyFive",
+        "None",
+      ]
+    }
+  }
+  salesforce.BtchCalcJobFrcstAggrFld aggregationFields {
+  }
+  string dateFieldName {
+  }
+  string description {
+  }
+  string forecastModelType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Additive",
+        "Auto",
+        "Multiplicative",
+      ]
+    }
+  }
+  number forecastPeriodCount {
+  }
+  string forecastPeriodType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "FiscalYear",
+        "FiscalYearMonth",
+        "FiscalYearQuarter",
+        "FiscalYearWeek",
+        "Year",
+        "YearMonth",
+        "YearMonthDay",
+        "YearQuarter",
+        "YearWeek",
+      ]
+    }
+  }
+  salesforce.BatchCalcJobFrcstGrpFld groupFields {
+  }
+  string label {
+  }
+  string name {
+  }
+  string periodStartDateName {
+  }
+  string seasonality {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Auto",
+        "Eight",
+        "Eighteen",
+        "Eleven",
+        "Fifteen",
+        "Five",
+        "Four",
+        "Fourteen",
+        "Nine",
+        "Nineteen",
+        "None",
+        "Seven",
+        "Seventeen",
+        "Six",
+        "Sixteen",
+        "Ten",
+        "Thirteen",
+        "Three",
+        "Twelve",
+        "Twenty",
+        "TwentyFour",
+        "TwentyOne",
+        "TwentyThree",
+        "TwentyTwo",
+        "Two",
+      ]
+    }
+  }
+  boolean shouldExcludeLastPeriod {
+  }
+  string sourceName {
+    foreignKeyDomain = [
+      salesforce.BatchCalcJobAggregate,
+      salesforce.BatchCalcJobCustomNode,
+      salesforce.BatchCalcJobDatasource,
+      salesforce.BatchCalcJobFilter,
+      salesforce.BatchCalcJobForecast,
+      salesforce.BatchCalcJobHierarchyPath,
+      salesforce.BatchCalcJobSourceJoin,
+      salesforce.BatchCalcJobTransform,
+      salesforce.BatchCalcJobUnion,
+    ]
+  }
+  metadataType = "BatchCalcJobForecast"
+}

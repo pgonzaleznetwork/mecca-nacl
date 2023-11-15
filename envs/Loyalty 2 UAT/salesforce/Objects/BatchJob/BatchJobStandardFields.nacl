@@ -1,0 +1,274 @@
+type salesforce.BatchJob {
+  salesforce.Lookup BatchJobDefinitionId {
+    apiName = "BatchJob.BatchJobDefinitionId"
+    relationshipName = "BatchJobDefinition"
+    referenceTo = [
+      "BatchJobDefinition",
+    ]
+    label = "Batch Job Definition ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text BatchJobDefinitionName {
+    apiName = "BatchJob.BatchJobDefinitionName"
+    length = 80
+    _required = true
+    label = "Batch Job Definition Name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime EndTime {
+    apiName = "BatchJob.EndTime"
+    label = "End Time"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text ErrorDescription {
+    apiName = "BatchJob.ErrorDescription"
+    length = 1333
+    label = "Error Description"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text ExternalReference {
+    apiName = "BatchJob.ExternalReference"
+    length = 255
+    label = "External Reference"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text ProcessGroup {
+    apiName = "BatchJob.ProcessGroup"
+    length = 80
+    _required = true
+    label = "Group"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number RetryCount {
+    apiName = "BatchJob.RetryCount"
+    label = "Retry Count"
+    precision = 9
+    createable = false
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.LongTextArea RuntimeParameter {
+    apiName = "BatchJob.RuntimeParameter"
+    length = 100000
+    label = "Runtime Parameter"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime StartTime {
+    apiName = "BatchJob.StartTime"
+    label = "Start Time"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist Status {
+    apiName = "BatchJob.Status"
+    valueSet = [
+      {
+        fullName = "Submitted"
+        isActive = true
+        label = "Submitted"
+        default = false
+      },
+      {
+        fullName = "Completed"
+        isActive = true
+        label = "Completed"
+        default = false
+      },
+      {
+        fullName = "Failed"
+        isActive = true
+        label = "Failed"
+        default = false
+      },
+      {
+        fullName = "InProgress"
+        isActive = true
+        label = "In Progress"
+        default = false
+      },
+      {
+        fullName = "Canceled"
+        isActive = true
+        label = "Canceled"
+        default = false
+      },
+      {
+        fullName = "CompletedWithFailures"
+        isActive = true
+        label = "Completed With Failures"
+        default = false
+      },
+      {
+        fullName = "QueueingInProgress"
+        isActive = true
+        label = "Queueing In Progress"
+        default = false
+      },
+      {
+        fullName = "Queued"
+        isActive = true
+        label = "Queued"
+        default = false
+      },
+    ]
+    restricted = true
+    _required = true
+    label = "Status"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist Type {
+    apiName = "BatchJob.Type"
+    valueSet = [
+      {
+        fullName = "Flow"
+        isActive = true
+        label = "Flow"
+        default = true
+      },
+      {
+        fullName = "Calc"
+        isActive = true
+        label = "Calc"
+        default = false
+      },
+      {
+        fullName = "LoyaltyProgramProcess"
+        isActive = true
+        label = "Loyalty Program Process"
+        default = false
+      },
+    ]
+    restricted = true
+    _required = true
+    label = "Type"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "BatchJob.Id"
+    label = "Run ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "BatchJob.OwnerId"
+    relationshipName = "Owner"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    label = "Owner ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "BatchJob.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "BatchJob.Name"
+    length = 255
+    _required = true
+    label = "Name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "BatchJob.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "BatchJob.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "BatchJob.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "BatchJob.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "BatchJob.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

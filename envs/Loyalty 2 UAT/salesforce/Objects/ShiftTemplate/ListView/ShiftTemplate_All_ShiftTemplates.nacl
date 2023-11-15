@@ -1,0 +1,9 @@
+salesforce.ListView ShiftTemplate_All_ShiftTemplates {
+  fullName = "ShiftTemplate.All_ShiftTemplates"
+  filterScope = "Everything"
+  label = "All Shift Templates"
+  _parent = [
+    salesforce.ShiftTemplate,
+  ]
+  _alias = "All Shift Templates"
+}

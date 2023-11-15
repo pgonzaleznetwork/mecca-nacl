@@ -1,0 +1,230 @@
+type salesforce.MemberBenefit {
+  salesforce.Lookup AccountId {
+    apiName = "MemberBenefit.AccountId"
+    relationshipName = "Account"
+    referenceTo = [
+      salesforce.Account,
+    ]
+    label = "Account ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup BenefitId {
+    apiName = "MemberBenefit.BenefitId"
+    relationshipName = "Benefit"
+    referenceTo = [
+      salesforce.Benefit,
+    ]
+    _required = true
+    label = "Benefit ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup ContactId {
+    apiName = "MemberBenefit.ContactId"
+    relationshipName = "Contact"
+    referenceTo = [
+      salesforce.Contact,
+    ]
+    label = "Contact ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text Description {
+    apiName = "MemberBenefit.Description"
+    length = 80
+    label = "Description"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Date EndDate {
+    apiName = "MemberBenefit.EndDate"
+    label = "End Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.MasterDetail MemberId {
+    apiName = "MemberBenefit.MemberId"
+    relationshipName = "Member"
+    referenceTo = [
+      salesforce.LoyaltyProgramMember,
+    ]
+    _required = true
+    label = "Member ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Text Name {
+    apiName = "MemberBenefit.Name"
+    length = 255
+    _required = true
+    label = "Member Benefit Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Text PrimaryRefObjectRecord {
+    apiName = "MemberBenefit.PrimaryRefObjectRecord"
+    length = 80
+    label = "Primary Reference Object Record"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Text PrimaryRefObjectRecordTitle {
+    apiName = "MemberBenefit.PrimaryRefObjectRecordTitle"
+    length = 255
+    label = "Primary Reference Object Record Title"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Picklist SourceType {
+    apiName = "MemberBenefit.SourceType"
+    valueSet = [
+      {
+        fullName = "Loyalty Tier Processing"
+        isActive = true
+        label = "Loyalty Tier Processing"
+        default = false
+      },
+      {
+        fullName = "Manual"
+        isActive = true
+        label = "Manual"
+        default = false
+      },
+    ]
+    restricted = false
+    _required = true
+    label = "Source Type"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Date StartDate {
+    apiName = "MemberBenefit.StartDate"
+    label = "Start Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist Status {
+    apiName = "MemberBenefit.Status"
+    valueSet = [
+      {
+        fullName = "NewPendingProcessing"
+        isActive = true
+        label = "New - Awaiting Processing"
+        default = true
+      },
+      {
+        fullName = "UpdatedPendingProcessing"
+        isActive = true
+        label = "Updated - Awaiting Processing"
+        default = false
+      },
+      {
+        fullName = "ExpiredPendingProcessing"
+        isActive = true
+        label = "Expired - Awaiting Processing"
+        default = false
+      },
+      {
+        fullName = "Processed"
+        isActive = true
+        label = "Processed"
+        default = false
+      },
+      {
+        fullName = "Expired"
+        isActive = true
+        label = "Expired"
+        default = false
+      },
+    ]
+    restricted = true
+    _required = true
+    label = "Status"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "MemberBenefit.Id"
+    label = "Member Benefit ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "MemberBenefit.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "MemberBenefit.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "MemberBenefit.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "MemberBenefit.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "MemberBenefit.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "MemberBenefit.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

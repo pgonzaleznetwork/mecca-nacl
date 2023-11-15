@@ -1,0 +1,7 @@
+salesforce.SharingRules ProductTransfer {
+  fullName = "ProductTransfer"
+  _parent = [
+    salesforce.ProductTransfer,
+  ]
+  _alias = "ProductTransfer"
+}

@@ -1,0 +1,143 @@
+type salesforce.TravelMode {
+  salesforce.Checkbox CanUseTollRoads {
+    apiName = "TravelMode.CanUseTollRoads"
+    label = "Can Use Toll Roads"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox IsTransportingHazmat {
+    apiName = "TravelMode.IsTransportingHazmat"
+    label = "Is Transporting Hazmat"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text Name {
+    apiName = "TravelMode.Name"
+    length = 255
+    _required = true
+    label = "Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Picklist TransportType {
+    apiName = "TravelMode.TransportType"
+    valueSet = [
+      {
+        fullName = "Car"
+        isActive = true
+        label = "Car"
+        default = false
+      },
+      {
+        fullName = "Light Truck"
+        isActive = true
+        label = "Light Truck"
+        default = false
+      },
+      {
+        fullName = "Heavy Truck"
+        isActive = true
+        label = "Heavy Truck"
+        default = false
+      },
+      {
+        fullName = "Bicycle"
+        isActive = true
+        label = "Bicycle"
+        default = false
+      },
+      {
+        fullName = "Walking"
+        isActive = true
+        label = "Walking"
+        default = false
+      },
+    ]
+    restricted = true
+    label = "Transport Type"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "TravelMode.Id"
+    label = "Travel Mode ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "TravelMode.OwnerId"
+    relationshipName = "Owner"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    label = "Owner ID"
+    createable = true
+    updateable = true
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "TravelMode.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "TravelMode.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "TravelMode.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "TravelMode.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "TravelMode.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "TravelMode.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

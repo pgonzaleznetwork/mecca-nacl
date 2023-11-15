@@ -1,0 +1,175 @@
+salesforce.Layout TimeSheetEntry_Time_Sheet_Entry_Layout@bsss {
+  excludeButtons = [
+    "Submit",
+  ]
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.TimeSheetEntry.field.TimeSheetId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.TimeSheetEntry.field.StartTime
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.TimeSheetEntry.field.Status
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.TimeSheetEntry.field.WorkOrderId
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.TimeSheetEntry.field.DurationInMinutes
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.TimeSheetEntry.field.Description
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.TimeSheetEntry.field.Subject
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.TimeSheetEntry.field.EndTime
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.TimeSheetEntry.field.Type
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.TimeSheetEntry.field.WorkOrderLineItemId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.TimeSheetEntry.field.LocationTimeZone
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.TimeSheetEntry.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.TimeSheetEntry.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  quickActionList = {
+    quickActionListItems = [
+      {
+        quickActionName = "FeedItem.ContentPost"
+      },
+      {
+        quickActionName = "FeedItem.LinkPost"
+      },
+      {
+        quickActionName = "FeedItem.PollPost"
+      },
+      {
+        quickActionName = "FeedItem.QuestionPost"
+      },
+      {
+        quickActionName = "FeedItem.RypplePost"
+      },
+      {
+        quickActionName = "FeedItem.TextPost"
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.LogACall
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.NewCase
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.NewEvent
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.NewNote
+      },
+      {
+        quickActionName = salesforce.QuickAction.instance.NewTask
+      },
+    ]
+  }
+  relatedLists = [
+    {
+      fields = [
+        "TASK.SUBJECT",
+        "TASK.WHO_NAME",
+        "ACTIVITY.TASK",
+        "TASK.DUE_DATE",
+        "TASK.STATUS",
+        "TASK.PRIORITY",
+        "CORE.USERS.FULL_NAME",
+      ]
+      relatedList = "RelatedActivityList"
+    },
+    {
+      relatedList = "RelatedFileList"
+    },
+    {
+      relatedList = "RelatedEntityHistoryList"
+    },
+    {
+      fields = [
+        "CreatedDate",
+        "StepStatus",
+        "OriginalActor",
+        "Actor",
+        "Comments",
+      ]
+      relatedList = "RelatedProcessHistoryList"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "TimeSheetEntry-Time Sheet Entry Layout"
+  _parent = [
+    salesforce.TimeSheetEntry,
+  ]
+  _alias = "TimeSheetEntry-Time Sheet Entry Layout"
+}

@@ -1,0 +1,15 @@
+salesforce.ListView LoyaltyPgmMbrPromEligView_IneligiblePromotionsListView {
+  fullName = "LoyaltyPgmMbrPromEligView.IneligiblePromotionsListView"
+  columns = [
+    "Promotion",
+    "Description",
+    "EndDate",
+    "IsPromotionEnrollmentRqr",
+  ]
+  filterScope = "Everything"
+  label = "Ineligible Promotions"
+  _parent = [
+    salesforce.LoyaltyPgmMbrPromEligView,
+  ]
+  _alias = "Ineligible Promotions"
+}

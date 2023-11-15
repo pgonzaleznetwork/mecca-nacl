@@ -1,0 +1,40 @@
+type salesforce.LoyaltyProgramProcessActionParameter {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string operator {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Equals",
+      ]
+    }
+  }
+  string parameterName {
+  }
+  number sequenceNumber {
+  }
+  string value {
+  }
+  string valueType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Literal",
+        "Parameter",
+      ]
+    }
+  }
+  metadataType = "LoyaltyProgramProcessActionParameter"
+}

@@ -1,0 +1,372 @@
+type salesforce.ProductTransfer {
+  salesforce.LongTextArea Description {
+    apiName = "ProductTransfer.Description"
+    length = 32000
+    label = "Description"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup DestinationLocationId {
+    apiName = "ProductTransfer.DestinationLocationId"
+    relationshipName = "DestinationLocation"
+    referenceTo = [
+      salesforce.Location,
+    ]
+    label = "Destination Location ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.DateTime ExpectedPickupDate {
+    apiName = "ProductTransfer.ExpectedPickupDate"
+    label = "Expected Pickup Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox IsReceived {
+    apiName = "ProductTransfer.IsReceived"
+    defaultValue = false
+    label = "Received"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox IsSent {
+    apiName = "ProductTransfer.IsSent"
+    defaultValue = false
+    label = "Sent"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "ProductTransfer.OwnerId"
+    relationshipName = "Owner"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    label = "Owner ID"
+    createable = true
+    updateable = true
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup Product2Id {
+    apiName = "ProductTransfer.Product2Id"
+    relationshipName = "Product2"
+    referenceTo = [
+      salesforce.Product2,
+    ]
+    label = "Product ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup ProductRequestId {
+    apiName = "ProductTransfer.ProductRequestId"
+    relationshipName = "ProductRequest"
+    referenceTo = [
+      salesforce.ProductRequest,
+    ]
+    label = "Product Request ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup ProductRequestLineItemId {
+    apiName = "ProductTransfer.ProductRequestLineItemId"
+    relationshipName = "ProductRequestLineItem"
+    referenceTo = [
+      salesforce.ProductRequestLineItem,
+    ]
+    label = "Product Request Line Item ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Number QuantityReceived {
+    apiName = "ProductTransfer.QuantityReceived"
+    label = "Quantity Received"
+    precision = 18
+    scale = 2
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.Number QuantitySent {
+    apiName = "ProductTransfer.QuantitySent"
+    _required = true
+    label = "Quantity Sent"
+    precision = 18
+    scale = 2
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.Picklist QuantityUnitOfMeasure {
+    apiName = "ProductTransfer.QuantityUnitOfMeasure"
+    valueSet = [
+      {
+        fullName = "Each"
+        isActive = true
+        label = "Each"
+        default = false
+      },
+    ]
+    restricted = false
+    label = "Quantity Unit Of Measure"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup ReceivedById {
+    apiName = "ProductTransfer.ReceivedById"
+    relationshipName = "ReceivedBy"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    label = "Received by ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup ReturnOrderId {
+    apiName = "ProductTransfer.ReturnOrderId"
+    relationshipName = "ReturnOrder"
+    referenceTo = [
+      salesforce.ReturnOrder,
+    ]
+    label = "Return Order ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup ReturnOrderLineItemId {
+    apiName = "ProductTransfer.ReturnOrderLineItemId"
+    relationshipName = "ReturnOrderLineItem"
+    referenceTo = [
+      salesforce.ReturnOrderLineItem,
+    ]
+    label = "Return Order Line Item ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.DateTime ShipmentExpectedDeliveryDate {
+    apiName = "ProductTransfer.ShipmentExpectedDeliveryDate"
+    label = "Shipment Expected Delivery Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup ShipmentId {
+    apiName = "ProductTransfer.ShipmentId"
+    relationshipName = "Shipment"
+    referenceTo = [
+      salesforce.Shipment,
+    ]
+    label = "Shipment ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist ShipmentStatus {
+    apiName = "ProductTransfer.ShipmentStatus"
+    valueSet = [
+      {
+        fullName = "Shipped"
+        isActive = true
+        label = "Shipped"
+        default = true
+      },
+      {
+        fullName = "Delivered"
+        isActive = true
+        label = "Delivered"
+        default = false
+      },
+    ]
+    restricted = false
+    label = "Shipment Status"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text ShipmentTrackingNumber {
+    apiName = "ProductTransfer.ShipmentTrackingNumber"
+    length = 255
+    label = "Shipment Tracking Number"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Url ShipmentTrackingUrl {
+    apiName = "ProductTransfer.ShipmentTrackingUrl"
+    label = "Shipment Tracking URL"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup SourceLocationId {
+    apiName = "ProductTransfer.SourceLocationId"
+    relationshipName = "SourceLocation"
+    referenceTo = [
+      salesforce.Location,
+    ]
+    label = "Source Location ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup SourceProductItemId {
+    apiName = "ProductTransfer.SourceProductItemId"
+    inlineHelpText = "For better search results, enter as many details as possible. For example, instead of searching for \"cable\", search for \"cable coaxial\", or enter part of a product code."
+    relationshipName = "SourceProductItem"
+    referenceTo = [
+      salesforce.ProductItem,
+    ]
+    label = "Product Item ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist Status {
+    apiName = "ProductTransfer.Status"
+    valueSet = [
+      {
+        fullName = "Ready For Pickup"
+        isActive = true
+        label = "Ready For Pickup"
+        default = true
+      },
+      {
+        fullName = "Completed"
+        isActive = true
+        label = "Completed"
+        default = false
+      },
+    ]
+    restricted = false
+    label = "Status"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "ProductTransfer.Id"
+    label = "Product Transfer ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ProductTransfer.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber ProductTransferNumber {
+    apiName = "ProductTransfer.ProductTransferNumber"
+    label = "Product Transfer Number"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ProductTransfer.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ProductTransfer.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ProductTransfer.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ProductTransfer.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ProductTransfer.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsProduct2Serialized {
+    apiName = "ProductTransfer.IsProduct2Serialized"
+    defaultValue = false
+    label = "Serialized"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist Product2TransferRecordMode {
+    apiName = "ProductTransfer.Product2TransferRecordMode"
+    valueSet = [
+      {
+        fullName = "SendAndReceive"
+        isActive = true
+        label = "Send And Receive"
+        default = true
+      },
+      {
+        fullName = "ReceiveOnly"
+        isActive = true
+        label = "Receive Only"
+        default = false
+      },
+    ]
+    restricted = true
+    label = "Transfer Record Mode"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

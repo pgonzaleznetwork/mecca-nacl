@@ -1,0 +1,141 @@
+type salesforce.AssetDowntimePeriod {
+  salesforce.MasterDetail AssetId {
+    apiName = "AssetDowntimePeriod.AssetId"
+    relationshipName = "Asset"
+    referenceTo = [
+      salesforce.Asset,
+    ]
+    _required = true
+    label = "Asset ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.LongTextArea Description {
+    apiName = "AssetDowntimePeriod.Description"
+    length = 32000
+    label = "Description"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist DowntimeType {
+    apiName = "AssetDowntimePeriod.DowntimeType"
+    valueSet = [
+      {
+        fullName = "Unplanned"
+        isActive = true
+        label = "Unplanned"
+        default = false
+      },
+      {
+        fullName = "Planned"
+        isActive = true
+        label = "Planned"
+        default = false
+      },
+    ]
+    restricted = true
+    label = "Downtime Type"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.DateTime EndTime {
+    apiName = "AssetDowntimePeriod.EndTime"
+    _required = true
+    label = "End Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox IsExcluded {
+    apiName = "AssetDowntimePeriod.IsExcluded"
+    inlineHelpText = "When the checkbox is ticked, this record is excluded from calculations of availability and reliability because it is outside the Uptime Record Start Date and Uptime Record End Date for the asset. Read only."
+    defaultValue = false
+    label = "Outside Uptime Calculation Period"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime StartTime {
+    apiName = "AssetDowntimePeriod.StartTime"
+    _required = true
+    label = "Start Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "AssetDowntimePeriod.Id"
+    label = "Asset Downtime Period ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "AssetDowntimePeriod.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber AssetDowntimePeriodNumber {
+    apiName = "AssetDowntimePeriod.AssetDowntimePeriodNumber"
+    label = "Asset Downtime Period Number"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "AssetDowntimePeriod.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "AssetDowntimePeriod.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "AssetDowntimePeriod.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "AssetDowntimePeriod.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "AssetDowntimePeriod.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

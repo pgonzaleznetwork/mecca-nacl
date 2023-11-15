@@ -1,0 +1,9 @@
+salesforce.ListView LoyaltyPgmPartnerCurrency_All_LoyaltyPgmPartnerCurrencys {
+  fullName = "LoyaltyPgmPartnerCurrency.All_LoyaltyPgmPartnerCurrencys"
+  filterScope = "Everything"
+  label = "allLoyaltyPgmPartnerCurrencies"
+  _parent = [
+    salesforce.LoyaltyPgmPartnerCurrency,
+  ]
+  _alias = "allLoyaltyPgmPartnerCurrencies"
+}

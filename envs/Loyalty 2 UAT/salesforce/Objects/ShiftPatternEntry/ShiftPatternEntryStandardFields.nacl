@@ -1,0 +1,108 @@
+type salesforce.ShiftPatternEntry {
+  salesforce.Number DayOrder {
+    apiName = "ShiftPatternEntry.DayOrder"
+    _required = true
+    label = "Day Position"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.MasterDetail ShiftPatternId {
+    apiName = "ShiftPatternEntry.ShiftPatternId"
+    relationshipName = "ShiftPattern"
+    referenceTo = [
+      salesforce.ShiftPattern,
+    ]
+    _required = true
+    label = "Shift Pattern ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Lookup ShiftTemplateId {
+    apiName = "ShiftPatternEntry.ShiftTemplateId"
+    relationshipName = "ShiftTemplate"
+    referenceTo = [
+      salesforce.ShiftTemplate,
+    ]
+    _required = true
+    label = "Shift Template ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "ShiftPatternEntry.Id"
+    label = "Shift Pattern Entry ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ShiftPatternEntry.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "ShiftPatternEntry.Name"
+    label = "Name"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ShiftPatternEntry.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ShiftPatternEntry.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ShiftPatternEntry.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ShiftPatternEntry.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ShiftPatternEntry.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

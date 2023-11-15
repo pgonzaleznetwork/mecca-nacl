@@ -1,0 +1,9 @@
+salesforce.ListView MaintenancePlan_All_MaintenancePlans {
+  fullName = "MaintenancePlan.All_MaintenancePlans"
+  filterScope = "Everything"
+  label = "All Maintenance Plans"
+  _parent = [
+    salesforce.MaintenancePlan,
+  ]
+  _alias = "All Maintenance Plans"
+}

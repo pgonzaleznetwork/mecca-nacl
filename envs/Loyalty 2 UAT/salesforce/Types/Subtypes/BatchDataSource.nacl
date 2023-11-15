@@ -1,0 +1,27 @@
+type salesforce.BatchDataSource {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string condition {
+  }
+  string criteria {
+  }
+  salesforce.BatchDataSrcFilterCriteria filters {
+  }
+  string sourceObject {
+  }
+  string sourceObjectField {
+  }
+  metadataType = "BatchDataSource"
+}

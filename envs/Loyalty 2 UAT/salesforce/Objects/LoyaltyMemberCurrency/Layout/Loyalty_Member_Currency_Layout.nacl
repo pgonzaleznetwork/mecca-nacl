@@ -1,0 +1,71 @@
+salesforce.Layout LoyaltyMemberCurrency_Loyalty_Member_Currency_Layout@bsss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Loyalty Member Currency Details"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.LoyaltyMemberCurrency.field.Name
+            },
+            {
+              behavior = "Required"
+              field = salesforce.LoyaltyMemberCurrency.field.LoyaltyMemberId
+            },
+            {
+              behavior = "Required"
+              field = salesforce.LoyaltyMemberCurrency.field.LoyaltyProgramCurrencyId
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.LoyaltyMemberCurrency.field.PointsBalance
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.LoyaltyMemberCurrency.field.EscrowPointsBalance
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.LoyaltyMemberCurrency.field.NextResetDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.LoyaltyMemberCurrency.field.LastResetDate
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.LoyaltyMemberCurrency.field.BalanceBeforeReset
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "LoyaltyMemberCurrency-Loyalty Member Currency Layout"
+  _parent = [
+    salesforce.LoyaltyMemberCurrency,
+  ]
+  _alias = "LoyaltyMemberCurrency-Loyalty Member Currency Layout"
+}
