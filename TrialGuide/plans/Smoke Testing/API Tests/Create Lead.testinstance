@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testPlanInstance guid="bbe9980d-fc5c-43bf-a78d-badda9a23263" testCasePath="tests/Lesson 1/Create Lead.testcase">
+  <planSettings/>
+  <planFeatures/>
+  <associations>
+    <association assocationType="TM.TEST_SUITE_CASE" connectionId="31c92433-7959-4a38-8c84-592b78238125" entityKey="a0f2o00002WIAKjAAP"/>
+  </associations>
+</testPlanInstance>

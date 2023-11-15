@@ -1,0 +1,46 @@
+{
+  "componentId" : "7b42f503-feb1-4cad-9896-2d9188b81749",
+  "name" : "/com/force/propertyFilter",
+  "type" : "Page",
+  "pageStructureElement" : false,
+  "fieldDetailsElement" : false,
+  "elements" : [ {
+    "componentId" : "dd6e02e8-3582-4ac9-a2b6-4031093b6d63",
+    "type" : "component::23229240-c74c-407d-97be-9bddb587e0cc",
+    "label" : "Filters",
+    "selectors" : [ {
+      "xpath" : ".//lightning-card[@title='Filters']"
+    } ],
+    "elements" : [ {
+      "type" : "content",
+      "elements" : [ {
+        "componentId" : "5380d2fc-de12-400a-a734-4a733d654363",
+        "type" : "component::5cd71547-c934-470c-9115-a10fe7f0307f",
+        "label" : "Search Key",
+        "properties" : [ ],
+        "selectors" : [ {
+          "xpath" : ".//lightning-input[@type='text']"
+        } ],
+        "elements" : [ ]
+      }, {
+        "componentId" : "c7f2536e-f71e-4bce-81c4-2051a3d84a32",
+        "type" : "component::619cb2f9-67a2-488c-ae0d-57ba340284f9",
+        "label" : "Max Price slider",
+        "properties" : [ {
+          "name" : "max",
+          "value" : "1200000"
+        }, {
+          "name" : "min",
+          "value" : "0"
+        }, {
+          "name" : "step",
+          "value" : "50000"
+        } ],
+        "selectors" : [ {
+          "xpath" : ".//lightning-slider[@label='Max Price']"
+        } ],
+        "elements" : [ ]
+      } ]
+    } ]
+  } ]
+}

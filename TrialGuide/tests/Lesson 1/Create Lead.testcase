@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase guid="6ac5b07b-59de-40f8-98bb-c73775d9bc15" id="0">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" guid="2756bf1e-769d-4d1e-a24e-308f2dd1a2f3" name="ApexConnect" testItemId="1" title="Salesforce Connect: Admin (Test)">
+      <associations>
+        <association assocationType="TM.TEST_STEP" connectionId="31c92433-7959-4a38-8c84-592b78238125" entityKey="a0e2o00001HPjvXAAT"/>
+      </associations>
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">Admin</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">Admin</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="uiApplicationName"/>
+        <argument id="quickUiLogin">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="closeAllPrimaryTabs">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="reuseConnectionName"/>
+        <argument id="alreadyOpenBehaviour">
+          <value class="value" valueClass="string">Fail</value>
+        </argument>
+        <argument id="privateBrowsingMode"/>
+        <argument id="enableObjectIdLogging">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="autoCleanup"/>
+        <argument id="cleanupConnectionName"/>
+        <argument id="logFileLocation"/>
+        <argument id="username"/>
+        <argument id="password"/>
+        <argument id="securityToken"/>
+        <argument id="environment"/>
+        <argument id="lightningMode">
+          <value class="value" valueClass="string">default</value>
+        </argument>
+        <argument id="webBrowser"/>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexCreateObject" guid="70b8c992-8311-4417-b285-00e9651e0602" name="ApexCreateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand" testItemId="2" title="Create Object: Lead=&gt;LeadId">
+      <associations>
+        <association assocationType="TM.TEST_STEP" connectionId="31c92433-7959-4a38-8c84-592b78238125" entityKey="a0e2o00001HPkycAAD"/>
+      </associations>
+      <arguments>
+        <argument id="objectType">
+          <value class="value" valueClass="string">Lead</value>
+        </argument>
+        <argument id="resultIdName">
+          <value class="value" valueClass="string">LeadId</value>
+        </argument>
+        <argument id="apexConnectionName">
+          <value class="value" valueClass="string">Admin</value>
+        </argument>
+        <argument id="assignmentRuleId"/>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument argId="0b7b2f20-11cb-4fea-851f-4c0b6ec9e554" id="LastName">
+          <value class="variable">
+            <path element="LastName"/>
+          </value>
+        </argument>
+        <argument argId="8a8cccde-5d01-42ee-979e-52e0f6d6528c" id="Company">
+          <value class="variable">
+            <path element="Company"/>
+          </value>
+        </argument>
+        <argument argId="4349f545-f85c-410b-b0f5-3d9443e7a8bd" id="FirstName">
+          <value class="variable">
+            <path element="FirstName"/>
+          </value>
+        </argument>
+        <argument argId="71201ccf-11d5-4426-b61f-f935d7173108" id="Phone">
+          <value class="variable">
+            <path element="Phone"/>
+          </value>
+        </argument>
+        <argument argId="18c4cf6b-8402-4eee-85ab-93828be2d7b8" id="Email">
+          <value class="variable">
+            <path element="Email"/>
+          </value>
+        </argument>
+      </arguments>
+      <parameterGeneratorProperties>
+        <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand.ConnectionName">Admin</propertyValue>
+        <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand.CustomObjectName">Lead</propertyValue>
+      </parameterGeneratorProperties>
+      <generatedParameters>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Lead&amp;field=LastName" name="LastName" title="LastName"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Lead&amp;field=Company" name="Company" title="Company"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Lead&amp;field=FirstName" name="FirstName" title="FirstName"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Lead&amp;field=Phone" name="Phone" title="Phone"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Lead&amp;field=Email" name="Email" title="Email"/>
+      </generatedParameters>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexReadObject" guid="4cdbddf0-8d36-4341-aa9d-e34a9cc81bac" name="ApexReadObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.ReadCustomObjectTestStepCommand" testItemId="3" title="Read Object: Lead = {LeadId}">
+      <associations>
+        <association assocationType="TM.TEST_STEP" connectionId="31c92433-7959-4a38-8c84-592b78238125" entityKey="a0e2o00001HPkydAAD"/>
+      </associations>
+      <arguments>
+        <argument id="objectType">
+          <value class="value" valueClass="string">Lead</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">LeadRead</value>
+        </argument>
+        <argument id="apexConnectionName">
+          <value class="value" valueClass="string">Admin</value>
+        </argument>
+        <argument id="objectId">
+          <value class="variable">
+            <path element="LeadId"/>
+          </value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+      </arguments>
+      <resultAssertions>
+        <resultAssertion resultName="FirstName" title="Check FirstName">
+          <expected class="variable">
+            <path element="FirstName"/>
+          </expected>
+        </resultAssertion>
+        <resultAssertion resultName="LastName" title="Check LastName">
+          <expected class="variable">
+            <path element="LastName"/>
+          </expected>
+        </resultAssertion>
+        <resultAssertion resultName="Phone" title="Check Phone">
+          <expected class="variable">
+            <path element="Phone"/>
+          </expected>
+        </resultAssertion>
+        <resultAssertion caseInsensitive="true" resultName="Email" title="Check Email">
+          <expected class="variable">
+            <path element="Email"/>
+          </expected>
+        </resultAssertion>
+        <resultAssertion resultName="Company" title="Check Company">
+          <expected class="variable">
+            <path element="Company"/>
+          </expected>
+        </resultAssertion>
+      </resultAssertions>
+      <parameterGeneratorProperties>
+        <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.ReadCustomObjectTestStepCommand.ConnectionName">Admin</propertyValue>
+        <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.ReadCustomObjectTestStepCommand.CustomObjectName">Lead</propertyValue>
+      </parameterGeneratorProperties>
+      <generatedParameters>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Lead&amp;field=FirstName" name="FirstName" title="First Name"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Lead&amp;field=LastName" name="LastName" title="Last Name"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Lead&amp;field=Phone" name="Phone" title="Phone"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Lead&amp;field=Email" name="Email" title="Email"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Lead&amp;field=Company" name="Company" title="Company"/>
+      </generatedParameters>
+    </apiCall>
+  </steps>
+  <params>
+    <param linkedToUrl="provar:hasvalue:4349f545-f85c-410b-b0f5-3d9443e7a8bd" modelBinding="sf:ui:binding:object?object=Lead&amp;field=FirstName" name="FirstName" passwordVariableAllowed="true" title="FirstName">
+      <summary/>
+    </param>
+    <param linkedToUrl="provar:hasvalue:0b7b2f20-11cb-4fea-851f-4c0b6ec9e554" modelBinding="sf:ui:binding:object?object=Lead&amp;field=LastName" name="LastName" passwordVariableAllowed="true" title="LastName">
+      <summary/>
+    </param>
+    <param linkedToUrl="provar:hasvalue:8a8cccde-5d01-42ee-979e-52e0f6d6528c" modelBinding="sf:ui:binding:object?object=Lead&amp;field=Company" name="Company" passwordVariableAllowed="true" title="Company">
+      <summary/>
+    </param>
+    <param linkedToUrl="provar:hasvalue:71201ccf-11d5-4426-b61f-f935d7173108" modelBinding="sf:ui:binding:object?object=Lead&amp;field=Phone" name="Phone" passwordVariableAllowed="true" title="Phone">
+      <summary/>
+    </param>
+    <param linkedToUrl="provar:hasvalue:18c4cf6b-8402-4eee-85ab-93828be2d7b8" modelBinding="sf:ui:binding:object?object=Lead&amp;field=Email" name="Email" passwordVariableAllowed="true" title="Email">
+      <summary/>
+    </param>
+  </params>
+  <args>
+    <argument id="FirstName">
+      <value class="value" valueClass="string">Provar</value>
+    </argument>
+    <argument id="LastName">
+      <value class="compound">
+        <parts>
+          <value valueClass="string">Trial </value>
+          <funcCall id="UniqueId">
+            <argument id="length">
+              <value class="value" valueClass="decimal">6</value>
+            </argument>
+          </funcCall>
+        </parts>
+      </value>
+    </argument>
+    <argument id="Company">
+      <value class="compound">
+        <parts>
+          <value valueClass="string">Provar Trial </value>
+          <funcCall id="UniqueId">
+            <argument id="length">
+              <value class="value" valueClass="decimal">5</value>
+            </argument>
+          </funcCall>
+        </parts>
+      </value>
+    </argument>
+    <argument id="Phone">
+      <value class="compound">
+        <parts>
+          <funcCall id="UniqueId">
+            <argument id="length">
+              <value class="value" valueClass="decimal">3</value>
+            </argument>
+            <argument id="format">
+              <value class="variable">
+                <path element="NUMERIC"/>
+              </value>
+            </argument>
+          </funcCall>
+          <value valueClass="string">-</value>
+          <funcCall id="UniqueId">
+            <argument id="length">
+              <value class="value" valueClass="decimal">3</value>
+            </argument>
+            <argument id="format">
+              <value class="variable">
+                <path element="NUMERIC"/>
+              </value>
+            </argument>
+          </funcCall>
+          <value valueClass="string">-</value>
+          <funcCall id="UniqueId">
+            <argument id="length">
+              <value class="value" valueClass="decimal">4</value>
+            </argument>
+            <argument id="format">
+              <value class="variable">
+                <path element="NUMERIC"/>
+              </value>
+            </argument>
+          </funcCall>
+        </parts>
+      </value>
+    </argument>
+    <argument id="Email">
+      <value class="compound">
+        <parts>
+          <value valueClass="string">test</value>
+          <funcCall id="UniqueId">
+            <argument id="length">
+              <value class="value" valueClass="decimal">9</value>
+            </argument>
+          </funcCall>
+          <value valueClass="string">@example.com</value>
+        </parts>
+      </value>
+    </argument>
+  </args>
+  <associations>
+    <association assocationType="TM.TEST_CASE" connectionId="31c92433-7959-4a38-8c84-592b78238125" entityKey="a0R2o00000fJsHKEA0" lastModifiedDateTime="2023-10-20T10:45:50Z" lastUploadedDateTime="2023-10-17T12:41:47Z"/>
+  </associations>
+</testCase>

@@ -1,0 +1,33 @@
+{
+    "provarHome":"/home/runner/work/mecca-nacl/mecca-nacl/ProvarHome",
+    "projectPath":"/home/runner/work/mecca-nacl/mecca-nacl/TrialGuide",
+    "resultsPath":"/home/runner/work/mecca-nacl/mecca-nacl/TrialGuide/ANT/Results",
+    "resultsPathDisposition":"Replace", 
+    "testOutputLevel":"WARNING",
+    "pluginOutputlevel":"WARNING",
+    "excludeCallable":false,
+    "stopOnError":false,
+    "lightningMode":true,
+    "connectionRefreshType":"Reuse",
+    "metadata":{
+       "metadataLevel":"Reuse",
+       "cachePath":"/home/runner/work/mecca-nacl/mecca-nacl/.provarCaches"
+    },
+    "testprojectSecrets": "ProvarSecretsPassword", 
+    "environment":{
+      "testEnvironment":"UAT",
+      "webBrowser":"Chrome",
+      "webBrowserConfig":"Full Screen",
+      "webBrowserProviderName":"Desktop",
+      "webBrowserDeviceName":"Full Screen"
+    },
+    "testPlan":[
+       "Smoke Testing"
+    ],
+    "testplanFeatures": [
+       {"name": "PDF", "type": "OUTPUT", "enabled": "true"},
+       {"name": "PIECHART", "type": "OUTPUT", "enabled": "true"},
+       {"name": "EMAIL", "type": "NOTIFICATION", "enabled": "false"},
+       {"name": "TEST_MANAGER", "type": "REPORTING", "enabled": "true"}
+    ]
+ }
