@@ -1,0 +1,9 @@
+salesforce.ListView WorkCapacityUsage_All_WorkCapacityUsages {
+  fullName = "WorkCapacityUsage.All_WorkCapacityUsages"
+  filterScope = "Everything"
+  label = "All Work Capacity Usages"
+  _parent = [
+    salesforce.WorkCapacityUsage,
+  ]
+  _alias = "All Work Capacity Usages"
+}

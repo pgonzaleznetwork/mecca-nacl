@@ -1,0 +1,19 @@
+type salesforce.FeatureFlag__mdt {
+  annotations {
+    serviceid apiName {
+    }
+    serviceid metadataType {
+    }
+    string label {
+    }
+    string pluralLabel {
+    }
+    hidden_string keyPrefix {
+    }
+  }
+  apiName = "FeatureFlag__mdt"
+  metadataType = "CustomMetadata"
+  label = "Feature Flag"
+  pluralLabel = "FeatureFlags"
+  _alias = "Feature Flag"
+}

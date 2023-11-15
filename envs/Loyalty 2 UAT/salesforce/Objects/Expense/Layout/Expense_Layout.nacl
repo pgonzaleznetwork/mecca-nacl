@@ -1,0 +1,116 @@
+salesforce.Layout Expense_Expense_Layout@bs {
+  excludeButtons = [
+    "Submit",
+  ]
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Expense.field.ExpenseType
+            },
+            {
+              behavior = "Required"
+              field = salesforce.Expense.field.TransactionDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Expense.field.ExpenseStartDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Expense.field.AccountId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Expense.field.Title
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.Expense.field.Amount
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Expense.field.WorkOrderId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Expense.field.ExpenseEndDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Expense.field.Description
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      fields = [
+        "Name",
+        "Title",
+        "TransactionDate",
+        "Amount",
+        "ExpenseType",
+        "ExpenseReport",
+      ]
+      relatedList = "ExpenseReportEntries"
+    },
+    {
+      fields = [
+        "TASK.SUBJECT",
+        "TASK.WHO_NAME",
+        "ACTIVITY.TASK",
+        "TASK.DUE_DATE",
+        "TASK.STATUS",
+        "TASK.PRIORITY",
+        "CORE.USERS.FULL_NAME",
+      ]
+      relatedList = "RelatedActivityList"
+    },
+    {
+      relatedList = "RelatedEntityHistoryList"
+    },
+    {
+      relatedList = "RelatedFileList"
+    },
+    {
+      fields = [
+        "CreatedDate",
+        "StepStatus",
+        "OriginalActor",
+        "Actor",
+        "Comments",
+      ]
+      relatedList = "RelatedProcessHistoryList"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "Expense-Expense Layout"
+  _parent = [
+    salesforce.Expense,
+  ]
+  _alias = "Expense-Expense Layout"
+}

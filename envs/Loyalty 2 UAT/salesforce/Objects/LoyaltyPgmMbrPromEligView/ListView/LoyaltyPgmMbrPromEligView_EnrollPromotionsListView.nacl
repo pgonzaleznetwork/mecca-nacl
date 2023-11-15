@@ -1,0 +1,15 @@
+salesforce.ListView LoyaltyPgmMbrPromEligView_EnrollPromotionsListView {
+  fullName = "LoyaltyPgmMbrPromEligView.EnrollPromotionsListView"
+  columns = [
+    "Promotion",
+    "Description",
+    "EndDate",
+    "IsPromotionEnrollmentRqr",
+  ]
+  filterScope = "Everything"
+  label = "Enrolled Promotions"
+  _parent = [
+    salesforce.LoyaltyPgmMbrPromEligView,
+  ]
+  _alias = "Enrolled Promotions"
+}

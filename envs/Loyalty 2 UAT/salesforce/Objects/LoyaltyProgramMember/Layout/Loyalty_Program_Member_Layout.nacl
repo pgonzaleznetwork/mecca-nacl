@@ -1,0 +1,221 @@
+salesforce.Layout LoyaltyProgramMember_Loyalty_Program_Member_Layout@bsss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Program Member Details"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.LoyaltyProgramMember.field.MemberType
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.LoyaltyProgramMember.field.ContactId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.LoyaltyProgramMember.field.GroupName
+            },
+            {
+              behavior = "Required"
+              field = salesforce.LoyaltyProgramMember.field.MembershipNumber
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.LoyaltyProgramMember.field.GroupCreatedByMemberId
+            },
+            {
+              behavior = "Required"
+              field = salesforce.LoyaltyProgramMember.field.EnrollmentDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.LoyaltyProgramMember.field.RelatedCorporateMembershipId
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.LoyaltyProgramMember.field.ProgramId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.LoyaltyProgramMember.field.AccountId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.LoyaltyProgramMember.field.ReferredById
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.LoyaltyProgramMember.field.EnrollmentChannel
+            },
+            {
+              behavior = "Required"
+              field = salesforce.LoyaltyProgramMember.field.MemberStatus
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.LoyaltyProgramMember.field.StatementLastGeneratedDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.LoyaltyProgramMember.field.LastActivityDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      fields = [
+        "Name",
+        "EffectiveDate",
+        "LoyaltyTierGroup",
+        "TierExpirationDate",
+      ]
+      relatedList = "LoyaltyMemberTiers"
+    },
+    {
+      fields = [
+        "Name",
+        "LoyaltyProgramCurrency",
+        "PointsBalance",
+        "EscrowPointsBalance",
+      ]
+      relatedList = "LoyaltyMemberCurrencies"
+    },
+    {
+      fields = [
+        "Name",
+        "VoucherCode",
+        "Status",
+        "ExpirationDate",
+      ]
+      relatedList = "Vouchers"
+    },
+    {
+      fields = [
+        "Name",
+        "JournalType",
+        "JournalSubType",
+        "ActivityDate",
+        "ExternalTransactionNumber",
+        "Member",
+        "JournalDate",
+        "Status",
+        "TransactionAmount",
+      ]
+      relatedList = "TransactionJournals"
+    },
+    {
+      fields = [
+        "Promotion",
+        "LoyaltyPromotionType",
+        "FulfillmentAction",
+        "CumulativeUsageCompletePercent",
+      ]
+      relatedList = "LoyaltyProgramMbrPromotions"
+    },
+    {
+      fields = [
+        "Case",
+        "Status",
+        "Subject",
+        "Reason",
+      ]
+      relatedList = "Cases"
+    },
+    {
+      fields = [
+        "GroupName",
+        "LoyaltyProgramGroupMember",
+        "MemberPointContributionPercent",
+        "CanMemberRedeemFromGroup",
+        "ContributionCalculationType",
+        "MemberRole",
+      ]
+      relatedList = "Rel_LoyaltyPgmGroupMbrRlnsps"
+    },
+    {
+      fields = [
+        "MemberName",
+        "RelatedLoyaltyProgramMember",
+        "MemberPointContributionPercent",
+        "CanMemberRedeemFromGroup",
+        "ContributionCalculationType",
+        "MemberRole",
+      ]
+      relatedList = "LoyaltyPgmGroupMbrRlnsps"
+    },
+    {
+      fields = [
+        "Name",
+        "LoyaltyPgmEngmtAttribute",
+        "CurrentValue",
+        "CumulativeValue",
+        "TargetValue",
+        "StartDate",
+        "EndDate",
+        "ResetCount",
+        "LastResetDate",
+      ]
+      relatedList = "ProgramMemberAttributeValues"
+    },
+    {
+      fields = [
+        "Name",
+        "LoyaltyProgramBadge",
+        "Status",
+        "EndDate",
+      ]
+      relatedList = "LoyaltyProgramMemberBadges"
+    },
+    {
+      fields = [
+        "Name",
+        "Benefit",
+        "Status",
+        "EndDate",
+      ]
+      relatedList = "MemberBenefitMembers"
+    },
+    {
+      fields = [
+        "Name",
+        "MembershipStatus",
+        "MembershipType",
+      ]
+      relatedList = "LoyaltyMembershipLifecycle"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  summaryLayout = {
+    masterLabel = "00h4U00000VIjqu"
+    sizeX = 4
+    sizeY = 0
+    summaryLayoutStyle = "Default"
+  }
+  fullName = "LoyaltyProgramMember-Loyalty Program Member Layout"
+  _parent = [
+    salesforce.LoyaltyProgramMember,
+  ]
+  _alias = "LoyaltyProgramMember-Loyalty Program Member Layout"
+}

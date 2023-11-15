@@ -1,0 +1,64 @@
+salesforce.Layout Address_Address_Layout@bs {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = "ParentId"
+            },
+            {
+              behavior = "Edit"
+              field = "Address"
+            },
+            {
+              behavior = "Edit"
+              field = "Description"
+            },
+            {
+              behavior = "Edit"
+              field = "TimeZone"
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = "LocationType"
+            },
+            {
+              behavior = "Edit"
+              field = "AddressType"
+            },
+            {
+              behavior = "Edit"
+              field = "DrivingDirections"
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  relatedObjects = [
+    "ParentId",
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "Address-Address Layout"
+  _alias = "Address-Address Layout"
+}

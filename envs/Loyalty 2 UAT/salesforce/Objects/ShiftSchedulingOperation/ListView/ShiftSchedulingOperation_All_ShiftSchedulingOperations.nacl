@@ -1,0 +1,9 @@
+salesforce.ListView ShiftSchedulingOperation_All_ShiftSchedulingOperations {
+  fullName = "ShiftSchedulingOperation.All_ShiftSchedulingOperations"
+  filterScope = "Everything"
+  label = "All Shift Scheduling Operations"
+  _parent = [
+    salesforce.ShiftSchedulingOperation,
+  ]
+  _alias = "All Shift Scheduling Operations"
+}

@@ -1,0 +1,9 @@
+salesforce.ListView ProductRequestLineItem_All_ProductRequestLineItems {
+  fullName = "ProductRequestLineItem.All_ProductRequestLineItems"
+  filterScope = "Everything"
+  label = "All Product Request Line Items"
+  _parent = [
+    salesforce.ProductRequestLineItem,
+  ]
+  _alias = "All Product Request Line Items"
+}

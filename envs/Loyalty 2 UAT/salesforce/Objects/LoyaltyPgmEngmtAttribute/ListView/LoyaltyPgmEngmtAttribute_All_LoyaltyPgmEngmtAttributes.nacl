@@ -1,0 +1,9 @@
+salesforce.ListView LoyaltyPgmEngmtAttribute_All_LoyaltyPgmEngmtAttributes {
+  fullName = "LoyaltyPgmEngmtAttribute.All_LoyaltyPgmEngmtAttributes"
+  filterScope = "Everything"
+  label = "allLoyaltyPgmEngmtAttributes"
+  _parent = [
+    salesforce.LoyaltyPgmEngmtAttribute,
+  ]
+  _alias = "allLoyaltyPgmEngmtAttributes"
+}

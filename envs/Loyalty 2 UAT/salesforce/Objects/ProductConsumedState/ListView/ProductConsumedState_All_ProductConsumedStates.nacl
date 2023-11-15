@@ -1,0 +1,9 @@
+salesforce.ListView ProductConsumedState_All_ProductConsumedStates {
+  fullName = "ProductConsumedState.All_ProductConsumedStates"
+  filterScope = "Everything"
+  label = "All Product Consumed States"
+  _parent = [
+    salesforce.ProductConsumedState,
+  ]
+  _alias = "All Product Consumed States"
+}

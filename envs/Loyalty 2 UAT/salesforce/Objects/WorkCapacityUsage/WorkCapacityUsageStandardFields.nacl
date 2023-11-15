@@ -1,0 +1,297 @@
+type salesforce.WorkCapacityUsage {
+  serviceid Id {
+    apiName = "WorkCapacityUsage.Id"
+    label = "Work Capacity Usage ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "WorkCapacityUsage.OwnerId"
+    relationshipName = "Owner"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    label = "Owner ID"
+    createable = true
+    updateable = true
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "WorkCapacityUsage.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber WorkCapacityUsageNumber {
+    apiName = "WorkCapacityUsage.WorkCapacityUsageNumber"
+    label = "Usage Number"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "WorkCapacityUsage.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "WorkCapacityUsage.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "WorkCapacityUsage.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "WorkCapacityUsage.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "WorkCapacityUsage.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist SvcApptField {
+    apiName = "WorkCapacityUsage.SvcApptField"
+    valueSet = [
+      {
+        fullName = "ServiceAppointment.AccountId"
+        isActive = true
+        label = "Account ID"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.ActualDuration"
+        isActive = true
+        label = "Actual Duration (Minutes)"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.Duration"
+        isActive = true
+        label = "Duration"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.DurationInMinutes"
+        isActive = true
+        label = "Duration in Minutes"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.IsOffsiteAppointment"
+        isActive = true
+        label = "Offsite Appointment"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.Subject"
+        isActive = true
+        label = "Subject"
+        default = false
+      },
+      {
+        fullName = "ServiceAppointment.WorkTypeId"
+        isActive = true
+        label = "Work Type ID"
+        default = false
+      },
+    ]
+    restricted = true
+    label = "Service Appointment Field"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Text SvcApptFieldValue {
+    apiName = "WorkCapacityUsage.SvcApptFieldValue"
+    length = 255
+    label = "Field Value"
+    createable = true
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Date StartDate {
+    apiName = "WorkCapacityUsage.StartDate"
+    _required = true
+    label = "Start Date"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Date EndDate {
+    apiName = "WorkCapacityUsage.EndDate"
+    _required = true
+    label = "End Date"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Lookup ServiceTerritoryId {
+    apiName = "WorkCapacityUsage.ServiceTerritoryId"
+    relationshipName = "ServiceTerritory"
+    referenceTo = [
+      salesforce.ServiceTerritory,
+    ]
+    label = "Territory ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Picklist LimitationUnits {
+    apiName = "WorkCapacityUsage.LimitationUnits"
+    valueSet = [
+      {
+        fullName = "Hours"
+        isActive = true
+        label = "Hours"
+        default = true
+      },
+      {
+        fullName = "Percentage"
+        isActive = true
+        label = "Percentage"
+        default = false
+      },
+    ]
+    restricted = true
+    _required = true
+    label = "Limitation Units"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Number LimitationValue {
+    apiName = "WorkCapacityUsage.LimitationValue"
+    _required = true
+    label = "Limitation (in hours)"
+    precision = 18
+    scale = 2
+    createable = true
+    updateable = false
+    unique = false
+    queryable = true
+  }
+  salesforce.Number TimeConsumedInMinutes {
+    apiName = "WorkCapacityUsage.TimeConsumedInMinutes"
+    _required = true
+    label = "Time Consumed (in minutes)"
+    precision = 18
+    scale = 2
+    createable = true
+    updateable = false
+    unique = false
+    queryable = true
+  }
+  salesforce.Picklist TimePeriod {
+    apiName = "WorkCapacityUsage.TimePeriod"
+    valueSet = [
+      {
+        fullName = "Day"
+        isActive = true
+        label = "Day"
+        default = true
+      },
+    ]
+    restricted = true
+    _required = true
+    label = "Time Period"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Text WcuUniqueField1 {
+    apiName = "WorkCapacityUsage.WcuUniqueField1"
+    length = 255
+    label = "WcuUniqueField1"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Text WcuUniqueField2 {
+    apiName = "WorkCapacityUsage.WcuUniqueField2"
+    length = 255
+    label = "WcuUniqueField2"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Number TimeConsumedInHours {
+    apiName = "WorkCapacityUsage.TimeConsumedInHours"
+    label = "Time Consumed (in hours)"
+    precision = 18
+    scale = 0
+    createable = true
+    updateable = false
+    unique = false
+    queryable = true
+  }
+  salesforce.Number LimitationPercentage {
+    apiName = "WorkCapacityUsage.LimitationPercentage"
+    label = "Limitation (in percentage)"
+    precision = 18
+    scale = 2
+    createable = true
+    updateable = false
+    unique = false
+    queryable = true
+  }
+  salesforce.Number AvailCapacityHours {
+    apiName = "WorkCapacityUsage.AvailCapacityHours"
+    label = "Available Capacity (in hours)"
+    precision = 18
+    scale = 2
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.Text SvcApptFieldValDplyNm {
+    apiName = "WorkCapacityUsage.SvcApptFieldValDplyNm"
+    length = 255
+    label = "Field Value Display Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+}

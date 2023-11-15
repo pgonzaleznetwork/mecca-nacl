@@ -1,0 +1,135 @@
+salesforce.Layout WorkCapacityUsage_Work_Capacity_Usage_Layout@bsss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "General Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.WorkCapacityUsage.field.SvcApptFieldValDplyNm
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.WorkCapacityUsage.field.WorkCapacityUsageNumber
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.WorkCapacityUsage.field.SvcApptField
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.WorkCapacityUsage.field.ServiceTerritoryId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.WorkCapacityUsage.field.SvcApptFieldValue
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Consumption Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.WorkCapacityUsage.field.TimePeriod
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.WorkCapacityUsage.field.AvailCapacityHours
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.WorkCapacityUsage.field.LimitationPercentage
+            },
+            {
+              behavior = "Required"
+              field = salesforce.WorkCapacityUsage.field.TimeConsumedInMinutes
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.WorkCapacityUsage.field.StartDate
+            },
+            {
+              behavior = "Required"
+              field = salesforce.WorkCapacityUsage.field.EndDate
+            },
+            {
+              behavior = "Required"
+              field = salesforce.WorkCapacityUsage.field.LimitationValue
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.WorkCapacityUsage.field.TimeConsumedInHours
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.WorkCapacityUsage.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.WorkCapacityUsage.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  miniLayout = {
+    fields = [
+      "SvcApptFieldValDplyNm",
+    ]
+  }
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "WorkCapacityUsage-Work Capacity Usage Layout"
+  _parent = [
+    salesforce.WorkCapacityUsage,
+  ]
+  _alias = "WorkCapacityUsage-Work Capacity Usage Layout"
+}

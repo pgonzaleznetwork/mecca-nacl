@@ -1,0 +1,9 @@
+salesforce.ListView ExpenseReportEntry_All_ExpenseReportEntries {
+  fullName = "ExpenseReportEntry.All_ExpenseReportEntries"
+  filterScope = "Everything"
+  label = "All Expense Report Entries"
+  _parent = [
+    salesforce.ExpenseReportEntry,
+  ]
+  _alias = "All Expense Report Entries"
+}

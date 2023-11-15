@@ -1,0 +1,12 @@
+salesforce.ApexClass IFeatureFlags {
+  apiVersion = 57
+  status = "Active"
+  fullName = "IFeatureFlags"
+  content = file("salesforce/Records/ApexClass/IFeatureFlags.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.FeatureFlags
+    },
+  ]
+  _alias = "IFeatureFlags"
+}

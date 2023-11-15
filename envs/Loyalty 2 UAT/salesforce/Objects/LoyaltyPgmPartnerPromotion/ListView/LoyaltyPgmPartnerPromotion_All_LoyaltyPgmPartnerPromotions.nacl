@@ -1,0 +1,9 @@
+salesforce.ListView LoyaltyPgmPartnerPromotion_All_LoyaltyPgmPartnerPromotions {
+  fullName = "LoyaltyPgmPartnerPromotion.All_LoyaltyPgmPartnerPromotions"
+  filterScope = "Everything"
+  label = "allLoyaltyPgmPartnerPromotions"
+  _parent = [
+    salesforce.LoyaltyPgmPartnerPromotion,
+  ]
+  _alias = "allLoyaltyPgmPartnerPromotions"
+}

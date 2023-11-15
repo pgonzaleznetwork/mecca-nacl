@@ -1,0 +1,9 @@
+salesforce.ListView WorkPlanTemplate_All_WorkPlanTemplates {
+  fullName = "WorkPlanTemplate.All_WorkPlanTemplates"
+  filterScope = "Everything"
+  label = "All Work Plan Templates"
+  _parent = [
+    salesforce.WorkPlanTemplate,
+  ]
+  _alias = "All Work Plan Templates"
+}

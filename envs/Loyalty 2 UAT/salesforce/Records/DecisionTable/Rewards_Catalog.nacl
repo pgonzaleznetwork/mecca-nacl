@@ -1,0 +1,58 @@
+salesforce.DecisionTable Rewards_Catalog {
+  fullName = "Rewards_Catalog"
+  collectOperator = "None"
+  conditionCriteria = "1 AND 2"
+  conditionType = "All"
+  dataSourceType = "SingleSobject"
+  decisionTableParameters = [
+    {
+      fieldName = "Voucher_Definition__c"
+      isGroupByField = false
+      isRequired = false
+      usage = "OUTPUT"
+    },
+    {
+      fieldName = "Product__c"
+      isGroupByField = false
+      isRequired = false
+      operator = "Equals"
+      sequence = 2
+      usage = "INPUT"
+    },
+    {
+      fieldName = "Points__c"
+      isGroupByField = false
+      isRequired = false
+      usage = "OUTPUT"
+    },
+    {
+      fieldName = "Partner__c"
+      isGroupByField = false
+      isRequired = false
+      operator = "Equals"
+      sequence = 1
+      usage = "INPUT"
+    },
+  ]
+  setupName = "Rewards Catalog"
+  sourceObject = "Rewards_Catalog__c"
+  status = "Active"
+  _generated_dependencies = [
+    {
+      reference = salesforce.Rewards_Catalog__c
+    },
+    {
+      reference = salesforce.Rewards_Catalog__c.field.Partner__c
+    },
+    {
+      reference = salesforce.Rewards_Catalog__c.field.Points__c
+    },
+    {
+      reference = salesforce.Rewards_Catalog__c.field.Product__c
+    },
+    {
+      reference = salesforce.Rewards_Catalog__c.field.Voucher_Definition__c
+    },
+  ]
+  _alias = "Rewards_Catalog"
+}

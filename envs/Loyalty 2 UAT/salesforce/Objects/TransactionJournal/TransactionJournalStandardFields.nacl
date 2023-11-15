@@ -1,0 +1,586 @@
+type salesforce.TransactionJournal {
+  salesforce.DateTime ActivityDate {
+    apiName = "TransactionJournal.ActivityDate"
+    _required = true
+    label = "Activity Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist BookedFareClass {
+    apiName = "TransactionJournal.BookedFareClass"
+    label = "Booked Fare Class"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist BookedRoomType {
+    apiName = "TransactionJournal.BookedRoomType"
+    label = "Booked Room Type"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Date BookingDate {
+    apiName = "TransactionJournal.BookingDate"
+    label = "Booking Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text Brand {
+    apiName = "TransactionJournal.Brand"
+    length = 30
+    label = "Brand"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Picklist Channel {
+    apiName = "TransactionJournal.Channel"
+    label = "Channel"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text Destination {
+    apiName = "TransactionJournal.Destination"
+    length = 30
+    label = "Destination"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Number Distance {
+    apiName = "TransactionJournal.Distance"
+    label = "Distance"
+    precision = 18
+    scale = 2
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.DateTime EndDate {
+    apiName = "TransactionJournal.EndDate"
+    label = "End Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text ErrorDescription {
+    apiName = "TransactionJournal.ErrorDescription"
+    length = 255
+    label = "Error Message"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Date EscrowPointsCreditDate {
+    apiName = "TransactionJournal.EscrowPointsCreditDate"
+    label = "Escrow Points Credit Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text Establishment {
+    apiName = "TransactionJournal.Establishment"
+    length = 40
+    label = "Establishment"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Text ExternalTransactionNumber {
+    apiName = "TransactionJournal.ExternalTransactionNumber"
+    length = 40
+    label = "External Transaction ID"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Text FlightNumber {
+    apiName = "TransactionJournal.FlightNumber"
+    length = 10
+    label = "Flight Number"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Picklist Industry {
+    apiName = "TransactionJournal.Industry"
+    valueSet = [
+      {
+        fullName = "Agriculture"
+        isActive = true
+        label = "Agriculture"
+        default = false
+      },
+      {
+        fullName = "Healthcare"
+        isActive = true
+        label = "Healthcare"
+        default = false
+      },
+      {
+        fullName = "Hospitality"
+        isActive = true
+        label = "Hospitality"
+        default = false
+      },
+      {
+        fullName = "Manufacturing"
+        isActive = true
+        label = "Manufacturing"
+        default = false
+      },
+      {
+        fullName = "Renewable Energy"
+        isActive = true
+        label = "Renewable Energy"
+        default = false
+      },
+      {
+        fullName = "Retail"
+        isActive = true
+        label = "Retail"
+        default = false
+      },
+    ]
+    restricted = false
+    label = "Industry"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Date InvoiceDate {
+    apiName = "TransactionJournal.InvoiceDate"
+    label = "Invoice Generated Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.DateTime JournalDate {
+    apiName = "TransactionJournal.JournalDate"
+    label = "Journal Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist JournalReason {
+    apiName = "TransactionJournal.JournalReason"
+    valueSet = [
+      {
+        fullName = "Service Recovery"
+        isActive = true
+        label = "Service Recovery"
+        default = false
+      },
+      {
+        fullName = "Resolve Disputed Points"
+        isActive = true
+        label = "Resolve Disputed Points"
+        default = false
+      },
+      {
+        fullName = "Product Returned"
+        isActive = true
+        label = "Product Returned"
+        default = false
+      },
+      {
+        fullName = "Order Canceled"
+        isActive = true
+        label = "Order Canceled"
+        default = false
+      },
+      {
+        fullName = "Accrual Cancelation Requested by Member"
+        isActive = true
+        label = "Accrual Cancelation Requested by Member"
+        default = false
+      },
+      {
+        fullName = "Redemption Cancelation Requested by Member"
+        isActive = true
+        label = "Redemption Cancelation Requested by Member"
+        default = false
+      },
+      {
+        fullName = "Product or Service Unavailable"
+        isActive = true
+        label = "Product or Service Unavailable"
+        default = false
+      },
+    ]
+    restricted = false
+    label = "Journal Reason"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup JournalSubTypeId {
+    apiName = "TransactionJournal.JournalSubTypeId"
+    relationshipName = "JournalSubType"
+    referenceTo = [
+      salesforce.JournalSubType,
+    ]
+    label = "Journal SubType ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup JournalTypeId {
+    apiName = "TransactionJournal.JournalTypeId"
+    relationshipName = "JournalType"
+    referenceTo = [
+      salesforce.JournalType,
+    ]
+    label = "Journal Type ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup LoyaltyProgramId {
+    apiName = "TransactionJournal.LoyaltyProgramId"
+    relationshipName = "LoyaltyProgram"
+    referenceTo = [
+      salesforce.LoyaltyProgram,
+    ]
+    label = "Loyalty Program ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup MemberId {
+    apiName = "TransactionJournal.MemberId"
+    relationshipName = "Member"
+    referenceTo = [
+      salesforce.LoyaltyProgramMember,
+    ]
+    label = "Program Member ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup OrderId {
+    apiName = "TransactionJournal.OrderId"
+    relationshipName = "Order"
+    referenceTo = [
+      salesforce.Order,
+    ]
+    label = "Order ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup OrderItemId {
+    apiName = "TransactionJournal.OrderItemId"
+    relationshipName = "OrderItem"
+    referenceTo = [
+      salesforce.OrderItem,
+    ]
+    label = "Order Product ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text Origin {
+    apiName = "TransactionJournal.Origin"
+    length = 30
+    label = "Origin"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Lookup PartnerId {
+    apiName = "TransactionJournal.PartnerId"
+    relationshipName = "Partner"
+    referenceTo = [
+      salesforce.LoyaltyProgramPartner,
+    ]
+    label = "Loyalty Program Partner ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist PaymentMethod {
+    apiName = "TransactionJournal.PaymentMethod"
+    label = "Payment Method"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup ProductCategoryId {
+    apiName = "TransactionJournal.ProductCategoryId"
+    relationshipName = "ProductCategory"
+    referenceTo = [
+      salesforce.ProductCategory,
+    ]
+    label = "Category ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup ProductId {
+    apiName = "TransactionJournal.ProductId"
+    relationshipName = "Product"
+    referenceTo = [
+      salesforce.Product2,
+    ]
+    label = "Product ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup PromotionId {
+    apiName = "TransactionJournal.PromotionId"
+    relationshipName = "Promotion"
+    referenceTo = [
+      salesforce.Promotion,
+    ]
+    label = "Promotion ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Number Quantity {
+    apiName = "TransactionJournal.Quantity"
+    label = "Quantity"
+    precision = 18
+    scale = 2
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.Lookup QuantityUnitOfMeasureId {
+    apiName = "TransactionJournal.QuantityUnitOfMeasureId"
+    relationshipName = "QuantityUnitOfMeasure"
+    referenceTo = [
+      salesforce.UnitOfMeasure,
+    ]
+    label = "Quantity Unit ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup ReferredMemberId {
+    apiName = "TransactionJournal.ReferredMemberId"
+    relationshipName = "ReferredMember"
+    referenceTo = [
+      salesforce.LoyaltyProgramMember,
+    ]
+    label = "Referred Member ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup RelatedCorporateMembershipId {
+    apiName = "TransactionJournal.RelatedCorporateMembershipId"
+    relationshipName = "RelatedCorporateMembership"
+    referenceTo = [
+      salesforce.LoyaltyProgramMember,
+    ]
+    label = "Related Corporate Membership ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup RelatedJournalId {
+    apiName = "TransactionJournal.RelatedJournalId"
+    relationshipName = "RelatedJournal"
+    referenceTo = [
+      salesforce.TransactionJournal,
+    ]
+    label = "Related Journal ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.DateTime StartDate {
+    apiName = "TransactionJournal.StartDate"
+    label = "Start Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist Status {
+    apiName = "TransactionJournal.Status"
+    valueSet = [
+      {
+        fullName = "Pending"
+        isActive = true
+        label = "Pending"
+        default = true
+      },
+      {
+        fullName = "Processed"
+        isActive = true
+        label = "Processed"
+        default = false
+      },
+      {
+        fullName = "Cancelled"
+        isActive = true
+        label = "Cancelled"
+        default = false
+      },
+      {
+        fullName = "Error"
+        isActive = true
+        label = "Error"
+        default = false
+      },
+    ]
+    restricted = true
+    _required = true
+    label = "Status"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Currency TransactionAmount {
+    apiName = "TransactionJournal.TransactionAmount"
+    label = "Transaction Amount"
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 18
+    queryable = true
+  }
+  salesforce.Text TransactionLocation {
+    apiName = "TransactionJournal.TransactionLocation"
+    length = 50
+    label = "Transaction Location"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Picklist TraveledFareClass {
+    apiName = "TransactionJournal.TraveledFareClass"
+    label = "Traveled Fare Class"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text VoucherCode {
+    apiName = "TransactionJournal.VoucherCode"
+    length = 255
+    label = "Voucher Code"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "TransactionJournal.Id"
+    label = "Transaction Journal ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "TransactionJournal.Name"
+    label = "Name"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "TransactionJournal.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "TransactionJournal.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "TransactionJournal.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "TransactionJournal.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "TransactionJournal.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "TransactionJournal.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist UsageType {
+    apiName = "TransactionJournal.UsageType"
+    valueSet = [
+      {
+        fullName = "Loyalty"
+        isActive = true
+        label = "Loyalty"
+        default = false
+      },
+      {
+        fullName = "Rebates"
+        isActive = true
+        label = "Rebates"
+        default = false
+      },
+    ]
+    restricted = true
+    label = "Usage Type"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+}

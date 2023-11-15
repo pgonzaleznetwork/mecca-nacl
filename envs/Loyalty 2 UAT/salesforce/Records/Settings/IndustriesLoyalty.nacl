@@ -1,0 +1,13 @@
+salesforce.IndustriesLoyaltySettings {
+  fullName = "IndustriesLoyalty"
+  enableAutomaticMemberTierAssessmentSelection = "false"
+  enableAutomaticVoucherCodeGeneration = "true"
+  enableFixedTypeNQPAggregation = "false"
+  enableLoyaltyApiAccessForExternalSiteUsers = "false"
+  enableLoyaltyRedeemedPointsExpirationInfoPref = "false"
+  enableLoyaltyServiceExcellence = "false"
+  enableNQPRealTimePointBalance = "true"
+  enableNonQualifyingPointsConsolidation = "false"
+  enableQPRealTimePointBalance = "true"
+  _alias = "IndustriesLoyalty"
+}

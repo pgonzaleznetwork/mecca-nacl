@@ -1,0 +1,71 @@
+type salesforce.IntegrationProviderDef {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  boolean active {
+  }
+  string apexClass {
+    foreignKeyDomain = [
+      salesforce.ApexClass,
+    ]
+  }
+  string description {
+  }
+  string developerName {
+  }
+  string externalServiceOperationName {
+  }
+  string externalServiceRegistration {
+    foreignKeyDomain = [
+      salesforce.ExternalServiceRegistration,
+    ]
+  }
+  string fileBasedApexClass {
+  }
+  string inputDataProcessor {
+    foreignKeyDomain = [
+      "OmniIntegrationProcedure",
+    ]
+  }
+  salesforce.IntegrationProviderAttr integrationProviderAttributes {
+  }
+  string javaClassName {
+  }
+  string outputDataProcessor {
+    foreignKeyDomain = [
+      "OmniIntegrationProcedure",
+    ]
+  }
+  string providerLabel {
+  }
+  string type {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Apex",
+        "Java",
+        "LowCode",
+      ]
+    }
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "integrationProviderDefinition"
+  dirName = "integrationProviderDefinitions"
+  metadataType = "IntegrationProviderDef"
+}

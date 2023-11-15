@@ -1,0 +1,127 @@
+type salesforce.DecisionTable {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string collectOperator {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Count",
+        "Maximum",
+        "Minimum",
+        "None",
+        "Sum",
+      ]
+    }
+  }
+  string conditionCriteria {
+  }
+  string conditionType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "All",
+        "Any",
+        "Custom",
+      ]
+    }
+  }
+  string dataSourceType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "CsvUpload",
+        "MultipleSobjects",
+        "SingleSobject",
+      ]
+    }
+  }
+  "List<salesforce.DecisionTableParameter>" decisionTableParameters {
+  }
+  salesforce.DecisionTableSourceCriteria decisionTableSourceCriterias {
+  }
+  string description {
+  }
+  string filterResultBy {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "AnyValue",
+        "CollectOperator",
+        "FirstMatch",
+        "OutputOrder",
+        "Priority",
+        "RuleOrder",
+        "UniqueValues",
+      ]
+    }
+  }
+  string lastSyncDate {
+  }
+  string setupName {
+  }
+  string sourceConditionLogic {
+  }
+  string sourceObject {
+  }
+  string status {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "ActivationInProgress",
+        "Active",
+        "Draft",
+        "Inactive",
+      ]
+    }
+  }
+  string type {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Advanced",
+        "HighVolume",
+        "LowVolume",
+      ]
+    }
+  }
+  string usageType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "AiAcceleratorSubscriberChurnPrediction",
+        "Bre",
+        "CustomLoyalty",
+        "DefaultPricing",
+        "ProductCategoryQualification",
+        "ProductQualification",
+        "RecordAlert",
+        "ShipAndDebit",
+        "TestProcess",
+        "TierProcessing",
+        "TransactionJournal",
+        "WarrantyClaim",
+      ]
+    }
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "decisionTable"
+  dirName = "decisionTables"
+  metadataType = "DecisionTable"
+}

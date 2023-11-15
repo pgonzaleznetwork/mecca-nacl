@@ -1,0 +1,211 @@
+type salesforce.EventRelayConfig {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string destinationResourceName {
+  }
+  string eventChannel {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "AccountChangeEvent",
+        "AccountContactRoleChangeEvent",
+        "ActivityEngagementVirtualChannel",
+        "AppExtensionChangeEvent",
+        "AssetAttributeChangeEvent",
+        "AssetChangeEvent",
+        "AssetTechnicalAttributesCDCEventChannel",
+        "AssetWarrantyChangeEvent",
+        "AssignedResourceChangeEvent",
+        "AttributeValueStoreChangeEvent",
+        "AuthorizationFormConsentChangeEvent",
+        "BriefcaseAssignmentChangeEvent",
+        "BriefcaseDefinitionChangeEvent",
+        "CaseChangeEvent",
+        "ChangeDataCaptureDiffeoStandard",
+        "ChangeDataStandardSales",
+        "ChangeEvents",
+        "CommSubscriptionConsentChangeEvent",
+        "CommerceChangeEvents",
+        "CommerceSearchIncrementalIndex",
+        "ConsentCDCChannel",
+        "ConsentCDCStandardChannel",
+        "ContactChangeEvent",
+        "ContactPointAddressChangeEvent",
+        "ContactPointConsentChangeEvent",
+        "ContactPointEmailChangeEvent",
+        "ContactPointPhoneChangeEvent",
+        "ContactPointTypeConsentChangeEvent",
+        "ContentDocumentChangeEvent",
+        "ContentDocumentLinkChangeEvent",
+        "ContentVersionChangeEvent",
+        "ContractChangeEvent",
+        "ContractLineItemChangeEvent",
+        "ContractLineOutcomeDataChangeEvent",
+        "ConversationIntelligenceVirtualChannel",
+        "CreChangeEvents",
+        "DataCloudEntities",
+        "DigitalSignatureChangeEvent",
+        "EinsteinDiscoveryWBChannel",
+        "EinsteinPlatformStandardChannel",
+        "EmailMessageChangeEvent",
+        "EmailTemplateChangeEvent",
+        "EngagementAttendeeChangeEvent",
+        "EngagementInteractionChangeEvent",
+        "EngagementTopicChangeEvent",
+        "EntitlementChangeEvent",
+        "EventBusRelayChangeEventChannel",
+        "EventChangeEvent",
+        "EventRelationChangeEvent",
+        "EventRelayConfigChangeEvent",
+        "ExpenseChangeEvent",
+        "FTestStandardChannel",
+        "FTestStandardInternalChannel",
+        "FieldServiceMobileSettingsChangeEvent",
+        "FinanceBalanceSnapshotChangeEvent",
+        "FinanceTransactionChangeEvent",
+        "FlowBuilderChangeData",
+        "FlowRecordChangeListenerChannel",
+        "GlobalIdentityStandard",
+        "HighVolumePriming",
+        "IndividualChangeEvent",
+        "IsotopeStandardChangeEvents",
+        "LeadChangeEvent",
+        "LearningItemProgress",
+        "ListEmailChangeEvent",
+        "ListEmailSentResultChangeEvent",
+        "LocationChangeEvent",
+        "LoyaltyLedgerChangeEvent",
+        "LoyaltyProgramPartnerLedgerChangeEvent",
+        "MacroChangeEvent",
+        "MacroInstructionChangeEvent",
+        "MaintenanceAssetChangeEvent",
+        "MaintenancePlanChangeEvent",
+        "MaintenanceWorkRuleChangeEvent",
+        "ManagedContentVariantChangeEvent",
+        "Merchandising",
+        "OperatingHoursChangeEvent",
+        "OpportunityChangeEvent",
+        "OpportunityContactRoleChangeEvent",
+        "OrderChangeEvent",
+        "OrderItemChangeEvent",
+        "PardotSyncStdChannel",
+        "PartyConsentChangeEvent",
+        "Pricebook2ChangeEvent",
+        "PricebookEntryChangeEvent",
+        "ProcessInstanceChangeEvent",
+        "ProcessInstanceStepChangeEvent",
+        "Product2ChangeEvent",
+        "ProductCatalogChangeEvent",
+        "ProductCategoryChangeEvent",
+        "ProductCategoryProductChangeEvent",
+        "ProductConsumedChangeEvent",
+        "ProductItemChangeEvent",
+        "ProductItemTransactionChangeEvent",
+        "ProductRequestChangeEvent",
+        "ProductRequestLineItemChangeEvent",
+        "ProductRequiredChangeEvent",
+        "ProductTransferChangeEvent",
+        "QuickTextChangeEvent",
+        "RecommendationChangeEvent",
+        "RecommendationReactionChangeEvent",
+        "RecordsetFilterCriteriaChangeEvent",
+        "RecordsetFilterCriteriaRuleChangeEvent",
+        "RecordsetFltrCritMonitorChangeEvent",
+        "ResourceAbsenceChangeEvent",
+        "ResourcePreferenceChangeEvent",
+        "ReturnOrderChangeEvent",
+        "ReturnOrderLineItemChangeEvent",
+        "Rewards_Catalog__ChangeEvent",
+        "ServiceAppointmentChangeEvent",
+        "ServiceContractChangeEvent",
+        "ServiceCrewChangeEvent",
+        "ServiceCrewMemberChangeEvent",
+        "ServiceReportChangeEvent",
+        "ServiceReportLayoutChangeEvent",
+        "ServiceResourceCapacityChangeEvent",
+        "ServiceResourceChangeEvent",
+        "ServiceResourceSkillChangeEvent",
+        "ServiceTerritoryChangeEvent",
+        "ServiceTerritoryLocationChangeEvent",
+        "ServiceTerritoryMemberChangeEvent",
+        "ShiftChangeEvent",
+        "ShiftPatternChangeEvent",
+        "ShiftPatternEntryChangeEvent",
+        "ShiftTemplateChangeEvent",
+        "ShipmentChangeEvent",
+        "SkillChangeEvent",
+        "SkillRequirementChangeEvent",
+        "SlackAlertsEventChannel",
+        "TaskChangeEvent",
+        "TaskRelationChangeEvent",
+        "TimeSheetChangeEvent",
+        "TimeSheetEntryChangeEvent",
+        "TimeSlotChangeEvent",
+        "TransactionJournalChangeEvent",
+        "UnitOfMeasureChangeEvent",
+        "UserChangeEvent",
+        "VideoCall",
+        "WarrantyTermChangeEvent",
+        "WorkOrderChangeEvent",
+        "WorkOrderLineItemChangeEvent",
+        "WorkPlanChangeEvent",
+        "WorkPlanSelectionRuleChangeEvent",
+        "WorkPlanTemplateChangeEvent",
+        "WorkPlanTemplateEntryChangeEvent",
+        "WorkPlansCDCEventChannel",
+        "WorkStepChangeEvent",
+        "WorkStepTemplateChangeEvent",
+        "WorkTypeChangeEvent",
+      ]
+    }
+    foreignKeyDomain = [
+      "CustomObject",
+      salesforce.PlatformEventChannel,
+    ]
+  }
+  string label {
+  }
+  string relayOption {
+  }
+  string state {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "PAUSE",
+        "RUN",
+        "STOP",
+      ]
+    }
+  }
+  string usageType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "AMAZON_EVENTBRIDGE",
+        "INTERNAL_MANAGED_SUBSCRIPTIONS",
+        "INTERNAL_REPLICATION",
+      ]
+    }
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "eventRelay"
+  dirName = "eventRelays"
+  metadataType = "EventRelayConfig"
+}

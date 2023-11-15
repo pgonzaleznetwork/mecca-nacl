@@ -1,0 +1,238 @@
+type salesforce.EngagementTopic {
+  salesforce.Lookup EngagementId {
+    apiName = "EngagementTopic.EngagementId"
+    relationshipName = "Engagement"
+    referenceTo = [
+      salesforce.EngagementInteraction,
+      salesforce.MessagingSession,
+    ]
+    _required = true
+    label = "Engagement ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text InteractionSummary {
+    apiName = "EngagementTopic.InteractionSummary"
+    length = 765
+    label = "Interaction Summary"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Text Name {
+    apiName = "EngagementTopic.Name"
+    length = 255
+    _required = true
+    label = "Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "EngagementTopic.OwnerId"
+    relationshipName = "Owner"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Owner ID"
+    createable = true
+    updateable = true
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup ParentTopicId {
+    apiName = "EngagementTopic.ParentTopicId"
+    relationshipName = "ParentTopic"
+    referenceTo = [
+      salesforce.EngagementTopic,
+    ]
+    label = "Engagement Topic ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist ProcessFailureReason {
+    apiName = "EngagementTopic.ProcessFailureReason"
+    label = "Process Failure Reason"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text ProcessName {
+    apiName = "EngagementTopic.ProcessName"
+    length = 255
+    label = "Process Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Picklist ProcessStatus {
+    apiName = "EngagementTopic.ProcessStatus"
+    valueSet = [
+      {
+        fullName = "Initiated"
+        isActive = true
+        label = "Initiated"
+        default = false
+      },
+      {
+        fullName = "Completed"
+        isActive = true
+        label = "Completed"
+        default = false
+      },
+      {
+        fullName = "Cancelled"
+        isActive = true
+        label = "Cancelled"
+        default = false
+      },
+      {
+        fullName = "Failed"
+        isActive = true
+        label = "Failed"
+        default = false
+      },
+    ]
+    restricted = false
+    label = "Process Status"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist ProcessType {
+    apiName = "EngagementTopic.ProcessType"
+    valueSet = [
+      {
+        fullName = "Flow"
+        isActive = true
+        label = "Flow"
+        default = false
+      },
+      {
+        fullName = "OmniScript"
+        isActive = true
+        label = "Omni Script"
+        default = false
+      },
+      {
+        fullName = "QuickAction"
+        isActive = true
+        label = "Quick Action"
+        default = false
+      },
+    ]
+    restricted = true
+    label = "Process Type"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup RelatedPersonId {
+    apiName = "EngagementTopic.RelatedPersonId"
+    relationshipName = "RelatedPerson"
+    referenceTo = [
+      salesforce.Account,
+      salesforce.Contact,
+      salesforce.Lead,
+      salesforce.LoyaltyProgramMember,
+    ]
+    label = "RelatedPerson ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup TopicId {
+    apiName = "EngagementTopic.TopicId"
+    relationshipName = "Topic"
+    referenceTo = [
+      salesforce.Asset,
+      salesforce.Case,
+      salesforce.Contract,
+      salesforce.Lead,
+      salesforce.LoyaltyMemberTier,
+      salesforce.LoyaltyProgramMember,
+      salesforce.Opportunity,
+      salesforce.Order,
+      salesforce.Product2,
+      salesforce.Rewards_Catalog__c,
+      salesforce.ServiceAppointment,
+      salesforce.TransactionJournal,
+      salesforce.Voucher,
+    ]
+    label = "Topic ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "EngagementTopic.Id"
+    label = "Engagement Topic ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "EngagementTopic.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "EngagementTopic.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "EngagementTopic.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "EngagementTopic.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "EngagementTopic.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "EngagementTopic.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

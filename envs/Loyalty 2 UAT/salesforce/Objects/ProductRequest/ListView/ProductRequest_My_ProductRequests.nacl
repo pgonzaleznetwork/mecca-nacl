@@ -1,0 +1,9 @@
+salesforce.ListView ProductRequest_My_ProductRequests {
+  fullName = "ProductRequest.My_ProductRequests"
+  filterScope = "Mine"
+  label = "My Product Requests"
+  _parent = [
+    salesforce.ProductRequest,
+  ]
+  _alias = "My Product Requests"
+}

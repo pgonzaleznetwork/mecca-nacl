@@ -1,0 +1,144 @@
+type salesforce.LoyaltyProgramMemberBadge {
+  salesforce.Date EndDate {
+    apiName = "LoyaltyProgramMemberBadge.EndDate"
+    label = "End Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup LoyaltyProgramBadgeId {
+    apiName = "LoyaltyProgramMemberBadge.LoyaltyProgramBadgeId"
+    relationshipName = "LoyaltyProgramBadge"
+    referenceTo = [
+      salesforce.LoyaltyProgramBadge,
+    ]
+    label = "Loyalty Program Badge ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.MasterDetail LoyaltyProgramMemberId {
+    apiName = "LoyaltyProgramMemberBadge.LoyaltyProgramMemberId"
+    relationshipName = "LoyaltyProgramMember"
+    referenceTo = [
+      salesforce.LoyaltyProgramMember,
+    ]
+    _required = true
+    label = "Loyalty Program Member ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Text Reason {
+    apiName = "LoyaltyProgramMemberBadge.Reason"
+    length = 255
+    label = "Reason"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Date StartDate {
+    apiName = "LoyaltyProgramMemberBadge.StartDate"
+    _required = true
+    label = "Start Date"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Picklist Status {
+    apiName = "LoyaltyProgramMemberBadge.Status"
+    valueSet = [
+      {
+        fullName = "Active"
+        isActive = true
+        label = "Active"
+        default = false
+      },
+      {
+        fullName = "Expired"
+        isActive = true
+        label = "Expired"
+        default = false
+      },
+    ]
+    restricted = true
+    _required = true
+    label = "Status"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "LoyaltyProgramMemberBadge.Id"
+    label = "Loyalty Program Member Badge ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "LoyaltyProgramMemberBadge.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "LoyaltyProgramMemberBadge.Name"
+    label = "Number"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "LoyaltyProgramMemberBadge.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "LoyaltyProgramMemberBadge.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "LoyaltyProgramMemberBadge.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "LoyaltyProgramMemberBadge.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "LoyaltyProgramMemberBadge.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

@@ -1,0 +1,242 @@
+type salesforce.ProductConsumed {
+  salesforce.LongTextArea Description {
+    apiName = "ProductConsumed.Description"
+    length = 32000
+    label = "Description"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Percent Discount {
+    apiName = "ProductConsumed.Discount"
+    label = "Discount"
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 5
+    queryable = true
+  }
+  salesforce.Checkbox IsConsumed {
+    apiName = "ProductConsumed.IsConsumed"
+    defaultValue = false
+    label = "Consumed"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Currency ListPrice {
+    apiName = "ProductConsumed.ListPrice"
+    label = "List Price"
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup PricebookEntryId {
+    apiName = "ProductConsumed.PricebookEntryId"
+    relationshipName = "PricebookEntry"
+    referenceTo = [
+      salesforce.PricebookEntry,
+    ]
+    label = "Price Book Entry ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup Product2Id {
+    apiName = "ProductConsumed.Product2Id"
+    relationshipName = "Product2"
+    referenceTo = [
+      salesforce.Product2,
+    ]
+    label = "Product ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup ProductItemId {
+    apiName = "ProductConsumed.ProductItemId"
+    relationshipName = "ProductItem"
+    referenceTo = [
+      salesforce.ProductItem,
+    ]
+    label = "Product Item ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Number QuantityConsumed {
+    apiName = "ProductConsumed.QuantityConsumed"
+    _required = true
+    label = "Quantity Consumed"
+    precision = 18
+    scale = 2
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.Picklist QuantityUnitOfMeasure {
+    apiName = "ProductConsumed.QuantityUnitOfMeasure"
+    valueSet = [
+      {
+        fullName = "Each"
+        isActive = true
+        label = "Each"
+        default = false
+      },
+    ]
+    restricted = false
+    label = "Quantity Unit Of Measure"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Currency Subtotal {
+    apiName = "ProductConsumed.Subtotal"
+    label = "Subtotal"
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Currency TotalPrice {
+    apiName = "ProductConsumed.TotalPrice"
+    label = "Total Price"
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Currency UnitPrice {
+    apiName = "ProductConsumed.UnitPrice"
+    label = "Unit Price"
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 18
+    queryable = true
+  }
+  salesforce.MasterDetail WorkOrderId {
+    apiName = "ProductConsumed.WorkOrderId"
+    relationshipName = "WorkOrder"
+    referenceTo = [
+      salesforce.WorkOrder,
+    ]
+    _required = true
+    label = "Work Order ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Lookup WorkOrderLineItemId {
+    apiName = "ProductConsumed.WorkOrderLineItemId"
+    relationshipName = "WorkOrderLineItem"
+    referenceTo = [
+      salesforce.WorkOrderLineItem,
+    ]
+    label = "Work Order Line Item ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "ProductConsumed.Id"
+    label = "Product Consumed ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ProductConsumed.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber ProductConsumedNumber {
+    apiName = "ProductConsumed.ProductConsumedNumber"
+    label = "Product Consumed Number"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ProductConsumed.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ProductConsumed.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ProductConsumed.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ProductConsumed.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ProductConsumed.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text ProductName {
+    apiName = "ProductConsumed.ProductName"
+    length = 255
+    label = "Product Name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsProduct2Serialized {
+    apiName = "ProductConsumed.IsProduct2Serialized"
+    defaultValue = false
+    label = "Serialized"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

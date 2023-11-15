@@ -1,0 +1,39 @@
+salesforce.CustomApplication standard__LoyaltyManagement {
+  formFactors = [
+    "Large",
+  ]
+  isNavAutoTempTabsDisabled = false
+  isNavPersonalizationDisabled = false
+  isNavTabPersistenceDisabled = false
+  label = "Loyalty Console"
+  navType = "Console"
+  tabs = [
+    "standard-LoyaltyProgram",
+    "standard-home",
+    "standard-LoyaltyProgramMember",
+    "standard-TransactionJournal",
+    salesforce.CustomTab.instance.Rewards_Catalog__c,
+  ]
+  uiType = "Lightning"
+  workspaceConfig = {
+    mappings = [
+      {
+        tab = salesforce.CustomTab.instance.Rewards_Catalog__c
+      },
+      {
+        tab = "standard-LoyaltyProgram"
+      },
+      {
+        tab = "standard-LoyaltyProgramMember"
+      },
+      {
+        tab = "standard-TransactionJournal"
+      },
+      {
+        tab = "standard-home"
+      },
+    ]
+  }
+  fullName = "standard__LoyaltyManagement"
+  _alias = "Loyalty Console (standard)"
+}

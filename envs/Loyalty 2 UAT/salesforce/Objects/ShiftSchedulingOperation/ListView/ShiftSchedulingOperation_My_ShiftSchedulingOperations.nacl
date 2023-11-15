@@ -1,0 +1,9 @@
+salesforce.ListView ShiftSchedulingOperation_My_ShiftSchedulingOperations {
+  fullName = "ShiftSchedulingOperation.My_ShiftSchedulingOperations"
+  filterScope = "Mine"
+  label = "My Shift Scheduling Operations"
+  _parent = [
+    salesforce.ShiftSchedulingOperation,
+  ]
+  _alias = "My Shift Scheduling Operations"
+}
