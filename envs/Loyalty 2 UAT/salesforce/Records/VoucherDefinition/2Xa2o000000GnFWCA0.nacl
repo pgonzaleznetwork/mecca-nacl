@@ -1,0 +1,13 @@
+salesforce.VoucherDefinition "2Xa2o000000GnFWCA0" {
+  DiscountPercent = 20
+  EffectiveDate = "2023-08-03"
+  ExpirationPeriod = 3
+  ExpirationPeriodUnit = "Months"
+  ExpirationType = "Period"
+  IsActive = true
+  IsPartialRedeemable = false
+  LoyaltyProgramId = salesforce.LoyaltyProgram.instance.Cloud_Kicks_Inner_Circle@s
+  Name = "20% off on Apparel Voucher"
+  Type = "DiscountPercentage"
+  _alias = "20% off on Apparel Voucher"
+}

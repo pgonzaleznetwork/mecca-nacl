@@ -1,0 +1,13 @@
+salesforce.VoucherDefinition "2Xa2o000000GnFYCA0" {
+  EffectiveDate = "2023-08-03"
+  ExpirationPeriod = 2
+  ExpirationPeriodUnit = "Months"
+  ExpirationType = "Period"
+  FaceValue = 50
+  IsActive = true
+  IsPartialRedeemable = false
+  LoyaltyProgramId = salesforce.LoyaltyProgram.instance.Cloud_Kicks_Inner_Circle@s
+  Name = "$50 discount on Ursa Major Solar’s solar panel batteries"
+  Type = "FixedValue"
+  _alias = "$50 discount on Ursa Major Solar’s solar panel batteries"
+}

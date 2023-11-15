@@ -1,0 +1,15 @@
+salesforce.LoyaltyTierGroup "0lt2o000000GnFWAA0" {
+  ExtendExpiration = "None"
+  IsActive = true
+  IsHiddenToMembers = false
+  IsPrimary = false
+  LoyaltyProgramId = salesforce.LoyaltyProgram.instance.Cloud_Kicks_Inner_Circle@s
+  Name = "Inner Circle Tier Group"
+  QpResetDate = "2024-08-31"
+  QpResetFrequency = 1
+  QpResetPeriod = "Years"
+  TierModel = "Fixed"
+  TierPeriodQuantity = 1
+  TierPeriodUnit = "Years"
+  _alias = "Cloud Kicks Inner Circle Inner Circle Tier Group"
+}

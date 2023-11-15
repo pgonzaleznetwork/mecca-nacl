@@ -1,0 +1,12 @@
+salesforce.LoyaltyProgramCurrency "0lc2o000000GnFbAAK" {
+  CurrencyType = "NonQualifying"
+  ExpiryModel = "Activity"
+  ExpiryPeriodFrequency = 3
+  ExpiryPeriodUnit = "Years"
+  HasEscrow = false
+  IsActive = true
+  IsPrimary = false
+  LoyaltyProgramId = salesforce.LoyaltyProgram.instance.Cloud_Kicks_Inner_Circle@s
+  Name = "Regular Points"
+  _alias = "Cloud Kicks Inner Circle Regular Points"
+}

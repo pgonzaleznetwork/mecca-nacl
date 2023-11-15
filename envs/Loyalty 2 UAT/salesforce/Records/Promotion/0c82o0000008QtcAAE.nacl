@@ -1,0 +1,15 @@
+salesforce.Promotion "0c82o0000008QtcAAE" {
+  CumulativeUsageTarget = 500
+  DefaultVoucherDefinitionId = salesforce.VoucherDefinition.instance.2Xa2o000000GnFXCA0
+  FulfillmentAction = "IssueVoucher"
+  IsActive = false
+  IsEnrollmentRequired = false
+  IsPointsWithFactor = false
+  IsQuickPromotion = false
+  LoyaltyProgramId = salesforce.LoyaltyProgram.instance.Cloud_Kicks_Inner_Circle@s
+  LoyaltyPromotionType = "Cumulative"
+  Name = "Spend $500, Get a Voucher"
+  StartDate = "2023-08-03"
+  TransactionJournalType = "Accrual"
+  _alias = "Spend $500, Get a Voucher"
+}
