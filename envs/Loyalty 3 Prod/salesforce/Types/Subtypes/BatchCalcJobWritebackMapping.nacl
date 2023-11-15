@@ -1,0 +1,27 @@
+type salesforce.BatchCalcJobWritebackMapping {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string parentName {
+  }
+  string relationshipName {
+  }
+  boolean runtimeParameter {
+  }
+  string sourceFieldName {
+  }
+  string targetFieldName {
+  }
+  metadataType = "BatchCalcJobWritebackMapping"
+}

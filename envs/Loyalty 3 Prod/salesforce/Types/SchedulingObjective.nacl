@@ -1,0 +1,48 @@
+type salesforce.SchedulingObjective {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  boolean isProtected {
+  }
+  string masterLabel {
+  }
+  string schedulingCategory {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "A",
+        "B",
+      ]
+    }
+  }
+  string schedulingObjectiveType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "AgentPreference",
+        "BalanceNonStandardShifts",
+        "BalanceShifts",
+      ]
+    }
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "schedulingObjective"
+  dirName = "SchedulingObjectives"
+  metadataType = "SchedulingObjective"
+}

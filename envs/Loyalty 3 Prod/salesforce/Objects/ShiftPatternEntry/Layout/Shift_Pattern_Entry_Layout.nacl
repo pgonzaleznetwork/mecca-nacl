@@ -1,0 +1,69 @@
+salesforce.Layout ShiftPatternEntry_Shift_Pattern_Entry_Layout@bsss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.ShiftPatternEntry.field.Name
+            },
+            {
+              behavior = "Required"
+              field = salesforce.ShiftPatternEntry.field.ShiftPatternId
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.ShiftPatternEntry.field.DayOrder
+            },
+            {
+              behavior = "Required"
+              field = salesforce.ShiftPatternEntry.field.ShiftTemplateId
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      fields = [
+        "TASK.SUBJECT",
+        "TASK.WHO_NAME",
+        "ACTIVITY.TASK",
+        "TASK.DUE_DATE",
+        "TASK.STATUS",
+        "TASK.PRIORITY",
+        "CORE.USERS.FULL_NAME",
+      ]
+      relatedList = "RelatedActivityList"
+    },
+    {
+      relatedList = "RelatedEntityHistoryList"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "ShiftPatternEntry-Shift Pattern Entry Layout"
+  _parent = [
+    salesforce.ShiftPatternEntry,
+  ]
+  _alias = "ShiftPatternEntry-Shift Pattern Entry Layout"
+}

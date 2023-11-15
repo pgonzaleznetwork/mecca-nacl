@@ -1,0 +1,235 @@
+type salesforce.ServiceReport {
+  salesforce.Lookup ContentVersionDocumentId {
+    apiName = "ServiceReport.ContentVersionDocumentId"
+    relationshipName = "ContentVersionDocument"
+    referenceTo = [
+      salesforce.ContentVersion,
+    ]
+    label = "ContentVersion ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsSigned {
+    apiName = "ServiceReport.IsSigned"
+    defaultValue = false
+    label = "Signed"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.MasterDetail ParentId {
+    apiName = "ServiceReport.ParentId"
+    relationshipName = "Parent"
+    referenceTo = [
+      salesforce.ServiceAppointment,
+      salesforce.WorkOrder,
+      salesforce.WorkOrderLineItem,
+    ]
+    _required = true
+    label = "Parent ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Picklist ServiceReportLanguage {
+    apiName = "ServiceReport.ServiceReportLanguage"
+    valueSet = [
+      {
+        fullName = "en_US"
+        isActive = true
+        label = "English"
+        default = false
+      },
+      {
+        fullName = "de"
+        isActive = true
+        label = "German"
+        default = false
+      },
+      {
+        fullName = "es"
+        isActive = true
+        label = "Spanish"
+        default = false
+      },
+      {
+        fullName = "fr"
+        isActive = true
+        label = "French"
+        default = false
+      },
+      {
+        fullName = "it"
+        isActive = true
+        label = "Italian"
+        default = false
+      },
+      {
+        fullName = "ja"
+        isActive = true
+        label = "Japanese"
+        default = false
+      },
+      {
+        fullName = "sv"
+        isActive = true
+        label = "Swedish"
+        default = false
+      },
+      {
+        fullName = "ko"
+        isActive = true
+        label = "Korean"
+        default = false
+      },
+      {
+        fullName = "zh_TW"
+        isActive = true
+        label = "Chinese (Traditional)"
+        default = false
+      },
+      {
+        fullName = "zh_CN"
+        isActive = true
+        label = "Chinese (Simplified)"
+        default = false
+      },
+      {
+        fullName = "pt_BR"
+        isActive = true
+        label = "Portuguese (Brazil)"
+        default = false
+      },
+      {
+        fullName = "nl_NL"
+        isActive = true
+        label = "Dutch"
+        default = false
+      },
+      {
+        fullName = "da"
+        isActive = true
+        label = "Danish"
+        default = false
+      },
+      {
+        fullName = "th"
+        isActive = true
+        label = "Thai"
+        default = false
+      },
+      {
+        fullName = "fi"
+        isActive = true
+        label = "Finnish"
+        default = false
+      },
+      {
+        fullName = "ru"
+        isActive = true
+        label = "Russian"
+        default = false
+      },
+      {
+        fullName = "es_MX"
+        isActive = true
+        label = "Spanish (Mexico)"
+        default = false
+      },
+      {
+        fullName = "no"
+        isActive = true
+        label = "Norwegian"
+        default = false
+      },
+    ]
+    restricted = true
+    label = "Service Report Language"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.AutoNumber ServiceReportNumber {
+    apiName = "ServiceReport.ServiceReportNumber"
+    label = "Service Report Name"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Template {
+    apiName = "ServiceReport.Template"
+    length = 255
+    label = "Service Report Template"
+    createable = true
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "ServiceReport.Id"
+    label = "Service Report ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ServiceReport.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ServiceReport.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ServiceReport.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ServiceReport.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ServiceReport.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ServiceReport.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

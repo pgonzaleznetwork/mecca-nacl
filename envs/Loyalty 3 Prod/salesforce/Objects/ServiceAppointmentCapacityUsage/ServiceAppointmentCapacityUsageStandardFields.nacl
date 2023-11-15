@@ -1,0 +1,116 @@
+type salesforce.ServiceAppointmentCapacityUsage {
+  salesforce.Number EstimatedUsageInMinutes {
+    apiName = "ServiceAppointmentCapacityUsage.EstimatedUsageInMinutes"
+    label = "Estimated Usage (Minutes)"
+    precision = 18
+    scale = 2
+    createable = false
+    updateable = false
+    unique = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.MasterDetail ServiceAppointmentId {
+    apiName = "ServiceAppointmentCapacityUsage.ServiceAppointmentId"
+    relationshipName = "ServiceAppointment"
+    referenceTo = [
+      salesforce.ServiceAppointment,
+    ]
+    _required = true
+    label = "Service Appointment ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Date UsageDate {
+    apiName = "ServiceAppointmentCapacityUsage.UsageDate"
+    label = "Usage Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "ServiceAppointmentCapacityUsage.Id"
+    label = "Service Appointment Capacity Usage ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ServiceAppointmentCapacityUsage.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber ServiceAppointmentCapacityUsageAutonumber {
+    apiName = "ServiceAppointmentCapacityUsage.ServiceAppointmentCapacityUsageAutonumber"
+    label = "Service Appointment Capacity Usage Number"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ServiceAppointmentCapacityUsage.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ServiceAppointmentCapacityUsage.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ServiceAppointmentCapacityUsage.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ServiceAppointmentCapacityUsage.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ServiceAppointmentCapacityUsage.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text WorkCapacityUsage {
+    apiName = "ServiceAppointmentCapacityUsage.WorkCapacityUsage"
+    length = 50
+    label = "Work Capacity Usage"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+}

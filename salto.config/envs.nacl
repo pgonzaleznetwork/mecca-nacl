@@ -1,0 +1,16 @@
+envs {
+  envs = [
+    {
+      name = "c227a242-34bc-4007-aab4-3fbcb9c9f80a-Loyalty 2 UAT"
+      accountToServiceName = {
+        salesforce = "salesforce"
+      }
+    },
+    {
+      name = "Loyalty 3 Prod"
+      accountToServiceName = {
+        salesforce = "salesforce"
+      }
+    },
+  ]
+}

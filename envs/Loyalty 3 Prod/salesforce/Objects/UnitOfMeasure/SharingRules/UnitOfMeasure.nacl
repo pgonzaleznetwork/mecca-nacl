@@ -1,0 +1,7 @@
+salesforce.SharingRules UnitOfMeasure {
+  fullName = "UnitOfMeasure"
+  _parent = [
+    salesforce.UnitOfMeasure,
+  ]
+  _alias = "UnitOfMeasure"
+}

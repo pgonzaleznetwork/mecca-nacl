@@ -1,0 +1,9 @@
+type salesforce.FeatureFlag__mdt {
+  salesforce.Checkbox Is_Active__c {
+    apiName = "FeatureFlag__mdt.Is_Active__c"
+    defaultValue = false
+    externalId = false
+    fieldManageability = "DeveloperControlled"
+    label = "Is Active"
+  }
+}

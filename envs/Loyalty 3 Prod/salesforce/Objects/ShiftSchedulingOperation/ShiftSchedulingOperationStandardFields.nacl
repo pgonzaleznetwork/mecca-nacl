@@ -1,0 +1,66 @@
+type salesforce.ShiftSchedulingOperation {
+  salesforce.Picklist CurrentShiftsStatus {
+    apiName = "ShiftSchedulingOperation.CurrentShiftsStatus"
+    _hidden_value = true
+  }
+  salesforce.Unknown JobEndTime {
+    apiName = "ShiftSchedulingOperation.JobEndTime"
+    _hidden_value = true
+  }
+  salesforce.Unknown JobProfiles {
+    apiName = "ShiftSchedulingOperation.JobProfiles"
+    _hidden_value = true
+  }
+  salesforce.Unknown JobStartTime {
+    apiName = "ShiftSchedulingOperation.JobStartTime"
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "ShiftSchedulingOperation.OwnerId"
+    _hidden_value = true
+  }
+  salesforce.Unknown SelectedAction {
+    apiName = "ShiftSchedulingOperation.SelectedAction"
+    _hidden_value = true
+  }
+  salesforce.Unknown ServiceTerritories {
+    apiName = "ShiftSchedulingOperation.ServiceTerritories"
+    _hidden_value = true
+  }
+  salesforce.Unknown ShiftsEndDateTime {
+    apiName = "ShiftSchedulingOperation.ShiftsEndDateTime"
+    _hidden_value = true
+  }
+  salesforce.Unknown ShiftsStartDateTime {
+    apiName = "ShiftSchedulingOperation.ShiftsStartDateTime"
+    _hidden_value = true
+  }
+  salesforce.Unknown Status {
+    apiName = "ShiftSchedulingOperation.Status"
+    _hidden_value = true
+  }
+  salesforce.Unknown TotalShiftsExcluded {
+    apiName = "ShiftSchedulingOperation.TotalShiftsExcluded"
+    _hidden_value = true
+  }
+  salesforce.Unknown TotalShiftsLeftUnassigned {
+    apiName = "ShiftSchedulingOperation.TotalShiftsLeftUnassigned"
+    _hidden_value = true
+  }
+  salesforce.Unknown TotalShiftsProcessed {
+    apiName = "ShiftSchedulingOperation.TotalShiftsProcessed"
+    _hidden_value = true
+  }
+  salesforce.Unknown TotalShiftsScheduled {
+    apiName = "ShiftSchedulingOperation.TotalShiftsScheduled"
+    _hidden_value = true
+  }
+  salesforce.Unknown TotalShiftsToSchedule {
+    apiName = "ShiftSchedulingOperation.TotalShiftsToSchedule"
+    _hidden_value = true
+  }
+  salesforce.Picklist UpdatedShiftsStatus {
+    apiName = "ShiftSchedulingOperation.UpdatedShiftsStatus"
+    _hidden_value = true
+  }
+}

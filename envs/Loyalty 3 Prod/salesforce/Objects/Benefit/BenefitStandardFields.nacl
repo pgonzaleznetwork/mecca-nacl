@@ -1,0 +1,166 @@
+type salesforce.Benefit {
+  salesforce.MasterDetail BenefitTypeId {
+    apiName = "Benefit.BenefitTypeId"
+    relationshipName = "BenefitType"
+    referenceTo = [
+      salesforce.BenefitType,
+    ]
+    _required = true
+    label = "Benefit Type ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.LongTextArea Description {
+    apiName = "Benefit.Description"
+    length = 1000
+    label = "Description"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Url ImageUrl {
+    apiName = "Benefit.ImageUrl"
+    inlineHelpText = "Enter the image URL. The image file format can be JPG, PNG, or BMP that’s less than 5 MB and 128x128 pixels in resolution."
+    label = "Image URL"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox IsActive {
+    apiName = "Benefit.IsActive"
+    defaultValue = false
+    label = "Active"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Checkbox IsBenefitSelectionAllowed {
+    apiName = "Benefit.IsBenefitSelectionAllowed"
+    defaultValue = false
+    label = "Benefit Selection Allowed"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text Name {
+    apiName = "Benefit.Name"
+    length = 255
+    _required = true
+    label = "Benefit Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Number PrioritySequence {
+    apiName = "Benefit.PrioritySequence"
+    label = "Priority Sequence"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Unknown RecertificationFrequency {
+    apiName = "Benefit.RecertificationFrequency"
+    _hidden_value = true
+  }
+  salesforce.Lookup UnitId {
+    apiName = "Benefit.UnitId"
+    relationshipName = "Unit"
+    referenceTo = [
+      salesforce.UnitOfMeasure,
+    ]
+    label = "Unit of Measure ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Number Value {
+    apiName = "Benefit.Value"
+    label = "Value"
+    precision = 18
+    scale = 0
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "Benefit.Id"
+    label = "Benefit ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "Benefit.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "Benefit.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "Benefit.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "Benefit.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "Benefit.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "Benefit.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup BenefitActionId {
+    apiName = "Benefit.BenefitActionId"
+    relationshipName = "BenefitAction"
+    referenceTo = [
+      salesforce.BenefitAction,
+    ]
+    label = "Benefit Action ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+}

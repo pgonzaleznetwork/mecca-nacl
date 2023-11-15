@@ -1,0 +1,7 @@
+salesforce.SharingRules WorkCapacityLimit {
+  fullName = "WorkCapacityLimit"
+  _parent = [
+    salesforce.WorkCapacityLimit,
+  ]
+  _alias = "WorkCapacityLimit"
+}

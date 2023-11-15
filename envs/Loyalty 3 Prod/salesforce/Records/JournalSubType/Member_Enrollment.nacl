@@ -1,0 +1,6 @@
+salesforce.JournalSubType Member_Enrollment@s {
+  Description = "Represents transactions that credit points to new loyalty program members that have joined a loyalty program."
+  JournalTypeId = salesforce.JournalType.instance.Accrual
+  Name = "Member Enrollment"
+  _alias = "Accrual Member Enrollment"
+}

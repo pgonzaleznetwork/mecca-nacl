@@ -1,0 +1,7 @@
+salesforce.SharingRules ExpenseReport {
+  fullName = "ExpenseReport"
+  _parent = [
+    salesforce.ExpenseReport,
+  ]
+  _alias = "ExpenseReport"
+}

@@ -1,0 +1,104 @@
+salesforce.Layout Swarm_Swarm_Layout@bs {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.Swarm.field.Name
+            },
+            {
+              behavior = "Required"
+              field = salesforce.Swarm.field.Status
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Swarm.field.StartedDateTime
+            },
+            {
+              behavior = "Required"
+              field = salesforce.Swarm.field.CollaborationTool
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Swarm.field.IsDedicatedChannel
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Swarm.field.OwnerId
+            },
+            {
+              behavior = "Required"
+              field = salesforce.Swarm.field.RelatedRecordId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Swarm.field.EndedDateTime
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Swarm.field.CollaborationUrl
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Swarm.field.HelpNeeded
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Swarm.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Swarm.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "Swarm-Swarm Layout"
+  _parent = [
+    salesforce.Swarm,
+  ]
+  _alias = "Swarm-Swarm Layout"
+}

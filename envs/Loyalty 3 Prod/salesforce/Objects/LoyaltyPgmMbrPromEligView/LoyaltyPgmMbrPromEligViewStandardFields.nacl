@@ -1,0 +1,358 @@
+type salesforce.LoyaltyPgmMbrPromEligView {
+  salesforce.Currency CurrPromotionLiabilityAmt {
+    apiName = "LoyaltyPgmMbrPromEligView.CurrPromotionLiabilityAmt"
+    inlineHelpText = "The total liability incurred by the loyalty program for the promotion."
+    label = "Current Promotion Liability Amount"
+    createable = true
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+  }
+  salesforce.Number CurrentPromotionPointsCount {
+    apiName = "LoyaltyPgmMbrPromEligView.CurrentPromotionPointsCount"
+    inlineHelpText = "Specify the number of points credited to members for the promotion until now."
+    label = "Current Promotion Points Count"
+    precision = 9
+    createable = true
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Lookup DefaultVoucherDefinitionId {
+    apiName = "LoyaltyPgmMbrPromEligView.DefaultVoucherDefinitionId"
+    relationshipName = "DefaultVoucherDefinition"
+    referenceTo = [
+      salesforce.VoucherDefinition,
+    ]
+    label = "Voucher Definition ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.LongTextArea Description {
+    apiName = "LoyaltyPgmMbrPromEligView.Description"
+    length = 1000
+    label = "Description"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Checkbox DoesPromHavePtWithFctr {
+    apiName = "LoyaltyPgmMbrPromEligView.DoesPromHavePtWithFctr"
+    inlineHelpText = "Select the checkbox to calculate the points to be credited by multiplying the transaction amount with a multiplier. For example, to credit points worth twice the transaction amount, select the checkbox and enter 2 in the Points Factor field."
+    defaultValue = false
+    label = "Promotion Have Points with Factor"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Date EndDate {
+    apiName = "LoyaltyPgmMbrPromEligView.EndDate"
+    label = "End Date"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Text ExternalId {
+    apiName = "LoyaltyPgmMbrPromEligView.ExternalId"
+    length = 255
+    label = "External ID"
+    createable = true
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Picklist FulfillmentAction {
+    apiName = "LoyaltyPgmMbrPromEligView.FulfillmentAction"
+    inlineHelpText = "Select the way in which a loyalty member is rewarded for fulfilling promotion requirements."
+    valueSet = [
+      {
+        fullName = "CreditPoints"
+        isActive = true
+        label = "Credit Points"
+        default = false
+      },
+      {
+        fullName = "IssueVoucher"
+        isActive = true
+        label = "Issue Voucher"
+        default = false
+      },
+    ]
+    restricted = true
+    label = "Fulfillment Action"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Checkbox IsMbrEligBsdCmpnOrSgmt {
+    apiName = "LoyaltyPgmMbrPromEligView.IsMbrEligBsdCmpnOrSgmt"
+    defaultValue = false
+    label = "Eligible Based on Segment Or Campaign"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Checkbox IsPromotionEnrollmentRqr {
+    apiName = "LoyaltyPgmMbrPromEligView.IsPromotionEnrollmentRqr"
+    defaultValue = false
+    label = "Enrollment Required"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Number IssuedPromotionVoucherCount {
+    apiName = "LoyaltyPgmMbrPromEligView.IssuedPromotionVoucherCount"
+    inlineHelpText = "Specify the number of vouchers that have been issued for the promotion until now."
+    label = "Issued Promotion Voucher Count"
+    precision = 9
+    createable = true
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Lookup LoyaltyProgramCurrencyId {
+    apiName = "LoyaltyPgmMbrPromEligView.LoyaltyProgramCurrencyId"
+    relationshipName = "LoyaltyProgramCurrency"
+    referenceTo = [
+      salesforce.LoyaltyProgramCurrency,
+    ]
+    label = "Currency ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Lookup LoyaltyProgramId {
+    apiName = "LoyaltyPgmMbrPromEligView.LoyaltyProgramId"
+    relationshipName = "LoyaltyProgram"
+    referenceTo = [
+      salesforce.LoyaltyProgram,
+    ]
+    label = "Loyalty Program ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Lookup LoyaltyProgramMemberId {
+    apiName = "LoyaltyPgmMbrPromEligView.LoyaltyProgramMemberId"
+    relationshipName = "LoyaltyProgramMember"
+    referenceTo = [
+      salesforce.LoyaltyProgramMember,
+    ]
+    label = "Loyalty Program Member ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Picklist LoyaltyPromotionType {
+    apiName = "LoyaltyPgmMbrPromEligView.LoyaltyPromotionType"
+    inlineHelpText = "Select Standard if the promotion rewards members immediately after they perform an activity. Select Cumulative if the promotion rewards members after they achieve a defined target value. Select Joint if the promotion is run in collaboration with one or more partners."
+    valueSet = [
+      {
+        fullName = "Standard"
+        isActive = true
+        label = "Standard"
+        default = false
+      },
+      {
+        fullName = "Cumulative"
+        isActive = true
+        label = "Cumulative"
+        default = false
+      },
+      {
+        fullName = "Joint"
+        isActive = true
+        label = "Joint"
+        default = false
+      },
+    ]
+    restricted = true
+    label = "Loyalty Promotion Type"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Currency MaxPromotionLiabilityAmount {
+    apiName = "LoyaltyPgmMbrPromEligView.MaxPromotionLiabilityAmount"
+    inlineHelpText = "Enter the maximum liability that the loyalty program can incur for this promotion."
+    label = "Maximum Promotion Liability Amount"
+    createable = true
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+  }
+  salesforce.Number MaxPromotionVoucherCount {
+    apiName = "LoyaltyPgmMbrPromEligView.MaxPromotionVoucherCount"
+    inlineHelpText = "Enter the maximum number of vouchers that can be issued by the promotion."
+    label = "Maximum Promotion Voucher Count"
+    precision = 9
+    createable = true
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Number MaximumPromotionRewardValue {
+    apiName = "LoyaltyPgmMbrPromEligView.MaximumPromotionRewardValue"
+    label = "Maximum Promotion Reward Value"
+    precision = 9
+    createable = true
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Picklist MemberEligibilityCategory {
+    apiName = "LoyaltyPgmMbrPromEligView.MemberEligibilityCategory"
+    valueSet = [
+      {
+        fullName = "Eligible"
+        isActive = true
+        label = "Eligible"
+        default = false
+      },
+      {
+        fullName = "EligibleButNotEnrolled"
+        isActive = true
+        label = "EligibleButNotEnrolled"
+        default = false
+      },
+      {
+        fullName = "Ineligible"
+        isActive = true
+        label = "Ineligible"
+        default = false
+      },
+    ]
+    restricted = true
+    label = "Member Eligibility Category"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.LongTextArea Objective {
+    apiName = "LoyaltyPgmMbrPromEligView.Objective"
+    length = 1000
+    label = "Objective"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Date PromEnrollmentStartDate {
+    apiName = "LoyaltyPgmMbrPromEligView.PromEnrollmentStartDate"
+    label = "Promotion Enrollment Start Date"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Number PromotionCumulativeUsageTgt {
+    apiName = "LoyaltyPgmMbrPromEligView.PromotionCumulativeUsageTgt"
+    inlineHelpText = "Enter the number of times a member must participate or the amount of money spent to qualify for a reward."
+    label = "Promotion Cumulative Usage Target"
+    precision = 9
+    createable = true
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Date PromotionEnrollmentEndDate {
+    apiName = "LoyaltyPgmMbrPromEligView.PromotionEnrollmentEndDate"
+    label = "Promotion Enrollment End Date"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Lookup PromotionId {
+    apiName = "LoyaltyPgmMbrPromEligView.PromotionId"
+    relationshipName = "Promotion"
+    referenceTo = [
+      salesforce.Promotion,
+    ]
+    label = "Promotion ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Url PromotionImageUrl {
+    apiName = "LoyaltyPgmMbrPromEligView.PromotionImageUrl"
+    label = "Promotion Image URL"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Text PromotionName {
+    apiName = "LoyaltyPgmMbrPromEligView.PromotionName"
+    length = 255
+    label = "Name"
+    createable = true
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Number PromotionPointFactor {
+    apiName = "LoyaltyPgmMbrPromEligView.PromotionPointFactor"
+    inlineHelpText = "Enter the multiplier that’s used to multiply the transaction amount and determine the number of points to be credited for the promotion. For example, to credit points worth twice the transaction amount, enter 2."
+    label = "Promotion Point Factor"
+    precision = 18
+    scale = 0
+    createable = true
+    updateable = false
+    unique = false
+    queryable = true
+  }
+  salesforce.Picklist PromotionTrxnJournalType {
+    apiName = "LoyaltyPgmMbrPromEligView.PromotionTrxnJournalType"
+    inlineHelpText = "Select the type of transactions for which the promotion is applicable."
+    valueSet = [
+      {
+        fullName = "Accrual"
+        isActive = true
+        label = "Accrual"
+        default = false
+      },
+      {
+        fullName = "Redemption"
+        isActive = true
+        label = "Redemption"
+        default = false
+      },
+    ]
+    restricted = true
+    label = "Promotion Transaction Journal Type"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Date StartDate {
+    apiName = "LoyaltyPgmMbrPromEligView.StartDate"
+    _required = true
+    label = "Start Date"
+    createable = true
+    updateable = false
+    queryable = true
+  }
+  salesforce.Number TotalPromotionRewardPointsVal {
+    apiName = "LoyaltyPgmMbrPromEligView.TotalPromotionRewardPointsVal"
+    label = "Total Promotion Reward Points Value"
+    precision = 9
+    createable = true
+    updateable = false
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  serviceid Id {
+    apiName = "LoyaltyPgmMbrPromEligView.Id"
+    label = "Loyalty Program Member Promotion Eligibility View ID"
+    queryable = true
+    _hidden_value = true
+  }
+}

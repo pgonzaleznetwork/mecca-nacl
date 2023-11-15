@@ -1,0 +1,9 @@
+salesforce.ListView SerializedProduct_All_SerializedProducts {
+  fullName = "SerializedProduct.All_SerializedProducts"
+  filterScope = "Everything"
+  label = "All Serialized Products"
+  _parent = [
+    salesforce.SerializedProduct,
+  ]
+  _alias = "All Serialized Products"
+}

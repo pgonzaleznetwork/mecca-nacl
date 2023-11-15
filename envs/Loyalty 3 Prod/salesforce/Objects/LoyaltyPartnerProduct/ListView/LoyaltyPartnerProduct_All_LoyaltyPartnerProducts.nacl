@@ -1,0 +1,9 @@
+salesforce.ListView LoyaltyPartnerProduct_All_LoyaltyPartnerProducts {
+  fullName = "LoyaltyPartnerProduct.All_LoyaltyPartnerProducts"
+  filterScope = "Everything"
+  label = "allLoyaltyPartnerProducts"
+  _parent = [
+    salesforce.LoyaltyPartnerProduct,
+  ]
+  _alias = "allLoyaltyPartnerProducts"
+}

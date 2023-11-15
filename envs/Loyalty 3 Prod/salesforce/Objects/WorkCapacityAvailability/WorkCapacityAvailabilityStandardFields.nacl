@@ -1,0 +1,167 @@
+type salesforce.WorkCapacityAvailability {
+  serviceid Id {
+    apiName = "WorkCapacityAvailability.Id"
+    label = "Work Capacity Availability ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "WorkCapacityAvailability.OwnerId"
+    relationshipName = "Owner"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    label = "Owner ID"
+    createable = true
+    updateable = true
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "WorkCapacityAvailability.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber WorkCapacityAvailNumber {
+    apiName = "WorkCapacityAvailability.WorkCapacityAvailNumber"
+    label = "Availability Number"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "WorkCapacityAvailability.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "WorkCapacityAvailability.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "WorkCapacityAvailability.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "WorkCapacityAvailability.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "WorkCapacityAvailability.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Date StartDate {
+    apiName = "WorkCapacityAvailability.StartDate"
+    label = "Start Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Date EndDate {
+    apiName = "WorkCapacityAvailability.EndDate"
+    label = "End Date"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup ServiceTerritoryId {
+    apiName = "WorkCapacityAvailability.ServiceTerritoryId"
+    relationshipName = "ServiceTerritory"
+    referenceTo = [
+      salesforce.ServiceTerritory,
+    ]
+    label = "Territory ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Number AvailCapacityMinutes {
+    apiName = "WorkCapacityAvailability.AvailCapacityMinutes"
+    label = "Available Capacity (in minutes)"
+    precision = 18
+    scale = 2
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.Number AvailCapacityHours {
+    apiName = "WorkCapacityAvailability.AvailCapacityHours"
+    label = "Available Capacity (in hours)"
+    precision = 18
+    scale = 2
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.Picklist TimePeriod {
+    apiName = "WorkCapacityAvailability.TimePeriod"
+    valueSet = [
+      {
+        fullName = "Day"
+        isActive = true
+        label = "Day"
+        default = true
+      },
+    ]
+    restricted = true
+    label = "Time Period"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text WcaUniqueField1 {
+    apiName = "WorkCapacityAvailability.WcaUniqueField1"
+    length = 255
+    label = "WcaUniqueField1"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Text WcaUniqueField2 {
+    apiName = "WorkCapacityAvailability.WcaUniqueField2"
+    length = 255
+    label = "WcaUniqueField2"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+}

@@ -1,0 +1,5 @@
+salesforce.StandardValueSet CampaignType {
+  fullName = "CampaignType"
+  sorted = false
+  _alias = "CampaignType"
+}

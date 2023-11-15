@@ -1,0 +1,273 @@
+salesforce.Layout Promotion_Promotion_Layout@bs {
+  excludeButtons = [
+    "Submit",
+  ]
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "PromotionDetails"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.Promotion.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Promotion.field.Description
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Promotion.field.LoyaltyProgramId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Promotion.field.LoyaltyPromotionType
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Promotion.field.TransactionJournalType
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Promotion.field.OwnerId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Promotion.field.Objective
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Promotion.field.FulfillmentAction
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Promotion.field.IsActive
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Promotion.field.CumulativeUsageTarget
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "PromotionPoints"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Promotion.field.LoyaltyProgramCurrencyId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Promotion.field.IsPointsWithFactor
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Promotion.field.CurrentPointCount
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Promotion.field.TotalRewardPoints
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Promotion.field.PointFactor
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "PromotionVouchers"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Promotion.field.DefaultVoucherDefinitionId
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Promotion.field.IssuedVoucherCount
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Promotion.field.MaximumVoucherCount
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "PromotionLiabilities"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Promotion.field.MaximumLiabilityAmount
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Promotion.field.CurrentLiabilityAmount
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "PromotionScheduling"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.Promotion.field.StartDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Promotion.field.IsEnrollmentRequired
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Promotion.field.EnrollmentStartDate
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Promotion.field.EndDate
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Promotion.field.EnrollmentEndDate
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "PromotionTypes"
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "PromotionRedemption"
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "PromotionReferral"
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = false
+      label = "Custom Links"
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      relatedList = "RelatedFileList"
+    },
+    {
+      relatedList = "RelatedNoteList"
+    },
+    {
+      relatedList = "RelatedMarketSegments"
+    },
+    {
+      fields = [
+        "LoyaltyPartnerProduct",
+        "LoyaltyProduct",
+        "ProductCategory",
+        "LoyaltyPartner",
+        "StartDate",
+        "EndDate",
+      ]
+      relatedList = "PromoLoyaltyPtnrProdts"
+    },
+    {
+      fields = [
+        "Name",
+        "LoyaltyProgramEngmtAttr",
+      ]
+      relatedList = "PromotionEngagementAttributes"
+    },
+    {
+      fields = [
+        "Name",
+        "LoyaltyProgramPartner",
+        "ContributionPercentage",
+        "PartnershipStartDate",
+        "PartnershipEndDate",
+      ]
+      relatedList = "LoyaltyPgmPartnerPromotions"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  summaryLayout = {
+    masterLabel = "00h4U00000VIjr9"
+    sizeX = 4
+    sizeY = 0
+    summaryLayoutStyle = "Default"
+  }
+  fullName = "Promotion-Promotion Layout"
+  _parent = [
+    salesforce.Promotion,
+  ]
+  _alias = "Promotion-Promotion Layout"
+}

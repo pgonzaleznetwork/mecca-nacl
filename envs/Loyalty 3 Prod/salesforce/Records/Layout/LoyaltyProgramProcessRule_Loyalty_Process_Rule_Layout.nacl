@@ -1,0 +1,52 @@
+salesforce.Layout LoyaltyProgramProcessRule_Loyalty_Process_Rule_Layout@bsss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = true
+      editHeading = true
+      label = "Program Process Rule Details"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = "Name"
+            },
+            {
+              behavior = "Readonly"
+              field = "LastModifiedById"
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = "PromotionId"
+            },
+            {
+              behavior = "Readonly"
+              field = "CreatedById"
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsLeftToRight"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "LoyaltyProgramProcessRule-Loyalty Process Rule Layout"
+  _alias = "LoyaltyProgramProcessRule-Loyalty Process Rule Layout"
+}

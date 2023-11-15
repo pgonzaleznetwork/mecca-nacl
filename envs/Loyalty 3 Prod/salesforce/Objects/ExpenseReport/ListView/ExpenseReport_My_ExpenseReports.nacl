@@ -1,0 +1,9 @@
+salesforce.ListView ExpenseReport_My_ExpenseReports {
+  fullName = "ExpenseReport.My_ExpenseReports"
+  filterScope = "Mine"
+  label = "My Expense Reports"
+  _parent = [
+    salesforce.ExpenseReport,
+  ]
+  _alias = "My Expense Reports"
+}

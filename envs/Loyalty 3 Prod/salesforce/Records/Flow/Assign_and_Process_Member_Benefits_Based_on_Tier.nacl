@@ -1,0 +1,128 @@
+salesforce.Flow Assign_and_Process_Member_Benefits_Based_on_Tier {
+  fullName = "Assign_and_Process_Member_Benefits_Based_on_Tier"
+  actionCalls = [
+    {
+      name = "Assign_Member_Benefits"
+      label = "Assign Member Benefits"
+      locationX = 688
+      locationY = 69
+      actionName = "assignMemberTierBenefits"
+      actionType = "assignMemberTierBenefits"
+      connector = {
+        targetReference = "Loop_Member_Benefits"
+      }
+      flowTransactionModel = "CurrentTransaction"
+      inputParameters = [
+        {
+          name = "LoyaltyProgramMemberId"
+          value = {
+            elementReference = "Get_Member_Tier.LoyaltyMemberId"
+          }
+        },
+      ]
+      nameSegment = "assignMemberTierBenefits"
+      storeOutputAutomatically = true
+      versionSegment = 1
+    },
+    {
+      name = "Process_Benefit_Action"
+      label = "Process Benefit Action"
+      locationX = 1031
+      locationY = 70
+      actionName = "processMemberBenefitAction"
+      actionType = "processMemberBenefitAction"
+      flowTransactionModel = "CurrentTransaction"
+      inputParameters = [
+        {
+          name = "MemberBenefitId"
+          value = {
+            elementReference = "Loop_Member_Benefits"
+          }
+        },
+      ]
+      nameSegment = "processMemberBenefitAction"
+      versionSegment = 1
+    },
+  ]
+  apiVersion = 58
+  environments = "Default"
+  interviewLabel = "Assign and Process Member Benefits Based on Tie {!$Flow.CurrentDateTime}"
+  label = "Assign and Process Member Benefits Based on Tier"
+  loops = [
+    {
+      name = "Loop_Member_Benefits"
+      label = "Loop Member Benefits"
+      locationX = 839
+      locationY = 69
+      collectionReference = "Assign_Member_Benefits.MemberBenefits"
+      iterationOrder = "Asc"
+      nextValueConnector = {
+        targetReference = "Process_Benefit_Action"
+      }
+    },
+  ]
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "FREE_FORM_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "AutoLaunchedFlow"
+  recordLookups = [
+    {
+      name = "Get_Member_Tier"
+      label = "Get Member Tier"
+      locationX = 503
+      locationY = 69
+      assignNullValuesIfNoRecordsFound = false
+      connector = {
+        targetReference = "Assign_Member_Benefits"
+      }
+      filterLogic = "and"
+      filters = [
+        {
+          field = salesforce.LoyaltyMemberTier.field.Id
+          operator = "EqualTo"
+          value = {
+            elementReference = "MemberTierId"
+          }
+        },
+      ]
+      getFirstRecordOnly = true
+      object = salesforce.LoyaltyMemberTier
+      storeOutputAutomatically = true
+    },
+  ]
+  start = {
+    locationX = 50
+    locationY = 50
+    connector = {
+      targetReference = "Get_Member_Tier"
+    }
+  }
+  status = "Active"
+  variables = [
+    {
+      name = "MemberTierId"
+      dataType = "String"
+      isCollection = false
+      isInput = true
+      isOutput = false
+    },
+  ]
+  _alias = "Assign and Process Member Benefits Based on Tier"
+}

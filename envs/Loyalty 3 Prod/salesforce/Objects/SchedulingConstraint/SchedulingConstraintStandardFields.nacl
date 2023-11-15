@@ -1,0 +1,169 @@
+type salesforce.SchedulingConstraint {
+  salesforce.Lookup Id {
+    apiName = "SchedulingConstraint.Id"
+    label = "Constraint ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number MaxNonstandardShiftsPerMonth {
+    apiName = "SchedulingConstraint.MaxNonstandardShiftsPerMonth"
+    label = "Maximum Non-Standard Shifts Per Month"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Number MaxShiftsPerDay {
+    apiName = "SchedulingConstraint.MaxShiftsPerDay"
+    label = "Maximum Shifts Per Day"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Number MaxShiftsPerMonth {
+    apiName = "SchedulingConstraint.MaxShiftsPerMonth"
+    label = "Maximum Shifts Per Month"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Number MaxShiftsPerWeek {
+    apiName = "SchedulingConstraint.MaxShiftsPerWeek"
+    label = "Maximum Shifts Per Week"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Number MaxWorkingHoursPerDay {
+    apiName = "SchedulingConstraint.MaxWorkingHoursPerDay"
+    label = "Maximum Working Hours Per Day"
+    precision = 10
+    scale = 2
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.Number MaxWorkingHoursPerMonth {
+    apiName = "SchedulingConstraint.MaxWorkingHoursPerMonth"
+    label = "Maximum Working Hours Per Month"
+    precision = 10
+    scale = 2
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.Number MaxWorkingHoursPerWeek {
+    apiName = "SchedulingConstraint.MaxWorkingHoursPerWeek"
+    label = "Maximum Working Hours Per Week"
+    precision = 10
+    scale = 2
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.Text Name {
+    apiName = "SchedulingConstraint.Name"
+    length = 200
+    _required = true
+    label = "Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "SchedulingConstraint.OwnerId"
+    relationshipName = "Owner"
+    referenceTo = [
+      salesforce.Group,
+      salesforce.User,
+    ]
+    label = "Owner ID"
+    createable = true
+    updateable = true
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Number RestTimeMinutes {
+    apiName = "SchedulingConstraint.RestTimeMinutes"
+    label = "Rest Time in Minutes"
+    precision = 9
+    createable = true
+    updateable = true
+    scale = 0
+    unique = false
+    queryable = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "SchedulingConstraint.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "SchedulingConstraint.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "SchedulingConstraint.CreatedById"
+    relationshipName = "CreatedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "SchedulingConstraint.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "SchedulingConstraint.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    referenceTo = [
+      salesforce.User,
+    ]
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "SchedulingConstraint.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+}

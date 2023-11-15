@@ -1,0 +1,13 @@
+envs {
+  envsCloud = [
+    {
+      uuid = "c227a242-34bc-4007-aab4-3fbcb9c9f80a"
+      folderName = "c227a242-34bc-4007-aab4-3fbcb9c9f80a-Loyalty 2 UAT"
+      type = "deployment"
+    },
+    {
+      uuid = "bfc989f9-e9f9-49e6-a98c-634470bd2960"
+      folderName = "Loyalty 3 Prod"
+    },
+  ]
+}
