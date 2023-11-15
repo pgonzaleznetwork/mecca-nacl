@@ -1,0 +1,8 @@
+salesforce.BenefitType "0jh2o000000KzznAAC" {
+  Category = "Member Exclusives"
+  Description = "Access to exclusive discounts on merchandise"
+  LoyaltyProgramId = salesforce.LoyaltyProgram.instance.Cloud_Kicks_Inner_Circle@s
+  Name = "Exclusive Discounts"
+  ProcessType = "Loyalty"
+  _alias = "Exclusive Discounts"
+}

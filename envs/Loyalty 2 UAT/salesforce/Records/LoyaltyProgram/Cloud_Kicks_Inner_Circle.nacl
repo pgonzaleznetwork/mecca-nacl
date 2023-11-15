@@ -5,4 +5,5 @@ salesforce.LoyaltyProgram Cloud_Kicks_Inner_Circle@s {
   _alias = "Cloud Kicks Inner Circle"
   
   
+  Tier__c = "Premium"
 }
